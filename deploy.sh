@@ -18,5 +18,5 @@ git commit -m 'deploy'
 
 
 # 部署到 https://<USERNAME>.github.io/<REPO>
-git push -f https://github.com/Bruno-Yu/week-7-project.git master:week-7-project-code
+git push -f https://github.com/Bruno-Yu/week-7-project-code.git master:dist
 cd -
