@@ -7,49 +7,161 @@
     ></ProductModal>
   </div>
   <h2 class="my-5 ms-2 fw-bold text-center">產品/服務列表</h2>
-  <div class="card-group">
-    <div class="row row-cols-1 row-cols-lg-4 g-2 g-lg-3">
-      <div class="col" v-for="product in products" :key="product.id">
-        <div class="card h-100 mb-3" style="max-width: 540px">
-          <div class="row g-0">
-            <div class="col-4">
-              <img
-                :src="product.imageUrl"
-                class="img-fluid card-img rounded-start"
-                alt="..."
-              />
-            </div>
-            <div class="col-8">
-              <div class="card-body">
-                <h5 class="card-title fw-bolder">{{ product.title }}</h5>
-                <p class="card-text text-secondary">
-                  {{ product.description }}
-                </p>
+  <div class="container mb-5 mt-md-5 mt-3mb-7">
+    <div class="row g-2">
+      <div class="col-md-2">
+        <div
+          class="border border-bottom border-top-0 border-start-0 border-end-0 mb-3 mx-3"
+        >
+          <div class="card border-0">
+            <div
+              class="card-header px-0 py-4 bg-white border border-bottom-0 border-top border-start-0 border-end-0 rounded-0"
+            >
+              <div
+                class="d-flex justify-content-between align-items-center pe-1 my-2"
+              >
+                <h4 class="fw-bold">
+                  類別 <span class="text-secondary small"> ▽ </span>
+                </h4>
               </div>
-
-              <div class="card-footer bg-light d-flex justify-content-end">
-                <button
-                  type="button"
-                  class="btn btn-outline-dark btn-sm me-2"
-                  @click="openProductModal(product.id)"
-                >
-                  查看細節
-                </button>
-                <button
-                  type="button"
-                  class="btn btn-dark btn-sm"
-                  @click="addToCart(product.id)"
-                >
-                  加入購物車
-                </button>
+              <div class="card-body py-0">
+                <ul class="list-group">
+                  <li
+                    class="list-group-item"
+                    v-for="(cat, key) in categories"
+                    :key="key"
+                  >
+                    <button
+                      type="button"
+                      class="fw-bold btn btn-outline-light link-dark"
+                      @click="(num += 1) % 2 ? getProducts(cat) : getProducts()"
+                    >
+                      {{ cat }}
+                    </button>
+                  </li>
+                </ul>
+                <p v-show="!((num += 1) % 2)" class="text-secondary small mt-2">
+                  說明: 再點一下 <span class="fw-bold"> 類別鈕 </span>>回到
+                  <span class="fw-bold"> 全類別 </span>
+                </p>
               </div>
             </div>
           </div>
         </div>
       </div>
+      <div class="col-md-10">
+        <div class="row row-cols-1 row-cols-md-3 g-2 g-lg-3">
+          <div class="col" v-for="product in products" :key="product.id">
+            <div class="card border-0 mb-2 position-relative">
+              <div
+                class="card-img-top rounded-0"
+                style="
+                  height: 200px;
+                  width: 350px;
+                  background-size: cover;
+                  background-position: center center;
+                  background-blend-mode: multiply;
+                  background-color: #9cb2c7;
+                "
+                :style="{ backgroundImage: `url(${product.imageUrl})` }"
+              ></div>
+              <router-link
+                to=""
+                class="position-absolute text-light"
+                style="right: 16px; top: 16px"
+                @click="
+                  favorites.includes(product.id)
+                    ? removeFromFavorites(product.id)
+                    : saveToFavorites(product.id)
+                "
+                ><i
+                  v-if="favorites.includes(product.id)"
+                  class="bi bi-heart-fill"
+                ></i>
+                <i v-else class="bi bi-heart"></i>
+              </router-link>
+            </div>
+            <div class="card-body p-0">
+              <h5 class="mb-0 mt-1 fw-bold">{{ product.title }}</h5>
+              <p class="card-text mt-1 mb-0 fw-bold">TWD {{ product.price }}</p>
+              <div class="d-flex justify-content-between">
+                <p class="text-muted fw-light small">
+                  <del> 原價TWD{{ product.origin_price }}</del>
+                </p>
+                <button
+                  type="button"
+                  class="btn btn-danger btn-sm me-1"
+                  @click="addToCart(product.id)"
+                >
+                  加入購物車
+                </button>
+              </div>
+              <p class="text-muted mt-3"></p>
+            </div>
+          </div>
+        </div>
+        <!-- <div class="card-group">
+          <div class="row row-cols-1 row-cols-lg-4 g-2 g-lg-3">
+            <div class="col" v-for="product in products" :key="product.id">
+              <div class="card h-100 mb-3" style="max-width: 540px">
+                <div class="row g-0">
+                  <div class="col-4">
+                    <img
+                      :src="product.imageUrl"
+                      class="img-fluid card-img rounded-start"
+                      alt="..."
+                    />
+                  </div>
+                  <div class="col-8">
+                    <div class="card-body">
+                      <h5 class="card-title fw-bolder">{{ product.title }}</h5>
+                      <p class="card-text text-secondary">
+                        {{ product.description }}
+                      </p>
+                    </div>
+
+                    <div
+                      class="card-footer bg-light d-flex justify-content-end"
+                    >
+                      <button
+                        type="button"
+                        class="btn btn-outline-dark btn-sm me-2"
+                        @click="openProductModal(product.id)"
+                      >
+                        查看細節
+                      </button>
+                      <button
+                        type="button"
+                        class="btn btn-dark btn-sm"
+                        @click="addToCart(product.id)"
+                      >
+                        加入購物車
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div> -->
+        <sticky-top top="20" :scroll-y="scrollY">
+          <i class="bi bi-cart2"></i>
+        </sticky-top>
+      </div>
     </div>
   </div>
 </template>
+
+<style>
+.cart {
+  width: 10px;
+  height: 10px;
+  right: 10px;
+  bottom: 10px;
+  border-radius: 50% 50%;
+  border: 1px black solid;
+}
+</style>
 
 <script>
 import ProductModal from '../components/ProductModal.vue';
@@ -60,27 +172,55 @@ export default {
       products: [],
       productId: '',
       addNum: 0,
+      num: 0,
       // 局部讀取效果對應變數
       isLoadingItem: '',
+      categories: [],
+      favorites: JSON.parse(window.localStorage.getItem('favorites')) || [],
     };
   },
   components: {
     ProductModal,
   },
   methods: {
-    getProducts() {
-      this.$http
-        .get(
-          `${process.env.VUE_APP_API}api/${process.env.VUE_APP_PATH}/products/all`,
-        )
-        .then((res) => {
-          this.products = res.data.products;
-        });
+    getCategory(products) {
+      const originCategories = [];
+      products.forEach((item) => {
+        originCategories.push(item.category);
+      });
+      this.categories = originCategories.filter(
+        (cat, index) => originCategories.indexOf(cat) === index,
+      );
+    },
+    getProducts(query) {
+      let url = `${process.env.VUE_APP_API}/api/${process.env.VUE_APP_PATH}/products`;
+      if (query) {
+        url = `${process.env.VUE_APP_API}/api/${process.env.VUE_APP_PATH}/products?category=${query}`;
+      }
+      this.isLoading = true;
+      this.$http.get(url).then((res) => {
+        this.products = res.data.products;
+        this.getCategory(this.products);
+        this.isLoading = false;
+      });
     },
     openProductModal(id) {
       this.productId = id;
+      this.isLoading = false;
       // 使用$refs調用productModal元件的 openModal()方法
       this.$refs.productModal.openModal();
+    },
+    getProduct(id) {
+      this.$router.push(`/user/product/${id}`);
+    },
+    saveToFavorites(id) {
+      this.favorites.push(id);
+    },
+    removeFromFavorites(id) {
+      const target = this.favorites.indexOf(id);
+      if (target !== -1) {
+        this.favorites.splice(target, 1);
+      }
     },
     addToCart(id, qty = 1) {
       // post cart的api資料格式
@@ -103,7 +243,18 @@ export default {
         });
     },
   },
-  mounted() {
+  watch: {
+    favorites: {
+      handler() {
+        window.localStorage.setItem(
+          'favorites',
+          JSON.stringify(this.favorites),
+        );
+      },
+      deep: true,
+    },
+  },
+  created() {
     this.getProducts();
   },
 };

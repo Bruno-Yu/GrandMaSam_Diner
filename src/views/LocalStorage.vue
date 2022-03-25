@@ -1,4 +1,10 @@
 <template>
+  <div class="container mt-3">
+    <h1 class="text-center mt-5 fs-1 mb-3 fw-bolder">收藏</h1>
+  </div>
+  {{ products }}
+  {{ favorites }}
+  {{ favProducts }}
   <div class="container">
     <div class="mt-4">
       <!-- 購物車列表 -->
@@ -8,7 +14,7 @@
         <button
           class="btn btn-outline-danger"
           type="button"
-          @click="removeCartAll"
+          @click="removeFavAll"
           :disabled="
             isLoadingItem === 'deleteAll' || cartData.carts.length === 0
           "
@@ -17,7 +23,7 @@
             class="spinner-grow spinner-grow-sm"
             v-show="isLoadingItem === 'deleteAll'"
           ></span
-          >清空購物車
+          >清空收藏
         </button>
       </div>
       <!-- 以上是清空購物車按鈕 -->
@@ -28,18 +34,15 @@
             <th>刪除鍵</th>
             <th>預覽圖</th>
             <th>品名</th>
-            <th>數量/單位</th>
-            <th>單價/總價</th>
+            <th>單價</th>
+            <th>產品細節</th>
+            <th>加入購物車</th>
           </tr>
         </thead>
-        <tbody v-if="cartData.carts">
+        <tbody>
           <!-- 使用v-for將購物車中的產品列表列出 -->
           <!-- 注意:產品資訊是包在carts陣列內部物件的product屬性中 -->
-          <tr
-            v-for="item in cartData.carts"
-            :key="item.product.id"
-            class="text-start"
-          >
+          <tr v-for="item in favProducts" :key="item.id" class="text-start">
             <td>
               <!-- 刪除品項 -->
               <!-- 注意: 刪除要刪除到資料庫 -->
@@ -48,7 +51,7 @@
               <button
                 type="button"
                 class="btn btn-outline-danger btn-sm"
-                @click="removeCartItem(item.id)"
+                @click="removeFromFavorites(item.id)"
                 :disabled="isLoadingItem === item.id"
               >
                 <span
@@ -66,59 +69,47 @@
                   background-size: cover;
                   background-position: center;
                 "
-                :style="{ backgroundImage: `url(${item.product.imageUrl})` }"
+                :style="{ backgroundImage: `url(${item.imageUrl})` }"
               ></div>
             </td>
             <td class="fw-bolder text-decoration-underline">
-              {{ item.product.title }}
+              {{ item.title }}
               <!-- <div class="text-success">已套用優惠券</div> -->
             </td>
             <td>
-              <!-- 使用BS的input-group 將其群組化 -->
-              <div class="input-group input-group-sm">
-                <div class="input-group mb-3">
-                  <!-- 數量 -->
-                  <!-- 注意: 要確保存數字，input標籤部分 要加type="number" -->
-                  <!-- 問題:會有bug比如可以填入負值、英文數字e...等 -->
-                  <!-- <input min="1" type="number" class="form-control"
-                          v-model="item.qty"/> -->
-                  <!-- 加入BS的樣式 class="form-select"下拉數字選單 -->
-                  <!-- v-modal綁定物品數量 -->
-                  <!-- 使用change方法，若數量改變，立即觸發updateCartItem方法，立即將修改對應數量 進行資料庫api回傳 -->
-                  <select
-                    id=""
-                    class="form-select"
-                    v-model="item.qty"
-                    @change="updateCartItem(item)"
-                    :disabled="isLoadingItem === item.id"
-                  >
-                    <!-- 數量，使用option 以這種方法可多出1~20的選項 -->
-                    <!-- 注意v-for用法:使用選項數字就會自動增減1 -->
-                    <!-- 注意，數量要存到資料庫 -->
-                    <!-- 注意: 這邊的value對應的num是透過v-bind變成根元件的資料屬性變數 -->
-                    <option
-                      :value="num"
-                      v-for="num in 20"
-                      :key="`${num}-${item.id}`"
-                    >
-                      {{ num }}
-                    </option>
-                  </select>
-                  <!-- 單位 -->
-                  <span class="input-group-text" id="basic-addon2">{{
-                    item.product.unit
-                  }}</span>
-                </div>
-              </div>
-            </td>
-            <td class="text-end">
               <span
                 class="spinner-grow spinner-grow-sm"
                 v-show="isLoadingItem === item.id"
               ></span>
               <span class="text-secondary fz-sm"
-                >單價 {{ item.product.price }}元 /</span
-              ><span class="fw-bolder"> 總價{{ item.total }}元 </span>
+                >單價 {{ item.price }}元 /</span
+              >
+            </td>
+            <td>
+              <!-- 使用BS的input-group 將其群組化 -->
+              <!-- 查看更多按鈕，對應api為 客戶購物-產品(products)中 GET product/{id}的api -->
+              <button
+                type="button"
+                class="btn btn-outline-secondary btn-sm"
+                :disabled="isLoadingItem === item.id"
+              >
+                <!-- @click="openProductModal(item.id)" -->
+                查看更多</button
+              >>
+            </td>
+            <td>
+              <button
+                type="button"
+                class="btn btn-danger btn-sm"
+                @click="addToCart(item.id)"
+                :disabled="isLoadingItem === item.id"
+              >
+                <span
+                  class="spinner-grow spinner-grow-sm"
+                  v-show="isLoadingItem === item.id"
+                ></span>
+                加到購物車
+              </button>
             </td>
           </tr>
         </tbody>
@@ -126,7 +117,6 @@
           <tr>
             <td></td>
             <td colspan="3" class="text-end">總計</td>
-            <td class="text-end">{{ cartData.total }}元</td>
           </tr>
           <!-- <tr>
               <td></td>
@@ -144,7 +134,7 @@
             isLoadingItem === 'deleteAll' || cartData.carts.length === 0
           "
         >
-          下一步
+          檢視購物車
         </button>
       </div>
     </div>
@@ -156,11 +146,13 @@ export default {
   data() {
     return {
       // 購物車列表
+      favorites: JSON.parse(window.localStorage.getItem('favorites')) || [],
       cartData: {
         carts: [],
       },
       // 產品列表 (客戶購物免登入的API)
       products: [],
+      favProducts: [],
       productId: '',
       // 局部讀取效果對應變數
       isLoadingItem: '',
@@ -176,6 +168,22 @@ export default {
     };
   },
   methods: {
+    getFavor() {
+      this.favorites.forEach((id) => {
+        this.favProducts = this.products.filter((item) => item.id === id);
+      });
+    },
+    getProducts() {
+      const url = `${process.env.VUE_APP_API}/api/${process.env.VUE_APP_PATH}/products`;
+      this.isLoading = true;
+      this.$http.get(url).then((res) => {
+        this.products = res.data.products;
+        console.log(this.products);
+        this.getFavor();
+        this.isLoading = false;
+      });
+    },
+
     getCart() {
       this.$http
         .get(`${process.env.VUE_APP_API}/api/${process.env.VUE_APP_PATH}/cart`)
@@ -192,6 +200,16 @@ export default {
     // 對應api 客戶購物-購物車(Cart) POST
     // 注意: 加入購物車需帶入兩個參數 1.id 2.數量
     // 由於購物車頁面上沒有調整數量的欄位，所以第二參數可使用參數預設值帶入
+    saveToFavorites(id) {
+      this.favorites.push(id);
+    },
+    removeFromFavorites(id) {
+      const target = this.favorites.indexOf(id);
+      if (target !== -1) {
+        this.favorites.splice(target, 1);
+        this.getFavor();
+      }
+    },
     addToCart(id, qty = 1) {
       // post cart的api資料格式
       const data = {
@@ -228,17 +246,11 @@ export default {
           this.isLoadingItem = '';
         });
     },
-    removeCartAll() {
+    removeFavAll() {
       this.isLoadingItem = 'deleteAll';
-      this.$http
-        .delete(
-          `${process.env.VUE_APP_API}/api/${process.env.VUE_APP_PATH}/carts`,
-        )
-        .then(() => {
-          // 取得購物車的資料
-          this.getCart();
-          this.isLoadingItem = '';
-        });
+      this.favorites = [];
+      this.favProducts = [];
+      this.isLoadingItem = '';
     },
     // 更新數量，使用put cart api
     // 記得直接帶入對應品項
@@ -260,12 +272,24 @@ export default {
         });
     },
     nextPage() {
-      this.$router.push('/userContact');
+      this.$router.push('/userOrders');
     },
   },
-  mounted() {
-    // 取得購物車的資料
-    this.getCart();
+  watch: {
+    favorites: {
+      handler() {
+        window.localStorage.setItem(
+          'favorites',
+          JSON.stringify(this.favorites),
+        );
+        this.getProducts();
+      },
+      deep: true,
+    },
+    created() {
+      // 取得購物車的資料
+      this.getProducts();
+    },
   },
 };
 </script>
