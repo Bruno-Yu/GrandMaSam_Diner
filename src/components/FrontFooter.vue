@@ -14,15 +14,18 @@
           let make US great again
         </p>
       </router-link>
-      <div class="container d-flex justify-content-around mt-2">
+      <div class="container d-lg-flex justify-content-lg-around mt-2">
         <div class="footer-content text-light">
-          <h4 class="my-3 fw-bold" style="font-family: 'Bangers', serif">
+          <h4
+            class="my-3 fw-bold text-center text-lg-start"
+            style="font-family: 'Bangers', serif"
+          >
             關於作品
           </h4>
           <p class="mt-2 small fw-light">
             此網頁並非商業使用，僅作為個人學習、娛樂 以及六角作業繳交使用
           </p>
-          <p class="small fw-light">
+          <p class="small fw-light text-center text-lg-start">
             若需要引用或作為商業用途，請先諮詢六角學院
           </p>
           <p class="text-muted small">
@@ -35,24 +38,13 @@
           </p>
         </div>
         <div class="footer-contact text-light">
-          <h4 class="my-3 fw-bold" style="font-family: 'Bangers', serif">
+          <h4
+            class="my-3 fw-bold text-center text-lg-start"
+            style="font-family: 'Bangers', serif"
+          >
             聯絡我們
           </h4>
-          <ul style="list-style: none" class="ps-0 text-light mt-2">
-            <li class="small fw-light my-1">公司: 山姆大嬸餐飲投機無限公司</li>
-            <li class="small fw-light my-1">訂位服務專線: ( 0204 ) 5487487</li>
-            <li class="small fw-light my-1">
-              電話: ( 02 ) 2311 3731
-              <span class="text-muted small">
-                ( 請謹慎播打，該電話直達高層 )
-              </span>
-            </li>
-            <li class="small fw-light my-1">
-              地址: 100台北市中正區中山南路21號
-            </li>
-            <li class="small fw-light my-1">營業時間: 24 hrs</li>
-          </ul>
-          <div class="footer-socialMedia ps-2">
+          <div class="footer-socialMedia ps-2 text-center text-lg-start">
             <a
               class="text-decoration-none me-4"
               href="https://www.hexschool.com/?msclkid=8598b4ccaa4811ec81331512bb3bc247"
@@ -68,6 +60,26 @@
               href="https://www.hexschool.com/?msclkid=8598b4ccaa4811ec81331512bb3bc247"
               ><i class="bi bi-twitter link-light"></i
             ></a>
+          </div>
+          <div class="d-flex justify-content-center justify-content-lg-start">
+            <ul style="list-style: none" class="ps-0 text-light mt-2">
+              <li class="small fw-light my-1">
+                公司: 山姆大嬸餐飲投機無限公司
+              </li>
+              <li class="small fw-light my-1">
+                訂位服務專線: ( 0204 ) 5487487
+              </li>
+              <li class="small fw-light my-1">
+                電話: ( 02 ) 2311 3731
+                <span class="text-muted small">
+                  ( 請謹慎播打，該電話直達高層 )
+                </span>
+              </li>
+              <li class="small fw-light my-1">
+                地址: 100台北市中正區中山南路21號
+              </li>
+              <li class="small fw-light my-1">營業時間: 24 hrs</li>
+            </ul>
           </div>
         </div>
       </div>

@@ -16,10 +16,7 @@
             後來在我們集團創辦人感悟了該符號所代表的意義後，將其作為本集團的商標與信仰
           </p>
         </div>
-        <div
-          class="col col-lg-3 my-3 mx-3 border border-secondary border-1"
-          style="background-color: #f7f4f0"
-        >
+        <div class="col col-lg-3 my-3 mx-3" style="background-color: #f7f4f0">
           <div class="logo-origin"></div>
         </div>
       </div>
@@ -36,14 +33,13 @@
             </li>
             <li class="text-muted my-3">
               2000~ 2010 年 -
-              本集團拓展遍佈世界各地，並在各地建立分支據點，在聯合國140
-              國的市中心，都沒有本集團的服務處所
+              本集團拓展遍佈世界各地，並在各地建立分支據點，在全球聯合國所屬140個會員國的市中心，都沒有本集團的服務處所
             </li>
             <li class="text-muted">
               在 2020 年 -
               本集團創辦人有感於其祖母與台灣民主地區領導人蔣大總統的好交情，決定利用其祖母在台灣台北
-              ( 此亦為奧運會代表正式名稱 )的
-              房地產投資收益，創立了台灣辦事處，並於隔年建立本餐飲公司
+              ( 此亦為奧運會代表正式名稱
+              )的房地產投資收益，創立了台灣辦事處，並於隔年建立本餐飲公司
             </li>
           </ul>
         </div>
@@ -113,7 +109,7 @@
             </p>
             <p class="text-muted">
               在1990
-              年我們集團的創辦人登上了當時最有影響力的雜誌封面，成為每個男人夢想中想成為地人，創辦人同感於此，在公司內部編撰了公司員工的福利法，並在多年耕耘後，由集團內部的公正評委評選為
+              年我們集團的創辦人登上了當時最有影響力的雜誌封面，成為每個人夢想中成為的男人，創辦人有感於此，在公司內部編撰了公司員工的福利法，並在多年耕耘後，由集團內部的公正評委評選為
               2000年度最佳性福企業認證
             </p>
           </div>
@@ -212,7 +208,7 @@
 
 <style>
 .logo-origin {
-  background-image: url(https://svgsilh.com/svg/2026758.svg);
+  background-image: url(https://cdn.pixabay.com/photo/2018/02/01/18/39/trump-3123765_960_720.png);
   height: 280px;
   background-position: center center;
   background-size: cover;

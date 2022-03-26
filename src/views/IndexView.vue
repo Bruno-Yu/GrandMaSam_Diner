@@ -4,7 +4,10 @@
       class="container d-flex justify-content-center align-items-center flex-direction-vertical g-2"
       style="height: 100%"
     >
-      <div class="row justify-content-end" style="width: 100%; height: 40%">
+      <div
+        class="row justify-content-center justify-content-lg-end"
+        style="width: 100%; height: 40%"
+      >
         <div class="col-6 col-lg-4" style="border: 1px solid #b8babdd5">
           <div class="d-flex justify-content-center justify-content-lg-start">
             <div>
@@ -105,7 +108,7 @@
 .header-banner {
   background-image: url(https://cdn.pixabay.com/photo/2017/10/04/09/10/trump-2815558_960_720.jpg);
   height: 600px;
-  background-position: right center;
+  background-position: center center;
   background-size: cover;
   background-blend-mode: multiply;
   background-color: #abafb3;
