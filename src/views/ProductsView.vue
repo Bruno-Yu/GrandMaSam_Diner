@@ -100,53 +100,6 @@
             </div>
           </div>
         </div>
-        <!-- <div class="card-group">
-          <div class="row row-cols-1 row-cols-lg-4 g-2 g-lg-3">
-            <div class="col" v-for="product in products" :key="product.id">
-              <div class="card h-100 mb-3" style="max-width: 540px">
-                <div class="row g-0">
-                  <div class="col-4">
-                    <img
-                      :src="product.imageUrl"
-                      class="img-fluid card-img rounded-start"
-                      alt="..."
-                    />
-                  </div>
-                  <div class="col-8">
-                    <div class="card-body">
-                      <h5 class="card-title fw-bolder">{{ product.title }}</h5>
-                      <p class="card-text text-secondary">
-                        {{ product.description }}
-                      </p>
-                    </div>
-
-                    <div
-                      class="card-footer bg-light d-flex justify-content-end"
-                    >
-                      <button
-                        type="button"
-                        class="btn btn-outline-dark btn-sm me-2"
-                        @click="openProductModal(product.id)"
-                      >
-                        查看細節
-                      </button>
-                      <button
-                        type="button"
-                        class="btn btn-dark btn-sm"
-                        @click="addToCart(product.id)"
-                      >
-                        加入購物車
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div> -->
-        <sticky-top top="20" :scroll-y="scrollY">
-          <i class="bi bi-cart2"></i>
-        </sticky-top>
       </div>
     </div>
   </div>
