@@ -3,12 +3,12 @@
     <ul class="pagination justify-content-center">
       <li class="page-item" :class="{ disabled: !hasPre }">
         <a
-          class="page-link"
+          class="page-link link-dark fw-bold"
           href="#"
           tabindex="-1"
           :aria-disabled="!hasPre"
           @click.prevent="emitData(currentPage - 1)"
-          >Previous</a
+          >上一頁</a
         >
       </li>
 
@@ -18,19 +18,25 @@
         :key="index"
         :class="{ active: num === currentPage }"
       >
-        <span class="page-link" v-if="num === currentPage">{{ num }}</span>
-        <a class="page-link" href="#" v-else @click.prevent="emitData(num)">{{
+        <span class="page-link link-dark fw-bold" v-if="num === currentPage">{{
           num
-        }}</a>
+        }}</span>
+        <a
+          class="page-link link-dark fw-bold"
+          href="#"
+          v-else
+          @click.prevent="emitData(num)"
+          >{{ num }}</a
+        >
       </li>
 
       <li class="page-item" :class="{ disabled: !hasNext }">
         <a
-          class="page-link"
+          class="page-link link-dark fw-bold"
           href="#"
           :aria-disabled="!hasNext"
           @click.prevent="emitData(currentPage + 1)"
-          >Next</a
+          >下一頁</a
         >
       </li>
     </ul>

@@ -34,7 +34,9 @@
                     <button
                       type="button"
                       class="fw-bold btn btn-outline-light link-dark"
-                      @click="(num += 1) % 2 ? getProducts(cat) : getProducts()"
+                      @click="
+                        (num += 1) % 2 ? getProducts(page, cat) : getProducts()
+                      "
                     >
                       {{ cat }}
                     </button>
@@ -50,10 +52,20 @@
         </div>
       </div>
       <div class="col-md-10">
-        <div class="row row-cols-1 row-cols-md-3 g-2 g-lg-3">
+        <div class="row row-cols-1 row-cols-lg-3 g-2 g-lg-3">
           <div class="col" v-for="product in products" :key="product.id">
             <div class="card border-0 mb-2 position-relative">
               <div
+                class="card-img-top rounded-0 ratio ratio-16x9"
+                style="
+                  background-size: cover;
+                  background-position: center center;
+                  background-blend-mode: multiply;
+                  background-color: #9cb2c7;
+                "
+                :style="{ backgroundImage: `url(${product.imageUrl})` }"
+              ></div>
+              <!-- <div
                 class="card-img-top rounded-0"
                 style="
                   height: 200px;
@@ -64,7 +76,8 @@
                   background-color: #9cb2c7;
                 "
                 :style="{ backgroundImage: `url(${product.imageUrl})` }"
-              ></div>
+              ></div> -->
+
               <router-link
                 to=""
                 class="position-absolute text-light"
@@ -79,6 +92,13 @@
                   class="bi bi-heart-fill"
                 ></i>
                 <i v-else class="bi bi-heart"></i>
+              </router-link>
+              <router-link
+                :to="{ name: 'Product', params: { id: `${product.id}` } }"
+                class="position-absolute link-light small text-decoration-none"
+                style="right: 16px; bottom: 10px"
+              >
+                看更多
               </router-link>
             </div>
             <div class="card-body p-0">
@@ -101,6 +121,15 @@
           </div>
         </div>
       </div>
+      <div class="d-flex justify-content-center mt-5">
+        <PaginationFooter
+          :current-page="current_page"
+          :has-pre="has_pre"
+          :has-next="has_next"
+          :total-pages="total_pages"
+          @click-page="getProducts"
+        ></PaginationFooter>
+      </div>
     </div>
   </div>
 </template>
@@ -118,6 +147,7 @@
 
 <script>
 import ProductModal from '../components/ProductModal.vue';
+import PaginationFooter from '../components/PaginationFooter.vue';
 
 export default {
   data() {
@@ -129,11 +159,21 @@ export default {
       // 局部讀取效果對應變數
       isLoadingItem: '',
       categories: [],
+      current_page: 1,
+      has_next: true,
+      has_pre: false,
+      total_pages: 1,
       favorites: JSON.parse(window.localStorage.getItem('favorites')) || [],
     };
   },
   components: {
     ProductModal,
+    PaginationFooter,
+  },
+  provide() {
+    return {
+      emitData: this.emitData,
+    };
   },
   methods: {
     getCategory(products) {
@@ -145,14 +185,19 @@ export default {
         (cat, index) => originCategories.indexOf(cat) === index,
       );
     },
-    getProducts(query) {
-      let url = `${process.env.VUE_APP_API}/api/${process.env.VUE_APP_PATH}/products`;
+    // eslint-disable-next-line default-param-last
+    getProducts(page = 1, query) {
+      let url = `${process.env.VUE_APP_API}/api/${process.env.VUE_APP_PATH}/products?page=${page}`;
       if (query) {
         url = `${process.env.VUE_APP_API}/api/${process.env.VUE_APP_PATH}/products?category=${query}`;
       }
       this.isLoading = true;
       this.$http.get(url).then((res) => {
         this.products = res.data.products;
+        this.current_page = res.data.pagination.current_page;
+        this.has_next = res.data.pagination.has_next;
+        this.has_pre = res.data.pagination.has_pre;
+        this.total_pages = res.data.pagination.total_pages;
         this.getCategory(this.products);
         this.isLoading = false;
       });
