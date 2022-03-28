@@ -39,14 +39,14 @@
           ></div> -->
 
     <div class="col-md-7">
-      <swiper
+      <Swiper
         :modules="modules"
         :slides-per-view="1"
         :space-between="50"
         navigation
         :pagination="{ clickable: true }"
       >
-        <swiper-slide active>
+        <SwiperSlide>
           <div
             class="carousel-item d-block ratio ratio-4x3"
             style="
@@ -57,8 +57,8 @@
             "
             :style="{ backgroundImage: `url(${product.imageUrl})` }"
           ></div>
-        </swiper-slide>
-        <swiper-slide v-for="(image, key) in product.imagesUrl" :key="key"
+        </SwiperSlide>
+        <SwiperSlide v-for="(image, key) in product.imagesUrl" :key="key"
           ><div
             style="
               height: 500px;
@@ -69,8 +69,8 @@
             "
             :style="{ backgroundImage: `url(${image})` }"
           ></div
-        ></swiper-slide>
-      </swiper>
+        ></SwiperSlide>
+      </Swiper>
 
       <!-- <div
         id="carouselExampleIndicators"
@@ -142,14 +142,26 @@
   </div>
 </template>
 
+<style lang="scss">
+@import '../../node_modules/swiper/swiper.scss';
+@import '../../node_modules/swiper/modules/navigation/navigation.scss';
+@import '../../node_modules/swiper/modules/pagination/pagination.scss';
+</style>
+
 <script>
+// eslint-disable-next-line object-curly-newline
 import { Navigation, Pagination } from 'swiper';
 
-import { Swiper, SwiperSlide } from 'swiper/vue/swiper-vue';
+import { Swiper, SwiperSlide } from 'swiper/vue';
 
-import 'swiper/swiper.scss';
-import 'swiper/modules/navigation/navigation.min.css';
-import 'swiper/modules/pagination/pagination.min.css';
+// import 'swiper/swiper.scss';
+// import 'swiper/modules/navigation/navigation.min.css';
+// import 'swiper/modules/pagination/pagination.min.css';
+
+// import 'swiper/swiper-bundle.css';
+// import 'swiper/modules/navigation/navigation.min.css';
+// import 'swiper/modules/pagination/pagination.min.css';
+// import 'swiper/modules/scrollbar/scrollbar.min.css';
 
 export default {
   data() {
