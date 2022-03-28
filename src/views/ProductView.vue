@@ -12,8 +12,67 @@
       "
       :style="{ backgroundImage: `url(${product.imageUrl})` }"
     ></div> -->
+
+    <!-- <div
+            class="carousel-item d-block ratio ratio-4x3"
+            style="
+              background-size: cover;
+              background-position: center center;
+              background-blend-mode: multiply;
+              background-color: #9cb2c7;
+            "
+            :style="{ backgroundImage: `url(${product.imageUrl})` }"
+            active
+          ></div> -->
+
+    <!-- <div
+            class="carousel-item d-block ratio ratio-4x3"
+            v-for="(image, key) in product.imagesUrl"
+            :key="key"
+            style="
+              background-size: cover;
+              background-position: center center;
+              background-blend-mode: multiply;
+              background-color: #9cb2c7;
+            "
+            :style="{ backgroundImage: `url(${image})` }"
+          ></div> -->
+
     <div class="col-md-7">
-      <div
+      <swiper
+        :modules="modules"
+        :slides-per-view="1"
+        :space-between="50"
+        navigation
+        :pagination="{ clickable: true }"
+      >
+        <swiper-slide active>
+          <div
+            class="carousel-item d-block ratio ratio-4x3"
+            style="
+              background-size: cover;
+              background-position: center center;
+              background-blend-mode: multiply;
+              background-color: #9cb2c7;
+            "
+            :style="{ backgroundImage: `url(${product.imageUrl})` }"
+          ></div>
+        </swiper-slide>
+        <swiper-slide v-for="(image, key) in product.imagesUrl" :key="key"
+          ><div
+            style="
+              height: 500px;
+              background-position: center center;
+              background-size: cover;
+              background-blend-mode: multiply;
+              background-color: #9cb2c7;
+            "
+            :style="{ backgroundImage: `url(${image})` }"
+          ></div
+        ></swiper-slide>
+      </swiper>
+
+      <!-- <div
         id="carouselExampleIndicators"
         ref="carouselIndicators"
         class="carousel slide vh-100"
@@ -50,17 +109,7 @@
               alt=""
             />
           </div>
-          <!-- <div
-            class="carousel-item d-block ratio ratio-4x3"
-            style="
-              background-size: cover;
-              background-position: center center;
-              background-blend-mode: multiply;
-              background-color: #9cb2c7;
-            "
-            :style="{ backgroundImage: `url(${product.imageUrl})` }"
-            active
-          ></div> -->
+
           <div
             class="carousel-item"
             v-for="(image, key) in product.imagesUrl"
@@ -68,19 +117,6 @@
           >
             <img class="d-block" :src="image" :alt="key" />
           </div>
-
-          <!-- <div
-            class="carousel-item d-block ratio ratio-4x3"
-            v-for="(image, key) in product.imagesUrl"
-            :key="key"
-            style="
-              background-size: cover;
-              background-position: center center;
-              background-blend-mode: multiply;
-              background-color: #9cb2c7;
-            "
-            :style="{ backgroundImage: `url(${image})` }"
-          ></div> -->
         </div>
         <button
           class="carousel-control-prev"
@@ -100,14 +136,20 @@
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
           <span class="visually-hidden">下一頁</span>
         </button>
-      </div>
+      </div> -->
     </div>
     <div class="col-md-5"></div>
   </div>
 </template>
 
 <script>
-import carousel from 'bootstrap/js/dist/carousel';
+import { Navigation, Pagination } from 'swiper';
+
+import { Swiper, SwiperSlide } from 'swiper/vue/swiper-vue';
+
+import 'swiper/swiper.scss';
+import 'swiper/modules/navigation/navigation.min.css';
+import 'swiper/modules/pagination/pagination.min.css';
 
 export default {
   data() {
@@ -115,8 +157,12 @@ export default {
       isLoading: false,
       product: {},
       id: '',
-      carousel: {},
+      modules: [Navigation, Pagination],
     };
+  },
+  components: {
+    Swiper,
+    SwiperSlide,
   },
   methods: {
     getProduct() {
@@ -155,7 +201,6 @@ export default {
   mounted() {
     this.getProduct();
     // eslint-disable-next-line new-cap
-    this.carousel = new carousel(this.$refs.carouselIndicators);
   },
 };
 </script>
