@@ -33,7 +33,11 @@
       <div class="col text-center text-light px-3">
         <h2>關於我們</h2>
         <p class="my-3 fs-5">
-          主打各系列量產漢堡外，還有搭配各大連鎖超商的義大利麵，燉飯，炸雞及各式炸物小點，絕對滿足不了味蕾挑剔的您
+          本餐廳的核心精神是: 自己的國家自己救 ; 自己的碗盤自己洗
+        </p>
+        <p class="my-3 fs-5">
+          餐點部分:
+          除了各系列防腐劑漢堡外，並與各大連鎖超商合作，推出義大利麵，燉飯，炸雞及各式炸物小點系列，絕對難以滿足味蕾挑剔的您
         </p>
       </div>
     </div>
@@ -63,11 +67,11 @@
           <h4 class="mt-4 text-center text-lg-start">別樹一格</h4>
           <p class="text-muted">
             > 有別於其他同類型的餐飲地點 ( 林森北 ) ;
-            本餐廳坐立在繁華的中山南路上，也區別了本集團雄厚的經濟基礎
+            本餐廳坐立在繁華的中山南路上，也凸顯了本集團雄厚的經濟基礎
           </p>
           <p class="text-muted">
             >
-            本台北旗艦店內部也是濃濃的美式風格，加上名亮對比的美金百元鈔票堆疊的用餐隔板以及壁飾，帶給您不同的視覺震撼與體驗
+            本台北旗艦店內部也是濃濃的美式風格，加上以名亮對比的美金百元鈔票堆疊而成的用餐隔板以及相關牆飾，皆能帶給您不同的視覺體驗與震撼
           </p>
           <p class="text-muted">
             > 大型廣場:
@@ -94,7 +98,7 @@
               <p class="fs-1 text-warning">
                 <i class="bi bi-award"></i>
               </p>
-              <p class="text-warning fw-bold fs-2">嗝來霉 與 米其林輪胎</p>
+              <p class="text-warning fw-bold fs-2">嗝來黴 與 米其林輪胎</p>
               <p class="text-warning fw-bold fs-5">全台唯一認證餐廳</p>
             </div>
           </div>
