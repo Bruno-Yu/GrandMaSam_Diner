@@ -201,9 +201,7 @@ export default {
           `${process.env.VUE_APP_API}/api/${process.env.VUE_APP_PATH}/cart`,
           { data },
         )
-        .then((res) => {
-          console.log(res);
-          // 清空局部讀取效果
+        .then(() => {
           this.isLoadingItem = '';
         });
     },
