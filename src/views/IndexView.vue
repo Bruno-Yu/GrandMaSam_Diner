@@ -32,10 +32,8 @@
     <div class="story-section row align-items-center gx-0">
       <div class="col text-center text-light px-3">
         <h2>關於我們</h2>
-        <p class="my-3 fs-5">
-          本餐廳的核心精神是: 自己的國家自己救 ; 自己的碗盤自己洗
-        </p>
-        <p class="my-3 fs-5">
+        <p>本餐廳的核心精神是: 自己的國家自己救 ; 自己的碗盤自己洗</p>
+        <p>
           餐點部分:
           除了各系列防腐劑漢堡外，並與各大連鎖超商合作，推出義大利麵，燉飯，炸雞及各式炸物小點系列，絕對難以滿足味蕾挑剔的您
         </p>
