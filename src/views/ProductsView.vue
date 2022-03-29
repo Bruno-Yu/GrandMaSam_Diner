@@ -234,7 +234,7 @@ export default {
       deep: true,
     },
   },
-  created() {
+  mounted() {
     this.getProducts();
   },
 };
