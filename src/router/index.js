@@ -85,6 +85,15 @@ const routes = [
     name: 'trueusLogin',
     component: () => import('../views/TrueusLogin.vue'),
   },
+  {
+    path: '/404',
+    name: '404',
+    component: () => import('../views/NotFound.vue'),
+  },
+  {
+    path: '/:pathMatch(.*)*',
+    redirect: '/404',
+  },
 ];
 
 const router = createRouter({

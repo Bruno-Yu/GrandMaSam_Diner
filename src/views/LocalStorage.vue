@@ -2,9 +2,7 @@
   <div class="container mt-3">
     <h1 class="text-center mt-5 fs-1 mb-3 fw-bolder">收藏</h1>
   </div>
-  {{ products }}
-  {{ favorites }}
-  {{ favProducts }}
+
   <div class="container">
     <div class="mt-4">
       <!-- 購物車列表 -->
@@ -15,9 +13,7 @@
           class="btn btn-outline-danger"
           type="button"
           @click="removeFavAll"
-          :disabled="
-            isLoadingItem === 'deleteAll' || cartData.carts.length === 0
-          "
+          :disabled="isLoadingItem === 'deleteAll' || favorites.length === 0"
         >
           <span
             class="spinner-grow spinner-grow-sm"
@@ -82,8 +78,8 @@
                 v-show="isLoadingItem === item.id"
               ></span>
               <span class="text-secondary fz-sm"
-                >單價 {{ item.price }}元 /</span
-              >
+                >{{ item.price }}元 / {{ item.unit }}
+              </span>
             </td>
             <td>
               <!-- 使用BS的input-group 將其群組化 -->
@@ -92,10 +88,10 @@
                 type="button"
                 class="btn btn-outline-secondary btn-sm"
                 :disabled="isLoadingItem === item.id"
+                @click="goToProductView(item.id)"
               >
-                <!-- @click="openProductModal(item.id)" -->
-                查看更多</button
-              >>
+                查看更多
+              </button>
             </td>
             <td>
               <button
@@ -114,10 +110,6 @@
           </tr>
         </tbody>
         <tfoot>
-          <tr>
-            <td></td>
-            <td colspan="3" class="text-end">總計</td>
-          </tr>
           <!-- <tr>
               <td></td>
               <td colspan="3" class="text-end text-success">折扣價</td>
@@ -129,12 +121,14 @@
         <button
           class="btn btn-danger fw-bolder"
           type="button"
-          @click="nextPage"
-          :disabled="
-            isLoadingItem === 'deleteAll' || cartData.carts.length === 0
-          "
+          @click="addAllToCart"
+          :disabled="isLoadingItem === 'addAll' || favorites.length === 0"
         >
-          檢視購物車
+          <span
+            class="spinner-grow spinner-grow-sm"
+            v-show="isLoadingItem === 'addAll'"
+          ></span>
+          全加到購物車
         </button>
       </div>
     </div>
@@ -168,20 +162,26 @@ export default {
     };
   },
   methods: {
-    getFavor() {
+    getFavor(products) {
       this.favorites.forEach((id) => {
-        this.favProducts = this.products.filter((item) => item.id === id);
+        this.favProducts.push(products.filter((item) => item.id === id));
       });
+      this.favProducts = this.favProducts.flat(1);
     },
     getProducts() {
-      const url = `${process.env.VUE_APP_API}/api/${process.env.VUE_APP_PATH}/products`;
       this.isLoading = true;
-      this.$http.get(url).then((res) => {
-        this.products = res.data.products;
-        console.log(this.products);
-        this.getFavor();
-        this.isLoading = false;
-      });
+      console.log('正確觸發');
+      this.$http
+        .get(
+          `${process.env.VUE_APP_API}/api/${process.env.VUE_APP_PATH}/products`,
+        )
+        .then((res) => {
+          console.log(res);
+          this.products = res.data.products;
+          console.log(this.products);
+          this.getFavor(this.products);
+          this.isLoading = false;
+        });
     },
 
     getCart() {
@@ -204,10 +204,12 @@ export default {
       this.favorites.push(id);
     },
     removeFromFavorites(id) {
+      this.isLoadingItem = 'id';
       const target = this.favorites.indexOf(id);
       if (target !== -1) {
         this.favorites.splice(target, 1);
         this.getFavor();
+        this.isLoadingItem = '';
       }
     },
     addToCart(id, qty = 1) {
@@ -231,6 +233,14 @@ export default {
           this.isLoadingItem = '';
         });
     },
+    addAllToCart() {
+      this.isLoadingItem = 'addAll';
+      this.favorites.forEach((id) => {
+        this.addToCart(id);
+      });
+      this.removeFavAll();
+    },
+
     // 對應購物車產品列表的 刪除品項 按鈕
     removeCartItem(id) {
       // 記得要帶入對應的item.id
@@ -271,8 +281,8 @@ export default {
           this.isLoadingItem = '';
         });
     },
-    nextPage() {
-      this.$router.push('/userOrders');
+    goToProductView(id) {
+      this.$router.push(`/productView/${id}`);
     },
   },
   watch: {
@@ -286,10 +296,10 @@ export default {
       },
       deep: true,
     },
-    created() {
-      // 取得購物車的資料
-      this.getProducts();
-    },
+  },
+  mounted() {
+    // 取得購物車的資料
+    this.getProducts();
   },
 };
 </script>
