@@ -1,7 +1,9 @@
 <template>
-  <FrontNavbar></FrontNavbar>
-  <router-view />
-  <FrontFooter></FrontFooter>
+  <div class="container-fluid w-100 gx-0">
+    <FrontNavbar class="row"></FrontNavbar>
+    <router-view class="row" />
+    <FrontFooter class="row"></FrontFooter>
+  </div>
 </template>
 
 <style lang="scss">

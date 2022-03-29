@@ -1,6 +1,6 @@
 <template>
-  <div class="bg-dark py-5">
-    <div class="container">
+  <div class="bg-dark py-5 gx-0">
+    <div class="container-fluid">
       <router-link
         class="fs-3 d-block navbar-brand link-light my-2 lh-1 text-center"
         style="font-family: 'Bangers', serif"
@@ -99,12 +99,12 @@
 
 <style>
 .footer-content {
-  max-width: 35rem;
-  margin-right: 3rem;
-  margin-bottom: 3rem;
+  max-width: 30rem;
+  margin-right: 2rem;
+  margin-bottom: 2rem;
 }
 .footer-contact {
-  max-width: 35rem;
+  max-width: 30rem;
 }
 </style>
 

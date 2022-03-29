@@ -1,11 +1,11 @@
 <template>
-  <div>
-    <h2 class="my-5 ms-2 fw-bold text-center">關於我們</h2>
+  <div class="gx-0">
+    <h2 class="my-5 fw-bold text-center gx-0">關於我們</h2>
     <div
-      class="container my-1 border border-secondary border-1 border-start-0 border-end-0 border-bottom-0"
+      class="container-fluid my-1 border border-secondary border-1 border-start-0 border-end-0 border-bottom-0 gx-0"
     >
-      <div class="row row-cols-1 d-flex justify-content-center">
-        <div class="col col-lg-6 mx-5">
+      <div class="row row-cols-1 d-flex justify-content-center gx-0">
+        <div class="col col-lg-6 mx-4">
           <h4 class="my-5 fw-bolder">起源</h4>
           <p class="text-muted">
             根據歷史文獻《 ??! 》第一部《His
@@ -20,7 +20,7 @@
           <div class="logo-origin"></div>
         </div>
       </div>
-      <div class="row row-cols-1 d-flex justify-content-center">
+      <div class="row row-cols-1 d-flex justify-content-center gx-0">
         <div class="col col-lg-9">
           <h4 class="my-5 my-lg-4 fw-bolder text-lg-center">集團</h4>
           <ul>
@@ -44,7 +44,9 @@
           </ul>
         </div>
       </div>
-      <div class="row row-cols-1 flex-row-reverse justify-content-center my-3">
+      <div
+        class="row row-cols-1 flex-row-reverse justify-content-center my-3 gx-0"
+      >
         <h4 class="mt-2 mb-1 my-lg-5 text-center fw-bolder">集團核心理念</h4>
         <div class="col col-lg-5 mx-2">
           <ul class="my-3 list-group">
@@ -95,10 +97,10 @@
           <div class="ourFounder"></div>
         </div>
       </div>
-      <div class="row my-3">
+      <div class="row my-3 gx-0">
         <h4 class="mt-2 mb-1 my-lg-5 text-center fw-bolder">榮譽獎章</h4>
       </div>
-      <div class="row row-cols-1 justify-content-center my-3">
+      <div class="row row-cols-1 justify-content-center my-3 gx-0">
         <div class="col col-lg-5 mx-2">
           <div style="height: 430px">
             <br />
@@ -118,7 +120,9 @@
           <div class="playboy-cover"></div>
         </div>
       </div>
-      <div class="row row-cols-1 flex-row-reverse justify-content-center my-3">
+      <div
+        class="row row-cols-1 flex-row-reverse justify-content-center my-3 gx-0"
+      >
         <div class="col col-lg-5 mx-2">
           <div style="height: 430px">
             <br />
@@ -138,7 +142,9 @@
           <div class="sex-equality"></div>
         </div>
       </div>
-      <div class="row row-cols-1 flex-row-reverse justify-content-center my-3">
+      <div
+        class="row row-cols-1 flex-row-reverse justify-content-center my-3 gx-0"
+      >
         <div class="col col-lg-5 mx-2">
           <div style="height: 430px">
             <h4 class="my-5 fw-bolder">立即與我們聯繫</h4>

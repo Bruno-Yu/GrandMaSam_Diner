@@ -1,5 +1,5 @@
 <template>
-  <div id="header" style="top: 0p">
+  <div id="header" style="top: 0p" class="gx-0">
     <nav class="navbar navbar-expand-lg navbar-light bg-light fix-top">
       <div class="container-fluid d-flex">
         <router-link

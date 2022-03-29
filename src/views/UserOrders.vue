@@ -1,5 +1,5 @@
 <template>
-  <div class="container mt-3">
+  <div class="container-fluid mt-3">
     <h1 class="text-center mt-5 fs-1 mb-3 fw-bolder">訂單</h1>
     <nav class="d-flex justify-content-center">
       <router-link

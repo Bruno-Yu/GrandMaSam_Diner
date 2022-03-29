@@ -1,7 +1,7 @@
 <template>
   <header class="header-banner">
     <div
-      class="container d-flex justify-content-center align-items-center flex-direction-vertical g-2"
+      class="container-fluid d-flex justify-content-center align-items-center flex-direction-vertical"
       style="height: 100%"
     >
       <div
@@ -28,8 +28,8 @@
       </div>
     </div>
   </header>
-  <div class="container-fluid px-1">
-    <div class="story-section row align-items-center">
+  <div class="container-fluid">
+    <div class="story-section row align-items-center gx-0">
       <div class="col text-center text-light px-3">
         <h2>關於我們</h2>
         <p class="my-3 fs-5">
@@ -37,7 +37,7 @@
         </p>
       </div>
     </div>
-    <div class="row">
+    <div class="row gx-0">
       <div class="col-md-6 mt-2">
         <div class="product-intro"></div>
       </div>
@@ -54,7 +54,7 @@
         </div>
       </div>
     </div>
-    <div class="row flex-row-reverse">
+    <div class="row flex-row-reverse gx-0">
       <div class="col-md-6 my-1">
         <div class="product-intro-2"></div>
       </div>
@@ -79,13 +79,13 @@
         </div>
       </div>
     </div>
-    <div class="row row-cols-1 row-cols-lg-3 mt-2">
+    <div class="row row-cols-1 row-cols-lg-3 mt-2 gx-0">
       <div
         class="col d-none d-lg-block product-intro-3"
         style="height: 450px"
       ></div>
       <div class="col product-intro-md" style="height: 450px">
-        <div class="container m-auto text-auto text-center text-light">
+        <div class="container text-auto text-center text-light">
           <div class="row align-items-center mt-5">
             <div class="col">
               <br />
