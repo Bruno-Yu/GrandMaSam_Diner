@@ -59,18 +59,6 @@
                 "
                 :style="{ backgroundImage: `url(${product.imageUrl})` }"
               ></div>
-              <!-- <div
-                class="card-img-top rounded-0"
-                style="
-                  height: 200px;
-                  width: 350px;
-                  background-size: cover;
-                  background-position: center center;
-                  background-blend-mode: multiply;
-                  background-color: #9cb2c7;
-                "
-                :style="{ backgroundImage: `url(${product.imageUrl})` }"
-              ></div> -->
 
               <router-link
                 to=""
@@ -149,7 +137,6 @@ export default {
       productId: '',
       addNum: 0,
       num: 0,
-      // 局部讀取效果對應變數
       isLoadingItem: '',
       categories: [],
       current_page: 1,
@@ -204,14 +191,11 @@ export default {
       }
     },
     addToCart(id, qty = 1) {
-      // post cart的api資料格式
       const data = {
         product_id: id,
         qty,
       };
-      // 局部讀取效果賦值對應id
       this.isLoadingItem = id;
-      // axios.post 加入購物車列表
       this.$http
         .post(
           `${process.env.VUE_APP_API}/api/${process.env.VUE_APP_PATH}/cart`,

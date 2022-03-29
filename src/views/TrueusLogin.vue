@@ -1,6 +1,6 @@
 <template>
-  <div class="container">
-    <div class="row justify-content-center">
+  <div class="container-fluid">
+    <div class="row justify-content-center gx-0">
       <h1 class="h3 my-5 font-weight-normal text-center fw-bolder">
         管理員請先登入
       </h1>
@@ -38,7 +38,7 @@
       </div>
     </div>
     <p class="mt-5 mb-3 text-muted text-center">
-      &copy; 2022~∞ - 六角學院關心您的肝與助教們的肝
+      &copy; 2022~∞ - 八角學院關心您的肝與助教們的肝
     </p>
     <p class="fw-light mb-3 text-muted text-center">改編自辛苦的助教Ray</p>
   </div>
