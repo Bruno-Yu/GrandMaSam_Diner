@@ -195,6 +195,7 @@ export default {
     },
     saveToFavorites(id) {
       this.favorites.push(id);
+      window.localStorage.setItem('favorites', JSON.stringify(this.favorites));
     },
     removeFromFavorites(id) {
       const target = this.favorites.indexOf(id);
@@ -223,17 +224,17 @@ export default {
         });
     },
   },
-  watch: {
-    favorites: {
-      handler() {
-        window.localStorage.setItem(
-          'favorites',
-          JSON.stringify(this.favorites),
-        );
-      },
-      deep: true,
-    },
-  },
+  // watch: {
+  //   favorites: {
+  //     handler() {
+  //       window.localStorage.setItem(
+  //         'favorites',
+  //         JSON.stringify(this.favorites),
+  //       );
+  //     },
+  //     deep: true,
+  //   },
+  // },
   mounted() {
     this.getProducts();
   },
