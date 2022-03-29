@@ -91,9 +91,11 @@
               <br />
               <br />
               <h3 class="my-5">獻出你的錢包，讓台灣再次偉大</h3>
-              <p class="text-muted">
-                本餐廳也是寵物友善餐廳，歡迎各位貴賓攜帶您圈養的畜牲前來
+              <p class="fs-1 text-warning">
+                <i class="bi bi-award"></i>
               </p>
+              <p class="text-warning fw-bold fs-2">嗝來霉 與 米其林輪胎</p>
+              <p class="text-warning fw-bold fs-5">全台唯一認證餐廳</p>
             </div>
           </div>
         </div>

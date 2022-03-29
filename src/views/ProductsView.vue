@@ -29,14 +29,14 @@
                       type="button"
                       class="fw-bold btn btn-outline-light link-dark"
                       @click="
-                        (num += 1) % 2 ? getProducts(page, cat) : getProducts()
+                        (num = !num) ? getProducts(page, cat) : getProducts()
                       "
                     >
                       {{ cat }}
                     </button>
                   </li>
                 </ul>
-                <p v-show="!((num += 1) % 2)" class="text-secondary small mt-2">
+                <p v-show="num" class="text-secondary small mt-2">
                   說明: 再點一下 <span class="fw-bold"> 類別鈕 </span>>回到
                   <span class="fw-bold"> 全類別 </span>
                 </p>
@@ -136,7 +136,7 @@ export default {
       products: [],
       productId: '',
       addNum: 0,
-      num: 0,
+      num: false,
       isLoadingItem: '',
       categories: [],
       current_page: 1,

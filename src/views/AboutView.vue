@@ -11,7 +11,7 @@
             根據歷史文獻《 ??! 》第一部《His
             Story》篇的解釋，此符號起源於公元前8000年，我們集團稱此為 榮譽元年
             ，有人認為此符號是出自上古性評會，也有說法是此符號是出自 耶路撒冷
-            朝聖者路上的石板天然紋路，有文字濟載在西元元年時，在著名歷史事件
+            朝聖者路上的石板天然紋路，有文字記載在西元元年時，在著名歷史事件
             摩東 開天闢地後，自然力量所產生的 特殊符號 ，
             後來在我們集團創辦人感悟了該符號所代表的意義後，將其作為本集團的商標與信仰
           </p>
@@ -147,12 +147,12 @@
       >
         <div class="col col-lg-5 mx-2">
           <div style="height: 430px">
-            <h4 class="my-5 fw-bolder">立即與我們聯繫</h4>
+            <h4 class="my-5 fw-bolder">立即斗內作者</h4>
 
             <form>
               <div class="mb-3">
                 <label for="InputEmail1" class="form-label fw-bold"
-                  >信箱帳號</label
+                  >銀行帳號</label
                 >
                 <input
                   type="email"
@@ -161,7 +161,7 @@
                   aria-describedby="emailHelp"
                 />
                 <div id="emailHelp" class="form-text">
-                  We'll never share your email with anyone else.
+                  我們不會將您的資訊分享給他人
                 </div>
               </div>
               <div class="mb-3">
@@ -177,7 +177,7 @@
               <div class="mb-3 form-check">
                 <input type="checkbox" class="form-check-input" id="Check1" />
                 <label class="form-check-label" for="Check1"
-                  >收到我們最新的資訊</label
+                  >收到我們最新的匯款需求</label
                 >
               </div>
               <div class="d-flex justify-content-end">

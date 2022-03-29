@@ -172,8 +172,8 @@ export default {
     onSubmit() {
       const url = `${process.env.VUE_APP_API}/api/${process.env.VUE_APP_PATH}/order`;
       const order = this.form;
-      this.$http.post(url, { data: order }).then((response) => {
-        alert(response.data.message);
+      this.$http.post(url, { data: order }).then(() => {
+        // alert(response.data.message);
         this.$refs.form.resetForm();
         this.$router.push('/orderCheck');
       });
