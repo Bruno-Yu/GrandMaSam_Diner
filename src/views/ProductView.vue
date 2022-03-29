@@ -87,11 +87,14 @@
             </div>
           </div>
           <div class="col-6">
-            <router-link
+            <button
+              type="button"
               to="/userOrders"
-              class="text-nowrap btn btn-dark w-100 py-2"
-              >加入購物車</router-link
+              class="text-nowrap btn btn-danger w-100 fw-bold py-2"
+              @click="addToCart(product.id)"
             >
+              加入購物車
+            </button>
           </div>
         </div>
       </div>
@@ -233,7 +236,7 @@ export default {
         .then((response) => {
           this.isLoading = false;
           this.$httpMessageState(response, '加入購物車');
-          this.$router.push('/user/cart');
+          this.$router.push('/userOrders');
         })
         .catch((error) => {
           this.isLoading = false;
