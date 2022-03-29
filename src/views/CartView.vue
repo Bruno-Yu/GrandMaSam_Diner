@@ -26,10 +26,10 @@
         <thead>
           <tr class="text-start">
             <th>刪除鍵</th>
-            <th>預覽圖</th>
+            <th class="d-none d-lg-block">預覽圖</th>
             <th>品名</th>
             <th>數量/單位</th>
-            <th>單價/總價</th>
+            <th class="d-none d-lg-block">單價/總價</th>
           </tr>
         </thead>
         <tbody v-if="cartData.carts">
@@ -58,7 +58,7 @@
                 x
               </button>
             </td>
-            <td>
+            <td class="d-none d-lg-table-cell">
               <div
                 style="
                   height: 100px;
@@ -111,7 +111,7 @@
                 </div>
               </div>
             </td>
-            <td class="text-end">
+            <td class="d-none d-lg-table-cell">
               <span
                 class="spinner-grow spinner-grow-sm"
                 v-show="isLoadingItem === item.id"

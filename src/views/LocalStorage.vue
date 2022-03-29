@@ -28,10 +28,10 @@
         <thead>
           <tr class="text-start">
             <th>刪除鍵</th>
-            <th>預覽圖</th>
+            <th class="d-none d-lg-table-cell">預覽圖</th>
             <th>品名</th>
             <th>單價</th>
-            <th>產品細節</th>
+            <th class="d-none d-lg-table-cell">產品細節</th>
             <th>加入購物車</th>
           </tr>
         </thead>
@@ -57,7 +57,7 @@
                 x
               </button>
             </td>
-            <td>
+            <td class="d-none d-lg-table-cell">
               <div
                 style="
                   height: 100px;
@@ -81,7 +81,7 @@
                 >{{ item.price }}元 / {{ item.unit }}
               </span>
             </td>
-            <td>
+            <td class="d-none d-lg-table-cell">
               <!-- 使用BS的input-group 將其群組化 -->
               <!-- 查看更多按鈕，對應api為 客戶購物-產品(products)中 GET product/{id}的api -->
               <button
