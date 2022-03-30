@@ -5,7 +5,7 @@
       class="container-fluid my-1 border border-secondary border-1 border-start-0 border-end-0 border-bottom-0 gx-0"
     >
       <div class="row row-cols-1 d-flex justify-content-center gx-0">
-        <div class="col col-lg-6 mx-4">
+        <div class="col col-lg-5 me-lg-5 header-content">
           <h4 class="my-5 fw-bolder">起源</h4>
           <p class="text-muted">
             根據歷史文獻《 ??! 》第一部《His
@@ -16,8 +16,10 @@
             後來在我們集團創辦人感悟了該符號所代表的意義後，將其作為本集團的商標與信仰
           </p>
         </div>
-        <div class="col col-lg-3 my-3 mx-3" style="background-color: #f7f4f0">
-          <div class="logo-origin"></div>
+        <div class="col col-lg-3">
+          <div class="my-3 ratio ratio-4x3" style="background-color: #f7f4f0">
+            <div class="logo-origin"></div>
+          </div>
         </div>
       </div>
       <div class="row row-cols-1 d-flex justify-content-center gx-0">
@@ -97,49 +99,53 @@
           <div class="ourFounder"></div>
         </div>
       </div>
-      <div class="row my-3 gx-0">
-        <h4 class="mt-2 mb-1 my-lg-5 text-center fw-bolder">榮譽獎章</h4>
-      </div>
-      <div class="row row-cols-1 justify-content-center my-3 gx-0">
-        <div class="col col-lg-5 mx-2">
-          <div style="height: 430px">
-            <br />
-            <br />
-
-            <p class="fs-5 fw-bold mt-5 text-secondary">
-              榮獲 2000年度最佳性福企業認證
-            </p>
-            <p class="text-muted">
-              在1990
-              年我們集團的創辦人登上了當時最有影響力的雜誌封面，成為每個人夢想中成為的男人，創辦人有感於此，在公司內部編撰了公司員工的福利法，並在多年耕耘後，由集團內部的公正評委評選為
-              2000年度最佳性福企業認證
-            </p>
-          </div>
-        </div>
-        <div class="col col-lg-5 my-3">
-          <div class="playboy-cover"></div>
-        </div>
-      </div>
       <div
-        class="row row-cols-1 flex-row-reverse justify-content-center my-3 gx-0"
+        class="row row-cols-1 row-cols-lg-2 justify-content-center mt-3 mb-1 gx-0"
       >
-        <div class="col col-lg-5 mx-2">
-          <div style="height: 430px">
-            <br />
-            <br />
-            <br />
-            <br />
-            <p class="fs-5 fw-bold mt-5 text-secondary">
-              榮獲 性別平等 餐廳認證
-            </p>
-            <p class="text-muted">
-              我們相信，在男性的世界大家都是平等，更顯示我們偉大的領導英明的遠見與價值觀，也為此本餐飲在2021年獲得本集團總裁所創立的
-              性別平等基金會 認證，成為績優的優良廠商
-            </p>
+        <div class="col col-lg-5 me-4">
+          <h4 class="mt-lg-2 my-lg-5 text-center text-lg-start fw-bolder">
+            榮譽獎章
+          </h4>
+          <div class="row d-flex align-items-center">
+            <div class="col">
+              <p class="fs-5 fw-bold mt-lg-1 text-secondary">
+                榮獲 2000年度最佳性福企業認證
+              </p>
+              <p class="text-muted">
+                在1990
+                年我們集團的創辦人登上了當時最有影響力的雜誌封面，成為每個人夢想中成為的男人，創辦人有感於此，在公司內部編撰了公司員工的福利法，並在多年耕耘後，由集團內部的公正評委評選為
+                2000年度最佳性福企業認證
+              </p>
+            </div>
           </div>
         </div>
-        <div class="col col-lg-5 my-3">
-          <div class="sex-equality"></div>
+        <div class="col col-lg-5 my-lg-3 ms-3">
+          <div class="mt-lg-3 mb-1 ratio ratio-4x3">
+            <div class="playboy-cover"></div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="row row-cols-1 row-cols-lg-2 flex-row-reverse justify-content-center my-3 gx-0"
+      >
+        <div class="col col-lg-4 mt-lg-5 ms-2">
+          <div class="row d-flex mt-lg-5 align-items-center">
+            <div class="col">
+              <p class="fs-5 mt-lg-5 fw-bold text-secondary">
+                榮獲 性別平等 餐廳認證
+              </p>
+              <p class="text-muted mt-3">
+                我們相信，在男性的世界大家都是平等，更顯示我們偉大的領導英明的遠見與價值觀，也為此本餐飲在2021年獲得本集團總裁所創立的
+                性別平等基金會 認證，成為績優的優良廠商
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col col-lg-5">
+          <div class="my-3 ratio ratio-4x3">
+            <div class="sex-equality"></div>
+          </div>
         </div>
       </div>
       <div
@@ -215,11 +221,11 @@
 <style>
 .logo-origin {
   background-image: url(https://cdn.pixabay.com/photo/2018/02/01/18/39/trump-3123765_960_720.png);
-  height: 280px;
-  background-position: center center;
+  background-position: top center;
   background-size: cover;
   background-color: #f7f4f0;
 }
+
 .ourFounder {
   background-image: url(https://cdn.pixabay.com/photo/2017/01/24/13/02/donald-trump-2005343_960_720.png);
   height: 470px;
@@ -238,7 +244,6 @@
 }
 .sex-equality {
   background-image: url(https://cdn.pixabay.com/photo/2015/08/22/22/47/woman-902214_960_720.jpg);
-  height: 430px;
   background-position: center center;
   background-size: cover;
 }
@@ -258,5 +263,9 @@ iframe {
   height: 100%;
   width: 100%;
   background-color: #b8babdd5;
+}
+.header-content {
+  max-width: 50rem;
+  margin-bottom: 2rem;
 }
 </style>
