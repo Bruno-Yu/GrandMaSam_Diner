@@ -1,7 +1,7 @@
 <template>
-  <div id="header" style="top: 0p" class="gx-0">
+  <div id="header" style="top: 0p" class="container-fluid gx-0 gx-lg-1">
     <nav class="navbar navbar-expand-lg navbar-light bg-light fix-top">
-      <div class="container-fluid d-flex">
+      <div class="container d-flex">
         <router-link
           class="fs-3 d-block navbar-brand my-0 lh-1"
           style="font-family: 'Bangers', serif"

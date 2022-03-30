@@ -1,34 +1,35 @@
 <template>
-  <header class="header-banner">
-    <div
-      class="container-fluid d-flex justify-content-center align-items-center flex-direction-vertical"
-      style="height: 100%"
-    >
+  <div class="container-fluid gx-1 gx-lg-0">
+    <header class="header-banner">
       <div
-        class="row justify-content-center justify-content-lg-end"
-        style="width: 100%; height: 40%"
+        class="row d-flex justify-content-center align-items-center flex-direction-vertical"
+        style="height: 100%"
       >
-        <div class="col-6 col-lg-4" style="border: 1px solid #b8babdd5">
-          <div class="d-flex justify-content-center justify-content-lg-start">
-            <div>
-              <h2 class="text-light mt-4 fw-bold">獻出你的錢包</h2>
-              <h2 class="text-light fw-bold">讓台灣再次偉大</h2>
+        <div
+          class="row justify-content-center justify-content-lg-end"
+          style="width: 100%; height: 40%"
+        >
+          <div class="col-6 col-lg-4" style="border: 1px solid #b8babdd5">
+            <div class="d-flex justify-content-center justify-content-lg-start">
+              <div>
+                <h2 class="text-light mt-4 fw-bold">獻出你的錢包</h2>
+                <h2 class="text-light fw-bold">讓台灣再次偉大</h2>
+              </div>
             </div>
-          </div>
-          <div class="d-flex justify-content-center mt-4">
-            <router-link
-              to="/productsView"
-              type="button"
-              class="btn btn-warning link-dark fw-bolder fs-4 border border-dark border-3"
-              style="width: 100%"
-              >馬上行動</router-link
-            >
+            <div class="d-flex justify-content-center mt-4">
+              <router-link
+                to="/productsView"
+                type="button"
+                class="btn btn-warning link-dark fw-bolder fs-4 border border-dark border-3"
+                style="width: 100%"
+                >馬上行動</router-link
+              >
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </header>
-  <div class="container-fluid">
+    </header>
+
     <div class="story-section row align-items-center gx-0">
       <div class="col text-center text-light px-3">
         <h2>關於我們</h2>

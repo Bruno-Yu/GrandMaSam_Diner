@@ -1,8 +1,8 @@
 <template>
-  <div class="container-fluid w-100 gx-0">
-    <FrontNavbar class="row"></FrontNavbar>
-    <router-view class="row" />
-    <FrontFooter class="row"></FrontFooter>
+  <div class="container-fluid gx-0.5 w-100">
+    <FrontNavbar></FrontNavbar>
+    <router-view />
+    <FrontFooter></FrontFooter>
   </div>
 </template>
 
