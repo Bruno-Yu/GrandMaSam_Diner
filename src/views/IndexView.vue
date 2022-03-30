@@ -9,7 +9,10 @@
           class="row justify-content-center justify-content-lg-end"
           style="width: 100%; height: 40%"
         >
-          <div class="col-6 col-lg-4" style="border: 1px solid #b8babdd5">
+          <div
+            class="col-10 col-md-6 col-lg-4 me-lg-5"
+            style="border: 1px solid #b8babdd5"
+          >
             <div class="d-flex justify-content-center justify-content-lg-start">
               <div>
                 <h2 class="text-light mt-4 fw-bold">獻出你的錢包</h2>

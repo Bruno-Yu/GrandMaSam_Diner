@@ -100,6 +100,14 @@ const router = createRouter({
   history: createWebHashHistory(),
   routes,
   linkActiveClass: 'active',
+  scrollBehavior(to, from) {
+    if (to.fullPath.match('about') && from.fullPath.match('404')) {
+      return {
+        top: 3400,
+      };
+    }
+    return {};
+  },
 });
 
 export default router;

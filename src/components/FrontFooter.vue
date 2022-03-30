@@ -69,7 +69,7 @@
               </div>
             </div>
             <div class="row d-flex justify-content-center">
-              <div class="col-6 col-lg-9 footer-content">
+              <div class="col-8 col-md-6 col-lg-9 footer-content">
                 <ul class="list-unstyled text-light ms-lg-5">
                   <li class="small fw-light my-1">
                     公司: 山姆大嬸餐飲投機無限公司

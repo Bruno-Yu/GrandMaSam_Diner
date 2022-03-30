@@ -102,7 +102,7 @@
       <div
         class="row row-cols-1 row-cols-lg-2 justify-content-center mt-3 mb-1 gx-0"
       >
-        <div class="col col-lg-5 me-4">
+        <div class="col-10 col-lg-5 me-4">
           <h4 class="mt-lg-2 my-lg-5 text-center text-lg-start fw-bolder">
             榮譽獎章
           </h4>
@@ -119,7 +119,7 @@
             </div>
           </div>
         </div>
-        <div class="col col-lg-5 my-lg-3 ms-3">
+        <div class="col col-lg-5 my-3 ms-3">
           <div class="mt-lg-3 mb-1 ratio ratio-4x3">
             <div class="playboy-cover"></div>
           </div>
@@ -129,10 +129,10 @@
       <div
         class="row row-cols-1 row-cols-lg-2 flex-row-reverse justify-content-center my-3 gx-0"
       >
-        <div class="col col-lg-4 mt-lg-5 ms-2">
+        <div class="col-10 col-lg-4 mt-3 mt-lg-5 ms-2">
           <div class="row d-flex mt-lg-5 align-items-center">
             <div class="col">
-              <p class="fs-5 mt-lg-5 fw-bold text-secondary">
+              <p class="fs-5 mt-5 fw-bold text-secondary">
                 榮獲 性別平等 餐廳認證
               </p>
               <p class="text-muted mt-3">

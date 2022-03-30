@@ -1,8 +1,7 @@
 <template>
-  <div class="mt-4"></div>
   <h2 class="my-5 ms-2 fw-bold text-center">產品/服務列表</h2>
   <div class="container mb-5 mt-md-5 mt-3mb-7">
-    <div class="row g-2">
+    <div class="row g-1">
       <div class="col-md-2">
         <div
           class="border border-bottom border-top-0 border-start-0 border-end-0 mb-3 mx-3"
