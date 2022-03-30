@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="container-fluid">
     <div class="row align-items-center">
       <div class="col-md-7">
         <Swiper
@@ -39,10 +39,10 @@
         <nav aria-label="breadcrumb">
           <ol class="breadcrumb bg-white px-0 mb-0 py-3">
             <li class="breadcrumb-item">
-              <router-link class="text-muted" to="">首頁</router-link>
+              <router-link class="text-muted" to="/">首頁</router-link>
             </li>
             <li class="breadcrumb-item">
-              <router-link class="text-muted" to="./productsView"
+              <router-link class="text-muted" to="/productsView"
                 >商店</router-link
               >
             </li>
@@ -54,7 +54,7 @@
           <del>{{ product.origin_price }}</del>
         </p>
         <p class="h4 fw-bold text-end">NT${{ product.price }}</p>
-        <div class="row align-items-center">
+        <div class="row mb-3 align-items-center">
           <div class="col-6">
             <div class="input-group my-3 bg-light rounded">
               <div class="input-group-prepend">
@@ -63,7 +63,7 @@
                   type="button"
                   id="button-addon1"
                 >
-                  <i class="fas fa-minus"></i>
+                  <i class="bi bi-dash"></i>
                 </button>
               </div>
               <input
@@ -80,7 +80,7 @@
                   type="button"
                   id="button-addon2"
                 >
-                  <i class="fas fa-plus"></i>
+                  <i class="bi bi-plus"></i>
                 </button>
                 <span class="text fw-dark lh-lg">{{ product.unit }}</span>
               </div>
@@ -97,20 +97,24 @@
             </button>
           </div>
         </div>
+        <div
+          class="row my-5 justify-content-center border border-secondary border-2"
+        >
+          <div class="col-6">
+            <h3 class="text-muted fw-bold">商品規格</h3>
+            <p class="text-muted">
+              {{ product.content }}
+            </p>
+          </div>
+          <div class="col-6">
+            <h3 class="fw-bold">商品介紹</h3>
+            <p>
+              {{ product.description }}
+            </p>
+          </div>
+        </div>
       </div>
-    </div>
-    <div class="row my-5">
-      <div class="col-md-4">
-        <p>
-          {{ product.content }}
-        </p>
-      </div>
-      <div class="col-md-3">
-        <p class="text-muted">
-          {{ product.description }}
-        </p>
-      </div>
-      <hr />
+      <hr class="my-5" />
       <h3 class="fw-bold mb-4">購買須知</h3>
       <p class="text-muted">
         寄送時間： 預計訂單成立後 7
@@ -133,37 +137,50 @@
       </p>
       <hr />
       <h3 class="fw-bold">您可能還會喜歡</h3>
-      <div class="swiper-container mt-4 mb-5">
-        <div class="swiper-wrapper">
-          <div v-for="(item, key) in products" :key="key" class="swiper-slide">
-            <div class="card border-0 mb-4 position-relative">
-              <div
-                class="card-img-top rounded-0 ratio ratio-4x3"
-                style="
-                  background-size: cover;
-                  background-position: center center;
-                  background-blend-mode: multiply;
-                  background-color: #9cb2c7;
-                  max-height: 300px;
-                "
-                :style="{ backgroundImage: `url(${item.imageUrl})` }"
-              >
-                <a href="#" class="text-dark"> </a>
-              </div>
-              <div class="card-body p-0">
-                <h4 class="mb-0 mt-3"><a href="#">item.title</a></h4>
-                <p class="card-text mb-0">
-                  NT$ {{ item.price }}
-                  <span class="text-muted"
-                    ><del>NT${{ item.origin_price }}</del></span
-                  >
-                </p>
-                <p class="text-muted mt-3"></p>
-              </div>
-            </div>
+      <swiper
+        :modules="modules"
+        :slides-per-view="3"
+        :space-between="50"
+        autoplay
+        :breakpoints="swiper.breakpoints"
+      >
+        <swiper-slide
+          class="card border-0 mb-4 position-relative position-relative"
+          v-for="item in products"
+          :key="item.id"
+        >
+          <div
+            class="swiper-slide-inner"
+            style="
+              height: 20rem;
+              background-position: center center;
+              background-size: cover;
+              background-color: #9cb2c7;
+              background-blend-mode: multiply;
+            "
+            :style="{ backgroundImage: `url(${item.imageUrl})` }"
+          >
+            <a href="#" class="text-dark"> </a>
           </div>
-        </div>
-      </div>
+          <div class="card-body p-0">
+            <h4 class="mb-0 mt-3">
+              <router-link
+                :to="{ name: 'Product', params: { id: `${product.id}` } }"
+                class="link-dark fw-bold text-decoration-none"
+              >
+                {{ item.title }}
+              </router-link>
+            </h4>
+            <p class="card-text mb-0">
+              NT$ {{ item.price }}
+              <span class="text-muted"
+                ><del>NT${{ item.origin_price }}</del></span
+              >
+            </p>
+            <p class="text-muted mt-3"></p>
+          </div>
+        </swiper-slide>
+      </swiper>
     </div>
   </div>
 </template>
@@ -175,19 +192,15 @@
 </style>
 
 <script>
-// eslint-disable-next-line object-curly-newline
-import { Navigation, Pagination } from 'swiper';
-
 import { Swiper, SwiperSlide } from 'swiper/vue';
-
-// import 'swiper/swiper.scss';
-// import 'swiper/modules/navigation/navigation.min.css';
-// import 'swiper/modules/pagination/pagination.min.css';
-
-// import 'swiper/swiper-bundle.css';
-// import 'swiper/modules/navigation/navigation.min.css';
-// import 'swiper/modules/pagination/pagination.min.css';
-// import 'swiper/modules/scrollbar/scrollbar.min.css';
+// eslint-disable-next-line object-curly-newline
+import {
+  Navigation,
+  Pagination,
+  Autoplay,
+  EffectCoverflow,
+  FreeMode,
+} from 'swiper';
 
 export default {
   data() {
@@ -196,8 +209,35 @@ export default {
       product: {},
       products: [],
       id: '',
-      modules: [Navigation, Pagination],
-      mySwiper: {},
+      modules: [Navigation, Pagination, Autoplay, EffectCoverflow, FreeMode],
+      swiper: {
+        autoplay: {
+          delay: 3000,
+          disableOnInteraction: false,
+        },
+        breakpoints: {
+          0: {
+            slidesPerView: 1,
+          },
+          768: {
+            slidesPerView: 2,
+            spaceBetween: 30,
+          },
+          1024: {
+            slidesPerView: 3,
+            spaceBetween: 50,
+          },
+        },
+        pagination: {
+          el: '.swiper-pagination',
+        },
+
+        // Navigation arrows
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+      },
     };
   },
   components: {
@@ -252,3 +292,23 @@ export default {
   },
 };
 </script>
+
+<style>
+.swiper-slide-inner {
+  box-shadow: 1px 1px 10px #696969;
+  border-radius: 1rem;
+}
+.swiper-free-mode > .swiper-wrapper {
+  transition-timing-function: linear;
+  margin: 0 auto;
+}
+.swiper-button-next {
+  color: #dde3ee;
+}
+.swiper-button-prev {
+  color: #dde3ee;
+}
+.swiper-pagination {
+  color: #dde3ee;
+}
+</style>
