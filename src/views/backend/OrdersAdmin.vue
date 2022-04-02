@@ -12,60 +12,62 @@
         <th scope="col">編輯</th>
       </tr>
     </thead>
-    <tbody>
-      <div v-for="(item, key) in orders" :key="key">
-        <tr v-if="orders.length" :class="{ 'text-secondary': !item.is_paid }">
-          <td>{{ item.id }}</td>
-          <td>{{ item.create_at }}</td>
-          <td>{{ item.user.email }}</td>
-          <td>
-            <ul class="list-group-numbered">
-              <li
-                class="list-group-item"
-                v-for="(product, index) in item.products"
-                :key="index"
-              >
-                {{ product.product.title }} 數量：{{ product.qty }}
-                {{ product.product.unit }}
-              </li>
-            </ul>
-          </td>
-          <td class="text-right">{{ item.total }} 元</td>
-          <td>
-            <div class="form-check form-switch">
-              <input
-                class="form-check-input"
-                type="checkbox"
-                :id="`switch${item.id}`"
-                v-model="item.is_paid"
-                @change="updatePaid(item)"
-              />
-              <label class="form-check-label" :for="`switch${item.id}`">
-                <span v-if="item.is_paid">已付款</span>
-                <span v-else>未付款</span>
-              </label>
-            </div>
-          </td>
-          <td>
-            <div class="btn-group">
-              <button
-                class="btn btn-outline-primary btn-sm"
-                type="button"
-                @click="openModal(item)"
-              >
-                檢視
-              </button>
-              <button
-                class="btn btn-outline-danger btn-sm"
-                type="button"
-                @click="openDelModal(item)"
-              >
-                刪除
-              </button>
-            </div>
-          </td>
-        </tr>
-      </div>
+    <tbody v-if="orders.length">
+      <tr
+        v-for="(item, key) in orders"
+        :key="key"
+        :class="{ 'text-secondary': !item.is_paid }"
+      >
+        <td>{{ item.id }}</td>
+        <td>{{ item.create_at }}</td>
+        <td>{{ item.user.email }}</td>
+        <td>
+          <ul class="list-group-numbered">
+            <li
+              class="list-group-item"
+              v-for="(product, index) in item.products"
+              :key="index"
+            >
+              {{ product.product.title }} 數量：{{ product.qty }}
+              {{ product.product.unit }}
+            </li>
+          </ul>
+        </td>
+        <td class="text-right">{{ item.total }} 元</td>
+        <td>
+          <div class="form-check form-switch">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              :id="`switch${item.id}`"
+              v-model="item.is_paid"
+              @change="updatePaid(item)"
+            />
+            <label class="form-check-label" :for="`switch${item.id}`">
+              <span v-if="item.is_paid">已付款</span>
+              <span v-else>未付款</span>
+            </label>
+          </div>
+        </td>
+        <td>
+          <div class="btn-group">
+            <button
+              class="btn btn-outline-primary btn-sm"
+              type="button"
+              @click="openModal(item)"
+            >
+              檢視
+            </button>
+            <button
+              class="btn btn-outline-danger btn-sm"
+              type="button"
+              @click="openDelModal(item)"
+            >
+              刪除
+            </button>
+          </div>
+        </td>
+      </tr>
     </tbody>
   </table>
   <OrderDetail
