@@ -47,9 +47,7 @@
 <script>
 export default {
   methods: {
-    // 登入鈕
     login() {
-      // 抓取使用者輸入資訊
       // EMAIL 輸入欄DOM元素
       const InputEmail = document.querySelector('#username');
       // PASSWORD輸入欄DOM元素

@@ -112,11 +112,9 @@
 export default {
   data() {
     return {
-      // 購物車列表
       cartData: {
         carts: [],
       },
-      // 局部讀取效果對應變數
       isLoadingItem: '',
       form: {
         user: {
@@ -131,23 +129,19 @@ export default {
   },
   methods: {
     addToCart(id, qty = 1) {
-      // post cart的api資料格式
       const data = {
         product_id: id,
         qty,
       };
       // 局部讀取效果賦值對應id
       this.isLoadingItem = id;
-      // axios.post 加入購物車列表
       this.$http
         .post(
           `${process.env.VUE_APP_API}/api/${process.env.VUE_APP_PATH}/cart`,
           { data },
         )
         .then(() => {
-          // 重新取得購物車內容
           this.getCart();
-          // 清空局部讀取效果
           this.isLoadingItem = '';
         });
     },
@@ -155,11 +149,6 @@ export default {
       this.$http
         .get(`${process.env.VUE_APP_API}/api/${process.env.VUE_APP_PATH}/cart`)
         .then((res) => {
-          console.log(res);
-          // 將購物車資料賦值至根元件資料中
-          // 購物車api回傳的response物件中有兩層data，2層data後的carts陣列，是為已加入購物車的品項內容(array)
-          // carts內品項的 價格有分 total:加入優惠券前 final_total:優惠券打折後最終結帳的價格
-          // 所以存取的時候是res.data.data
           this.cartData = res.data.data;
         });
     },
@@ -168,12 +157,10 @@ export default {
       const url = `${process.env.VUE_APP_API}/api/${process.env.VUE_APP_PATH}/order`;
       const order = this.form;
       this.$http.post(url, { data: order }).then(() => {
-        // alert(response.data.message);
         this.$refs.form.resetForm();
         this.$router.push('/orderCheck');
       });
     },
-    // 不得為空
     noEmpty(value) {
       return value ? true : '此欄不得為空';
     },
@@ -186,7 +173,6 @@ export default {
     },
   },
   mounted() {
-    // 取得購物車的資料
     this.getCart();
   },
 };

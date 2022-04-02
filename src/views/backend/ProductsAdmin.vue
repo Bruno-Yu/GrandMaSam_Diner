@@ -2,7 +2,6 @@
   <div class="container">
     <h2 class="my-5 ms-2 fw-bold text-center">產品管理列表</h2>
     <div class="text-end mt-4">
-      <!-- 建立新產品按鈕 -->
       <button type="button" class="btn btn-primary" @click="modalOn('new')">
         建立新的產品
       </button>
@@ -22,25 +21,18 @@
           </thead>
           <tbody>
             <tr v-for="(item, key) in productsList" :key="key">
-              <!-- 分類 -->
               <td>{{ item.category }}</td>
-              <!-- 產品名稱 -->
               <td class="fw-bold text-decoration-underline">
                 {{ item.title }}
               </td>
-              <!-- 原價 -->
               <td class="text-secondary fw-light">{{ item.origin_price }}</td>
-              <!-- 售價 -->
               <td class="fw-bold">{{ item.price }}</td>
               <td>
-                <!-- 是否啟用 v-if 或是 三元函式 -->
                 <span v-if="item.is_enabled" class="text-success">啟用</span>
                 <span v-else class="text-danger">未啟用</span>
               </td>
               <td>
                 <div class="btn-group" :data-id="key">
-                  <!-- 修改3: 嘗試直接傳入item到內層進行修改 -->
-                  <!-- 產品細節按鈕 -->
                   <button
                     type="button"
                     class="btn btn-outline-success btn-sm"
@@ -49,7 +41,6 @@
                   >
                     細節
                   </button>
-                  <!-- 編輯按鈕 -->
                   <button
                     type="button"
                     class="btn btn-outline-primary btn-sm"
@@ -58,7 +49,6 @@
                   >
                     編輯
                   </button>
-                  <!-- 刪除按鈕 -->
                   <button
                     type="button"
                     class="btn btn-outline-danger btn-sm"
@@ -74,7 +64,6 @@
         </table>
       </div>
       <div class="col-xl-6">
-        <!-- 產品細節 -->
         <ProductDetail
           :product-display="emitData.productDisplay"
           :detail-display="emitData.detailDisplay"
@@ -82,10 +71,7 @@
       </div>
     </div>
   </div>
-  <!-- BS Modal 產品跳出視窗-->
-  <!-- id="productModal" -->
-  <EditModal ref="editModal" @get-data="getData"></EditModal>>
-  <!-- 分頁元件 -->
+  <EditModal ref="editModal" @get-data="getData"></EditModal>
   <PaginationFooter
     :current-page="current_page"
     :has-pre="has_pre"
@@ -137,7 +123,6 @@ export default {
         )
         .then((res) => {
           this.productsList = res.data.products;
-          // 將pagination各屬性帶入data屬性中
           this.current_page = res.data.pagination.current_page;
           this.has_next = res.data.pagination.has_next;
           this.has_pre = res.data.pagination.has_pre;

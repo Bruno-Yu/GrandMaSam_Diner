@@ -59,7 +59,6 @@
 export default {
   data() {
     return {
-      // 購物車列表
       cartData: {
         carts: [],
       },
@@ -75,7 +74,6 @@ export default {
     },
   },
   mounted() {
-    // 取得購物車的資料
     this.getCart();
   },
 };

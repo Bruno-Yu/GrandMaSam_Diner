@@ -3,9 +3,6 @@
     <h1 class="text-center mt-5 fs-1 mb-3 fw-bolder">收藏</h1>
     <div class="container">
       <div class="mt-4">
-        <!-- 購物車列表 -->
-        <!-- 做購物車的技巧: 由於是先 加入購物車 購物車內才有會有內容 ，可用{{cartData}}來作為反饋確認 -->
-        <!-- 清空購物車按鈕 -->
         <div class="text-end">
           <button
             class="btn btn-outline-danger"
@@ -20,8 +17,6 @@
             >清空收藏
           </button>
         </div>
-        <!-- 以上是清空購物車按鈕 -->
-        <!-- 下方為驗證程式碼資料，方便使用，用後須刪除 -->
         <table class="table align-middle">
           <thead>
             <tr class="text-start">
@@ -34,14 +29,8 @@
             </tr>
           </thead>
           <tbody>
-            <!-- 使用v-for將購物車中的產品列表列出 -->
-            <!-- 注意:產品資訊是包在carts陣列內部物件的product屬性中 -->
             <tr v-for="item in favProducts" :key="item.id" class="text-start">
               <td>
-                <!-- 刪除品項 -->
-                <!-- 注意: 刪除要刪除到資料庫 -->
-                <!-- 對應remobdeCartItem方法 -->
-                <!-- 加入loading效果 -->
                 <button
                   type="button"
                   class="btn btn-outline-danger btn-sm"
@@ -80,8 +69,6 @@
                 </span>
               </td>
               <td class="d-none d-lg-table-cell">
-                <!-- 使用BS的input-group 將其群組化 -->
-                <!-- 查看更多按鈕，對應api為 客戶購物-產品(products)中 GET product/{id}的api -->
                 <button
                   type="button"
                   class="btn btn-outline-secondary btn-sm"
@@ -95,7 +82,7 @@
                 <button
                   type="button"
                   class="btn btn-danger btn-sm"
-                  @click="addToCart(item.id)"
+                  @click="[addToCart(item.id), removeFromFavorites(item.id)]"
                   :disabled="isLoadingItem === item.id"
                 >
                   <span
@@ -166,21 +153,10 @@ export default {
       cartData: {
         carts: [],
       },
-      // 產品列表 (客戶購物免登入的API)
       products: [],
       favProducts: [],
       productId: '',
-      // 局部讀取效果對應變數
       isLoadingItem: '',
-      form: {
-        user: {
-          name: '',
-          email: '',
-          tel: '',
-          address: '',
-        },
-        message: '',
-      },
     };
   },
   methods: {
@@ -192,15 +168,12 @@ export default {
     },
     getProducts() {
       this.isLoading = true;
-      console.log('正確觸發');
       this.$http
         .get(
           `${process.env.VUE_APP_API}/api/${process.env.VUE_APP_PATH}/products`,
         )
         .then((res) => {
-          console.log(res);
           this.products = res.data.products;
-          console.log(this.products);
           this.getFavor(this.products);
           this.isLoading = false;
         });
@@ -210,18 +183,10 @@ export default {
       this.$http
         .get(`${process.env.VUE_APP_API}/api/${process.env.VUE_APP_PATH}/cart`)
         .then((res) => {
-          console.log(res);
-          // 將購物車資料賦值至根元件資料中
-          // 購物車api回傳的response物件中有兩層data，2層data後的carts陣列，是為已加入購物車的品項內容(array)
-          // carts內品項的 價格有分 total:加入優惠券前 final_total:優惠券打折後最終結帳的價格
-          // 所以存取的時候是res.data.data
           this.cartData = res.data.data;
         });
     },
-    // 加入購物車按鈕對應方法
-    // 對應api 客戶購物-購物車(Cart) POST
     // 注意: 加入購物車需帶入兩個參數 1.id 2.數量
-    // 由於購物車頁面上沒有調整數量的欄位，所以第二參數可使用參數預設值帶入
     saveToFavorites(id) {
       this.favorites.push(id);
     },
@@ -230,28 +195,22 @@ export default {
       const target = this.favorites.indexOf(id);
       if (target !== -1) {
         this.favorites.splice(target, 1);
-        this.getFavor();
         this.isLoadingItem = '';
       }
     },
     addToCart(id, qty = 1) {
-      // post cart的api資料格式
       const data = {
         product_id: id,
         qty,
       };
-      // 局部讀取效果賦值對應id
       this.isLoadingItem = id;
-      // axios.post 加入購物車列表
       this.$http
         .post(
           `${process.env.VUE_APP_API}/api/${process.env.VUE_APP_PATH}/cart`,
           { data },
         )
         .then(() => {
-          // 重新取得購物車內容
           this.getCart();
-          // 清空局部讀取效果
           this.isLoadingItem = '';
         });
     },
@@ -262,46 +221,11 @@ export default {
       });
       this.removeFavAll();
     },
-
-    // 對應購物車產品列表的 刪除品項 按鈕
-    removeCartItem(id) {
-      // 記得要帶入對應的item.id
-      this.isLoadingItem = id;
-      // 注意: 對應的api是購物車的api
-      this.$http
-        .delete(
-          `${process.env.VUE_APP_API}/api/${process.env.VUE_APP_PATH}/cart/${id}`,
-        )
-        .then(() => {
-          // 取得購物車的資料
-          this.getCart();
-          this.isLoadingItem = '';
-        });
-    },
     removeFavAll() {
       this.isLoadingItem = 'deleteAll';
       this.favorites = [];
       this.favProducts = [];
       this.isLoadingItem = '';
-    },
-    // 更新數量，使用put cart api
-    // 記得直接帶入對應品項
-    updateCartItem(item) {
-      const data = {
-        product_id: item.product.id,
-        qty: item.qty,
-      };
-      this.isLoadingItem = item.id;
-      this.$http
-        .put(
-          `${process.env.VUE_APP_API}/api/${process.env.VUE_APP_PATH}/cart/${item.id}`,
-          { data },
-        )
-        .then(() => {
-          // 取得購物車的資料
-          this.getCart();
-          this.isLoadingItem = '';
-        });
     },
     goToProductView(id) {
       this.$router.push(`/productView/${id}`);
@@ -319,8 +243,7 @@ export default {
       deep: true,
     },
   },
-  mounted() {
-    // 取得購物車的資料
+  created() {
     this.getProducts();
   },
 };

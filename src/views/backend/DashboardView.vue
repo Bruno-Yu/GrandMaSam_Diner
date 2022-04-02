@@ -74,22 +74,17 @@ export default {
     },
   },
   created() {
-    // 夾帶登入時已驗證的cookie內token
     const token = document.cookie.replace(
       /(?:(?:^|.*;\s*)hexToken\s*=\s*([^;]*).*$)|^.*$/,
       '$1',
     );
     this.$http.defaults.headers.common.Authorization = `${token}`;
-
-    // 確認權限
     this.$http
       .post(`${process.env.VUE_APP_API}/api/user/check`)
-      // 成功結果接收
       .then((res) => {
         console.log(res);
         alert('成功登入', `${res.data.sucess}`);
       })
-      //   若驗證token 失敗則轉回index頁面
       .catch((error) => {
         alert(error);
         this.$router.push('/trueusLogin');
