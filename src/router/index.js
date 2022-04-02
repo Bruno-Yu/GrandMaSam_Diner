@@ -1,5 +1,5 @@
 import { createRouter, createWebHashHistory } from 'vue-router';
-import FrontView from '../views/FrontView.vue';
+import FrontView from '../views/frontend/FrontView.vue';
 
 const routes = [
   {
@@ -9,46 +9,46 @@ const routes = [
     children: [
       {
         path: '',
-        component: () => import('../views/IndexView.vue'),
+        component: () => import('../views/frontend/IndexView.vue'),
       },
       {
         path: '/productsView',
-        component: () => import('../views/ProductsView.vue'),
+        component: () => import('../views/frontend/ProductsView.vue'),
       },
       {
         path: '/localStorage',
-        component: () => import('../views/LocalStorage.vue'),
+        component: () => import('../views/frontend/LocalStorage.vue'),
       },
       {
         path: '/userOrders',
-        component: () => import('../views/UserOrders.vue'),
+        component: () => import('../views/frontend/UserOrders.vue'),
         children: [
           {
             path: '/cartView',
-            component: () => import('../views/CartView.vue'),
+            component: () => import('../views/frontend/CartView.vue'),
           },
           {
             path: '/userContact',
-            component: () => import('../views/UserContact.vue'),
+            component: () => import('../views/frontend/UserContact.vue'),
           },
           {
             path: '/orderCheck',
-            component: () => import('../views/OrderCheck.vue'),
+            component: () => import('../views/frontend/OrderCheck.vue'),
           },
           {
             path: '/paidSuccess',
-            component: () => import('../views/PaidSuccess.vue'),
+            component: () => import('../views/frontend/PaidSuccess.vue'),
           },
         ],
       },
       {
         path: '/about',
-        component: () => import('../views/AboutView.vue'),
+        component: () => import('../views/frontend/AboutView.vue'),
       },
       {
         path: '/productView/:id',
         name: 'Product',
-        component: () => import('../views/ProductView.vue'),
+        component: () => import('../views/frontend/ProductView.vue'),
       },
     ],
   },
@@ -56,27 +56,27 @@ const routes = [
   {
     path: '/admin',
     name: 'dashboardView',
-    component: () => import('../views/DashboardView.vue'),
+    component: () => import('../views/backend/DashboardView.vue'),
     children: [
       {
         path: '',
-        component: () => import('../views/ProductsAdmin.vue'),
+        component: () => import('../views/backend/ProductsAdmin.vue'),
       },
       {
         path: '/orderAmin',
-        component: () => import('../views/OrdersAdmin.vue'),
+        component: () => import('../views/backend/OrdersAdmin.vue'),
       },
       {
         path: '/couponsAdmin',
-        component: () => import('../views/CouponsAdmin.vue'),
+        component: () => import('../views/backend/CouponsAdmin.vue'),
       },
       {
         path: '/aboutAdmin',
-        component: () => import('../views/AboutAdmin.vue'),
+        component: () => import('../views/backend/AboutAdmin.vue'),
       },
       {
         path: '/eventAdmin',
-        component: () => import('../views/EventAdmin.vue'),
+        component: () => import('../views/backend/EventAdmin.vue'),
       },
     ],
   },

@@ -23,7 +23,7 @@
 </template>
 
 <script>
-import emitter from '../libs/emitter';
+import emitter from '@/libs/emitter';
 
 export default {
   data() {

@@ -287,6 +287,12 @@ export default {
 };
 </script>
 
+<style lang="scss">
+@import 'node_modules/swiper/swiper.scss';
+@import 'node_modules/swiper/modules/pagination/pagination.scss';
+@import 'node_modules/swiper/modules/navigation/navigation.scss';
+</style>
+
 <style>
 .swiper-slide-inner {
   box-shadow: 1px 1px 10px #696969;
@@ -305,10 +311,4 @@ export default {
 .swiper-pagination {
   color: #dde3ee;
 }
-</style>
-
-<style lang="scss">
-@import '../../node_modules/swiper/swiper.scss';
-@import '../../node_modules/swiper/modules/navigation/navigation.scss';
-@import '../../node_modules/swiper/modules/pagination/pagination.scss';
 </style>

@@ -121,7 +121,7 @@
 </template>
 
 <script>
-import PaginationFooter from '../components/PaginationFooter.vue';
+import PaginationFooter from '@/components/PaginationFooter.vue';
 
 export default {
   data() {

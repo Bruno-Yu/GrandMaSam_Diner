@@ -97,9 +97,9 @@
 
 <script type="module">
 // import emitter from '@/libs/emitter';
-import EditModal from '../components/EditModal.vue';
-import PaginationFooter from '../components/PaginationFooter.vue';
-import ProductDetail from '../components/ProductDetail.vue';
+import EditModal from '@/components/EditModal.vue';
+import PaginationFooter from '@/components/PaginationFooter.vue';
+import ProductDetail from '@/components/ProductDetail.vue';
 
 export default {
   data() {
