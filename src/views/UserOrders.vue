@@ -24,7 +24,7 @@
         步驟3. 訂單明細確認
       </router-link>
     </nav>
-    <router-view />
+    <RouterView />
   </div>
   <div v-else class="container-fluid cart-banner my-1">
     <div
@@ -55,17 +55,6 @@
   </div>
 </template>
 
-<style>
-.cart-banner {
-  background-image: url(https://cdn.pixabay.com/photo/2016/08/06/07/54/trump-1573999_960_720.jpg);
-  height: 600px;
-  background-position: center center;
-  background-size: cover;
-  background-blend-mode: multiply;
-  background-color: #5e6063;
-}
-</style>
-
 <script>
 export default {
   data() {
@@ -91,3 +80,14 @@ export default {
   },
 };
 </script>
+
+<style>
+.cart-banner {
+  background-image: url(https://cdn.pixabay.com/photo/2016/08/06/07/54/trump-1573999_960_720.jpg);
+  height: 600px;
+  background-position: center center;
+  background-size: cover;
+  background-blend-mode: multiply;
+  background-color: #5e6063;
+}
+</style>

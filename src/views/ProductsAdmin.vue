@@ -3,7 +3,7 @@
     <h2 class="my-5 ms-2 fw-bold text-center">產品管理列表</h2>
     <div class="text-end mt-4">
       <!-- 建立新產品按鈕 -->
-      <button class="btn btn-primary" @click="modalOn('new')">
+      <button type="button" class="btn btn-primary" @click="modalOn('new')">
         建立新的產品
       </button>
     </div>

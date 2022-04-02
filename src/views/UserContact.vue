@@ -1,17 +1,12 @@
 <template>
   <div class="container">
     <div class="my-5 row justify-content-center">
-      <v-form
-        ref="form"
-        class="col-md-6"
-        v-slot="{ errors }"
-        @submit="onSubmit"
-      >
+      <VForm ref="form" class="col-md-6" v-slot="{ errors }" @submit="onSubmit">
         <div class="mb-3">
           <label for="email" class="form-label fw-bold">
             Email <span class="text-danger fw-bolder">*</span></label
           >
-          <v-field
+          <VField
             id="email"
             name="email"
             type="email"
@@ -20,15 +15,15 @@
             placeholder="請輸入 Email"
             rules="email|required"
             v-model="form.user.email"
-          ></v-field>
-          <error-message name="email" class="invalid-feedback"></error-message>
+          ></VField>
+          <ErrorMessage name="email" class="invalid-feedback"></ErrorMessage>
         </div>
 
         <div class="mb-3">
           <label for="name" class="form-label fw-bold"
             >收件人姓名 <span class="text-danger fw-bolder">*</span></label
           >
-          <v-field
+          <VField
             id="name"
             name="姓名"
             type="text"
@@ -37,15 +32,15 @@
             placeholder="請輸入姓名"
             :rules="noEmpty"
             v-model="form.user.name"
-          ></v-field>
-          <error-message name="姓名" class="invalid-feedback"></error-message>
+          ></VField>
+          <ErrorMessage name="姓名" class="invalid-feedback"></ErrorMessage>
         </div>
 
         <div class="mb-3">
           <label for="tel" class="form-label fw-bold"
             >收件人電話 <span class="text-danger fw-bolder">*</span></label
           >
-          <v-field
+          <VField
             id="tel"
             name="電話"
             type="text"
@@ -54,15 +49,15 @@
             placeholder="請輸入電話"
             :rules="isPhone"
             v-model="form.user.tel"
-          ></v-field>
-          <error-message name="電話" class="invalid-feedback"></error-message>
+          ></VField>
+          <ErrorMessage name="電話" class="invalid-feedback"></ErrorMessage>
         </div>
 
         <div class="mb-3">
           <label for="address" class="form-label fw-bold"
             >收件人地址 <span class="text-danger fw-bolder">*</span></label
           >
-          <v-field
+          <VField
             id="address"
             name="地址"
             type="text"
@@ -71,8 +66,8 @@
             placeholder="請輸入地址"
             :rules="noEmpty"
             v-model="form.user.address"
-          ></v-field>
-          <error-message name="地址" class="invalid-feedback"></error-message>
+          ></VField>
+          <ErrorMessage name="地址" class="invalid-feedback"></ErrorMessage>
         </div>
 
         <div class="mb-3">
@@ -108,7 +103,7 @@
             送出訂單
           </button>
         </div>
-      </v-form>
+      </VForm>
     </div>
   </div>
 </template>

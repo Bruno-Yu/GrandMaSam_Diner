@@ -51,7 +51,7 @@
       </router-link>
     </nav>
     <hr class="text-secondary" />
-    <router-view />
+    <RouterView />
   </div>
 </template>
 

@@ -107,7 +107,3 @@
   margin-bottom: 2rem;
 }
 </style>
-
-<script>
-export default {};
-</script>

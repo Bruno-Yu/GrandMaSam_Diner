@@ -59,11 +59,16 @@
                 :style="{ backgroundImage: `url(${product.imageUrl})` }"
               ></div>
 
-              <router-link
-                to=""
+              <a
+                href="#"
                 class="position-absolute text-light"
                 style="right: 16px; top: 16px"
-                @click="
+                @click.prevent="
+                  favorites.includes(product.id)
+                    ? removeFromFavorites(product.id)
+                    : saveToFavorites(product.id)
+                "
+                @keyup.i="
                   favorites.includes(product.id)
                     ? removeFromFavorites(product.id)
                     : saveToFavorites(product.id)
@@ -73,7 +78,7 @@
                   class="bi bi-heart-fill"
                 ></i>
                 <i v-else class="bi bi-heart"></i>
-              </router-link>
+              </a>
               <router-link
                 :to="{ name: 'Product', params: { id: `${product.id}` } }"
                 class="position-absolute link-light small text-decoration-none"
@@ -114,17 +119,6 @@
     </div>
   </div>
 </template>
-
-<style>
-.cart {
-  width: 10px;
-  height: 10px;
-  right: 10px;
-  bottom: 10px;
-  border-radius: 50% 50%;
-  border: 1px black solid;
-}
-</style>
 
 <script>
 import PaginationFooter from '../components/PaginationFooter.vue';
@@ -220,3 +214,14 @@ export default {
   },
 };
 </script>
+
+<style>
+.cart {
+  width: 10px;
+  height: 10px;
+  right: 10px;
+  bottom: 10px;
+  border-radius: 50% 50%;
+  border: 1px black solid;
+}
+</style>

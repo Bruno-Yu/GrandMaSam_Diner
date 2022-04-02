@@ -1,4 +1,3 @@
-// under components file
 <template>
   <!-- 刪除產品視窗 -->
   <div
@@ -239,7 +238,6 @@
               </div>
               <div class="mb-3">
                 <!-- 產品是否啟用 -->
-                <!-- 做完後想一下 -->
                 <div class="form-check">
                   <input
                     id="is_enabled"

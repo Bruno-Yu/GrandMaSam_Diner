@@ -157,17 +157,6 @@
   </div>
 </template>
 
-<style>
-.fav-banner {
-  background-image: url(https://cdn.pixabay.com/photo/2016/10/18/18/35/dementia-1750965_960_720.jpg);
-  height: 600px;
-  background-position: center center;
-  background-size: cover;
-  background-blend-mode: multiply;
-  background-color: #5e6063;
-}
-</style>
-
 <script>
 export default {
   data() {
@@ -336,3 +325,14 @@ export default {
   },
 };
 </script>
+
+<style>
+.fav-banner {
+  background-image: url(https://cdn.pixabay.com/photo/2016/10/18/18/35/dementia-1750965_960_720.jpg);
+  height: 600px;
+  background-position: center center;
+  background-size: cover;
+  background-blend-mode: multiply;
+  background-color: #5e6063;
+}
+</style>

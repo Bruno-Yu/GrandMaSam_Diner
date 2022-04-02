@@ -1,5 +1,5 @@
 <template>
-  <div id="header" style="top: 0p" class="container-fluid gx-0 gx-lg-1">
+  <div id="header" class="container-fluid gx-0 gx-lg-1">
     <nav class="navbar navbar-expand-lg navbar-light bg-light fix-top">
       <div class="container d-flex">
         <router-link
@@ -95,7 +95,3 @@
   background-size: cover;
 }
 </style>
-
-<script>
-export default {};
-</script>

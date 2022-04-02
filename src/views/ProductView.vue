@@ -137,14 +137,14 @@
       </p>
       <hr />
       <h3 class="fw-bold">您可能還會喜歡</h3>
-      <swiper
+      <Swiper
         :modules="modules"
         :slides-per-view="3"
         :space-between="50"
         autoplay
         :breakpoints="swiper.breakpoints"
       >
-        <swiper-slide
+        <SwiperSlide
           class="card border-0 mb-4 position-relative position-relative"
           v-for="item in products"
           :key="item.id"
@@ -179,17 +179,11 @@
             </p>
             <p class="text-muted mt-3"></p>
           </div>
-        </swiper-slide>
-      </swiper>
+        </SwiperSlide>
+      </Swiper>
     </div>
   </div>
 </template>
-
-<style lang="scss">
-@import '../../node_modules/swiper/swiper.scss';
-@import '../../node_modules/swiper/modules/navigation/navigation.scss';
-@import '../../node_modules/swiper/modules/pagination/pagination.scss';
-</style>
 
 <script>
 import { Swiper, SwiperSlide } from 'swiper/vue';
@@ -311,4 +305,10 @@ export default {
 .swiper-pagination {
   color: #dde3ee;
 }
+</style>
+
+<style lang="scss">
+@import '../../node_modules/swiper/swiper.scss';
+@import '../../node_modules/swiper/modules/navigation/navigation.scss';
+@import '../../node_modules/swiper/modules/pagination/pagination.scss';
 </style>
