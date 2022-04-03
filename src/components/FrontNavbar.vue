@@ -7,12 +7,12 @@
           style="font-family: 'Bangers', serif"
           to="/"
         >
-          Grandma Sam Diner
+          GRANDMA SAM DINER
           <p
             class="text-dark fw-lighter text-center fs-6 lh-1 mb-0"
             style="font-family: 'Bangers', serif"
           >
-            let make US great again
+            LET MAKE AMERICA GREAT AGAIN
           </p>
         </router-link>
 

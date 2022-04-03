@@ -15,15 +15,24 @@
           >
             <div class="d-flex justify-content-center justify-content-lg-start">
               <div>
-                <h2 class="text-light mt-4 fw-bold">獻出你的錢包</h2>
-                <h2 class="text-light fw-bold">讓台灣再次偉大</h2>
+                <h2 class="text-light mt-4 fw-bold text-nowrap">
+                  獻出你的錢包<span style="font-family: 'Bangers', serif">
+                    ! ! !</span
+                  >
+                </h2>
+                <h2 class="text-light fw-bold">
+                  讓台灣再次偉大
+                  <span style="font-family: 'Bangers', serif">
+                    ! ! ! ! ! !</span
+                  >
+                </h2>
               </div>
             </div>
             <div class="d-flex justify-content-center mt-4">
               <router-link
                 to="/productsView"
                 type="button"
-                class="btn btn-warning link-dark fw-bolder fs-4 border border-dark border-3"
+                class="btn btn-danger link-light fw-bolder fs-4 border border-dark border-3"
                 style="width: 100%"
                 >馬上行動</router-link
               >
@@ -33,11 +42,13 @@
       </div>
     </header>
 
-    <div class="story-section row align-items-center gx-0">
-      <div class="col text-center text-light px-3">
-        <h2>關於我們</h2>
-        <p>本餐廳的核心精神是: 自己的國家自己救 ; 自己的碗盤自己洗</p>
-        <p>
+    <div class="story-section mt-2 row align-items-center gx-0">
+      <div class="col text-center px-3">
+        <h2 class="fs-2 fw-bolder mb-4">關於我們</h2>
+        <p class="fs-4 fw-bold">
+          本餐廳的核心精神是: 自己的國家自己救 ; 自己的碗盤自己洗
+        </p>
+        <p class="fs-5">
           餐點部分:
           除了各系列防腐劑漢堡外，並與各大連鎖超商合作，推出義大利麵，燉飯，炸雞及各式炸物小點系列，絕對難以滿足味蕾挑剔的您
         </p>
@@ -114,20 +125,21 @@
 
 <style>
 .header-banner {
-  background-image: url(https://cdn.pixabay.com/photo/2017/10/04/09/10/trump-2815558_960_720.jpg);
-  height: 600px;
+  background-image: url(@/assets/images/index_header_banner.jpg);
+  height: 669px;
   background-position: center center;
   background-size: cover;
   background-blend-mode: multiply;
-  background-color: #abafb3;
+  /* background-color: #79797a; */
+  background-color: #a7aaadf9;
 }
 .story-section {
-  height: 200px;
-  background-image: url(https://cdn.pixabay.com/photo/2016/04/06/17/49/noodles-1312384_960_720.jpg);
+  height: 300px;
+  background-image: url(@/assets/images/index_about_us.jpg);
   background-position: center center;
   background-size: cover;
-  background-blend-mode: multiply;
-  background-color: #2f3030;
+  background-blend-mode: lighten;
+  background-color: #f3f3f4c8;
 }
 .product-intro {
   background-image: url(https://cdn.pixabay.com/photo/2016/06/10/14/33/aioli-1448217_960_720.jpg);
@@ -138,12 +150,12 @@
   background-color: #b1c3d3;
 }
 .product-intro-2 {
-  background-image: url(https://cdn.pixabay.com/photo/2015/07/25/15/24/money-860128_960_720.jpg);
+  background-image: url(@/assets/images/product_intro_2.jpg);
   height: 400px;
   background-position: center center;
   background-size: cover;
   background-blend-mode: multiply;
-  background-color: #bbbfc2;
+  background-color: #eef1f3;
 }
 .product-intro-3 {
   background-image: url(https://images.pexels.com/photos/1639557/pexels-photo-1639557.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260);
@@ -158,11 +170,11 @@
   background-color: #1b1c1d;
 }
 .product-intro-4 {
-  background-image: url(https://cdn.pixabay.com/photo/2016/11/13/21/40/trump-1822121_960_720.jpg);
+  background-image: url(@/assets/images/index_footer_right.jpg);
   height: 450px;
   background-position: center center;
   background-size: cover;
   background-blend-mode: multiply;
-  background-color: #b6c0c9;
+  background-color: #f0f9ff;
 }
 </style>
