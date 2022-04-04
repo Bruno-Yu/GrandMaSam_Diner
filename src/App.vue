@@ -1,5 +1,5 @@
 <template>
-  <div class="container-fluid gx-0.5 w-100">
+  <div class="container-fluid gx-0.5 w-100" style="box-sizing: border-box">
     <FrontNavbar />
     <RouterView />
     <FrontFooter />

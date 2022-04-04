@@ -1,8 +1,8 @@
 <template>
-  <div class="gx-0">
+  <div class="container-fluid gx-0">
     <h2 class="my-5 fw-bold text-center gx-0">關於我們</h2>
     <div
-      class="container-fluid my-1 border border-secondary border-1 border-start-0 border-end-0 border-bottom-0 gx-0"
+      class="container my-1 border border-secondary border-1 border-start-0 border-end-0 border-bottom-0 gx-0"
     >
       <div class="row row-cols-1 d-flex justify-content-center gx-0">
         <div class="col col-lg-5 me-lg-5 header-content">
@@ -25,31 +25,33 @@
       <div class="row row-cols-1 d-flex justify-content-center gx-0">
         <div class="col col-lg-9">
           <h4 class="my-5 my-lg-4 fw-bolder text-lg-center">集團</h4>
-          <ul>
-            <li class="text-muted">
-              1990年 -
-              集團創辦人在祖母與親朋好友的經濟支援下，在紐約曼哈頓的黃金地段，購置了大量不動產，創辦了本集團大樓，為紀念創辦人祖母的獨到的眼光和金援，以及表現創辦人的性別平等核心理念，將該大樓命名為
-              山姆大嬸大樓（英語：The Grandma Sam
-              building），並以該大樓的名稱作為本集團的正式名稱 山姆大嬸 集團
-              （英語：The Grandma Sam Organization）
-            </li>
-            <li class="text-muted my-3">
-              2000~ 2010 年 -
-              本集團拓展遍佈世界各地，並在各地建立分支據點，在全球聯合國所屬140個會員國的市中心，都沒有本集團的服務處所
-            </li>
-            <li class="text-muted">
-              在 2020 年 -
-              本集團創辦人有感於其祖母與台灣民主地區領導人蔣大總統的好交情，決定利用其祖母在台灣台北
-              ( 此亦為奧運會代表正式名稱
-              )的房地產投資收益，創立了台灣辦事處，並於隔年建立本餐飲公司
-            </li>
-          </ul>
+          <div class="container mx-auto" style="max-width: 60rem">
+            <ul>
+              <li class="text-muted">
+                1990年 -
+                集團創辦人在祖母與親朋好友的經濟支援下，在紐約曼哈頓的黃金地段，購置了大量不動產，創辦了本集團大樓，為紀念創辦人祖母的獨到的眼光和金援，以及表現創辦人的性別平等核心理念，將該大樓命名為
+                山姆大嬸大樓（英語：The Grandma Sam
+                building），並以該大樓的名稱作為本集團的正式名稱 山姆大嬸 集團
+                （英語：The Grandma Sam Organization）
+              </li>
+              <li class="text-muted my-3">
+                2000~ 2010 年 -
+                本集團拓展遍佈世界各地，並在各地建立分支據點，在全球聯合國所屬140個會員國的市中心，都沒有本集團的服務處所
+              </li>
+              <li class="text-muted">
+                在 2020 年 -
+                本集團創辦人有感於其祖母與台灣民主地區領導人蔣大總統的好交情，決定利用其祖母在台灣台北
+                ( 此亦為奧運會代表正式名稱
+                )的房地產投資收益，創立了台灣辦事處，並於隔年建立本餐飲公司
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
       <div
         class="row row-cols-1 flex-row-reverse justify-content-center my-3 gx-0"
       >
-        <h4 class="mt-2 mb-1 my-lg-5 text-center fw-bolder">集團核心理念</h4>
+        <h4 class="mt-2 mb-1 my-lg-5 text-lg-center fw-bolder">集團核心理念</h4>
         <div class="col col-lg-5 mx-2">
           <ul class="my-3 list-group">
             <li class="text-muted list-group-item py-3">
@@ -100,12 +102,10 @@
         </div>
       </div>
       <div
-        class="row row-cols-1 row-cols-lg-2 justify-content-center mt-3 mb-1 gx-0"
+        class="row row-cols-1 row-cols-lg-2 justify-content-center mt-3 mb-4 mb-sm-0 gx-0"
       >
-        <div class="col-10 col-lg-5 me-4">
-          <h4 class="mt-lg-2 my-lg-5 text-center text-lg-start fw-bolder">
-            榮譽獎章
-          </h4>
+        <div class="col-10 col-lg-5 me-lg-4">
+          <h4 class="mt-2 my-lg-5 text-lg-center fw-bolder">榮譽獎章</h4>
           <div class="row d-flex align-items-center">
             <div class="col">
               <p class="fs-5 fw-bold mt-lg-1 text-secondary">
@@ -119,20 +119,20 @@
             </div>
           </div>
         </div>
-        <div class="col col-lg-5 my-3 ms-3">
-          <div class="mt-lg-3 mb-1 ratio ratio-4x3">
+        <div class="col col-lg-5 my-sm-3">
+          <div class="mt-lg-3 mb-1 mb-sm-5 ratio ratio-4x3">
             <div class="playboy-cover"></div>
           </div>
         </div>
       </div>
 
       <div
-        class="row row-cols-1 row-cols-lg-2 flex-row-reverse justify-content-center my-3 gx-0"
+        class="row row-cols-1 row-cols-lg-2 flex-row-reverse justify-content-center my-2 my-sm-5 gx-0"
       >
-        <div class="col-10 col-lg-4 mt-3 mt-lg-5 ms-2">
-          <div class="row d-flex mt-lg-5 align-items-center">
-            <div class="col">
-              <p class="fs-5 mt-5 fw-bold text-secondary">
+        <div class="col-10 col-lg-4 mt-3 mt-sm-0 mt-lg-5 ms-2">
+          <div class="row d-flex mt-sm-0 mt-lg-5 align-items-center">
+            <div class="col my-lg-4">
+              <p class="fs-5 mt-5 mt-md-0 mt-lg-5 fw-bold text-secondary">
                 榮獲 性別平等 餐廳認證
               </p>
               <p class="text-muted mt-3">

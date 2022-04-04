@@ -1,59 +1,69 @@
 <template>
   <div class="container-fluid gx-1 gx-lg-0">
     <header class="header-banner">
-      <div
-        class="row d-flex justify-content-center align-items-center flex-direction-vertical"
-        style="height: 100%"
-      >
+      <div class="container" style="height: 100%">
         <div
-          class="row justify-content-center justify-content-lg-end"
-          style="width: 100%; height: 40%"
+          class="row d-flex justify-content-center align-items-center flex-direction-vertical"
+          style="height: 100%"
         >
           <div
-            class="col-10 col-md-6 col-lg-4 me-lg-5"
-            style="border: 1px solid #b8babdd5"
+            class="row justify-content-center justify-content-lg-end"
+            style="width: 100%; height: 40%"
           >
-            <div class="d-flex justify-content-center justify-content-lg-start">
-              <div>
-                <h2 class="text-light mt-4 fw-bold text-nowrap">
-                  獻出你的錢包<span style="font-family: 'Bangers', serif">
-                    ! ! !</span
-                  >
-                </h2>
-                <h2 class="text-light fw-bold">
-                  讓台灣再次偉大
-                  <span style="font-family: 'Bangers', serif">
-                    ! ! ! ! ! !</span
-                  >
-                </h2>
+            <div class="col-10 col-md-6 col-lg-4 me-lg-5">
+              <!-- style="border: 1px solid #b8babdd5" -->
+              <div class="d-flex justify-content-start">
+                <div>
+                  <h2 class="text-light mt-4 fw-bold text-nowrap">
+                    獻出你的錢包<span style="font-family: 'Bangers', serif">
+                      ! ! !</span
+                    >
+                  </h2>
+                  <h2 class="text-light fw-bold">
+                    讓台灣再次偉大
+                    <span style="font-family: 'Bangers', serif">
+                      ! ! ! ! ! !</span
+                    >
+                  </h2>
+                </div>
               </div>
-            </div>
-            <div class="d-flex justify-content-center mt-4">
-              <router-link
-                to="/productsView"
-                type="button"
-                class="btn btn-danger link-light fw-bolder fs-4 border border-dark border-3"
-                style="width: 100%"
-                >馬上行動</router-link
-              >
+              <div class="d-flex justify-content-center mt-4">
+                <router-link
+                  to="/productsView"
+                  type="button"
+                  class="btn btn-danger link-light fw-bolder fs-4 border border-dark border-3"
+                  style="width: 100%"
+                  >馬上行動</router-link
+                >
+              </div>
             </div>
           </div>
         </div>
       </div>
     </header>
-
-    <div class="story-section mt-2 row align-items-center gx-0">
-      <div class="col text-center px-3">
-        <h2 class="fs-2 fw-bolder mb-4">關於我們</h2>
-        <p class="fs-4 fw-bold">
-          本餐廳的核心精神是: 自己的國家自己救 ; 自己的碗盤自己洗
-        </p>
-        <p class="fs-5">
-          餐點部分:
-          除了各系列防腐劑漢堡外，並與各大連鎖超商合作，推出義大利麵，燉飯，炸雞及各式炸物小點系列，絕對難以滿足味蕾挑剔的您
-        </p>
+    <!-- 這邊後續要做卡片陰影 -->
+    <div class="story-section mt-2">
+      <div class="container">
+        <div class="row align-items-center gx-0">
+          <div class="col px-3">
+            <div class="container">
+              <h2 class="fs-2 text-center fw-bolder my-4">關於我們</h2>
+              <p class="fs-4 text-center fw-bold mb-0">本餐廳的核心精神是:</p>
+              <p class="fs-4 text-center text-danger text-lg-nowrap fw-bold">
+                自己的國家自己救 ; 自己的碗盤自己洗
+              </p>
+              <div class="container text-lg-center" style="max-width: 50rem">
+                <p class="fs-6 fw-bold text-secondary">
+                  餐點部分:
+                  除了各系列防腐劑漢堡外，並與各大連鎖超商合作，推出義大利麵，燉飯，炸雞及各式炸物小點系列，絕對難以滿足味蕾挑剔的您
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
+
     <div class="row gx-0">
       <div class="col-md-6 mt-2">
         <div class="product-intro"></div>
@@ -71,6 +81,7 @@
         </div>
       </div>
     </div>
+
     <div class="row flex-row-reverse gx-0">
       <div class="col-md-6 my-1">
         <div class="product-intro-2"></div>
@@ -96,7 +107,7 @@
         </div>
       </div>
     </div>
-    <div class="row row-cols-1 row-cols-lg-3 mt-2 gx-0">
+    <div class="row row-cols-1 row-cols-lg-3 mt-2 gx-1">
       <div
         class="col d-none d-lg-block product-intro-3"
         style="height: 450px"
@@ -117,7 +128,6 @@
           </div>
         </div>
       </div>
-
       <div class="col product-intro-4" style="height: 450px"></div>
     </div>
   </div>
