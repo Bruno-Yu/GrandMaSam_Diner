@@ -1,5 +1,5 @@
 <template>
-  <div class="container-fluid bg-dark py-5 gx-lg-0">
+  <div class="container-fluid py-5 gx-lg-0" style="background-color: black">
     <div class="container">
       <router-link
         class="fs-3 d-block navbar-brand link-light my-2 lh-1 text-center"

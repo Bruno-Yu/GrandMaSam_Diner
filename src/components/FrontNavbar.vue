@@ -1,5 +1,5 @@
 <template>
-  <div id="header" class="container-fluid">
+  <div id="header" class="container-fluid shadow p-3 mb-2 bg-body rounded">
     <div class="container gx-0">
       <nav class="navbar navbar-expand-lg navbar-light bg-light fix-top">
         <div class="container d-flex">
