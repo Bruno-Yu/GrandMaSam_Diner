@@ -80,18 +80,36 @@
                     </li>
                     <li class="small fw-light my-1 text-nowrap">
                       <i class="bi bi-telephone-inbound text-warning"></i>
-                      訂位服務專線: ( 0204 ) 5487487
+                      <a
+                        href="#"
+                        alt="diner_book_tel"
+                        class="text-decoration-none link-light"
+                      >
+                        訂位服務專線: ( 0204 ) 5487487</a
+                      >
                     </li>
                     <li class="small fw-light my-1 text-nowrap">
-                      <i class="bi bi-phone text-warning"></i> 電話: ( 02 ) 2311
-                      3731
+                      <i class="bi bi-phone text-warning"></i>
+                      <a
+                        href="#"
+                        alt="diner_office"
+                        class="text-decoration-none link-light"
+                      >
+                        電話: ( 02 ) 2311 3731</a
+                      >
                     </li>
                     <li class="text-muted small text-nowrap">
                       註: 請謹慎播打，該電話直達高層
                     </li>
                     <li class="small fw-light my-1 text-nowrap">
-                      <i class="bi bi-cursor text-warning"></i> 地址:
-                      100台北市中正區中山南路21號
+                      <i class="bi bi-cursor text-warning"></i>
+                      <a
+                        href="https://goo.gl/maps/zZZryo7weMvN7RGo8"
+                        alt="diner_office"
+                        class="text-decoration-none link-light"
+                      >
+                        地址: 100台北市中正區中山南路21號</a
+                      >
                     </li>
                     <li class="small fw-light my-1 text-nowrap">
                       <i class="bi bi-clock text-warning"></i> 營業時間: 24 hrs

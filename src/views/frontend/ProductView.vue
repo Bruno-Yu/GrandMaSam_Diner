@@ -21,7 +21,10 @@
               :style="{ backgroundImage: `url(${product.imageUrl})` }"
             ></div>
           </SwiperSlide>
-          <SwiperSlide v-for="(image, key) in product.imagesUrl" :key="key"
+          <SwiperSlide
+            v-for="(image, key) in product.imagesUrl"
+            :key="key"
+            class="shadow rounded"
             ><div
               class="carousel-item d-block ratio ratio-4x3"
               style="
@@ -90,16 +93,14 @@
             <button
               type="button"
               to="/userOrders"
-              class="text-nowrap btn btn-danger w-100 fw-bold py-2"
+              class="text-nowrap btn btn-warning shadow w-100 fw-bold py-2"
               @click="addToCart(product.id)"
             >
               加入購物車
             </button>
           </div>
         </div>
-        <div
-          class="row my-5 justify-content-center border border-secondary border-2"
-        >
+        <div class="row my-5 justify-content-center shadow p-3 mb-1 rounded">
           <div class="col-6">
             <h3 class="text-muted fw-bold">商品規格</h3>
             <p class="text-muted">
@@ -114,73 +115,81 @@
           </div>
         </div>
       </div>
-      <hr class="my-5" />
-      <h3 class="fw-bold mb-4">購買須知</h3>
-      <p class="text-muted">
-        寄送時間： 預計訂單成立後 7
-        個工作天內送達不含週六日及國定假日。如廠商有約定日將於約定日期內送達，約定日期需於訂單成立後
-        14天內。
-      </p>
+    </div>
+    <div class="container-fluid mt-5">
+      <div class="container">
+        <div class="row shadow p-3 my-5 rounded">
+          <h3 class="fw-bold mb-4">購買須知</h3>
+          <p class="text-muted">
+            寄送時間： 預計訂單成立後 7
+            個工作天內送達不含週六日及國定假日。如廠商有約定日將於約定日期內送達，約定日期需於訂單成立後
+            14天內。
+          </p>
 
-      <p class="text-muted">送貨方式： 透過宅配或是郵局送達。</p>
-      <p class="text-muted">
-        消費者訂購之商品若經配送兩次無法送達，再經本公司以電話與 E-mail
-        均無法聯繫逾三天者，本公司將取消該筆訂單，並且全額退款。
-      </p>
-      <p class="text-muted">
-        送貨範圍：
-        限台灣本島地區。注意！收件地址請勿為郵政信箱。若有台灣本島以外地區送貨需求，收貨人地址請填台灣本島親友的地址
-      </p>
-      <p class="text-muted">
-        關於退貨:
-        由於本公司所販售的商品皆屬易於腐敗且保存期限較短之商品，依據消費者保護法之規定，將無法享有七天猶豫期之權益且不得辦理退貨。
-      </p>
-      <hr />
-      <h3 class="fw-bold">您可能還會喜歡</h3>
-      <Swiper
-        :modules="modules"
-        :slides-per-view="3"
-        :space-between="50"
-        autoplay
-        :breakpoints="swiper.breakpoints"
-      >
-        <SwiperSlide
-          class="card border-0 mb-4 position-relative position-relative"
-          v-for="item in products"
-          :key="item.id"
+          <p class="text-muted">送貨方式： 透過宅配或是郵局送達。</p>
+          <p class="text-muted">
+            消費者訂購之商品若經配送兩次無法送達，再經本公司以電話與 E-mail
+            均無法聯繫逾三天者，本公司將取消該筆訂單，並且全額退款。
+          </p>
+          <p class="text-muted">
+            送貨範圍：
+            限台灣本島地區。注意！收件地址請勿為郵政信箱。若有台灣本島以外地區送貨需求，收貨人地址請填台灣本島親友的地址
+          </p>
+          <p class="text-muted">
+            關於退貨:
+            由於本公司所販售的商品皆屬易於腐敗且保存期限較短之商品，依據消費者保護法之規定，將無法享有七天猶豫期之權益且不得辦理退貨。
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid">
+      <div class="row">
+        <h3 class="fw-bold">您可能還會喜歡</h3>
+        <Swiper
+          :modules="modules"
+          :slides-per-view="3"
+          :space-between="50"
+          autoplay
+          :breakpoints="swiper.breakpoints"
         >
-          <div
-            class="swiper-slide-inner"
-            style="
-              height: 20rem;
-              background-position: center center;
-              background-size: cover;
-              background-color: #9cb2c7;
-              background-blend-mode: multiply;
-            "
-            :style="{ backgroundImage: `url(${item.imageUrl})` }"
+          <SwiperSlide
+            class="card border-0 mb-4 position-relative position-relative"
+            v-for="item in products"
+            :key="item.id"
           >
-            <a href="#" class="text-dark"> </a>
-          </div>
-          <div class="card-body p-0">
-            <h4 class="mb-0 mt-3">
-              <router-link
-                :to="{ name: 'Product', params: { id: `${product.id}` } }"
-                class="link-dark fw-bold text-decoration-none"
-              >
-                {{ item.title }}
-              </router-link>
-            </h4>
-            <p class="card-text mb-0">
-              NT$ {{ item.price }}
-              <span class="text-muted"
-                ><del>NT${{ item.origin_price }}</del></span
-              >
-            </p>
-            <p class="text-muted mt-3"></p>
-          </div>
-        </SwiperSlide>
-      </Swiper>
+            <div
+              class="swiper-slide-inner"
+              style="
+                height: 20rem;
+                background-position: center center;
+                background-size: cover;
+                background-color: #9cb2c7;
+                background-blend-mode: multiply;
+              "
+              :style="{ backgroundImage: `url(${item.imageUrl})` }"
+            >
+              <a href="#" class="text-dark"> </a>
+            </div>
+            <div class="card-body p-0">
+              <h4 class="mb-0 mt-3">
+                <router-link
+                  :to="{ name: 'Product', params: { id: `${product.id}` } }"
+                  class="link-dark fw-bold text-decoration-none"
+                >
+                  {{ item.title }}
+                </router-link>
+              </h4>
+              <p class="card-text mb-0">
+                NT$ {{ item.price }}
+                <span class="text-muted"
+                  ><del>NT${{ item.origin_price }}</del></span
+                >
+              </p>
+              <p class="text-muted mt-3"></p>
+            </div>
+          </SwiperSlide>
+        </Swiper>
+      </div>
     </div>
   </div>
 </template>
@@ -294,6 +303,11 @@ export default {
 </style>
 
 <style>
+.carousel-item {
+  box-shadow: 1px 1px 10px #696969;
+  border-radius: 0.5rem;
+}
+
 .swiper-slide-inner {
   box-shadow: 1px 1px 10px #696969;
   border-radius: 1rem;

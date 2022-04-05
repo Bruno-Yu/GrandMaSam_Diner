@@ -1,7 +1,7 @@
 <template>
   <div class="container-fluid bg-warning">
     <div class="row row-cols-1 row-cols-lg-2">
-      <div class="col col-lg-5">
+      <div class="col col-lg-6">
         <div class="container">
           <div class="row row-cols-1">
             <div class="col m-auto">
@@ -55,7 +55,7 @@
           </div>
         </div>
       </div>
-      <div class="col col-lg-5 productsView-banner"></div>
+      <div class="col col-lg-6 productsView-banner"></div>
     </div>
   </div>
   <div class="container-fluid mb-5 mt-md-5 mt-3 mb-7">
