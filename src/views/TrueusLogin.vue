@@ -27,7 +27,7 @@
             <label for="password">Password</label>
           </div>
           <button
-            class="btn btn-lg btn-dark w-100 mt-3"
+            class="btn btn-lg btn-warning fw-bold shadow w-100 mt-3"
             data-name="loginBtn"
             type="button"
             v-on:click="login"

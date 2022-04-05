@@ -58,11 +58,11 @@
       <div class="col col-5 productsView-banner"></div>
     </div>
   </div>
-  <div class="container mb-5 mt-md-5 mt-3mb-7">
-    <div class="row g-1">
+  <div class="container-fluid mb-5 mt-md-5 mt-3 mb-7">
+    <div class="row">
       <div class="col-md-2">
         <div
-          class="border border-bottom border-top-0 border-start-0 border-end-0 mb-3 mx-3"
+          class="border border-bottom border-top-0 border-start-0 border-end-0 mb-3 mx-1"
         >
           <div class="card border-0">
             <div
@@ -103,8 +103,13 @@
         </div>
       </div>
       <div class="col-md-10">
-        <div class="row row-cols-1 row-cols-lg-3 g-2 g-lg-3">
-          <div class="col" v-for="product in products" :key="product.id">
+        <div class="row row-cols-1 row-cols-lg-3">
+          <div
+            class="col shadow bg-body mb-2 p-2"
+            style="border-size: border-box"
+            v-for="product in products"
+            :key="product.id"
+          >
             <div class="card border-0 mb-2 position-relative">
               <div
                 class="card-img-top rounded-0 ratio ratio-16x9"
@@ -112,11 +117,12 @@
                   background-size: cover;
                   background-position: center center;
                   background-blend-mode: multiply;
-                  background-color: #9cb2c7;
+                  background-color: #ede6dcb;
                 "
                 :style="{ backgroundImage: `url(${product.imageUrl})` }"
               ></div>
 
+              <!-- background-color: #9cb2c7; -->
               <a
                 href="#"
                 class="position-absolute text-light"
@@ -146,7 +152,9 @@
               </router-link>
             </div>
             <div class="card-body p-0">
-              <h5 class="mb-0 mt-1 fw-bold">{{ product.title }}</h5>
+              <h5 class="mb-0 mt-1 fw-bold">
+                {{ product.title }}
+              </h5>
               <p class="card-text mt-1 mb-0 fw-bold">TWD {{ product.price }}</p>
               <div class="d-flex justify-content-between">
                 <p class="text-muted fw-light small">
@@ -154,7 +162,7 @@
                 </p>
                 <button
                   type="button"
-                  class="btn btn-danger btn-sm me-1"
+                  class="btn btn-warning shadow fw-bolder border border-1 btn-sm me-1"
                   @click="addToCart(product.id)"
                 >
                   加入購物車
@@ -290,5 +298,13 @@ export default {
   bottom: 10px;
   border-radius: 50% 50%;
   border: 1px black solid;
+}
+.product-intro-3 {
+  background-image: url(@/assets/images/left_footer.jpg);
+  height: 450px;
+  background-position: center center;
+  background-size: cover;
+  background-blend-mode: multiply;
+  background-color: #ede6dcbf;
 }
 </style>
