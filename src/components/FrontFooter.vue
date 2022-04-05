@@ -2,13 +2,13 @@
   <div class="container-fluid py-5 gx-lg-0" style="background-color: black">
     <div class="container">
       <router-link
-        class="fs-3 d-block navbar-brand link-light my-2 lh-1 text-center"
+        class="fs-3 d-block navbar-brand link-light my-2 lh-1 text-center text-warning"
         style="font-family: 'Bangers', serif"
         to="/"
       >
         GRANDMA SAM DINER
         <p
-          class="text-light fw-lighter fs-6 lh-1 mb-0 text-center"
+          class="fw-lighter fs-6 lh-1 mb-0 text-center text-warning"
           style="font-family: 'Bangers', serif"
         >
           LET MAKE AMERICA GREAT AGAIN
@@ -57,17 +57,17 @@
                   <a
                     class="col-1 text-decoration-none ms-3 ms-lg-4"
                     href="https://www.hexschool.com/?msclkid=8598b4ccaa4811ec81331512bb3bc247"
-                    ><i class="bi bi-facebook link-light"></i
+                    ><i class="bi bi-facebook link-light text-warning"></i
                   ></a>
                   <a
                     class="col-1 text-decoration-none mx-lg-1"
                     href="https://www.hexschool.com/?msclkid=8598b4ccaa4811ec81331512bb3bc247"
-                    ><i class="bi bi-instagram link-light"></i>
+                    ><i class="bi bi-instagram link-light text-warning"></i>
                   </a>
                   <a
                     class="col-1 text-decoration-none me-lg-5"
                     href="https://www.hexschool.com/?msclkid=8598b4ccaa4811ec81331512bb3bc247"
-                    ><i class="bi bi-twitter link-light"></i
+                    ><i class="bi bi-twitter link-light text-warning"></i
                   ></a>
                 </div>
               </div>
@@ -75,22 +75,26 @@
                 <div class="col-8 col-md-6 col-lg-9 footer-content">
                   <ul class="list-unstyled text-light ms-sm-5 ms-lg-5">
                     <li class="small fw-light my-1 text-nowrap">
-                      公司: 山姆大嬸餐飲投機無限公司
+                      <i class="bi bi-building text-warning"></i> 公司:
+                      山姆大嬸餐飲投機無限公司
                     </li>
                     <li class="small fw-light my-1 text-nowrap">
+                      <i class="bi bi-telephone-inbound text-warning"></i>
                       訂位服務專線: ( 0204 ) 5487487
                     </li>
                     <li class="small fw-light my-1 text-nowrap">
-                      電話: ( 02 ) 2311 3731
+                      <i class="bi bi-phone text-warning"></i> 電話: ( 02 ) 2311
+                      3731
                     </li>
                     <li class="text-muted small text-nowrap">
-                      ( 請謹慎播打，該電話直達高層 )
+                      註: 請謹慎播打，該電話直達高層
                     </li>
                     <li class="small fw-light my-1 text-nowrap">
-                      地址: 100台北市中正區中山南路21號
+                      <i class="bi bi-cursor text-warning"></i> 地址:
+                      100台北市中正區中山南路21號
                     </li>
                     <li class="small fw-light my-1 text-nowrap">
-                      營業時間: 24 hrs
+                      <i class="bi bi-clock text-warning"></i> 營業時間: 24 hrs
                     </li>
                   </ul>
                 </div>

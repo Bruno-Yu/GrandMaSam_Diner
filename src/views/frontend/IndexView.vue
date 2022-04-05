@@ -23,7 +23,7 @@
                   >
                     <i> 獻出你的錢包 !!!</i>
                   </h2>
-                  <h2 class="text-light fw-bold">
+                  <h2 class="text-light fw-bold text-nowrap">
                     <i>
                       讓台灣再次偉大
                       <span style="font-family: 'Noto Sans JP', sans-serif">
@@ -127,13 +127,15 @@
             class="text-muted"
             style="font-family: 'Noto Sans JP', sans-serif; font-weight: 500"
           >
-            > 生菜沙拉可選擇胡錦醬／維尼醬／蜜汁和風醬
+            <i class="bi bi-check2-square"></i>
+            生菜沙拉可選擇胡錦醬／維尼醬／蜜汁和風醬
           </p>
           <p
             class="text-muted"
             style="font-family: 'Noto Sans JP', sans-serif; font-weight: 500"
           >
-            > 還有獨特的川辣醬／穿普醬／穿幫醬！
+            <i class="bi bi-check2-square"></i>
+            還有獨特的川辣醬／穿普醬／穿幫醬！
           </p>
           <p
             class="text-muted"
@@ -158,19 +160,21 @@
             別樹一格
           </h4>
           <p style="font-family: 'Noto Sans JP', sans-serif; font-weight: 450">
-            > 有別於其他同類型的餐飲地點 ( 林森北 ) ;
+            <i class="bi bi-check2-square"></i>
+            有別於其他同類型的餐飲地點 ( 林森北 ) ;
             本餐廳坐立在繁華的中山南路上，也凸顯了本集團雄厚的經濟基礎
           </p>
           <p style="font-family: 'Noto Sans JP', sans-serif; font-weight: 450">
-            >
+            <i class="bi bi-check2-square"></i>
             本台北旗艦店內部也是濃濃的美式風格，加上以名亮對比的美金百元鈔票堆疊而成的用餐隔板以及相關牆飾，皆能帶給您不同的視覺體驗與震撼
           </p>
           <p style="font-family: 'Noto Sans JP', sans-serif; font-weight: 450">
-            > 大型廣場:
+            <i class="bi bi-check2-square"></i> 大型廣場:
             附近有全台最大型的免費抗議廣場，若有政見訴求而來的朋友都方便
           </p>
           <p style="font-family: 'Noto Sans JP', sans-serif; font-weight: 450">
-            > 地點方便: 近總統府以及本島各政府機關地點，關說以及處理事情便利
+            <i class="bi bi-check2-square"></i> 地點方便:
+            近總統府以及本島各政府機關地點，關說以及處理事情便利
           </p>
         </div>
       </div>
