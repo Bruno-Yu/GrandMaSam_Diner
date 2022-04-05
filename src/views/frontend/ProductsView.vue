@@ -112,16 +112,16 @@
           >
             <div class="card border-0 mb-2 position-relative">
               <div
-                class="card-img-top rounded-0 ratio ratio-16x9"
-                style="
+                class="card-img-top cart-image rounded-0 ratio ratio-16x9"
+                :style="{ backgroundImage: `url(${product.imageUrl})` }"
+              ></div>
+
+              <!-- style="
                   background-size: cover;
                   background-position: center center;
                   background-blend-mode: multiply;
                   background-color: #ede6dcb;
-                "
-                :style="{ backgroundImage: `url(${product.imageUrl})` }"
-              ></div>
-
+                " -->
               <!-- background-color: #9cb2c7; -->
               <a
                 href="#"
@@ -290,6 +290,19 @@ export default {
   background-blend-mode: multiply;
   background-color: #dcd8cfea;
 }
+/* background-size: cover; */
+.cart-image {
+  background-size: cover;
+  background-position: center center;
+  background-blend-mode: multiply;
+  /* background-color: #f1efecea; */
+  /* overflow: hidden;
+  transform: scale(1, 1);
+  transition: all 1s ease-out; */
+}
+/* .cart-image :hover {
+  transform: scale(1.2, 1.2);
+} */
 
 .cart {
   width: 10px;
