@@ -1,5 +1,63 @@
 <template>
-  <h2 class="my-5 ms-2 fw-bold text-center">產品/服務列表</h2>
+  <div class="container-fluid bg-warning">
+    <div class="row row-cols-1 row-cols-lg-2">
+      <div class="col col-5">
+        <div class="container">
+          <div class="row row-cols-1">
+            <div class="col m-auto">
+              <h2
+                class="my-5 ms-2 fs-1 text-center"
+                style="
+                  font-family: 'Noto Sans JP', sans-serif;
+                  font-weight: 700;
+                "
+              >
+                產品/服務列表
+              </h2>
+              <p
+                class="fs-3 text-light"
+                style="
+                  font-family: 'Noto Sans JP', sans-serif;
+                  font-weight: 600;
+                "
+              >
+                廚師介紹
+              </p>
+              <p
+                class="fs-5"
+                style="
+                  font-family: 'Noto Sans JP', sans-serif;
+                  font-weight: 400;
+                "
+              >
+                五腥級菜色 來自嘉義明雄的米其林廚師帶來的味道
+              </p>
+              <p
+                class="fs-5"
+                style="
+                  font-family: 'Noto Sans JP', sans-serif;
+                  font-weight: 400;
+                "
+              >
+                而每份食物他所帶來的食物，每份都有屬於他們自己的故事
+              </p>
+              <p
+                class="fs-5"
+                style="
+                  font-family: 'Noto Sans JP', sans-serif;
+                  font-weight: 400;
+                "
+              >
+                只要您用心品嘗，一定能嚐出嘉明
+                <span class="text-light">( 嘉義民雄 )</span> 的味道
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col col-5 productsView-banner"></div>
+    </div>
+  </div>
   <div class="container mb-5 mt-md-5 mt-3mb-7">
     <div class="row g-1">
       <div class="col-md-2">
@@ -216,6 +274,15 @@ export default {
 </script>
 
 <style>
+.productsView-banner {
+  background-image: url(@/assets/images/productsView_banner.jpg);
+  height: 420px;
+  background-position: center center;
+  background-size: cover;
+  background-blend-mode: multiply;
+  background-color: #dcd8cfea;
+}
+
 .cart {
   width: 10px;
   height: 10px;

@@ -1,11 +1,18 @@
 <template>
-  <div class="container-fluid gx-0">
-    <h2 class="my-5 fw-bold text-center gx-0">關於我們</h2>
+  <div class="container-fluid gx-0 bg-body">
+    <h2
+      class="my-5 fw-bold text-center gx-0"
+      style="font-family: 'Noto Sans JP', sans-serif; font-weight: 700"
+    >
+      關於我們
+    </h2>
     <div
-      class="container my-1 border border-secondary border-1 border-start-0 border-end-0 border-bottom-0 gx-0"
+      class="container my-1 py-3 border border-secondary border-1 border-start-0 border-end-0 border-bottom-0 gx-0"
     >
       <div class="row row-cols-1 d-flex justify-content-center gx-0">
-        <div class="col col-lg-5 me-lg-5 header-content">
+        <div
+          class="col col-lg-5 me-lg-5 header-content shadow p-4 mb-5 mt-2 bg-body rounded"
+        >
           <h4 class="my-5 fw-bolder">起源</h4>
           <p class="text-muted">
             根據歷史文獻《 ??! 》第一部《His
@@ -17,29 +24,48 @@
           </p>
         </div>
         <div class="col col-lg-3">
-          <div class="my-3 ratio ratio-4x3" style="background-color: #f7f4f0">
+          <div class="my-2 ratio ratio-1x1" style="background-color: #f7f4f0">
             <div class="logo-origin"></div>
           </div>
         </div>
       </div>
-      <div class="row row-cols-1 d-flex justify-content-center gx-0">
+      <div
+        class="row row-cols-1 d-flex justify-content-center gx-0 shadow p-3 mb-2 bg-warning rounded border border-dark border-2"
+      >
         <div class="col col-lg-9">
-          <h4 class="my-5 my-lg-4 fw-bolder text-lg-center">集團</h4>
+          <h4
+            class="my-5 my-lg-4 text-light fw-bolder text-lg-center"
+            style="font-family: 'Noto Sans JP', sans-serif; font-weight: 700"
+          >
+            集團
+          </h4>
           <div class="container mx-auto" style="max-width: 60rem">
             <ul>
-              <li class="text-muted">
-                1990年 -
+              <li class="text-light fw-bold">
+                <span
+                  class="text-dark"
+                  style="font-family: 'Noto Sans JP', sans-serif"
+                  ><i>1990年 -</i>
+                </span>
                 集團創辦人在祖母與親朋好友的經濟支援下，在紐約曼哈頓的黃金地段，購置了大量不動產，創辦了本集團大樓，為紀念創辦人祖母的獨到的眼光和金援，以及表現創辦人的性別平等核心理念，將該大樓命名為
                 山姆大嬸大樓（英語：The Grandma Sam
                 building），並以該大樓的名稱作為本集團的正式名稱 山姆大嬸 集團
                 （英語：The Grandma Sam Organization）
               </li>
-              <li class="text-muted my-3">
-                2000~ 2010 年 -
+              <li class="text-light fw-bolder">
+                <span
+                  class="text-dark"
+                  style="font-family: 'Noto Sans JP', sans-serif"
+                  ><i>2000~ 2010 年 -</i>
+                </span>
                 本集團拓展遍佈世界各地，並在各地建立分支據點，在全球聯合國所屬140個會員國的市中心，都沒有本集團的服務處所
               </li>
-              <li class="text-muted">
-                在 2020 年 -
+              <li class="text-light fw-bolder">
+                <span
+                  class="text-dark"
+                  style="font-family: 'Noto Sans JP', sans-serif"
+                  ><i>在 2020 年 -</i>
+                </span>
                 本集團創辦人有感於其祖母與台灣民主地區領導人蔣大總統的好交情，決定利用其祖母在台灣台北
                 ( 此亦為奧運會代表正式名稱
                 )的房地產投資收益，創立了台灣辦事處，並於隔年建立本餐飲公司
@@ -49,7 +75,7 @@
         </div>
       </div>
       <div
-        class="row row-cols-1 flex-row-reverse justify-content-center my-3 gx-0"
+        class="row row-cols-1 flex-row-reverse justify-content-center my-3 gx-0 shadow p-3 mb-2 bg-body rounded"
       >
         <h4 class="mt-2 mb-1 my-lg-5 text-lg-center fw-bolder">集團核心理念</h4>
         <div class="col col-lg-5 mx-2">
@@ -102,16 +128,22 @@
         </div>
       </div>
       <div
-        class="row row-cols-1 row-cols-lg-2 justify-content-center mt-3 mb-4 mb-sm-0 gx-0"
+        class="row row-cols-1 row-cols-lg-2 justify-content-center mt-3 mb-4 mb-sm-0 gx-0 bg-warning shadow p-3 mb-2 rounded"
       >
         <div class="col-10 col-lg-5 me-lg-4">
           <h4 class="mt-2 my-lg-5 text-lg-center fw-bolder">榮譽獎章</h4>
           <div class="row d-flex align-items-center">
-            <div class="col">
-              <p class="fs-5 fw-bold mt-lg-1 text-secondary">
+            <div class="col shadow p-5 mb-2 bg-warning rounded">
+              <p
+                class="fs-5 fw-bold mt-lg-1"
+                style="
+                  font-family: 'Noto Sans JP', sans-serif;
+                  font-weight: 700;
+                "
+              >
                 榮獲 2000年度最佳性福企業認證
               </p>
-              <p class="text-muted">
+              <p class="fw-bold">
                 在1990
                 年我們集團的創辦人登上了當時最有影響力的雜誌封面，成為每個人夢想中成為的男人，創辦人有感於此，在公司內部編撰了公司員工的福利法，並在多年耕耘後，由集團內部的公正評委評選為
                 2000年度最佳性福企業認證
@@ -127,12 +159,18 @@
       </div>
 
       <div
-        class="row row-cols-1 row-cols-lg-2 flex-row-reverse justify-content-center my-2 my-sm-5 gx-0"
+        class="row row-cols-1 row-cols-lg-2 flex-row-reverse justify-content-center my-2 my-sm-5 gx-0 shadow p-3 mb-2 bg-body rounded"
       >
         <div class="col-10 col-lg-4 mt-3 mt-sm-0 mt-lg-5 ms-2">
           <div class="row d-flex mt-sm-0 mt-lg-5 align-items-center">
-            <div class="col my-lg-4">
-              <p class="fs-5 mt-5 mt-md-0 mt-lg-5 fw-bold text-secondary">
+            <div class="col my-lg-4 shadow p-3 mb-2 bg-body rounded">
+              <p
+                class="fs-5 mt-5 mt-md-0 mt-lg-5 fw-bold text-secondary"
+                style="
+                  font-family: 'Noto Sans JP', sans-serif;
+                  font-weight: 700;
+                "
+              >
                 榮獲 性別平等 餐廳認證
               </p>
               <p class="text-muted mt-3">
@@ -148,16 +186,23 @@
           </div>
         </div>
       </div>
-      <div
-        class="row row-cols-1 flex-row-reverse justify-content-center my-3 gx-0"
-      >
-        <div class="col col-lg-5 mx-2">
+    </div>
+  </div>
+  <div class="container-fluid gx-0 shadow bg-dark">
+    <div class="row row-cols-1 flex-row-reverse justify-content-center mt-3">
+      <div class="col col-lg-5">
+        <div class="container m-auto px-auto">
           <div style="height: 430px">
-            <h4 class="my-5 fw-bolder">立即斗內作者</h4>
+            <h4
+              class="my-5 text-warning"
+              style="font-family: 'Noto Sans JP', sans-serif; font-weight: 700"
+            >
+              立即斗內作者
+            </h4>
 
             <form>
               <div class="mb-3">
-                <label for="InputEmail1" class="form-label fw-bold"
+                <label for="InputEmail1" class="form-label text-warning fw-bold"
                   >銀行帳號</label
                 >
                 <input
@@ -166,12 +211,14 @@
                   id="InputEmail1"
                   aria-describedby="emailHelp"
                 />
-                <div id="emailHelp" class="form-text">
+                <div id="emailHelp" class="text-light form-text">
                   我們不會將您的資訊分享給他人
                 </div>
               </div>
               <div class="mb-3">
-                <label for="InputPassword1" class="form-label fw-bold"
+                <label
+                  for="InputPassword1"
+                  class="form-label text-warning fw-bold"
                   >存摺密碼</label
                 >
                 <input
@@ -182,35 +229,44 @@
               </div>
               <div class="mb-3 form-check">
                 <input type="checkbox" class="form-check-input" id="Check1" />
-                <label class="form-check-label" for="Check1"
+                <label class="form-check-label text-light" for="Check1"
                   >收到我們最新的匯款需求</label
                 >
               </div>
               <div class="d-flex justify-content-end">
-                <button type="submit" class="btn btn-danger">送出</button>
+                <button
+                  type="submit"
+                  class="btn btn-warning border shadow border-2"
+                  style="
+                    font-family: 'Noto Sans JP', sans-serif;
+                    font-weight: 700;
+                  "
+                >
+                  送出
+                </button>
               </div>
             </form>
           </div>
         </div>
-        <div class="col col-lg-6 my-3">
-          <div class="mapouter">
-            <div class="gmap_canvas">
-              <iframe
-                title="gmap"
-                width="612"
-                height="200"
-                id="gmap_canvas"
-                src="https://maps.google.com/maps?q=%E4%B8%AD%E6%AD%A3%E7%B4%80%E5%BF%B5%E5%A0%82&t=&z=15&ie=UTF8&iwloc=&output=embed"
-                frameborder="0"
-                scrolling="no"
-                marginheight="0"
-                marginwidth="0"
-              ></iframe
-              ><a href="https://www.whatismyip-address.com"></a><br /><a
-                href="https://www.embedgooglemap.net"
-                >add map to website</a
-              >
-            </div>
+      </div>
+      <div class="col col-lg-6 my-3">
+        <div class="mapouter">
+          <div class="gmap_canvas">
+            <iframe
+              title="gmap"
+              width="612"
+              height="200"
+              id="gmap_canvas"
+              src="https://maps.google.com/maps?q=%E4%B8%AD%E6%AD%A3%E7%B4%80%E5%BF%B5%E5%A0%82&t=&z=15&ie=UTF8&iwloc=&output=embed"
+              frameborder="0"
+              scrolling="no"
+              marginheight="0"
+              marginwidth="0"
+            ></iframe
+            ><a href="https://www.whatismyip-address.com"></a><br /><a
+              href="https://www.embedgooglemap.net"
+              >add map to website</a
+            >
           </div>
         </div>
       </div>

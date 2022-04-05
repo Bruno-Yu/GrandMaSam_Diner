@@ -109,36 +109,36 @@
         <div class="product-intro"></div>
       </div>
       <div class="col col-lg-5 m-auto text-auto">
-        <div class="container-fluid shadow p-3 mb-1 bg-body rounded">
+        <div class="container-fluid shadow p-5 mb-1 bg-warning rounded">
           <h4
-            class="mt-4 text-warning text-center text-lg-start"
+            class="mt-4 text-dark text-center text-lg-start"
             style="font-family: 'Noto Sans JP', sans-serif; font-weight: 500"
           >
             味道獨特
           </h4>
           <p
-            class="text-muted"
+            class="text-dark"
             style="font-family: 'Noto Sans JP', sans-serif; font-weight: 500"
           >
             本集團訴求的是夢想，並不只是單純的餐飲品牌，所以我們販售給我們貴賓的餐點都有一份夢想的味道
             ( ? )
           </p>
           <p
-            class="text-muted"
+            class="text-dark"
             style="font-family: 'Noto Sans JP', sans-serif; font-weight: 500"
           >
             <i class="bi bi-check2-square"></i>
             生菜沙拉可選擇胡錦醬／維尼醬／蜜汁和風醬
           </p>
           <p
-            class="text-muted"
+            class="text-dark"
             style="font-family: 'Noto Sans JP', sans-serif; font-weight: 500"
           >
             <i class="bi bi-check2-square"></i>
             還有獨特的川辣醬／穿普醬／穿幫醬！
           </p>
           <p
-            class="text-muted"
+            class="text-dark"
             style="font-family: 'Noto Sans JP', sans-serif; font-weight: 500"
           >
             每個都有不同風味呈現~任您挑選搭配！
@@ -147,14 +147,14 @@
       </div>
     </div>
 
-    <div class="row flex-row-reverse g-lg-0">
+    <div class="row flex-row-reverse g-lg-0 shadow p-5 mb-1 bg-body rounded">
       <div class="col-md-6 my-1">
         <div class="product-intro-2"></div>
       </div>
       <div class="col-md-4 m-auto text-auto">
-        <div class="container">
+        <div class="container shadow p-3 mb-1 bg-body rounded">
           <h4
-            class="mt-4 text-center text-lg-start text-light"
+            class="text-center text-lg-start"
             style="font-family: 'Noto Sans JP', sans-serif; font-weight: 700"
           >
             別樹一格
@@ -235,13 +235,13 @@
   /* background-color: #f3f3f4c8; */
 }
 .product-intro {
-  background-image: url(https://cdn.pixabay.com/photo/2016/06/10/14/33/aioli-1448217_960_720.jpg);
+  background-image: url(@/assets/images/index_product_intro_1.jpg);
   height: 400px;
   background-position: center center;
   background-size: cover;
   background-blend-mode: multiply;
-  background-color: #b1c3d3;
-  border: 0.5em solid black;
+  background-color: #bdc8d7;
+  border: 0.5em solid rgb(0, 0, 0);
   border-radius: 0.2em;
 }
 .product-intro-2 {
