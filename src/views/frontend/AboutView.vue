@@ -30,7 +30,7 @@
         </div>
       </div>
       <div
-        class="row row-cols-1 d-flex justify-content-center gx-0 shadow p-3 mb-2 bg-warning rounded border border-dark border-2"
+        class="row row-cols-1 d-flex justify-content-center gx-0 shadow p-3 mb-2 bg-warning rounded chronicle-event"
       >
         <div class="col col-lg-9">
           <h4
@@ -127,63 +127,62 @@
           <div class="ourFounder"></div>
         </div>
       </div>
+    </div>
+  </div>
+  <div class="container-fluid">
+    <div
+      class="row row-cols-1 row-cols-lg-2 justify-content-center my-3 bg-warning shadow p-3 mb-1 rounded"
+    >
       <div
-        class="row row-cols-1 row-cols-lg-2 justify-content-center mt-3 mb-4 mb-sm-0 gx-0 bg-warning shadow p-3 mb-2 rounded"
+        class="col-12 col-lg-5 me-lg-4 d-flex justify-content-center align-items-center"
       >
-        <div class="col-10 col-lg-5 me-lg-4">
-          <h4 class="mt-2 my-lg-5 text-lg-center fw-bolder">榮譽獎章</h4>
-          <div class="row d-flex align-items-center">
-            <div class="col shadow p-5 mb-2 bg-warning rounded">
-              <p
-                class="fs-5 fw-bold mt-lg-1"
-                style="
-                  font-family: 'Noto Sans JP', sans-serif;
-                  font-weight: 700;
-                "
-              >
-                榮獲 2000年度最佳性福企業認證
-              </p>
-              <p class="fw-bold">
-                在1990
-                年我們集團的創辦人登上了當時最有影響力的雜誌封面，成為每個人夢想中成為的男人，創辦人有感於此，在公司內部編撰了公司員工的福利法，並在多年耕耘後，由集團內部的公正評委評選為
-                2000年度最佳性福企業認證
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="col col-lg-5 my-sm-3">
-          <div class="mt-lg-3 mb-1 mb-sm-5 ratio ratio-4x3">
-            <div class="playboy-cover"></div>
+        <div class="row">
+          <h4 class="my-lg-5 text-lg-center fw-bolder">榮譽獎章</h4>
+          <!-- <div class="col shadow p-5 mb-2 bg-warning rounded"> -->
+          <div class="col shadow p-4 p-sm-5 mb-2 bg-warning rounded">
+            <p
+              class="fs-5 fw-bold mt-lg-1"
+              style="font-family: 'Noto Sans JP', sans-serif; font-weight: 700"
+            >
+              榮獲 2000年度最佳性福企業認證
+            </p>
+            <p class="fw-bold">
+              在1990
+              年我們集團的創辦人登上了當時最有影響力的雜誌封面，成為每個人夢想中成為的男人，創辦人有感於此，在公司內部編撰了公司員工的福利法，並在多年耕耘後，由集團內部的公正評委評選為
+              2000年度最佳性福企業認證
+            </p>
           </div>
         </div>
       </div>
+      <div class="col col-lg-5">
+        <div class="mt-lg-5 mb-2 ratio ratio-1x1">
+          <div class="playboy-cover vh-60 vh-lg-30"></div>
+        </div>
+      </div>
+    </div>
 
-      <div
-        class="row row-cols-1 row-cols-lg-2 flex-row-reverse justify-content-center my-2 my-sm-5 gx-0 shadow p-3 mb-2 bg-body rounded"
-      >
-        <div class="col-10 col-lg-4 mt-3 mt-sm-0 mt-lg-5 ms-2">
-          <div class="row d-flex mt-sm-0 mt-lg-5 align-items-center">
-            <div class="col my-lg-4 shadow p-3 mb-2 bg-body rounded">
-              <p
-                class="fs-5 mt-5 mt-md-0 mt-lg-5 fw-bold text-secondary"
-                style="
-                  font-family: 'Noto Sans JP', sans-serif;
-                  font-weight: 700;
-                "
-              >
-                榮獲 性別平等 餐廳認證
-              </p>
-              <p class="text-muted mt-3">
-                我們相信，在男性的世界大家都是平等，更顯示我們偉大的領導英明的遠見與價值觀，也為此本餐飲在2021年獲得本集團總裁所創立的
-                性別平等基金會 認證，成為績優的優良廠商
-              </p>
-            </div>
+    <div
+      class="row row-cols-1 row-cols-lg-2 flex-row-reverse justify-content-center my-2 shadow p-3 mb-2 bg-body rounded"
+    >
+      <div class="col-12 col-lg-4 mt-3 mt-sm-0 mt-lg-5 ms-2">
+        <div class="row d-flex mt-sm-0 mt-lg-5 align-items-center">
+          <div class="col my-lg-4 shadow p-2 p-sm-3 mb-2 bg-body rounded">
+            <p
+              class="fs-5 mt-5 mt-md-0 mt-lg-5 fw-bold text-secondary"
+              style="font-family: 'Noto Sans JP', sans-serif; font-weight: 700"
+            >
+              榮獲 性別平等 餐廳認證
+            </p>
+            <p class="text-muted mt-3">
+              我們相信，在男性的世界大家都是平等，更顯示我們偉大的領導英明的遠見與價值觀，也為此本餐飲在2021年獲得本集團總裁所創立的
+              性別平等基金會 認證，成為績優的優良廠商
+            </p>
           </div>
         </div>
-        <div class="col col-lg-5">
-          <div class="my-3 ratio ratio-4x3">
-            <div class="sex-equality"></div>
-          </div>
+      </div>
+      <div class="col col-lg-5">
+        <div class="my-3 ratio ratio-4x3">
+          <div class="sex-equality"></div>
         </div>
       </div>
     </div>
@@ -281,7 +280,10 @@
   background-size: cover;
   background-color: #f7f4f0;
 }
-
+.chronicle-event {
+  border: 0.1em solid rgb(30, 23, 5);
+  border-radius: 0.2em;
+}
 .ourFounder {
   background-image: url(https://cdn.pixabay.com/photo/2017/01/24/13/02/donald-trump-2005343_960_720.png);
   height: 470px;
@@ -292,11 +294,12 @@
 }
 .playboy-cover {
   background-image: url(https://live.staticflickr.com/1978/44436996494_b23b5ee3e3_b.jpg);
-  height: 430px;
-  background-position: center center;
+  background-position: top center;
   background-size: cover;
   background-blend-mode: multiply;
   background-color: #acb3c9ea;
+  border: 0.5em solid rgb(0, 0, 0);
+  border-radius: 0.2em;
 }
 .sex-equality {
   background-image: url(https://cdn.pixabay.com/photo/2015/08/22/22/47/woman-902214_960_720.jpg);

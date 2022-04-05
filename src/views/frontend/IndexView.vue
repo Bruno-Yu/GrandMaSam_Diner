@@ -53,7 +53,7 @@
     <!-- 這邊後續要做卡片陰影 -->
     <div
       class="mt-2 shadow p-3 mb-5 bg-body rounded border-dark border-1"
-      style="height: 300px"
+      style="height: 330px"
     >
       <div class="container-fluid">
         <div class="row align-items-center gx-0">
@@ -147,12 +147,14 @@
       </div>
     </div>
 
-    <div class="row flex-row-reverse g-lg-0 shadow p-5 mb-1 bg-body rounded">
+    <div
+      class="row flex-row-reverse g-1 shadow p-1 p-lg-5 mb-1 bg-body rounded"
+    >
       <div class="col-md-6 my-1">
         <div class="product-intro-2"></div>
       </div>
-      <div class="col-md-4 m-auto text-auto">
-        <div class="container shadow p-3 mb-1 bg-body rounded">
+      <div class="col-md-5 m-auto text-auto">
+        <div class="container-fluid shadow p-5 mb-1 bg-body rounded">
           <h4
             class="text-center text-lg-start"
             style="font-family: 'Noto Sans JP', sans-serif; font-weight: 700"
@@ -227,7 +229,7 @@
   background-color: #a7aaadf9;
 }
 .story-section {
-  height: 300px;
+  height: 500px;
   /* background-image: url(@/assets/images/index_about_us.jpg); */
   /* background-position: center center; */
   /* background-size: cover; */
