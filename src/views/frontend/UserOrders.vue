@@ -81,7 +81,7 @@ export default {
 
 <style>
 .cart-banner {
-  background-image: url(https://cdn.pixabay.com/photo/2016/08/06/07/54/trump-1573999_960_720.jpg);
+  background-image: url(@/assets/images/cartView.jpg);
   height: 600px;
   background-position: center center;
   background-size: cover;

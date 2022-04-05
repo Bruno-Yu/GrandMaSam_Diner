@@ -52,7 +52,7 @@
 
 <style>
 .Not-found-banner {
-  background-image: url(https://cdn.pixabay.com/photo/2016/01/20/09/01/america-1151134_960_720.jpg);
+  background-image: url(@/assets/images/404_flag.jpg);
   height: 800px;
   background-position: center center;
   background-size: cover;

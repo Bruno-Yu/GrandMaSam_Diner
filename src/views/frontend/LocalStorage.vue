@@ -251,7 +251,7 @@ export default {
 
 <style>
 .fav-banner {
-  background-image: url(https://cdn.pixabay.com/photo/2016/10/18/18/35/dementia-1750965_960_720.jpg);
+  background-image: url(@/assets/images/localStorage_banner.jpg);
   height: 600px;
   background-position: center center;
   background-size: cover;

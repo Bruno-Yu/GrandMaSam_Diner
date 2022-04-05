@@ -275,7 +275,7 @@
 
 <style>
 .logo-origin {
-  background-image: url(https://cdn.pixabay.com/photo/2018/02/01/18/39/trump-3123765_960_720.png);
+  background-image: url(@/assets/images/aboutView_leader.png);
   background-position: top center;
   background-size: cover;
   background-color: #f7f4f0;
@@ -285,7 +285,7 @@
   border-radius: 0.2em;
 }
 .ourFounder {
-  background-image: url(https://cdn.pixabay.com/photo/2017/01/24/13/02/donald-trump-2005343_960_720.png);
+  background-image: url(@/assets/images/aboutView_group.png);
   height: 470px;
   background-position: center center;
   background-size: cover;
@@ -293,7 +293,7 @@
   background-color: #d1d7dbf3;
 }
 .playboy-cover {
-  background-image: url(https://live.staticflickr.com/1978/44436996494_b23b5ee3e3_b.jpg);
+  background-image: url(@/assets/images/aboutView_playboy.jpg);
   background-position: top center;
   background-size: cover;
   background-blend-mode: multiply;
@@ -302,7 +302,7 @@
   border-radius: 0.2em;
 }
 .sex-equality {
-  background-image: url(https://cdn.pixabay.com/photo/2015/08/22/22/47/woman-902214_960_720.jpg);
+  background-image: url(@/assets/images/aboutView_woman.jpg);
   background-position: center center;
   background-size: cover;
 }
