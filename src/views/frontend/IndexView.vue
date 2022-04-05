@@ -111,7 +111,7 @@
       <div class="col col-lg-5 m-auto text-auto">
         <div class="container-fluid shadow p-5 mb-1 bg-warning rounded">
           <h4
-            class="mt-4 text-dark text-center text-lg-start"
+            class="mt-4 text-center text-light text-lg-start"
             style="font-family: 'Noto Sans JP', sans-serif; font-weight: 500"
           >
             味道獨特
