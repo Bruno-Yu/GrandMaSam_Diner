@@ -106,6 +106,11 @@ const router = createRouter({
         top: 3400,
       };
     }
+    if (to.fullPath.match('about') && from.fullPath.match('trueusLogin')) {
+      return {
+        top: 3400,
+      };
+    }
     return {};
   },
 });

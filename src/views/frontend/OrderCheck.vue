@@ -1,4 +1,5 @@
 <template>
+  <ModalMessage ref="modalMessage"></ModalMessage>
   <div class="container mt-4" style="max-width: 1000px">
     <div class="row my-5 justify-content-center">
       <div class="col-md-6">
@@ -91,6 +92,7 @@
 </template>
 <script>
 import emitter from '@/libs/emitter';
+// import ModalMessage from '@/components/ModalMessage.vue';
 
 export default {
   data() {
@@ -101,6 +103,9 @@ export default {
       isPaid: false,
       PaidDate: '尚未付款',
     };
+  },
+  components: {
+    // ModalMessage,
   },
   methods: {
     PaidDateRenewed() {
@@ -131,9 +136,8 @@ export default {
           this.orderShow = this.orders.pop();
           emitter.emit('order-id', this.orderShow.id);
         })
-        .catch((error) => {
+        .catch(() => {
           this.isLoading = false;
-          alert(error.response, '錯誤訊息');
         });
     },
     updatePaid() {
@@ -143,15 +147,20 @@ export default {
         .post(api)
         .then(() => {
           this.PaidDate = this.PaidDateRenewed();
-          this.$router.push('/paidSuccess');
+          this.$refs.modalMessage.openModal(true, 'paid');
         })
-        .catch((error) => {
-          alert(error.response, '錯誤訊息');
+        .catch(() => {
+          this.$refs.modalMessage.openModal(false, 'paid');
         });
     },
   },
   created() {
     this.getOrder();
+    emitter.on('paidSuccess', (data) => {
+      if (data === 'paidSuccess') {
+        this.$router.push('/paidSuccess');
+      }
+    });
   },
 };
 </script>

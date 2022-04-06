@@ -119,25 +119,24 @@
       </div>
     </div>
   </div>
-  <div v-else class="container-fluid fav-banner my-1">
+  <div v-else class="container-fluid fav-banner vh-90 my-1">
     <div
-      class="row d-flex align-items-center justify-content-center"
+      class="row d-flex align-items-end justify-content-center"
       style="height: 100%"
     >
       <div class="col vh-30">
-        <p class="fs-1 text-light text-center">
-          <i class="bi bi-emoji-frown"></i>
-        </p>
-        <h2 class="text-light fw-bold text-center">怎麼會連收藏都沒有呢?</h2>
+        <h2 class="text-light fw-bold text-center pt-2">
+          怎麼會連收藏都沒有呢?
+        </h2>
         <h2 class="text-light fw-bold text-center">難到您不愛台灣嗎?</h2>
         <div class="d-flex justify-content-center mt-4">
           <router-link
             to="/productsView"
             type="button"
-            class="btn btn-warning link-dark fw-bolder fs-4 border border-dark border-3"
-            style="width: 20%"
+            class="btn btn-dark link-light fw-bolder fs-4 border border-dark border-3 mb-5 w-50 w-lg-15"
             >馬上改正</router-link
           >
+          <!-- style="width: 50%" -->
         </div>
       </div>
     </div>
@@ -255,7 +254,7 @@ export default {
   height: 600px;
   background-position: center center;
   background-size: cover;
-  background-blend-mode: multiply;
-  background-color: #5e6063;
+  /* background-blend-mode: multiply;
+  background-color: #eff2f6; */
 }
 </style>

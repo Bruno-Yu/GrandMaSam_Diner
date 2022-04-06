@@ -1,4 +1,6 @@
 <template>
+  <ModalMessage ref="modalMessage"></ModalMessage>
+  <!-- :succeeded="success" -->
   <div class="container-fluid">
     <div class="row justify-content-center gx-0">
       <h1 class="h3 my-5 font-weight-normal text-center fw-bolder">
@@ -45,7 +47,18 @@
 </template>
 
 <script>
+import emitter from '@/libs/emitter';
+// import ModalMessage from '@/components/ModalMessage.vue';
+
 export default {
+  data() {
+    return {
+      success: false,
+    };
+  },
+  components: {
+    // ModalMessage,
+  },
   methods: {
     login() {
       // EMAIL 輸入欄DOM元素
@@ -60,18 +73,34 @@ export default {
       this.$http
         .post(`${process.env.VUE_APP_API}/admin/signin`, user)
         .then((res) => {
-          console.log('登入成功');
           const { token, expired } = res.data;
           document.cookie = `hexToken=${token};expires=${new Date(expired)};`;
-          this.$router.push('/admin');
-          alert('登入成功，按確定後進行跳轉');
+          // this.success = true;
+          this.$refs.modalMessage.openModal(true, 'login');
+          // this.success = false;
+          // this.$router.push('/admin');
         })
-        .catch((error) => {
-          alert(
-            `警告: ${error.data.message} \n提醒: ${error.data.error.message}`,
-          );
+        .catch(() => {
+          this.$refs.modalMessage.openModal(false, 'login');
         });
     },
+  },
+  created() {
+    emitter.on('loginSuccess', (data) => {
+      if (data === 'login') {
+        this.$router.push('/admin');
+      }
+    });
+    emitter.on('loginFail', (data) => {
+      if (data === 'loginFail') {
+        this.$router.push('/trueusLogin');
+      }
+    });
+    emitter.on('donateNow', (data) => {
+      if (data === 'donateNow') {
+        this.$router.push('/about');
+      }
+    });
   },
 };
 </script>
