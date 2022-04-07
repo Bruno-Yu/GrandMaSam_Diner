@@ -41,7 +41,7 @@
                 "
               >
                 而每份<span class="d-none d-md-inline">他所帶來的</span
-                >食物，都有屬於他們自己的故事
+                >食物，都有屬於食材自己的故事
               </p>
               <p
                 class="fs-5 text-light text-sm-nowrap"
