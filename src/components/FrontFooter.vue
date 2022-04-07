@@ -136,7 +136,10 @@
   max-width: 20rem;
   margin-bottom: 2rem;
 }
-a:hover {
+.link-light.link-light:hover {
   color: #ffc107;
+}
+.navbar-brand.navbar-brand.link-light:hover {
+  color: #b38602;
 }
 </style>
