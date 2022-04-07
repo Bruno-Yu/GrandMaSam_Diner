@@ -55,12 +55,12 @@
               <div class="col">
                 <div class="row-cols-3 d-flex justify-content-center">
                   <a
-                    class="col-1 text-decoration-none ms-3 ms-lg-4"
+                    class="col-1 link text-decoration-none ms-3 ms-lg-4"
                     href="https://www.hexschool.com/?msclkid=8598b4ccaa4811ec81331512bb3bc247"
                     ><i class="bi bi-facebook link-light text-warning"></i
                   ></a>
                   <a
-                    class="col-1 text-decoration-none mx-lg-1"
+                    class="col-1 link text-decoration-none mx-lg-1"
                     href="https://www.hexschool.com/?msclkid=8598b4ccaa4811ec81331512bb3bc247"
                     ><i class="bi bi-instagram link-light text-warning"></i>
                   </a>
@@ -79,7 +79,7 @@
                       山姆大嬸餐飲投機無限公司
                     </li>
                     <li class="small fw-light my-1 text-nowrap">
-                      <i class="bi bi-telephone-inbound text-warning"></i>
+                      <i class="bi bi-telephone-inbound link text-warning"></i>
                       <a
                         href="#"
                         alt="diner_book_tel"
@@ -135,5 +135,8 @@
 .footer-content {
   max-width: 20rem;
   margin-bottom: 2rem;
+}
+a:hover {
+  color: #ffc107;
 }
 </style>

@@ -280,4 +280,7 @@
   background-blend-mode: multiply;
   background-color: #545351;
 }
+a :hover {
+  color: #ffc107;
+}
 </style>
