@@ -37,8 +37,8 @@
                 <router-link
                   class="nav-link active fw-bold"
                   aria-current="page"
-                  to="/about"
-                  ><i class="bi bi-journals"></i> 故事</router-link
+                  to="/admin"
+                  ><i class="bi bi-shop-window"></i> 產品管理</router-link
                 >
               </li>
 
@@ -46,20 +46,20 @@
                 <router-link
                   class="nav-link active fw-bold"
                   aria-current="page"
-                  to="/productsView"
+                  to="/ordersAdmin"
                 >
-                  <i class="bi bi-shop"></i>
-                  商店</router-link
+                  <i class="bi bi-clipboard-check"></i>
+                  訂單管理</router-link
                 >
               </li>
               <li class="nav-item">
                 <router-link
                   class="nav-link active fw-bold"
                   aria-current="page"
-                  to="/localStorage"
-                  ><i class="bi bi-suit-heart"></i>
+                  to="/eventAdmin"
+                  ><i class="bi bi-emoji-sunglasses"></i>
 
-                  收藏</router-link
+                  活動編輯</router-link
                 >
               </li>
 
@@ -67,17 +67,18 @@
                 <router-link
                   class="nav-link active fw-bold"
                   aria-current="page"
-                  to="/cartView"
-                  ><i class="bi bi-bag"></i> 訂單</router-link
+                  to="/aboutAdmin"
+                  ><i class="bi bi-journal-text"></i> 關於作品</router-link
                 >
               </li>
               <li class="nav-item">
-                <router-link
-                  class="nav-link active fw-bold"
+                <a
+                  class="nav-link active fw-bold text-decoration-none"
                   aria-current="page"
-                  to="/trueusLogin"
+                  @click.prevent="logout"
+                  href="#"
                 >
-                  <i class="bi bi-person"></i> 登入</router-link
+                  <i class="bi bi-box-arrow-right"></i> 人生登出</a
                 >
               </li>
             </ul>
@@ -87,6 +88,27 @@
     </div>
   </div>
 </template>
+
+<script>
+export default {
+  methods: {
+    logout() {
+      const api = `${process.env.VUE_APP_API}/logout`;
+      this.$http
+        .post(api)
+        .then((response) => {
+          alert(response, '登出');
+          if (response.data.success) {
+            this.$router.push('/trueusLogin');
+          }
+        })
+        .catch((error) => {
+          alert(error.response, '錯誤訊息');
+        });
+    },
+  },
+};
+</script>
 
 <style>
 router-link .nav-item:hover {

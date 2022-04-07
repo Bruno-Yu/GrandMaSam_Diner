@@ -20,7 +20,7 @@
       >
         <td>{{ item.id }}</td>
         <td>{{ item.create_at }}</td>
-        <td>{{ item.user.email }}</td>
+        <td v-if="item.user">{{ item.user.email }}</td>
         <td>
           <ul class="list-group-numbered">
             <li
@@ -183,8 +183,8 @@ export default {
   created() {
     this.getOrders();
   },
-  updated() {
-    this.getOrders();
-  },
+  // updated() {
+  //   this.getOrders();
+  // },
 };
 </script>

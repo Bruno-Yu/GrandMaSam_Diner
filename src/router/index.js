@@ -63,7 +63,7 @@ const routes = [
         component: () => import('../views/backend/ProductsAdmin.vue'),
       },
       {
-        path: '/orderAmin',
+        path: '/ordersAdmin',
         component: () => import('../views/backend/OrdersAdmin.vue'),
       },
       {
