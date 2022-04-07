@@ -121,21 +121,53 @@
   </div>
   <div v-else class="container-fluid fav-banner vh-90 my-1">
     <div
-      class="row d-flex align-items-end justify-content-center"
+      class="row d-flex align-items-center justify-content-center"
       style="height: 100%"
     >
       <div class="col vh-30">
-        <h2 class="text-light fw-bold text-center pt-2">
-          怎麼會連收藏都沒有呢?
-        </h2>
-        <h2 class="text-light fw-bold text-center">難到您不愛台灣嗎?</h2>
-        <div class="d-flex justify-content-center mt-4">
-          <router-link
-            to="/productsView"
+        <p
+          class="text-dark fs-2 fw-bold text-center mt-2"
+          style="font-family: 'Noto Sans JP', sans-serif; font-weight: 500"
+        >
+          怎麼? 你以為這是一般的購物網站嗎?
+        </p>
+        <p
+          class="text-dark fs-4 fw-bold text-center pt-2"
+          style="font-family: 'Noto Sans JP', sans-serif; font-weight: 400"
+        >
+          你有想到非洲的小孩每天過60秒就<span
+            class="text-danger d-inline-block d-sm-inline"
+            >少了1分鐘的壽命</span
+          >嗎?
+        </p>
+        <p
+          class="text-dark fs-4 fw-bold text-center"
+          style="font-family: 'Noto Sans JP', sans-serif; font-weight: 400"
+        >
+          而這
+        </p>
+        <p
+          class="text-dark fs-4 fw-bold text-center"
+          style="font-family: 'Noto Sans JP', sans-serif; font-weight: 400"
+        >
+          而這其實這不是收不收藏商品的問題，而是愛不愛國的問題!!!
+        </p>
+        <div class="d-flex justify-content-center mt-2 mb-2 mt-lg-4">
+          <button
             type="button"
-            class="btn btn-dark link-light fw-bolder fs-4 border border-dark border-3 mb-5 w-50 w-lg-15"
-            >馬上改正</router-link
+            class="btn btn-outline-dark fs-3 shadow p-2 mb-1 border border-dark border-1 w-30"
+            style="font-family: 'Noto Sans JP', sans-serif; font-weight: 600"
           >
+            不愛國
+          </button>
+          <button
+            type="button"
+            class="btn btn-danger fs-3 link-light mx-2 shadow p-2 mb-1 border border-dark border-1 w-30"
+            style="font-family: 'Noto Sans JP', sans-serif; font-weight: 600"
+            @click="backToStore()"
+          >
+            我愛國
+          </button>
           <!-- style="width: 50%" -->
         </div>
       </div>
@@ -159,6 +191,9 @@ export default {
     };
   },
   methods: {
+    backToStore() {
+      this.$router.push('/productsView');
+    },
     getFavor(products) {
       this.favorites.forEach((id) => {
         this.favProducts.push(products.filter((item) => item.id === id));

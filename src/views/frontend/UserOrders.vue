@@ -31,24 +31,44 @@
       class="row d-flex align-items-center justify-content-center"
       style="height: 100%"
     >
-      <div class="col vh-30">
-        <p class="fs-1 text-light text-center">
-          <i class="bi bi-emoji-frown"></i>
-        </p>
-        <h2 class="text-light fw-bold text-center">
-          怎麼購物車都沒有東西呢? 難道是沒錢購物嗎?
-        </h2>
-        <h2 class="text-light fw-bold text-center">
-          錢跟時間一樣擠一擠就會有的!
-        </h2>
-        <div class="d-flex justify-content-center mt-4">
-          <router-link
-            to="/productsView"
-            type="button"
-            class="btn btn-warning link-dark fw-bolder fs-4 border border-dark border-3"
-            style="width: 20%"
-            >馬上消費</router-link
+      <div class="col col-lg-7 vh-30">
+        <div class="container bg-dark" style="--bs-bg-opacity: 0.1">
+          <p
+            class="text-light fs-2 text-center"
+            style="font-family: 'Noto Sans JP', sans-serif; font-weight: 500"
           >
+            其實你知道嗎?
+            <span class="d-inline-block d-sm-inline">和平是需要付出代價的</span>
+          </p>
+          <p
+            class="text-light fs-4 text-center"
+            style="font-family: 'Noto Sans JP', sans-serif; font-weight: 400"
+          >
+            若你不願意付出，那你跟騙人家感情的渣男有甚麼兩樣呢?
+          </p>
+          <p
+            class="text-light fs-4 text-center"
+            style="font-family: 'Noto Sans JP', sans-serif; font-weight: 400"
+          >
+            小心你的青春跟背景這可愛的和平鴿一樣，一但逝去就回不來了 (哼
+          </p>
+          <div class="container d-flex justify-content-center mt-4">
+            <button
+              type="button"
+              class="btn btn-outline-dark fs-3 shadow p-2 mb-1 border border-dark border-1 w-30"
+              style="font-family: 'Noto Sans JP', sans-serif; font-weight: 600"
+            >
+              誰管你
+            </button>
+            <button
+              type="button"
+              class="btn btn-danger fs-3 link-light mx-2 shadow p-2 mb-1 border border-dark border-1 w-30"
+              style="font-family: 'Noto Sans JP', sans-serif; font-weight: 600"
+              @click="backToStore()"
+            >
+              我錯了
+            </button>
+          </div>
         </div>
       </div>
     </div>
@@ -65,6 +85,9 @@ export default {
     };
   },
   methods: {
+    backToStore() {
+      this.$router.push('/productsView');
+    },
     getCart() {
       this.$http
         .get(`${process.env.VUE_APP_API}/api/${process.env.VUE_APP_PATH}/cart`)
@@ -85,7 +108,5 @@ export default {
   height: 600px;
   background-position: center center;
   background-size: cover;
-  background-blend-mode: multiply;
-  background-color: #5e6063;
 }
 </style>
