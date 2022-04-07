@@ -96,4 +96,7 @@
   background-position: center center;
   background-size: cover;
 }
+router-link .nav-item:hover {
+  color: #ffc107;
+}
 </style>

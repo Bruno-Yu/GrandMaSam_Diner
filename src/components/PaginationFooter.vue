@@ -8,7 +8,7 @@
           tabindex="-1"
           :aria-disabled="!hasPre"
           @click.prevent="emitData(currentPage - 1)"
-          >上一頁</a
+          >上吐</a
         >
       </li>
 
@@ -36,7 +36,7 @@
           href="#"
           :aria-disabled="!hasNext"
           @click.prevent="emitData(currentPage + 1)"
-          >下一頁</a
+          >下瀉</a
         >
       </li>
     </ul>
