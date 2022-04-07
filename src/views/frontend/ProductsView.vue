@@ -30,7 +30,7 @@
                   font-weight: 400;
                 "
               >
-                <span class="d-none d-md-inline">五腥級菜色，</span
+                <span class="d-none d-md-inline">五腥出品，</span
                 >來自嘉義明雄的米其林廚師帶來的味道
               </p>
               <p

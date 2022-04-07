@@ -39,10 +39,18 @@
         </form>
       </div>
     </div>
-    <p class="mt-5 mb-3 text-muted text-center">
-      &copy; 2022~∞ - 八角學院關心您的肝與助教們的肝
+    <p
+      class="mt-5 mb-1 text-center"
+      style="font-family: 'Noto Sans JP', sans-serif; font-weight: 500"
+    >
+      &copy; 2022~∞ - 八角學堂向以下人員致敬
     </p>
-    <p class="fw-light mb-3 text-muted text-center">改編自辛苦的助教Ray</p>
+    <p
+      class="mb-3 text-muted text-center"
+      style="font-family: 'Noto Sans JP', sans-serif; font-weight: 500"
+    >
+      辛苦的卡老師、Ray與其他同期的駁二裝置藝術們
+    </p>
   </div>
 </template>
 
