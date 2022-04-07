@@ -81,12 +81,8 @@ export default {
     this.$http.defaults.headers.common.Authorization = `${token}`;
     this.$http
       .post(`${process.env.VUE_APP_API}/api/user/check`)
-      .then((res) => {
-        console.log(res);
-        alert('成功登入', `${res.data.sucess}`);
-      })
-      .catch((error) => {
-        alert(error);
+      .then(() => {})
+      .catch(() => {
         this.$router.push('/trueusLogin');
       });
   },

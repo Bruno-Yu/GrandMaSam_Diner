@@ -47,7 +47,7 @@
 </template>
 
 <script>
-import emitter from '@/libs/emitter';
+// import emitter from '@/libs/emitter';
 // import ModalMessage from '@/components/ModalMessage.vue';
 
 export default {
@@ -84,23 +84,6 @@ export default {
           this.$refs.modalMessage.openModal(false, 'login');
         });
     },
-  },
-  created() {
-    emitter.on('loginSuccess', (data) => {
-      if (data === 'login') {
-        this.$router.push('/admin');
-      }
-    });
-    emitter.on('loginFail', (data) => {
-      if (data === 'loginFail') {
-        this.$router.push('/trueusLogin');
-      }
-    });
-    emitter.on('donateNow', (data) => {
-      if (data === 'donateNow') {
-        this.$router.push('/about');
-      }
-    });
   },
 };
 </script>

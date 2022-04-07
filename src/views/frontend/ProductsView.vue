@@ -1,21 +1,21 @@
 <template>
   <div class="container-fluid bg-warning">
-    <div class="row row-cols-1 row-cols-lg-2">
+    <div class="row row-cols-1 row-cols-lg-2 g-1 my-1">
       <div class="col col-lg-6">
-        <div class="container">
-          <div class="row row-cols-1">
+        <div class="container shadow px-2 py-4 p-sm-5 bg-warning rounded">
+          <div class="row ps-2 row-cols-1">
             <div class="col m-auto">
               <h2
-                class="my-5 ms-2 fs-1 text-center"
+                class="mt-5 mb-4 ms-2 fs-1 text-nowrap text-dark text-center text-sm-start"
                 style="
                   font-family: 'Noto Sans JP', sans-serif;
-                  font-weight: 700;
+                  font-weight: 800;
                 "
               >
                 產品/服務列表
               </h2>
               <p
-                class="fs-3 text-light"
+                class="fs-3 text-dark text-sm-nowrap"
                 style="
                   font-family: 'Noto Sans JP', sans-serif;
                   font-weight: 600;
@@ -24,38 +24,42 @@
                 廚師介紹
               </p>
               <p
-                class="fs-5"
+                class="fs-5 text-light text-sm-nowrap"
                 style="
                   font-family: 'Noto Sans JP', sans-serif;
                   font-weight: 400;
                 "
               >
-                五腥級菜色 來自嘉義明雄的米其林廚師帶來的味道
+                <span class="d-none d-md-inline">五腥級菜色，</span
+                >來自嘉義明雄的米其林廚師帶來的味道
               </p>
               <p
-                class="fs-5"
+                class="fs-5 text-light text-sm-nowrap"
                 style="
                   font-family: 'Noto Sans JP', sans-serif;
                   font-weight: 400;
                 "
               >
-                而每份食物他所帶來的食物，每份都有屬於他們自己的故事
+                而每份<span class="d-none d-md-inline">他所帶來的</span
+                >食物，都有屬於他們自己的故事
               </p>
               <p
-                class="fs-5"
+                class="fs-5 text-light text-sm-nowrap"
                 style="
                   font-family: 'Noto Sans JP', sans-serif;
                   font-weight: 400;
                 "
               >
-                只要您用心品嘗，一定能嚐出嘉明
-                <span class="text-light">( 嘉義民雄 )</span> 的味道
+                只要您用心品嘗，一定能嚐出嘉明<span
+                  class="text-light fw-light d-none d-md-inline"
+                  >( 嘉義民雄 )</span
+                >的味道
               </p>
             </div>
           </div>
         </div>
       </div>
-      <div class="col col-lg-6 productsView-banner"></div>
+      <div class="col col-lg-6 productsView-banner mt-1"></div>
     </div>
   </div>
   <div class="container-fluid mb-5 mt-md-5 mt-3 mb-7">

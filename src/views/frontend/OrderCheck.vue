@@ -156,11 +156,6 @@ export default {
   },
   created() {
     this.getOrder();
-    emitter.on('paidSuccess', (data) => {
-      if (data === 'paidSuccess') {
-        this.$router.push('/paidSuccess');
-      }
-    });
   },
 };
 </script>

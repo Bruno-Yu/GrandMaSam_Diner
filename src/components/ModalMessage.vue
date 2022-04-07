@@ -10,10 +10,14 @@
   >
     <div class="modal-dialog">
       <div v-if="success" class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title bg-warning" id="exampleModalLabel">
+        <div class="modal-header bg-warning">
+          <h3
+            class="modal-title text-light"
+            id="exampleModalLabel"
+            style="font-family: 'Noto Sans JP', sans-serif; font-weight: 550"
+          >
             執行成功
-          </h5>
+          </h3>
           <button
             type="button"
             class="btn-close"
@@ -24,55 +28,72 @@
         </div>
         <div v-if="login" class="modal-body">
           <div class="container">
-            <h5>歡迎回來，我們尊貴的會員</h5>
+            <h5
+              style="font-family: 'Noto Sans JP', sans-serif; font-weight: 500"
+            >
+              歡迎回來，我們尊貴的會員
+            </h5>
             <p>
-              貼心提醒，這個月因為作者的手頭有點緊，還請於明日就匯會員款項，用以籌備作者跑路時的盤纏基金
+              貼心提醒，這個月因為作者的手頭有點緊，還請於明日就匯會員款項，用以作為作者的跑路基金
             </p>
           </div>
         </div>
         <div v-if="paid" class="modal-body">
           <div class="container">
-            <h5>感謝施主您的善舉</h5>
-            <p>
+            <h5
+              style="font-family: 'Noto Sans JP', sans-serif; font-weight: 600"
+            >
+              感謝施主您的善舉
+            </h5>
+            <p class="fw-bold">
               有句話說台灣最美的風景就是人，但在作者眼中，最美的台灣風景就是你
             </p>
-            <p>的錢</p>
+            <p class="fw-bold">的錢</p>
           </div>
         </div>
         <div v-if="paid" class="modal-footer">
           <div class="container">
             <button
               type="button"
-              class="btn btn-warning"
+              class="btn btn-warning shadow mx-auto shadow p-2 mb-1 border border-dark border-1"
               @click="[paidSuccess(), closeModal()]"
+              style="font-family: 'Noto Sans JP', sans-serif; font-weight: 400"
             >
               我是盤子我驕傲
             </button>
           </div>
         </div>
         <div v-if="login" class="modal-footer">
-          <div class="container">
+          <div class="container d-flex justify-content-end">
             <button
               type="button"
-              class="btn btn-warning"
+              class="btn btn-outline-dark shadow p-2 mb-1"
+              data-bs-dismiss="modal"
               @click="[closeModal(), loginSuccess()]"
+              style="font-family: 'Noto Sans JP', sans-serif; font-weight: 400"
             >
-              朕知道了
+              我也沒錢
             </button>
             <button
               type="button"
-              class="btn btn-secondary"
-              data-bs-dismiss="modal"
+              class="btn btn-warning mx-2 shadow p-2 mb-1 border border-dark border-1"
               @click="[closeModal(), loginSuccess()]"
+              style="font-family: 'Noto Sans JP', sans-serif; font-weight: 400"
             >
-              我也沒錢
+              朕知道了
             </button>
           </div>
         </div>
       </div>
       <div v-else class="modal-content">
         <div class="modal-header bg-danger">
-          <h5 class="modal-title" id="exampleModalLabel">執行結果失敗</h5>
+          <h3
+            class="modal-title text-light"
+            id="exampleModalLabel"
+            style="font-family: 'Noto Sans JP', sans-serif; font-weight: 550"
+          >
+            執行結果失敗
+          </h3>
           <button
             type="button"
             class="btn-close"
@@ -81,11 +102,15 @@
             aria-label="Close"
           ></button>
         </div>
-        <div class="modal-body">
-          <div v-if="paid" class="container">
-            <h5>很遺憾地通知您，付款失敗</h5>
-            <p>貼心小提示:</p>
-            <ul>
+        <div class="modal-body" v-if="paid">
+          <div class="container">
+            <h5
+              style="font-family: 'Noto Sans JP', sans-serif; font-weight: 550"
+            >
+              很遺憾地通知您，付款失敗
+            </h5>
+            <p class="fw-bold">貼心小提示:</p>
+            <ul class="list-unstyled">
               <li>
                 1. 或許您可以透過替親人保高額保險並技巧性的向保險公司申請理賠
               </li>
@@ -93,41 +118,57 @@
             </ul>
             <p>請放心，我們致力於保護客戶的隱私，我們並不會追查款項來源</p>
           </div>
-          <div v-if="login" class="container">
-            <h5>很遺憾地通知您，登入失敗</h5>
+        </div>
+        <div class="modal-body" v-if="login">
+          <div class="container">
+            <h5
+              style="font-family: 'Noto Sans JP', sans-serif; font-weight: 550"
+            >
+              很遺憾地通知您，登入失敗
+            </h5>
             <p>
               這很明顯的，是您的誠意不夠，難道您不曉得斗內給作者越多的人，越有機會登入嗎?
             </p>
             <p>隨隨便便讓你登入，這讓很有誠意的會員情何以堪?</p>
           </div>
         </div>
-        <div class="modal-footer">
-          <div v-if="paid" class="container">
+        <div v-if="paid" class="modal-footer">
+          <div class="container d-flex justify-content-end">
             <button
               type="button"
-              class="btn btn-secondary"
+              class="btn btn-outline-dark shadow p-2 mb-1"
               data-bs-dismiss="modal"
               @click="closeModal()"
+              style="font-family: 'Noto Sans JP', sans-serif; font-weight: 400"
             >
               給我滾
             </button>
-            <button type="button" class="btn btn-danger" @click="closeModal">
+            <button
+              type="button"
+              class="btn btn-danger mx-2 shadow p-2 mb-1 border border-dark border-1"
+              @click="closeModal"
+              style="font-family: 'Noto Sans JP', sans-serif; font-weight: 400"
+            >
               我知道了
             </button>
           </div>
-          <div v-if="login" class="container">
+        </div>
+        <div v-if="login" class="modal-footer">
+          <div class="container d-flex justify-content-end">
             <button
               type="button"
-              class="btn btn-secondary"
+              class="btn btn-outline-dark shadow p-2 mb-1"
               data-bs-dismiss="modal"
               @click="[loginFail(), closeModal()]"
+              style="font-family: 'Noto Sans JP', sans-serif; font-weight: 400"
             >
               再試試看
             </button>
             <button
               type="button"
-              class="btn btn-danger"
+              class="btn btn-danger mx-2 shadow p-2 mb-1 border border-dark border-1"
               @click="[donateNow(), closeModal()]"
+              style="font-family: 'Noto Sans JP', sans-serif; font-weight: 400"
             >
               馬上斗內
             </button>
@@ -140,7 +181,7 @@
 
 <script>
 import Modal from 'bootstrap/js/dist/modal';
-import emitter from '@/libs/emitter';
+// import emitter from '@/libs/emitter';
 
 export default {
   data() {
@@ -171,17 +212,16 @@ export default {
       this.modal.hide();
     },
     loginSuccess() {
-      console.log('登入成功');
-      emitter.emit('loginSuccess', 'login');
+      this.$router.push('/admin');
     },
     loginFail() {
-      emitter.emit('loginFail', 'loginFail');
+      this.$router.push('/trueusLogin');
     },
     donateNow() {
-      emitter.emit('donateNow', 'donateNow');
+      this.$router.push('/about');
     },
     paidSuccess() {
-      emitter.emit('paidSuccess', 'paidSuccess');
+      this.$router.push('/paidSuccess');
     },
   },
 
