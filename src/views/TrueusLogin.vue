@@ -4,7 +4,7 @@
   <div class="container-fluid">
     <div class="row justify-content-center gx-0">
       <h1 class="h3 my-5 font-weight-normal text-center fw-bolder">
-        管理員請先登入
+        榮譽會員登入處
       </h1>
       <div class="col-8 col-lg-5">
         <form id="form" class="form-signin">
