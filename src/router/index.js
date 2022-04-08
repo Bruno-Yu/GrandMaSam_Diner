@@ -20,6 +20,14 @@ const routes = [
         component: () => import('../views/frontend/LocalStorage.vue'),
       },
       {
+        path: '/theEnd',
+        component: () => import('../views/frontend/TheEnd.vue'),
+      },
+      {
+        path: '/aidsIntro',
+        component: () => import('../views/frontend/AidsIntro.vue'),
+      },
+      {
         path: '/userOrders',
         component: () => import('../views/frontend/UserOrders.vue'),
         children: [

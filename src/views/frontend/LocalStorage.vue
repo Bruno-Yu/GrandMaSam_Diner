@@ -159,6 +159,7 @@
               type="button"
               class="btn btn-outline-dark fs-3 shadow p-2 mb-1 border border-dark border-1 w-30"
               style="font-family: 'Noto Sans JP', sans-serif; font-weight: 600"
+              @click="goToAIDS()"
             >
               我愛滋
             </button>
@@ -196,6 +197,9 @@ export default {
   methods: {
     backToStore() {
       this.$router.push('/productsView');
+    },
+    goToAIDS() {
+      this.$router.push('/aidsIntro');
     },
     getFavor(products) {
       this.favorites.forEach((id) => {
