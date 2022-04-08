@@ -1,5 +1,5 @@
 <template>
-  <div class="container-fluid fav-banner vh-90 my-1">
+  <div class="container-fluid arrestUser vh-90 my-1">
     <div
       class="row d-flex align-items-center justify-content-center justify-content-lg-start"
       style="height: 100%"
@@ -67,7 +67,7 @@ export default {
 </script>
 
 <style>
-.fav-banner {
+.arrestUser {
   background-image: url(@/assets/images/arrestUser.jpg);
   height: 600px;
   background-position: center right;

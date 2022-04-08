@@ -1,58 +1,72 @@
 <template>
-  <div class="container-fluid fav-banner vh-90 my-1">
+  <div class="container-fluid bg-warning vh-90 my-1">
     <div
-      class="row d-flex align-items-center justify-content-center"
+      class="row row-cols-1 row-cols-lg-2 d-flex align-items-center justify-content-center"
       style="height: 100%"
     >
-      <div class="col vh-30 my-3">
-        <div class="container bg-light" style="--bs-bg-opacity: 0.2">
-          <p
-            class="text-dark fs-2 fw-bold text-center mt-4 mt-sm-2"
-            style="font-family: 'Noto Sans JP', sans-serif; font-weight: 500"
-          >
-            怎麼? 你以為這是一般的購物網站嗎?
-          </p>
-          <p
-            class="text-dark fs-4 fw-bold text-center pt-2"
-            style="font-family: 'Noto Sans JP', sans-serif; font-weight: 400"
-          >
-            你有想過
-            <span class="d-inline-block d-sm-inline">非洲的小孩</span
-            >每過60秒就<span class="text-danger d-inline-block d-sm-inline"
-              >少了1分鐘的壽命</span
-            >嗎?
-          </p>
-          <p
-            class="text-dark fs-4 fw-bold text-center"
-            style="font-family: 'Noto Sans JP', sans-serif; font-weight: 400"
-          >
-            而這
-          </p>
-          <p
-            class="text-dark fs-4 fw-bold text-center"
-            style="font-family: 'Noto Sans JP', sans-serif; font-weight: 400"
-          >
-            並不是收不收藏商品的問題，而是愛不愛國的問題!!!
-          </p>
-          <div class="d-flex justify-content-center mt-2 mb-2 mt-lg-4">
-            <button
-              type="button"
-              class="btn btn-outline-dark fs-3 shadow p-2 mb-1 border border-dark border-1 w-30"
-              style="font-family: 'Noto Sans JP', sans-serif; font-weight: 600"
-            >
-              我愛滋
-            </button>
-            <button
-              type="button"
-              class="btn btn-danger fs-3 link-light mx-2 shadow p-2 mb-1 border border-dark border-1 w-30"
-              style="font-family: 'Noto Sans JP', sans-serif; font-weight: 600"
-              @click="backToStore()"
-            >
-              我愛國
-            </button>
-            <!-- style="width: 50%" -->
-          </div>
+      <div class="col col-lg-5">
+        <div class="my-2 ratio ratio-1x1">
+          <div class="aidsHelp"></div>
         </div>
+      </div>
+      <div
+        class="col col-lg-5 me-lg-5 header-content shadow p-4 mb-5 mt-2 bg-warning rounded"
+      >
+        <h3
+          class="my-3 text-light"
+          style="font-family: 'Noto Sans JP', sans-serif; font-weight: 600"
+        >
+          很遺憾地聽到這消息
+        </h3>
+        <p class="fw-bold">
+          但莫擔心莫害怕，我們政府衛生福利部疾病管理署早就立定了維護罹患愛滋朋友的相關權益，若有您有遭受以下行為皆能申訴，以下是節錄部分:
+        </p>
+        <ol>
+          <li>
+            如果感染者所遭受的
+            歧視行為產生的結果具有行政處分性質，例如：基於感染者身
+            分所為之教師免職處分、學生退學處分等
+          </li>
+          <li>如果感染者勞工因就業歧 視或相關不公平待遇導致遭雇主違法解僱</li>
+        </ol>
+        <p class="fw-bold">感染者可尋求之相關資源</p>
+        <ol>
+          <li>
+            感染者權益保障團體：中華民國愛滋感染者權益促進會、社團
+            法人台灣露德協會等相關民間團體，提供感染者申訴案件之協助。
+          </li>
+          <li>
+            法律諮詢資源：各縣市政府免費法律諮詢服務、區公所調解
+            委員會法律諮詢服務，另相關民間公益團體，如：財團法人
+            法律扶助基金會等亦有提供免費諮詢服務。
+          </li>
+        </ol>
+        <p class="fw-bold">
+          看完以上節錄的內容若覺得有所幫助，但需要更詳盡的說明的畫，可以到以下連結參考出處原文
+        </p>
+        <p class="fs-5 fw-bold text-light">出自: 衛生福利部疾病管制署</p>
+        <ul>
+          <li class="text-nowrap">
+            <a
+              href="https://www.cdc.gov.tw/Category/MPage/Zz9yglWGHewdUrqnozQcFQ"
+              class="link-dark fw-bold"
+              >重要指引與教材</a
+            >
+          </li>
+          <li class="text-nowrap">
+            <a
+              href="https://www.cdc.gov.tw/File/Get/jfHiRTv3GAi8ocWYY0qFhA"
+              class="link-dark fw-bold"
+              >感染者權益保障 PDF</a
+            >
+          </li>
+        </ul>
+        <p class="fs-5 fw-bold">
+          看到這麼用心的台灣主管機關所編撰的內容，是否有讓您回心轉意，要回到商店怒買一波以表達您的愛國心呢?
+          <router-link to="/productsView" class="link-danger fw-bold"
+            >回商店連結</router-link
+          >
+        </p>
       </div>
     </div>
   </div>
@@ -69,12 +83,9 @@ export default {
 </script>
 
 <style>
-.fav-banner {
-  background-image: url(@/assets/images/theEnd.jpg);
-  height: 600px;
-  background-position: center center;
+.aidsHelp {
+  background-image: url(@/assets/images/aidsHelp.png);
+  background-position: top center;
   background-size: cover;
-  /* background-blend-mode: multiply;
-  background-color: #eff2f6; */
 }
 </style>
