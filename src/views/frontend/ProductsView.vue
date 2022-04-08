@@ -79,16 +79,16 @@
                   類別 <span class="text-secondary small"> ▽ </span>
                 </h4>
               </div>
-              <div class="card-body py-0">
+              <div class="card-body p-0">
                 <ul class="list-group">
                   <li
-                    class="list-group-item"
+                    class="list-group-item p-0"
                     v-for="(cat, key) in categories"
                     :key="key"
                   >
                     <button
                       type="button"
-                      class="fw-bold btn btn-outline-light link-dark"
+                      class="fw-bold btn btn-light h-100 w-100 p-2"
                       @click="
                         (num = !num) ? getProducts(page, cat) : getProducts()
                       "
@@ -159,14 +159,18 @@
               <h5 class="mb-0 mt-1 fw-bold">
                 {{ product.title }}
               </h5>
-              <p class="card-text mt-1 mb-0 fw-bold">TWD {{ product.price }}</p>
               <div class="d-flex justify-content-between">
-                <p class="text-muted fw-light small">
-                  <del> 原價TWD{{ product.origin_price }}</del>
-                </p>
+                <div>
+                  <p class="card-text mt-1 mb-0 fw-bold">
+                    TWD {{ product.price }}
+                  </p>
+                  <p class="text-muted fw-light small my-auto">
+                    <del> 原價TWD{{ product.origin_price }}</del>
+                  </p>
+                </div>
                 <button
                   type="button"
-                  class="btn btn-warning shadow fw-bolder border border-1 btn-sm me-1"
+                  class="btn btn-warning shadow fw-bolder border border-1 btn-sm p-2 my-auto me-1"
                   @click="addToCart(product.id)"
                 >
                   加入購物車
