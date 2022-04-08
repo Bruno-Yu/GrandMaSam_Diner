@@ -28,6 +28,10 @@ const routes = [
         component: () => import('../views/frontend/AidsIntro.vue'),
       },
       {
+        path: '/arrestUser',
+        component: () => import('../views/frontend/ArrestUser.vue'),
+      },
+      {
         path: '/userOrders',
         component: () => import('../views/frontend/UserOrders.vue'),
         children: [

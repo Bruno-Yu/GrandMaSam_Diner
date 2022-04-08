@@ -157,7 +157,7 @@
           <div class="d-flex justify-content-center mt-2 mb-2 mt-lg-4">
             <button
               type="button"
-              class="btn btn-outline-dark fs-3 shadow p-2 mb-1 border border-dark border-1 w-30"
+              class="btn btn-outline-dark fs-3 shadow p-2 mb-1 border border-dark border-2 w-30"
               style="font-family: 'Noto Sans JP', sans-serif; font-weight: 600"
               @click="goToAIDS()"
             >

@@ -16,7 +16,7 @@
                 background-size: cover;
                 background-position: center center;
                 background-blend-mode: multiply;
-                background-color: #9cb2c7;
+                background-color: #ece7ddea;
               "
               :style="{ backgroundImage: `url(${product.imageUrl})` }"
             ></div>
@@ -31,7 +31,7 @@
                 background-position: center center;
                 background-size: cover;
                 background-blend-mode: multiply;
-                background-color: #9cb2c7;
+                background-color: #ece7ddea;
               "
               :style="{ backgroundImage: `url(${image})` }"
             ></div
@@ -163,7 +163,7 @@
                 height: 20rem;
                 background-position: center center;
                 background-size: cover;
-                background-color: #9cb2c7;
+                background-color: #ece7ddea;
                 background-blend-mode: multiply;
               "
               :style="{ backgroundImage: `url(${item.imageUrl})` }"
@@ -324,5 +324,13 @@ export default {
 }
 .swiper-pagination {
   color: #dde3ee;
+}
+.productsView-banner {
+  background-image: url(@/assets/images/productsView_banner.jpg);
+  height: 420px;
+  background-position: center center;
+  background-size: cover;
+  background-blend-mode: multiply;
+  background-color: #ece7ddea;
 }
 </style>

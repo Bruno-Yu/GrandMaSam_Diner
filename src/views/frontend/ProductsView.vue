@@ -81,6 +81,15 @@
               </div>
               <div class="card-body p-0">
                 <ul class="list-group">
+                  <li class="list-group-item">
+                    <button
+                      type="button"
+                      class="fw-bold btn btn-light h-100 w-100 p-2"
+                      @click="arrestHim()"
+                    >
+                      未亡人系列
+                    </button>
+                  </li>
                   <li
                     class="list-group-item p-0"
                     v-for="(cat, key) in categories"
@@ -218,6 +227,9 @@ export default {
   },
 
   methods: {
+    arrestHim() {
+      this.$router.push('/arrestUser');
+    },
     getCategory(products) {
       const originCategories = [];
       products.forEach((item) => {
