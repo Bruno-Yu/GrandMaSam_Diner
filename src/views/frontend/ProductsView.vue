@@ -81,7 +81,7 @@
               </div>
               <div class="card-body p-0">
                 <ul class="list-group">
-                  <li v-show="num === false" class="list-group-item">
+                  <li v-show="num === false" class="list-group-item p-0">
                     <button
                       type="button"
                       class="fw-bold btn btn-light h-100 w-100 p-2"
