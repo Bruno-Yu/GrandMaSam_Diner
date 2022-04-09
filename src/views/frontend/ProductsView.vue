@@ -122,10 +122,17 @@
             :key="product.id"
           >
             <div class="card border-0 mb-2 position-relative">
-              <div
-                class="card-img-top cart-image rounded-0 ratio ratio-16x9"
-                :style="{ backgroundImage: `url(${product.imageUrl})` }"
-              ></div>
+              <div class="cart-img-top">
+                <router-link
+                  :to="{ path: `/productView/${product.id}` }"
+                  class="text-decoration-none"
+                >
+                  <div
+                    class="cart-image rounded-0 ratio ratio-16x9"
+                    :style="{ backgroundImage: `url(${product.imageUrl})` }"
+                  ></div>
+                </router-link>
+              </div>
 
               <!-- style="
                   background-size: cover;
@@ -154,13 +161,13 @@
                 ></i>
                 <i v-else class="bi bi-heart"></i>
               </a>
-              <router-link
+              <!-- <router-link
                 :to="{ name: 'Product', params: { id: `${product.id}` } }"
                 class="position-absolute link-light small text-decoration-none"
                 style="right: 16px; bottom: 10px"
               >
                 看更多
-              </router-link>
+              </router-link> -->
             </div>
             <div class="card-body p-0">
               <h5 class="mb-0 mt-1 fw-bold">
