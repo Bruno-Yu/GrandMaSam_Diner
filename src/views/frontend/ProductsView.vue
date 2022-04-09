@@ -81,7 +81,7 @@
               </div>
               <div class="card-body p-0">
                 <ul class="list-group">
-                  <li class="list-group-item">
+                  <li v-show="num === false" class="list-group-item">
                     <button
                       type="button"
                       class="fw-bold btn btn-light h-100 w-100 p-2"
@@ -98,9 +98,7 @@
                     <button
                       type="button"
                       class="fw-bold btn btn-light h-100 w-100 p-2"
-                      @click="
-                        (num = !num) ? getProducts(page, cat) : getProducts()
-                      "
+                      @click="(num = !num) ? getCategory(cat) : catButton()"
                     >
                       {{ cat }}
                     </button>
@@ -192,6 +190,7 @@
       </div>
       <div class="d-flex justify-content-center mt-5">
         <PaginationFooter
+          v-show="num === false"
           :current-page="current_page"
           :has-pre="has_pre"
           :has-next="has_next"
@@ -210,6 +209,8 @@ export default {
   data() {
     return {
       products: [],
+      allProducts: [],
+      showProducts: this.products,
       productId: '',
       addNum: 0,
       num: false,
@@ -230,21 +231,32 @@ export default {
     arrestHim() {
       this.$router.push('/arrestUser');
     },
-    getCategory(products) {
+    getCategory(query) {
       const originCategories = [];
-      products.forEach((item) => {
-        originCategories.push(item.category);
-      });
-      this.categories = originCategories.filter(
-        (cat, index) => originCategories.indexOf(cat) === index,
-      );
-    },
-    // eslint-disable-next-line default-param-last
-    getProducts(page = 1, query) {
-      let url = `${process.env.VUE_APP_API}/api/${process.env.VUE_APP_PATH}/products?page=${page}`;
+      this.isLoading = true;
+      let url = `${process.env.VUE_APP_API}/api/${process.env.VUE_APP_PATH}/products/all`;
+
       if (query) {
         url = `${process.env.VUE_APP_API}/api/${process.env.VUE_APP_PATH}/products?category=${query}`;
       }
+      this.$http.get(url).then((res) => {
+        this.allProducts = JSON.parse(JSON.stringify(res.data.products));
+        // console.log(this.allProducts);
+        if (query) {
+          this.products = this.allProducts;
+        }
+        this.allProducts.forEach((item) => {
+          originCategories.push(item.category);
+        });
+        this.categories = originCategories.filter(
+          (cat, index) => originCategories.indexOf(cat) === index,
+        );
+        this.isLoading = false;
+      });
+    },
+    // eslint-disable-next-line default-param-last
+    getProducts(page = 1) {
+      const url = `${process.env.VUE_APP_API}/api/${process.env.VUE_APP_PATH}/products?page=${page}`;
       this.isLoading = true;
       this.$http.get(url).then((res) => {
         this.products = res.data.products;
@@ -252,7 +264,7 @@ export default {
         this.has_next = res.data.pagination.has_next;
         this.has_pre = res.data.pagination.has_pre;
         this.total_pages = res.data.pagination.total_pages;
-        this.getCategory(this.products);
+        // this.getCategory(this.products);
         this.isLoading = false;
       });
     },
@@ -267,6 +279,10 @@ export default {
       if (target !== -1) {
         this.favorites.splice(target, 1);
       }
+    },
+    catButton() {
+      this.getCategory();
+      this.getProducts();
     },
     addToCart(id, qty = 1) {
       const data = {
@@ -297,6 +313,7 @@ export default {
   },
   mounted() {
     this.getProducts();
+    this.getCategory();
   },
 };
 </script>
