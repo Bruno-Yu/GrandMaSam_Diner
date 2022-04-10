@@ -186,7 +186,7 @@
                 <button
                   type="button"
                   class="btn btn-warning shadow fw-bolder border border-1 btn-sm p-2 my-auto me-1"
-                  @click="addToCart(product.id)"
+                  @click="[addToCart(product.id), getCart()]"
                 >
                   加入購物車
                 </button>
@@ -194,6 +194,7 @@
               <p class="text-muted mt-3"></p>
             </div>
           </div>
+          <CartIcon :cartNum="cartNum"></CartIcon>
         </div>
       </div>
       <div class="d-flex justify-content-center mt-5">
@@ -213,6 +214,7 @@
 <script>
 import PaginationFooter from '@/components/PaginationFooter.vue';
 import cartMessage from '@/components/cartMessage.vue';
+import CartIcon from '@/components/CartIcon.vue';
 
 export default {
   data() {
@@ -229,12 +231,14 @@ export default {
       has_next: true,
       has_pre: false,
       total_pages: 1,
+      cartNum: 0,
       favorites: JSON.parse(window.localStorage.getItem('favorites')) || [],
     };
   },
   components: {
     PaginationFooter,
     cartMessage,
+    CartIcon,
   },
 
   methods: {
@@ -281,6 +285,14 @@ export default {
     getProduct(id) {
       this.$router.push(`/user/product/${id}`);
     },
+    getCart() {
+      this.$http
+        .get(`${process.env.VUE_APP_API}/api/${process.env.VUE_APP_PATH}/cart`)
+        .then((res) => {
+          this.cartNum = res.data.data.carts.length || 0;
+          console.log(res);
+        });
+    },
     saveToFavorites(id) {
       this.favorites.push(id);
     },
@@ -325,6 +337,7 @@ export default {
   mounted() {
     this.getProducts();
     this.getCategory();
+    this.getCart();
   },
 };
 </script>

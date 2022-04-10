@@ -129,6 +129,7 @@
 
 <script>
 import cartMessage from '@/components/cartMessage.vue';
+import emitter from '@/libs/emitter';
 
 export default {
   data() {
@@ -159,8 +160,8 @@ export default {
       this.$http
         .get(`${process.env.VUE_APP_API}/api/${process.env.VUE_APP_PATH}/cart`)
         .then((res) => {
-          console.log(res);
           this.cartData = res.data.data;
+          emitter.emit('cart-num', this.cartData.carts.length);
         });
     },
     addToCart(id, qty = 1) {
@@ -224,7 +225,7 @@ export default {
       this.$router.push('/userContact');
     },
   },
-  mounted() {
+  created() {
     this.getCart();
   },
 };
