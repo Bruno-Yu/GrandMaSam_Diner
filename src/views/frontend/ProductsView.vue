@@ -60,7 +60,7 @@
           </div>
         </div>
       </div>
-      <div class="col col-lg-6 productsView-banner mt-1"></div>
+      <div class="d-none d-sm-grid col col-lg-6 productsView-banner mt-1"></div>
     </div>
   </div>
   <div class="container-fluid mb-5 mt-md-5 mt-3 mb-7">
