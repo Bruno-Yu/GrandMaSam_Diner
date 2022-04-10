@@ -1,4 +1,5 @@
 <template>
+  <cartMessage ref="cartMessage"></cartMessage>
   <div class="container-fluid bg-warning">
     <div class="row row-cols-1 row-cols-lg-2 g-1 my-1">
       <div class="col col-lg-6">
@@ -211,6 +212,7 @@
 
 <script>
 import PaginationFooter from '@/components/PaginationFooter.vue';
+import cartMessage from '@/components/cartMessage.vue';
 
 export default {
   data() {
@@ -232,6 +234,7 @@ export default {
   },
   components: {
     PaginationFooter,
+    cartMessage,
   },
 
   methods: {
@@ -304,6 +307,7 @@ export default {
         )
         .then(() => {
           this.isLoadingItem = '';
+          this.$refs.cartMessage.openModal(true);
         });
     },
   },
