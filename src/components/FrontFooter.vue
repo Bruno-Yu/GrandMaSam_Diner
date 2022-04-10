@@ -72,7 +72,7 @@
                 </div>
               </div>
               <div class="row d-flex justify-content-center">
-                <div class="col-10 col-sm-8 col-md-8 col-lg-9 footer-content">
+                <div class="col-12 col-sm-10 col-md-8 col-lg-9 footer-content">
                   <ul class="list-unstyled text-light ms-sm-5">
                     <li class="small fw-light my-1 text-nowrap">
                       <i class="bi bi-building text-warning"></i> 公司:
