@@ -1,8 +1,14 @@
 <template>
-  <div class="container-fluid w-100" style="box-sizing: border-box">
-    <FrontNavbar />
-    <RouterView />
-    <FrontFooter />
+  <div class="container-fluid" style="box-sizing: border-box">
+    <div class="row mb-5">
+      <FrontNavbar />
+    </div>
+    <div class="row">
+      <RouterView />
+    </div>
+    <div class="row">
+      <FrontFooter />
+    </div>
   </div>
 </template>
 

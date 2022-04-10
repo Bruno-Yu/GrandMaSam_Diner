@@ -1,7 +1,7 @@
 <template>
-  <div class="container-fluid the-end vh-90 my-1">
+  <div class="container-fluid the-end vh-100 vh-sm-90 my-1">
     <div
-      class="row d-flex row-cols-1 row-cols-lg-2 align-items-center justify-content-center g-1"
+      class="row d-flex row-cols-1 row-cols-lg-2 align-items-center justify-content-center gx-1"
       style="height: 100%"
     >
       <div
@@ -36,6 +36,7 @@
           </p>
         </div>
       </div>
+
       <div
         class="col col-lg-3 bg-dark border border-light border-1 rounded-3 h-auto"
         style="--bs-bg-opacity: 0.4"
