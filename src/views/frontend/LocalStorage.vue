@@ -20,12 +20,17 @@
         <table class="table align-middle">
           <thead>
             <tr class="text-start">
-              <th>刪除鍵</th>
+              <th>刪<span class="d-none d-lg-inline">除鍵</span></th>
               <th class="d-none d-lg-table-cell">預覽圖</th>
               <th>品名</th>
               <th>單價</th>
               <th class="d-none d-lg-table-cell">產品細節</th>
-              <th>加入購物車</th>
+              <th class="text-nowrap">
+                加<span class="d-none d-lg-inline">入</span>購<span
+                  class="d-none d-lg-inline"
+                  >物車</span
+                >
+              </th>
             </tr>
           </thead>
           <tbody>
@@ -65,7 +70,8 @@
                   v-show="isLoadingItem === item.id"
                 ></span>
                 <span class="text-secondary fz-sm"
-                  >{{ item.price }}元 / {{ item.unit }}
+                  >{{ item.price }} <span class="d-none d-lg-inline">元</span>
+                  <span class="d-none d-lg-inline"> / {{ item.unit }}</span>
                 </span>
               </td>
               <td class="d-none d-lg-table-cell">
@@ -81,7 +87,7 @@
               <td>
                 <button
                   type="button"
-                  class="btn btn-danger btn-sm"
+                  class="btn btn-lg-danger btn-sm"
                   @click="[addToCart(item.id), removeFromFavorites(item.id)]"
                   :disabled="isLoadingItem === item.id"
                 >
@@ -89,7 +95,8 @@
                     class="spinner-grow spinner-grow-sm"
                     v-show="isLoadingItem === item.id"
                   ></span>
-                  加到購物車
+                  <i class="d-lg-none bi bi-cart2 text-danger fs-3"></i
+                  ><span class="d-none d-lg-inline"> 加到購物車</span>
                 </button>
               </td>
             </tr>

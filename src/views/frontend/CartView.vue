@@ -21,11 +21,11 @@
       <table class="table align-middle">
         <thead>
           <tr class="text-start">
-            <th>刪除鍵</th>
-            <th class="d-none d-lg-block">預覽圖</th>
+            <th>刪<span class="d-none d-lg-inline">除鍵</span></th>
+            <th class="d-none d-lg-table-cell">預覽圖</th>
             <th>品名</th>
-            <th>數量/單位</th>
-            <th class="d-none d-lg-block">單價/總價</th>
+            <th>數量<span class="d-none d-lg-inline">/單位</span></th>
+            <th class="d-none d-lg-table-cell text-center">單價/總價</th>
           </tr>
         </thead>
         <tbody v-if="cartData.carts">
@@ -65,7 +65,7 @@
             </td>
             <td>
               <div class="input-group input-group-sm">
-                <div class="input-group mb-3">
+                <div class="input-group mb-sm-3">
                   <select
                     id=""
                     class="form-select"
@@ -81,13 +81,15 @@
                       {{ num }}
                     </option>
                   </select>
-                  <span class="input-group-text" id="basic-addon2">{{
-                    item.product.unit
-                  }}</span>
+                  <span
+                    class="input-group-text d-none d-lg-table-cell"
+                    id="basic-addon2"
+                    >{{ item.product.unit }}</span
+                  >
                 </div>
               </div>
             </td>
-            <td class="d-none d-lg-table-cell">
+            <td class="d-none text-center d-lg-table-cell">
               <span
                 class="spinner-grow spinner-grow-sm"
                 v-show="isLoadingItem === item.id"
@@ -100,9 +102,12 @@
         </tbody>
         <tfoot>
           <tr>
-            <td></td>
-            <td colspan="3" class="text-end">總計</td>
-            <td class="text-end">{{ cartData.total }}元</td>
+            <td class="d-none d-lg-table-cell"></td>
+            <td colspan="2" class="text-end d-lg-none">總計</td>
+            <td colspan="3" class="text-end d-none d-lg-cell">總計</td>
+            <td class="text-end">
+              {{ cartData.total }}<span class="d-none d-lg-inline"> 元</span>
+            </td>
           </tr>
           <!-- <tr>
               <td></td>
