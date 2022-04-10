@@ -352,6 +352,11 @@ export default {
   transform: scale(1.2, 1.2);
 } */
 
+.cart-img-top:hover {
+  background-color: #8b702cea;
+  opacity: 0.6;
+}
+
 .cart {
   width: 10px;
   height: 10px;
