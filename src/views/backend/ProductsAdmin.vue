@@ -161,7 +161,8 @@ export default {
           this.total_pages = res.data.pagination.total_pages;
         })
         .catch((error) => {
-          alert(error.message);
+          this.isLoading = false;
+          this.$httpMessageState(error.response, '錯誤訊息');
         });
     },
 

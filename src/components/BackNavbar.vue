@@ -97,13 +97,13 @@ export default {
       this.$http
         .post(api)
         .then((response) => {
-          alert(response, '登出');
           if (response.data.success) {
+            this.$httpMessageState(response, '登出');
             this.$router.push('/trueusLogin');
           }
         })
         .catch((error) => {
-          alert(error.response, '錯誤訊息');
+          this.$httpMessageState(error.response, '錯誤訊息');
         });
     },
   },

@@ -7,6 +7,7 @@
   ></PageLoading>
   <div class="container-fluid w-100" style="box-sizing: border-box">
     <BackNavbar />
+    <ToastMessages></ToastMessages>
     <RouterView v-if="verify" />
     <FrontFooter />
   </div>
@@ -15,6 +16,8 @@
 <script>
 import BackNavbar from '@/components/BackNavbar.vue';
 import FrontFooter from '@/components/FrontFooter.vue';
+import '@/libs/emitter';
+import ToastMessages from '@/components/ToastMessages.vue';
 
 export default {
   data() {
@@ -26,6 +29,7 @@ export default {
   components: {
     BackNavbar,
     FrontFooter,
+    ToastMessages,
   },
   methods: {
     logout() {
@@ -33,14 +37,14 @@ export default {
       this.$http
         .post(api)
         .then((response) => {
-          alert(response, '登出');
+          this.$httpMessageState(response, '登出');
           if (response.data.success) {
             this.$router.push('/trueusLogin');
             this.verify = false;
           }
         })
         .catch((error) => {
-          alert(error.response, '錯誤訊息');
+          this.$httpMessageState(error.response, '錯誤訊息');
           this.verify = false;
         });
     },
@@ -54,9 +58,10 @@ export default {
     this.$http.defaults.headers.common.Authorization = `${token}`;
     this.$http
       .post(`${process.env.VUE_APP_API}/api/user/check`)
-      .then(() => {
-        this.isLoading = false;
+      .then((response) => {
+        this.$httpMessageState(response, '登入');
         this.verify = true;
+        this.isLoading = false;
       })
       .catch(() => {
         this.$router.push('/trueusLogin');

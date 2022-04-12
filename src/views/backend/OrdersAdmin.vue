@@ -158,7 +158,7 @@ export default {
         })
         .catch((error) => {
           this.isLoading = false;
-          alert(error.response, '錯誤訊息');
+          this.$httpMessageState(error.response, '錯誤訊息');
         });
     },
 
@@ -188,12 +188,12 @@ export default {
         .then((response) => {
           this.$refs.orderDetail.closeModal();
           this.getOrders(this.currentPage);
-          alert(response, '更新付款狀態');
+          this.$httpMessageState(response, '更新付款狀態');
           this.isLoadingItem = '';
           this.isLoading = false;
         })
         .catch((error) => {
-          alert(error.response, '錯誤訊息');
+          this.$httpMessageState(error.response, '錯誤訊息');
           this.isLoadingItem = '';
           this.isLoading = false;
         });
@@ -209,7 +209,7 @@ export default {
           this.getOrders(this.currentPage);
         })
         .catch((error) => {
-          alert(error.response, '錯誤訊息');
+          this.$httpMessageState(error.response, '錯誤訊息');
           this.isLoadingItem = '';
         });
       this.isLoadingItem = '';
