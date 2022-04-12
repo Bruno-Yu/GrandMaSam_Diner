@@ -1,49 +1,49 @@
 <template>
-  <div class="Not-found-bg vh-100">
-    <div
-      class="Not-found-banner my-3 border border-dark border-3 border-start-0 border-end-0"
-    >
+  <div class="Not-found-banner vh-100">
+    <div class="container" style="height: 100%">
+      <div class="row d-flex justify-content-center justify-content-lg-end">
+        <div class="col-8 mt-5">
+          <h2
+            class="text-center text-light fs-1 my-5"
+            style="font-family: 'Noto Sans JP', sans-serif; font-weight: 900"
+          >
+            404
+          </h2>
+        </div>
+      </div>
       <div
-        class="container d-flex justify-content-center align-items-center flex-direction-vertical g-2"
-        style="height: 100%"
+        class="row d-flex justify-content-center justify-content-lg-end align-items-center"
       >
         <div
-          class="row justify-content-center"
-          style="width: 100%; height: 50%"
+          class="col-8 bg-dark"
+          style="border: 1px solid #b8babdd5; --bs-bg-opacity: 0.3"
         >
-          <div class="col-8" style="border: 1px solid #b8babdd5">
-            <div class="d-flex justify-content-center">
-              <div class="text-center">
-                <h3 class="text-light mt-4 fw-bold text-dark">
-                  這裡不是487 而是404
-                </h3>
-                <h2 class="text-light fw-bolder fs-1 text-dark">404</h2>
-                <h3 class="text-light fw-bold fs-1 no-wrap text-dark">
-                  迷途的羔羊們，請回到您的歸屬吧!
-                </h3>
-                <h3 class="text-light fw-bold fs-1">
-                  為了更偉大的未來，或許您也想到商城以貢獻自己一份心力
-                </h3>
-              </div>
+          <div class="d-flex justify-content-center my-2">
+            <div class="text-center">
+              <h3 class="text-light fw-bold text-light my-3 p-2">
+                喔喔~ 你找的這些頁面是不存在的
+                就像謠傳那些被撕碎丟到馬桶的機密一樣 是不存在的!
+              </h3>
+              <h5 class="text-dark fw-bold">或許您也是想到商城?而不是白宮?</h5>
             </div>
-            <div class="d-flex justify-content-center mt-4">
-              <router-link
-                to="/productsView"
-                type="button"
-                class="btn btn-warning link-dark fw-bolder fs-4 border border-dark border-3"
-                style="width: 100%"
-                >馬上前往</router-link
-              >
-            </div>
-            <p class="fw-bold my-2 text-light">
-              當然若選擇要贊助窮得很有骨氣的作者，還請您在<router-link
-                to="/about"
-                class="link-warning fw-bold"
-                >這邊</router-link
-              >
-              填入相關資訊，後續作者沒錢吃飯時會再聯繫您
-            </p>
           </div>
+          <div class="d-flex justify-content-center mt-1">
+            <router-link
+              to="/productsView"
+              type="button"
+              class="btn btn-danger link-light fw-bolder fs-4 border border-light border-2"
+              style="width: 50%"
+              >馬上前往</router-link
+            >
+          </div>
+          <p class="fw-bold my-2 text-dark">
+            當然若選擇要贊助窮得很有骨氣的作者，還請您在<router-link
+              to="/about"
+              class="link-danger fw-bold"
+              >這邊</router-link
+            >
+            填入相關資訊，後續作者沒錢吃飯時會再聯繫您
+          </p>
         </div>
       </div>
     </div>
@@ -52,14 +52,14 @@
 
 <style>
 .Not-found-banner {
-  background-image: url(@/assets/images/404_flag.jpg);
-  height: 800px;
-  background-position: center center;
+  background-image: url(@/assets/images/404_page.jpg);
+  height: 750px;
+  background-position: left center;
   background-size: cover;
-  background-blend-mode: multiply;
-  background-color: #abafb3;
+  /* background-blend-mode: multiply;
+  background-color: #abafb3; */
 }
-.Not-found-bg {
+/* .Not-found-bg {
   background-color: rgba(14, 14, 15, 0.952);
-}
+} */
 </style>
