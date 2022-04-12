@@ -154,6 +154,7 @@ export default {
           this.has_next = res.data.pagination.has_next;
           this.has_pre = res.data.pagination.has_pre;
           this.total_pages = res.data.pagination.total_pages;
+          this.isLoading = false;
         })
         .catch((error) => {
           this.isLoading = false;
@@ -167,12 +168,14 @@ export default {
       this.isNew = false;
       this.$refs.orderDetail.openModal();
       this.isLoadingItem = '';
+      this.isLoading = false;
     },
     openDelModal(item) {
       this.isLoadingItem = item.id;
       this.orderShow = { ...item };
       this.$refs.delModal.openModal();
       this.isLoadingItem = '';
+      this.isLoading = false;
     },
     updatePaid(item) {
       this.isLoadingItem = item.id;
@@ -187,10 +190,12 @@ export default {
           this.getOrders(this.currentPage);
           alert(response, '更新付款狀態');
           this.isLoadingItem = '';
+          this.isLoading = false;
         })
         .catch((error) => {
           alert(error.response, '錯誤訊息');
           this.isLoadingItem = '';
+          this.isLoading = false;
         });
     },
     delOrder() {
@@ -208,6 +213,7 @@ export default {
           this.isLoadingItem = '';
         });
       this.isLoadingItem = '';
+      this.isLoading = false;
     },
   },
   created() {
