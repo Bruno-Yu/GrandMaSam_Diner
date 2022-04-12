@@ -106,14 +106,14 @@
             </button>
           </div>
         </div>
-        <div class="row my-5 justify-content-center shadow p-3 mb-1 rounded">
-          <div class="col-6">
+        <div class="row row-cols-1 row-cols-lg-2 my-5 justify-content-center shadow p-3 mb-1 rounded">
+          <div class="col col-lg-6">
             <h3 class="text-muted fw-bold">商品規格</h3>
             <p class="text-muted">
               {{ product.content }}
             </p>
           </div>
-          <div class="col-6">
+          <div class="col col-lg-6">
             <h3 class="fw-bold">商品介紹</h3>
             <p>
               {{ product.description }}
