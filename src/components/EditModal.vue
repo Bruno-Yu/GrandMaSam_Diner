@@ -68,7 +68,7 @@
           <!-- 叉叉如何變成白色呢? -->
           <button
             type="button"
-            class="btn-close"
+            class="btn-close btn-light"
             data-bs-dismiss="modal"
             aria-label="Close"
           ></button>

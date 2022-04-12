@@ -1,4 +1,10 @@
 <template>
+  <PageLoading
+    loader="bars"
+    :active="isLoading"
+    :can-cancel="true"
+    :is-full-page="false"
+  ></PageLoading>
   <div class="container-fluid bg-warning vh-90 my-1">
     <div
       class="row row-cols-1 row-cols-lg-2 d-flex align-items-center justify-content-center"
@@ -74,9 +80,16 @@
 
 <script>
 export default {
+  data() {
+    return {
+      isLoading: false,
+    };
+  },
   methods: {
     backToStore() {
+      this.isLoading = true;
       this.$router.push('/productsView');
+      this.isLoading = false;
     },
   },
 };

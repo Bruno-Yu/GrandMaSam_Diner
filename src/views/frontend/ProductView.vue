@@ -1,4 +1,10 @@
 <template>
+  <PageLoading
+    loader="bars"
+    :active="isLoading"
+    :can-cancel="true"
+    :is-full-page="false"
+  ></PageLoading>
   <div class="container-fluid">
     <div class="row align-items-center">
       <div class="col-md-7">
@@ -209,6 +215,7 @@ export default {
   data() {
     return {
       isLoading: false,
+
       product: {},
       products: [],
       id: '',

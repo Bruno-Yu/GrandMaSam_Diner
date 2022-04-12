@@ -87,6 +87,10 @@
                   :disabled="isLoadingItem === item.id"
                   @click="goToProductView(item.id)"
                 >
+                  <span
+                    class="spinner-grow spinner-grow-sm"
+                    v-show="isLoadingItem === item.id"
+                  ></span>
                   查看更多
                 </button>
               </td>
@@ -275,6 +279,7 @@ export default {
         this.addToCart(id);
       });
       this.removeFavAll();
+      this.isLoadingItem = '';
     },
     removeFavAll() {
       this.isLoadingItem = 'deleteAll';
@@ -283,7 +288,9 @@ export default {
       this.isLoadingItem = '';
     },
     goToProductView(id) {
+      this.isLoading = true;
       this.$router.push(`/productView/${id}`);
+      this.isLoading = false;
     },
   },
   watch: {

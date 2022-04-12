@@ -1,4 +1,10 @@
 <template>
+  <PageLoading
+    loader="bars"
+    :active="isLoading"
+    :can-cancel="true"
+    :is-full-page="false"
+  ></PageLoading>
   <div class="container-fluid gx-1 gx-lg-0 bg-warning vh-50">
     <header class="header-banner shadow p-3 mb-2 bg-body rounded">
       <div class="container" style="height: 100%">
@@ -221,9 +227,16 @@
 
 <script>
 export default {
+  data() {
+    return {
+      isLoading: false,
+    };
+  },
   methods: {
     backToStore() {
+      this.isLoading = true;
       this.$router.push('/productsView');
+      this.isLoading = false;
     },
   },
 };

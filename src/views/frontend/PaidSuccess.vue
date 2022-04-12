@@ -1,4 +1,10 @@
 <template>
+  <PageLoading
+    loader="bars"
+    :active="isLoading"
+    :can-cancel="true"
+    :is-full-page="false"
+  ></PageLoading>
   <div class="container">
     <div class="my-5">
       <p class="fs-2 fw-bold text-center">
@@ -29,12 +35,15 @@ export default {
   data() {
     return {
       orderID: '',
+      isLoading: false,
     };
   },
   created() {
+    this.isLoading = true;
     emitter.on('order-id', (data) => {
       this.orderID = data;
     });
+    this.isLoading = false;
   },
 };
 </script>

@@ -8,7 +8,16 @@
   <div class="container">
     <h2 class="my-5 ms-2 fw-bold text-center">產品管理列表</h2>
     <div class="text-end mt-4">
-      <button type="button" class="btn btn-primary" @click="modalOn('new')">
+      <button
+        type="button"
+        class="btn btn-primary"
+        @click="modalOn('new')"
+        :disabled="isLoadingItem === 'New'"
+      >
+        <span
+          class="spinner-grow spinner-grow-sm"
+          v-show="isLoadingItem === 'New'"
+        ></span>
         建立新的產品
       </button>
     </div>
@@ -44,7 +53,12 @@
                     class="btn btn-outline-success btn-sm"
                     :data-detail-id="key"
                     v-on:click="productDetail(item)"
+                    :disabled="isLoadingItem === item.id"
                   >
+                    <span
+                      class="spinner-grow spinner-grow-sm"
+                      v-show="isLoadingItem === item.id"
+                    ></span>
                     細節
                   </button>
                   <button
@@ -52,7 +66,12 @@
                     class="btn btn-outline-primary btn-sm"
                     :data-edit-id="key"
                     @click="modalOn('edit', item)"
+                    :disabled="isLoadingItem === item.id"
                   >
+                    <span
+                      class="spinner-grow spinner-grow-sm"
+                      v-show="isLoadingItem === item.id"
+                    ></span>
                     編輯
                   </button>
                   <button
@@ -60,7 +79,12 @@
                     class="btn btn-outline-danger btn-sm"
                     :data-delete-id="key"
                     @click="modalOn('delete', item)"
+                    :disabled="isLoadingItem === item.id"
                   >
+                    <span
+                      class="spinner-grow spinner-grow-sm"
+                      v-show="isLoadingItem === item.id"
+                    ></span>
                     刪除
                   </button>
                 </div>
@@ -101,6 +125,7 @@ export default {
       has_next: true,
       has_pre: false,
       total_pages: 1,
+      isLoadingItem: '',
       isLoading: false,
       emitData: {
         productDisplay: {
@@ -141,7 +166,9 @@ export default {
     },
 
     modalOn(status, item) {
+      this.isLoading = true;
       if (status === 'edit') {
+        this.isLoadingItem = item.id;
         this.emitData.productDisplay = {
           imagesUrl: [],
         };
@@ -150,6 +177,7 @@ export default {
         this.emitData.productDisplay = item;
         this.$refs.editModal.bsNewproduct.show();
       } else if (status === 'new') {
+        this.isLoadingItem = 'New';
         this.emitData.productDisplay = {
           imagesUrl: [],
         };
@@ -160,6 +188,7 @@ export default {
         this.$refs.editModal.bsNewproduct.show();
       } else if (status === 'delete') {
         // 清空
+        this.isLoadingItem = item.id;
         this.emitData.productDisplay = {
           imagesUrl: [],
         };
@@ -169,11 +198,15 @@ export default {
         this.emitData.deleteOn = true;
         this.$refs.editModal.bsDeleteproduct.show();
       }
+      this.isLoadingItem = '';
+      this.isLoading = false;
     },
 
     productDetail(item) {
+      this.isLoadingItem = item.id;
       this.emitData.productDisplay = item;
       this.emitData.detailDisplay = true;
+      this.isLoadingItem = '';
     },
   },
   mounted() {

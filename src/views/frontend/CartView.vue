@@ -1,4 +1,10 @@
 <template>
+  <PageLoading
+    loader="bars"
+    :active="isLoading"
+    :can-cancel="true"
+    :is-full-page="false"
+  ></PageLoading>
   <cartMessage ref="cartMessage" @get-cart="getCart()"></cartMessage>
   <div class="container">
     <div class="mt-4">
@@ -73,6 +79,10 @@
                     @change="updateCartItem(item)"
                     :disabled="isLoadingItem === item.id"
                   >
+                    <span
+                      class="spinner-grow spinner-grow-sm"
+                      v-show="isLoadingItem === item.id"
+                    ></span>
                     <option
                       :value="num"
                       v-for="num in 20"
@@ -145,6 +155,7 @@ export default {
       },
       products: [],
       productId: '',
+      isLoading: false,
       isLoadingItem: '',
       form: {
         user: {
@@ -227,11 +238,15 @@ export default {
         });
     },
     nextPage() {
+      this.isLoading = true;
       this.$router.push('/userContact');
+      this.isLoading = false;
     },
   },
   created() {
+    this.isLoading = true;
     this.getCart();
+    this.isLoading = false;
   },
 };
 </script>

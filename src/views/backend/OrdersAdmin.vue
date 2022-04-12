@@ -61,14 +61,24 @@
               class="btn btn-outline-primary btn-sm"
               type="button"
               @click="openModal(item)"
+              :disabled="isLoadingItem === item.id"
             >
+              <span
+                class="spinner-grow spinner-grow-sm"
+                v-show="isLoadingItem === item.id"
+              ></span>
               檢視
             </button>
             <button
               class="btn btn-outline-danger btn-sm"
               type="button"
               @click="openDelModal(item)"
+              :disabled="isLoadingItem === item.id"
             >
+              <span
+                class="spinner-grow spinner-grow-sm"
+                v-show="isLoadingItem === item.id"
+              ></span>
               刪除
             </button>
           </div>
@@ -109,6 +119,7 @@ export default {
       has_next: false,
       has_pre: false,
       isLoading: false,
+      isLoadingItem: '',
       total_pages: 1,
       orderShow: {},
       currentPage: 1,
@@ -129,6 +140,7 @@ export default {
       return dateFull;
     },
     getOrders(Page = 1) {
+      this.isLoading = true;
       this.currentPage = Page;
       const url = `${process.env.VUE_APP_API}/api/${process.env.VUE_APP_PATH}/admin/orders?page=${Page}`;
       this.$http
@@ -150,15 +162,20 @@ export default {
     },
 
     openModal(item) {
+      this.isLoadingItem = item.id;
       this.orderShow = { ...item };
       this.isNew = false;
       this.$refs.orderDetail.openModal();
+      this.isLoadingItem = '';
     },
     openDelModal(item) {
+      this.isLoadingItem = item.id;
       this.orderShow = { ...item };
       this.$refs.delModal.openModal();
+      this.isLoadingItem = '';
     },
     updatePaid(item) {
+      this.isLoadingItem = item.id;
       const api = `${process.env.VUE_APP_API}/api/${process.env.VUE_APP_PATH}/admin/order/${item.id}`;
       const paid = {
         is_paid: item.is_paid,
@@ -169,22 +186,28 @@ export default {
           this.$refs.orderDetail.closeModal();
           this.getOrders(this.currentPage);
           alert(response, '更新付款狀態');
+          this.isLoadingItem = '';
         })
         .catch((error) => {
           alert(error.response, '錯誤訊息');
+          this.isLoadingItem = '';
         });
     },
     delOrder() {
+      this.isLoadingItem = this.orderShow.id;
       const url = `${process.env.VUE_APP_API}/api/${process.env.VUE_APP_PATH}/admin/order/${this.orderShow.id}`;
       this.$http
         .delete(url)
         .then(() => {
           this.$refs.delModal.closeModal();
+          this.isLoadingItem = '';
           this.getOrders(this.currentPage);
         })
         .catch((error) => {
           alert(error.response, '錯誤訊息');
+          this.isLoadingItem = '';
         });
+      this.isLoadingItem = '';
     },
   },
   created() {

@@ -1,4 +1,10 @@
 <template>
+  <PageLoading
+    loader="bars"
+    :active="isLoading"
+    :can-cancel="true"
+    :is-full-page="false"
+  ></PageLoading>
   <div class="container">
     <div class="my-5 row justify-content-center">
       <VForm ref="form" class="col-md-6" v-slot="{ errors }" @submit="onSubmit">
@@ -116,6 +122,7 @@ export default {
         carts: [],
       },
       isLoadingItem: '',
+      isLoading: false,
       form: {
         user: {
           name: '',
@@ -154,11 +161,13 @@ export default {
     },
     // 驗證 表單觸發方法
     onSubmit() {
+      this.isLoading = true;
       const url = `${process.env.VUE_APP_API}/api/${process.env.VUE_APP_PATH}/order`;
       const order = this.form;
       this.$http.post(url, { data: order }).then(() => {
         this.$refs.form.resetForm();
         this.$router.push('/orderCheck');
+        this.isLoading = false;
       });
     },
     noEmpty(value) {
@@ -169,11 +178,15 @@ export default {
       return phoneNumber.test(value) ? true : '需要正確的電話號碼';
     },
     prePage() {
+      this.isLoading = true;
       this.$router.push('/cartView');
+      this.isLoading = false;
     },
   },
   mounted() {
+    this.isLoading = true;
     this.getCart();
+    this.isLoading = false;
   },
 };
 </script>
