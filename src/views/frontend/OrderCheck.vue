@@ -1,4 +1,10 @@
 <template>
+  <PageLoading
+    loader="bars"
+    :active="isLoading"
+    :can-cancel="true"
+    :is-full-page="false"
+  ></PageLoading>
   <ModalMessage ref="modalMessage"></ModalMessage>
   <div class="container mt-4" style="max-width: 1000px">
     <div class="row my-5 justify-content-center">
@@ -101,6 +107,7 @@ export default {
       orders: {},
       orderShow: {},
       isPaid: false,
+      isLoading: false,
       PaidDate: '尚未付款',
     };
   },
@@ -141,6 +148,7 @@ export default {
         });
     },
     updatePaid() {
+      this.isLoading = true;
       const { id } = this.orderShow;
       const api = `${process.env.VUE_APP_API}/api/${process.env.VUE_APP_PATH}/pay/${id}`;
       this.$http
@@ -148,14 +156,18 @@ export default {
         .then(() => {
           this.PaidDate = this.PaidDateRenewed();
           this.$refs.modalMessage.openModal(true, 'paid');
+          this.isLoading = false;
         })
         .catch(() => {
           this.$refs.modalMessage.openModal(false, 'paid');
+          this.isLoading = false;
         });
     },
   },
   created() {
+    this.isLoading = true;
     this.getOrder();
+    this.isLoading = false;
   },
 };
 </script>

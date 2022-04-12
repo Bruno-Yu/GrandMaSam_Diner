@@ -1,4 +1,10 @@
 <template>
+  <PageLoading
+    loader="bars"
+    :active="isLoading"
+    :can-cancel="true"
+    :is-full-page="false"
+  ></PageLoading>
   <div v-if="cartData.carts.length" class="container-fluid mt-3">
     <h1 class="text-center mt-5 fs-1 mb-3 fw-bolder">訂單</h1>
     <nav class="d-flex justify-content-center">
@@ -83,6 +89,7 @@ export default {
       cartData: {
         carts: [],
       },
+      isLoading: false,
     };
   },
   methods: {
@@ -93,10 +100,12 @@ export default {
       this.$router.push('/theEnd');
     },
     getCart() {
+      this.isLoading = true;
       this.$http
         .get(`${process.env.VUE_APP_API}/api/${process.env.VUE_APP_PATH}/cart`)
         .then((res) => {
           this.cartData = res.data.data;
+          this.isLoading = false;
         });
     },
   },

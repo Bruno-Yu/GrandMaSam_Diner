@@ -1,7 +1,13 @@
 <template>
+  <PageLoading
+    loader="bars"
+    :active="isLoading"
+    :can-cancel="true"
+    :is-full-page="false"
+  ></PageLoading>
   <div class="container-fluid w-100" style="box-sizing: border-box">
     <BackNavbar />
-    <RouterView />
+    <RouterView v-if="verify" />
     <FrontFooter />
   </div>
 </template>
@@ -11,6 +17,12 @@ import BackNavbar from '@/components/BackNavbar.vue';
 import FrontFooter from '@/components/FrontFooter.vue';
 
 export default {
+  data() {
+    return {
+      isLoading: false,
+      verify: false,
+    };
+  },
   components: {
     BackNavbar,
     FrontFooter,
@@ -24,14 +36,17 @@ export default {
           alert(response, '登出');
           if (response.data.success) {
             this.$router.push('/trueusLogin');
+            this.verify = false;
           }
         })
         .catch((error) => {
           alert(error.response, '錯誤訊息');
+          this.verify = false;
         });
     },
   },
   created() {
+    this.isLoading = true;
     const token = document.cookie.replace(
       /(?:(?:^|.*;\s*)hexToken\s*=\s*([^;]*).*$)|^.*$/,
       '$1',
@@ -39,9 +54,13 @@ export default {
     this.$http.defaults.headers.common.Authorization = `${token}`;
     this.$http
       .post(`${process.env.VUE_APP_API}/api/user/check`)
-      .then(() => {})
+      .then(() => {
+        this.isLoading = false;
+        this.verify = true;
+      })
       .catch(() => {
         this.$router.push('/trueusLogin');
+        this.isLoading = false;
       });
   },
 };

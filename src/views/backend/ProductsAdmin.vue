@@ -1,4 +1,10 @@
 <template>
+  <PageLoading
+    loader="bars"
+    :active="isLoading"
+    :can-cancel="true"
+    :is-full-page="false"
+  ></PageLoading>
   <div class="container">
     <h2 class="my-5 ms-2 fw-bold text-center">產品管理列表</h2>
     <div class="text-end mt-4">
@@ -95,6 +101,7 @@ export default {
       has_next: true,
       has_pre: false,
       total_pages: 1,
+      isLoading: false,
       emitData: {
         productDisplay: {
           imagesUrl: [],
@@ -170,7 +177,9 @@ export default {
     },
   },
   mounted() {
+    this.isLoading = true;
     this.getData();
+    this.isLoading = false;
   },
 };
 </script>

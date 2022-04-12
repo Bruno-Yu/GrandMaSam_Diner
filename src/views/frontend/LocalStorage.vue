@@ -1,4 +1,10 @@
 <template>
+  <PageLoading
+    loader="bars"
+    :active="isLoading"
+    :can-cancel="true"
+    :is-full-page="false"
+  ></PageLoading>
   <div v-if="favorites.length" class="container-fluid gx-0 gy-1 mt-3">
     <h1 class="text-center mt-5 fs-1 mb-3 fw-bolder">收藏</h1>
     <div class="container">
@@ -198,6 +204,7 @@ export default {
       products: [],
       favProducts: [],
       productId: '',
+      isLoading: false,
       isLoadingItem: '',
     };
   },
@@ -292,7 +299,9 @@ export default {
     },
   },
   created() {
+    this.isLoading = true;
     this.getProducts();
+    this.isLoading = false;
   },
 };
 </script>

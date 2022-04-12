@@ -1,4 +1,10 @@
 <template>
+  <PageLoading
+    loader="bars"
+    :active="isLoading"
+    :can-cancel="true"
+    :is-full-page="false"
+  ></PageLoading>
   <cartMessage ref="cartMessage"></cartMessage>
   <div class="container-fluid bg-warning">
     <div class="row row-cols-1 row-cols-lg-2 g-1 my-1">
@@ -225,6 +231,7 @@ export default {
       productId: '',
       addNum: 0,
       num: false,
+      isLoading: false,
       isLoadingItem: '',
       categories: [],
       current_page: 1,
@@ -283,7 +290,9 @@ export default {
       });
     },
     getProduct(id) {
+      this.isLoading = true;
       this.$router.push(`/user/product/${id}`);
+      this.isLoading = false;
     },
     getCart() {
       this.$http
@@ -335,9 +344,11 @@ export default {
     },
   },
   mounted() {
+    this.isLoading = true;
     this.getProducts();
     this.getCategory();
     this.getCart();
+    this.isLoading = false;
   },
 };
 </script>

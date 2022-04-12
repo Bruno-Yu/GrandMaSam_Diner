@@ -9,6 +9,8 @@ import { localize, setLocale } from '@vee-validate/i18n';
 import zhTW from '@vee-validate/i18n/dist/locale/zh_TW.json';
 import ModalMessage from '@/components/ModalMessage.vue';
 // import PageLoading from '@/components/PageLoading.vue';
+import Loading from 'vue-loading-overlay';
+import 'vue-loading-overlay/dist/vue-loading.css';
 import App from './App.vue';
 import router from './router';
 
@@ -26,6 +28,7 @@ const app = createApp(App);
 app.component('VForm', Form);
 app.component('ModalMessage', ModalMessage);
 // app.component('PageLoading', PageLoading);
+app.component('PageLoading', Loading);
 app.component('VField', Field);
 app.component('ErrorMessage', ErrorMessage);
 app.use(router);

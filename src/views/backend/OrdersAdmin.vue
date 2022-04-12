@@ -1,4 +1,10 @@
 <template>
+  <PageLoading
+    loader="bars"
+    :active="isLoading"
+    :can-cancel="true"
+    :is-full-page="false"
+  ></PageLoading>
   <h2 class="my-5 ms-2 fw-bold text-center">訂單管理頁面</h2>
   <table class="table mt-4">
     <thead>
@@ -102,6 +108,7 @@ export default {
       current_page: 1,
       has_next: false,
       has_pre: false,
+      isLoading: false,
       total_pages: 1,
       orderShow: {},
       currentPage: 1,
@@ -181,7 +188,9 @@ export default {
     },
   },
   created() {
+    this.isLoading = true;
     this.getOrders();
+    this.isLoading = false;
   },
   // updated() {
   //   this.getOrders();
