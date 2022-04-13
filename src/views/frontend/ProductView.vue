@@ -5,6 +5,7 @@
     :can-cancel="true"
     :is-full-page="false"
   ></PageLoading>
+  <cartMessage ref="cartMessage"></cartMessage>
   <div class="container-fluid">
     <div class="row mt-5 d-flex align-items-center justify-content-center">
       <div class="col-md-6 rounded">
@@ -72,23 +73,28 @@
                   class="btn btn-outline-dark border-0 py-2"
                   type="button"
                   id="button-addon1"
+                  @click="productQty = productQty - 1"
+                  :disabled="productQty === 1"
                 >
                   <i class="bi bi-dash"></i>
                 </button>
               </div>
               <input
-                type="text"
+                type="number"
+                :value="productQty"
                 class="form-control border-0 text-center my-auto shadow-none bg-light"
                 placeholder=""
                 aria-label="Example text with button addon"
                 aria-describedby="button-addon1"
-                value="1"
+                onkeyup="value=value.replace(/^(0+)|[^\d]+/g,'')"
+                readonly="readonly"
               />
               <div class="input-group-append">
                 <button
                   class="btn btn-outline-dark border-0 py-2"
                   type="button"
                   id="button-addon2"
+                  @click="productQty = productQty + 1"
                 >
                   <i class="bi bi-plus"></i>
                 </button>
@@ -101,7 +107,7 @@
               type="button"
               to="/userOrders"
               class="text-nowrap btn btn-warning shadow w-100 fw-bold py-2"
-              @click="addToCart(product.id)"
+              @click="addToCart(product.id, productQty)"
             >
               加入購物車
             </button>
@@ -205,6 +211,7 @@
 
 <script>
 import { Swiper, SwiperSlide } from 'swiper/vue';
+import cartMessage from '@/components/cartMessage.vue';
 // eslint-disable-next-line object-curly-newline
 import {
   Navigation,
@@ -221,6 +228,7 @@ export default {
 
       product: {},
       products: [],
+      productQty: 1,
       id: '',
       modules: [Navigation, Pagination, Autoplay, EffectCoverflow, FreeMode],
       swiper: {
@@ -256,6 +264,7 @@ export default {
   components: {
     Swiper,
     SwiperSlide,
+    cartMessage,
   },
   methods: {
     getProduct() {
@@ -277,7 +286,7 @@ export default {
         this.isLoading = false;
       });
     },
-    addToCart(id, qty = 1) {
+    addToCart(id, qty) {
       const url = `${process.env.VUE_APP_API}/api/${process.env.VUE_APP_PATH}/cart`;
       const cart = {
         product_id: id,
@@ -286,14 +295,12 @@ export default {
       this.isLoading = true;
       this.$http
         .post(url, { data: cart })
-        .then((response) => {
+        .then(() => {
           this.isLoading = false;
-          this.$httpMessageState(response, '加入購物車');
-          this.$router.push('/userOrders');
+          this.$refs.cartMessage.openModal(true);
         })
-        .catch((error) => {
+        .catch(() => {
           this.isLoading = false;
-          this.$httpMessageState(error.response, '加入購物車');
         });
     },
   },
