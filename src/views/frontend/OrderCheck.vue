@@ -97,7 +97,7 @@
   </div>
 </template>
 <script>
-import emitter from '@/libs/emitter';
+// import emitter from '@/libs/emitter';
 // import ModalMessage from '@/components/ModalMessage.vue';
 
 export default {
@@ -141,8 +141,8 @@ export default {
             create_at: this.dateTimeFormat(item.create_at),
           }));
           this.orderShow = this.orders.pop();
-          console.log(this.orderShow);
-          emitter.emit('order-id', this.orderShow.id);
+          // console.log(this.orderShow);
+          // emitter.emit('order-id', this.orderShow.id);
         })
         .catch(() => {
           this.isLoading = false;
@@ -156,7 +156,7 @@ export default {
         .post(api)
         .then(() => {
           this.PaidDate = this.PaidDateRenewed();
-          this.$refs.modalMessage.openModal(true, 'paid');
+          this.$refs.modalMessage.openModal(true, 'paid', id);
           this.isLoading = false;
         })
         .catch(() => {

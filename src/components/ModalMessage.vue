@@ -48,7 +48,8 @@
             <p class="fw-bold">
               有句話說台灣最美的風景就是人，但在作者眼中，最美的台灣風景就是你
             </p>
-            <p class="fw-bold">的錢</p>
+            <p class="fw-bold">的錢{{ id }}</p>
+            <p class="fw-bold">處理訂單編號: {{ id }}</p>
           </div>
         </div>
         <div v-if="paid" class="modal-footer">
@@ -181,7 +182,7 @@
 
 <script>
 import Modal from 'bootstrap/js/dist/modal';
-import '@/libs/emitter';
+import emitter from '@/libs/emitter';
 
 export default {
   data() {
@@ -190,15 +191,18 @@ export default {
       paid: false,
       modal: null,
       success: false,
+      id: '',
     };
   },
 
   methods: {
-    openModal(isPaid, source) {
+    openModal(isPaid, source, id) {
       this.success = isPaid;
       if (source === 'paid') {
         this.paid = true;
         this.login = false;
+        this.id = id;
+        emitter.emit('order-id', id);
       } else if (source === 'login') {
         this.login = true;
         this.paid = false;

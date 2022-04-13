@@ -12,6 +12,7 @@ import ModalMessage from '@/components/ModalMessage.vue';
 import Loading from 'vue-loading-overlay';
 import 'vue-loading-overlay/dist/vue-loading.css';
 import $httpMessageState from '@/libs/pushMessageState';
+// import emitter from '@/libs/emitter';
 import App from './App.vue';
 import router from './router';
 
@@ -27,6 +28,7 @@ setLocale('zh_TW');
 
 const app = createApp(App);
 app.config.globalProperties.$httpMessageState = $httpMessageState;
+// app.config.globalProperties.emitter = emitter;
 app.component('VForm', Form);
 app.component('ModalMessage', ModalMessage);
 // app.component('PageLoading', PageLoading);

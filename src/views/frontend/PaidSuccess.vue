@@ -6,18 +6,15 @@
     :is-full-page="false"
   ></PageLoading>
   <div class="container paid-success shadow mb-2 p-1">
-    <div class="my-5">
-      <p class="fs-2 fw-bold text-dark text-lg-light text-center">
+    <div class="my-5 row">
+      <p class="fs-2 fw-bold text-dark text-center">
         <i class="bi bi-check2-circle text-success fw-bolder"></i>
         付款成功
       </p>
       <div class="d-flex justify-content-center">
-        <p class="fw-bold text-light">訂單編號: {{ orderID }}</p>
-      </div>
-      <div class="d-flex justify-content-center">
         <button
           type="button"
-          class="btn btn-warning border-1 border fw-bold border-light my-5"
+          class="btn btn-warning border-1 border fw-bold border-light my-2"
         >
           <router-link
             to="/productsView"
@@ -32,22 +29,11 @@
 </template>
 
 <script>
-import emitter from '@/libs/emitter';
-
 export default {
   data() {
     return {
-      orderID: '',
       isLoading: false,
     };
-  },
-  mounted() {
-    // this.isLoading = true;
-    emitter.on('order-id', (data) => {
-      console.log(data);
-      this.orderID = data;
-    });
-    // this.isLoading = false;
   },
 };
 </script>
@@ -57,5 +43,6 @@ export default {
   background-image: url(@/assets/images/paid_success.jpg);
   background-position: center center;
   background-size: cover;
+  height: 470px;
 }
 </style>
