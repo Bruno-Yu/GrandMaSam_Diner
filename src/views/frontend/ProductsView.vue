@@ -5,6 +5,7 @@
     :can-cancel="true"
     :is-full-page="false"
   ></PageLoading>
+  <CartModal ref="CartModal"></CartModal>
   <cartMessage ref="cartMessage"></cartMessage>
   <div class="container-fluid bg-warning">
     <div class="row row-cols-1 row-cols-lg-2 g-1 my-1">
@@ -205,7 +206,9 @@
               <p class="text-muted mt-3"></p>
             </div>
           </div>
-          <CartIcon :cartNum="cartNum"></CartIcon>
+          <a href="#" class="btn" @click.prevent="openCartModal(cartData)">
+            <CartIcon :cartNum="cartNum"></CartIcon>
+          </a>
         </div>
       </div>
       <div class="d-flex justify-content-center mt-5">
@@ -223,9 +226,11 @@
 </template>
 
 <script>
+// import emitter from '@/libs/emitter';
 import PaginationFooter from '@/components/PaginationFooter.vue';
 import cartMessage from '@/components/cartMessage.vue';
 import CartIcon from '@/components/CartIcon.vue';
+import CartModal from '@/components/CartModal.vue';
 
 export default {
   data() {
@@ -244,6 +249,9 @@ export default {
       has_pre: false,
       total_pages: 1,
       cartNum: 0,
+      cartData: {
+        carts: [],
+      },
       favorites: JSON.parse(window.localStorage.getItem('favorites')) || [],
     };
   },
@@ -251,11 +259,15 @@ export default {
     PaginationFooter,
     cartMessage,
     CartIcon,
+    CartModal,
   },
 
   methods: {
     arrestHim() {
       this.$router.push('/arrestUser');
+    },
+    openCartModal(cartData) {
+      this.$refs.CartModal.openModal(cartData);
     },
     getCategory(query) {
       const originCategories = [];
@@ -303,8 +315,8 @@ export default {
       this.$http
         .get(`${process.env.VUE_APP_API}/api/${process.env.VUE_APP_PATH}/cart`)
         .then((res) => {
+          this.cartData = res.data.data;
           this.cartNum = res.data.data.carts.length || 0;
-          console.log(res);
         });
     },
     saveToFavorites(id) {
@@ -349,10 +361,11 @@ export default {
     },
   },
   mounted() {
+    this.getCart();
     this.isLoading = true;
     this.getProducts();
     this.getCategory();
-    this.getCart();
+
     this.isLoading = false;
   },
 };
