@@ -28,12 +28,12 @@
           <p class="text-light fw-bold">我們推廣合意信教制</p>
           <p class="text-light fw-bold">讓您不論在身體上、心理上皆能獲得滿足</p>
           <p
-            class="text-light fs-5"
+            class="text-light fs-4"
             style="font-family: 'Noto Sans JP', sans-serif; font-weight: 600"
           >
             女士們先生們 今晚你們想信教嗎?
           </p>
-          <p class="text-light fw-light">
+          <p class="text-light d-none d-lg-inline-block fw-light">
             特此聲明:
             我們是拜燈神教，並不拜月，有請各位為拯救趙靈兒的少俠們多保養眼睛，避免誤闖，造成本餐飲正在用餐的貴賓困擾，感謝!
           </p>
