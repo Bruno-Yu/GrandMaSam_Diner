@@ -206,9 +206,13 @@
               <p class="text-muted mt-3"></p>
             </div>
           </div>
-          <a href="#" class="btn" @click.prevent="openCartModal(cartData)">
+          <button
+            type="button"
+            class="btn"
+            @click.prevent="openCartModal(cartData)"
+          >
             <CartIcon :cartNum="cartNum"></CartIcon>
-          </a>
+          </button>
         </div>
       </div>
       <div class="d-flex justify-content-center mt-5">
@@ -226,7 +230,7 @@
 </template>
 
 <script>
-// import emitter from '@/libs/emitter';
+import emitter from '@/libs/emitter';
 import PaginationFooter from '@/components/PaginationFooter.vue';
 import cartMessage from '@/components/cartMessage.vue';
 import CartIcon from '@/components/CartIcon.vue';
@@ -359,6 +363,12 @@ export default {
       },
       deep: true,
     },
+  },
+  created() {
+    emitter.on('get-cart', () => {
+      this.getCart();
+      this.openCartModal(this.cartData);
+    });
   },
   mounted() {
     this.getCart();

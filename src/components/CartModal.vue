@@ -10,8 +10,8 @@
   >
     <div class="modal-dialog" role="document">
       <div class="modal-content">
-        <div class="modal-header bg-warning fw-bold">
-          <h5 class="modal-title" id="exampleModalLabel">購物車</h5>
+        <div class="modal-header bg-warning">
+          <h5 class="modal-title fw-bold" id="exampleModalLabel">購物車</h5>
           <button
             type="button"
             class="btn-close"
@@ -35,7 +35,7 @@
                     <button
                       type="button"
                       class="btn btn-outline-danger btn-sm"
-                      @click.prevent="removeCart(item.id)"
+                      @click="[removeCart(item.id), this.modal.hide()]"
                       :disabled="loadingItem === item.id"
                     >
                       <span
@@ -46,8 +46,13 @@
                     </button>
                   </td>
                   <td>
-                    {{ item.product.title }}
-                    <div class="text-primary" v-if="item.coupon">
+                    <router-link
+                      :to="{ path: `/productView/${item.product.id}` }"
+                      class="text-decoration-none link-dark fw-bold"
+                    >
+                      {{ item.product.title }}
+                    </router-link>
+                    <div class="text-dark" v-if="item.coupon">
                       <small>已套用優惠券</small>
                     </div>
                   </td>
@@ -57,10 +62,10 @@
                 <tr>
                   <td
                     colspan="4"
-                    class="text-right pt-3"
+                    class="text-right fw-bold pt-3"
                     v-if="cart.total == cart.final_total"
                     :class="{
-                      'text-primary': cart.total == cart.final_total,
+                      'text-dark': cart.total == cart.final_total,
                       h5: cart.total == cart.final_total,
                     }"
                   >
@@ -68,7 +73,7 @@
                   </td>
                   <td
                     colspan="4"
-                    class="text-right pt-3"
+                    class="text-right fw-bold pt-3"
                     v-if="cart.total !== cart.final_total"
                   >
                     <del>總計&nbsp;${{ cart.total }}</del>
@@ -77,7 +82,7 @@
                 <tr v-if="cart.total !== cart.final_total">
                   <td
                     colspan="4"
-                    class="text-right text-primary h5 border-top-0"
+                    class="text-right text-dark h5 border-top-0 fw-bold"
                   >
                     折扣價&nbsp;&nbsp;&nbsp;${{ cart.final_total }}
                   </td>
@@ -95,7 +100,7 @@
         <div class="modal-footer" v-if="cart.carts.length > 0">
           <a
             href="#"
-            class="btn btn-primary btn-block btn-shadow"
+            class="btn btn-warning btn-block btn-shadow fw-bold"
             @click.prevent="goOrders"
             >結帳去</a
           >
@@ -107,7 +112,7 @@
 
 <script>
 import Modal from 'bootstrap/js/dist/modal';
-// import emitter from '@/libs/emitter';
+import emitter from '@/libs/emitter';
 
 export default {
   // props: ['cartData'],
@@ -132,26 +137,16 @@ export default {
       this.modal.hide();
     },
     removeCart(id) {
-      if (id) {
-        this.loadingItem = id;
-        this.$http
-          .delete(
-            `${process.env.VUE_APP_API}/api/${process.env.VUE_APP_PATH}/cart/${id}`,
-          )
+      this.loadingItem = id;
+      this.$http
+        .delete(
+          `${process.env.VUE_APP_API}/api/${process.env.VUE_APP_PATH}/cart/${id}`,
+        )
 
-          .then(() => {
-            this.loadingItem = '';
-          });
-      } else {
-        this.$http
-          .delete(
-            `${process.env.VUE_APP_API}/api/${process.env.VUE_APP_PATH}/carts`,
-          )
-          .then(() => {
-            // 取得購物車的資料
-            this.loadingItem = '';
-          });
-      }
+        .then(() => {
+          emitter.emit('get-cart');
+          this.loadingItem = '';
+        });
     },
   },
 
