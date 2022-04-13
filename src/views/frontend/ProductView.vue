@@ -6,14 +6,15 @@
     :is-full-page="false"
   ></PageLoading>
   <div class="container-fluid">
-    <div class="row align-items-center">
-      <div class="col-md-7">
+    <div class="row mt-5 d-flex align-items-center justify-content-center">
+      <div class="col-md-6 rounded">
         <Swiper
           :modules="modules"
           :slides-per-view="1"
           :space-between="50"
           navigation
           :pagination="{ clickable: true }"
+          class="shadow mb-3 p-2 rounded"
         >
           <SwiperSlide>
             <div
@@ -106,7 +107,9 @@
             </button>
           </div>
         </div>
-        <div class="row row-cols-1 row-cols-lg-2 my-5 justify-content-center shadow p-3 mb-1 rounded">
+        <div
+          class="row row-cols-1 row-cols-lg-2 my-5 justify-content-center shadow p-3 mb-1 rounded"
+        >
           <div class="col col-lg-6">
             <h3 class="text-muted fw-bold">商品規格</h3>
             <p class="text-muted">
@@ -166,7 +169,7 @@
             <div
               class="swiper-slide-inner"
               style="
-                height: 20rem;
+                height: 15rem;
                 background-position: center center;
                 background-size: cover;
                 background-color: #ece7ddea;
@@ -331,13 +334,5 @@ export default {
 }
 .swiper-pagination {
   color: #dde3ee;
-}
-.productsView-banner {
-  background-image: url(@/assets/images/productsView_banner.jpg);
-  height: 420px;
-  background-position: center center;
-  background-size: cover;
-  background-blend-mode: multiply;
-  background-color: #ece7ddea;
 }
 </style>
