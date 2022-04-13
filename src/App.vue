@@ -6,4 +6,5 @@
 
 <style lang="scss">
 @import 'bootstrap/scss/bootstrap';
+// @import './src/assets/stylesheets/all.scss';
 </style>
