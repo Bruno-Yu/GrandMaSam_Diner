@@ -141,6 +141,7 @@ export default {
             create_at: this.dateTimeFormat(item.create_at),
           }));
           this.orderShow = this.orders.pop();
+          console.log(this.orderShow);
           emitter.emit('order-id', this.orderShow.id);
         })
         .catch(() => {

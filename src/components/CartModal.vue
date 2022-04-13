@@ -36,7 +36,7 @@
                       type="button"
                       class="btn btn-outline-danger btn-sm"
                       @click="[removeCart(item.id), this.modal.hide()]"
-                      :disabled="loadingItem === item.id"
+                      :disabled="isLoadingItem === item.id"
                     >
                       <span
                         class="spinner-grow spinner-grow-sm"
@@ -98,12 +98,13 @@
           </section>
         </div>
         <div class="modal-footer" v-if="cart.carts.length > 0">
-          <a
-            href="#"
+          <button
+            type="button"
             class="btn btn-warning btn-block btn-shadow fw-bold"
-            @click.prevent="goOrders"
-            >結帳去</a
+            @click="[closeModal(), goOrders()]"
           >
+            結帳去
+          </button>
         </div>
       </div>
     </div>
@@ -119,7 +120,7 @@ export default {
   data() {
     return {
       modal: null,
-      loadingItem: '',
+      isLoadingItem: '',
       cart: {
         carts: [],
       },
@@ -127,17 +128,18 @@ export default {
   },
   methods: {
     goOrders() {
-      this.$router.push('/userOrders');
+      this.$router.push('/cartView');
     },
     openModal(cartData) {
       this.cart = cartData;
       this.modal.show();
     },
     closeModal() {
+      this.isLoadingItem = '';
       this.modal.hide();
     },
     removeCart(id) {
-      this.loadingItem = id;
+      this.isLoadingItem = id;
       this.$http
         .delete(
           `${process.env.VUE_APP_API}/api/${process.env.VUE_APP_PATH}/cart/${id}`,
@@ -145,7 +147,7 @@ export default {
 
         .then(() => {
           emitter.emit('get-cart');
-          this.loadingItem = '';
+          this.isLoadingItem = '';
         });
     },
   },

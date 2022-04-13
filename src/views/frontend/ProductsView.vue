@@ -371,8 +371,8 @@ export default {
     });
   },
   mounted() {
-    this.getCart();
     this.isLoading = true;
+    this.getCart();
     this.getProducts();
     this.getCategory();
 

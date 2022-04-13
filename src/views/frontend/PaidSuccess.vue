@@ -41,12 +41,13 @@ export default {
       isLoading: false,
     };
   },
-  created() {
-    this.isLoading = true;
+  mounted() {
+    // this.isLoading = true;
     emitter.on('order-id', (data) => {
+      console.log(data);
       this.orderID = data;
     });
-    this.isLoading = false;
+    // this.isLoading = false;
   },
 };
 </script>
