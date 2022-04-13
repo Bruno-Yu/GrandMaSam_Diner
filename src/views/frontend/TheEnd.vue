@@ -22,7 +22,7 @@
             台灣毀滅RIP
           </h3>
           <p class="text-light fw-bold">我們最不想發生的事情終究還還是發生了</p>
-          <p class="text-light fw-bold d-none d-lg-inline-block">
+          <p class="text-light fw-bold">
             但還好本集團創辦人早已提前洞悉這可能性，體恤在地民眾沒有精神寄託，特別開設了拜燈神教的東亞分部，讓在地民眾在這末日有個精神寄託，其總部分部就在台北
           </p>
           <p class="text-light fw-bold">我們推廣合意信教制</p>
