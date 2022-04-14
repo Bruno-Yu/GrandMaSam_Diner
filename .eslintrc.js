@@ -22,7 +22,7 @@ module.exports = {
       },
     ],
     'max-len': ['off', { code: 150 }],
-    'vue/no-multiple-template-root': 'off',
+    // 'vue/no-multiple-template-root': 'off',
     'vuejs-accessibility/anchor-has-content': 'off',
   },
 };

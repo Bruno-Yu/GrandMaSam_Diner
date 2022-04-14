@@ -1,7 +1,30 @@
+@import './Sass/variables';
+@import './Sass/_functions.scss';
+@import '../node_modules/bootstrap/scss/_mixins.scss';
+@import '../node_modules/bootstrap/scss/_reboot.scss';
+@import '../node_modules/bootstrap/scss/_spinners.scss';
+@import '../node_modules/bootstrap/scss/_modal.scss';
+@import '../node_modules/bootstrap/scss/_close.scss';
+
+@import '../node_modules/bootstrap/scss/bootstrap-grid.scss';
+@import '../node_modules/bootstrap/scss/bootstrap-utilities.scss';
+@import '../node_modules/bootstrap/scss/buttons.scss';
+@import '../node_modules/bootstrap/scss/nav.scss';
+@import '../node_modules/bootstrap/scss/forms.scss';
+@import '../node_modules/bootstrap/scss/transitions.scss';
+@import '../node_modules/bootstrap/scss/tables.scss';
+@import '../node_modules/bootstrap/scss/offcanvas.scss';
+@import '../node_modules/bootstrap/scss/spinners.scss';
+@import '../node_modules/bootstrap/scss/popover.scss';
+@import '../node_modules/bootstrap/scss/card.scss';
+@import '../node_modules/bootstrap/scss/pagination.scss';
+@import '../node_modules/bootstrap/scss/dropdown.scss';
+@import '../node_modules/bootstrap/scss/breadcrumb.scss';
+
 // @import './Sass/_functions.scss';
-@import '../node_modules/bootstrap/scss/_functions.scss';
-@import './Sass/_variables.scss';
+// @import '../node_modules/bootstrap/scss/_functions.scss';
+// @import './Sass/_variables.scss';
 // @import './Sass/bootstrap.scss';
-@import '../node_modules/bootstrap/scss/bootstrap.scss';
+// @import '../node_modules/bootstrap/scss/bootstrap.scss';
 // @import '../node_modules/bootstrap/scss/_mixins.scss';
 // @import '../node_modules/bootstrap/scss/_utilities.scss';
