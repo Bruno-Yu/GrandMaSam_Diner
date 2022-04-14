@@ -1,11 +1,6 @@
 <template>
   <div class="container-fluid gx-0 bg-body">
-    <h2
-      class="my-5 fw-bold text-center gx-0"
-      style="font-family: 'Noto Sans JP', sans-serif; font-weight: 700"
-    >
-      關於我們
-    </h2>
+    <h2 class="my-5 fw-bold text-center gx-0 font-Noto fw-700">關於我們</h2>
     <div
       class="container my-1 py-3 border border-secondary border-1 border-start-0 border-end-0 border-bottom-0 gx-0"
     >
@@ -13,7 +8,7 @@
         <div
           class="col col-lg-5 me-lg-5 header-content shadow p-4 mb-5 mt-2 bg-body rounded"
         >
-          <h4 class="my-3 fw-bolder">起源</h4>
+          <h4 class="my-3 fw-bolder">源起</h4>
           <p class="text-muted">
             根據現存史料《 !!! 》第一部《His
             Story》篇的解釋，此人形符號是起源於西元前1234年，文獻中記載，該符號可能是出自上古奧林匹斯性評會所創。
@@ -26,7 +21,7 @@
           </p>
         </div>
         <div class="col col-lg-3">
-          <div class="my-2 ratio ratio-1x1" style="background-color: #f7f4f0">
+          <div class="my-2 ratio ratio-1x1 logo-origin-bg">
             <div class="logo-origin"></div>
           </div>
         </div>
@@ -36,38 +31,25 @@
       >
         <div class="col col-lg-9">
           <h4
-            class="my-5 my-lg-4 text-light fw-bolder text-lg-center"
-            style="font-family: 'Noto Sans JP', sans-serif; font-weight: 700"
+            class="my-5 my-lg-4 text-light fw-bolder text-lg-center font-Noto fw-700"
           >
             集團
           </h4>
-          <div class="container mx-auto" style="max-width: 60rem">
+          <div class="container mx-auto group-width">
             <ul>
               <li class="text-light fw-bold">
-                <span
-                  class="text-dark"
-                  style="font-family: 'Noto Sans JP', sans-serif"
-                  ><i>1990年 -</i>
-                </span>
+                <span class="text-dark font-Noto"><i>1990年 -</i> </span>
                 創辦人在祖母與親朋好友的經濟支援下，藉由其銳利的商業判斷，在紐約曼哈頓的黃金地段，購置了大量不動產，並創辦了本集團大樓，為紀念創辦人祖母的獨到的眼光和金援以及為表現創辦人"在金錢之下人人平等"的核心理念，將該大樓命名為
                 山姆大嬸大樓（英語：The Grandma Sam
                 building），並以該大樓的名稱作為本集團的正式名稱 山姆大嬸 集團
                 （英語：The Grandma Sam Organization）
               </li>
               <li class="text-light fw-bolder">
-                <span
-                  class="text-dark"
-                  style="font-family: 'Noto Sans JP', sans-serif"
-                  ><i>2000~ 2010 年 -</i>
-                </span>
+                <span class="text-dark font-Noto"><i>2000~ 2010 年 -</i> </span>
                 本集團拓展遍佈世界各地，並在各地建立分支據點，在全球聯合國所屬140個會員國的市中心，沒有一個有本集團的辦事處
               </li>
               <li class="text-light fw-bolder">
-                <span
-                  class="text-dark"
-                  style="font-family: 'Noto Sans JP', sans-serif"
-                  ><i>在 2020 年 -</i>
-                </span>
+                <span class="text-dark font-Noto"><i>在 2020 年 -</i> </span>
                 本集團創辦人有感於其祖母與台灣民主地區領導人蔣大總統的好交情，決定利用其祖母在中華台北
                 ( 此亦為奧運會代表正式名稱
                 )的房地產投資收益，創立了台灣辦事處，並於隔年建立本餐飲公司
@@ -142,10 +124,7 @@
           <h4 class="my-lg-5 text-lg-center fw-bolder">榮譽獎章</h4>
           <!-- <div class="col shadow p-5 mb-2 bg-warning rounded"> -->
           <div class="col shadow p-4 p-sm-5 mb-2 bg-warning rounded">
-            <p
-              class="fs-5 fw-bold mt-lg-1"
-              style="font-family: 'Noto Sans JP', sans-serif; font-weight: 700"
-            >
+            <p class="fs-5 fw-bold mt-lg-1 font-Noto fw-700">
               榮獲 2000年度最佳性福企業認證
             </p>
             <p class="fw-bold">
@@ -170,8 +149,7 @@
         <div class="row d-flex mt-sm-0 mt-lg-5 align-items-center">
           <div class="col my-lg-4 shadow p-2 p-sm-3 mb-2 bg-body rounded">
             <p
-              class="fs-5 mt-5 mt-md-0 mt-lg-5 fw-bold text-secondary"
-              style="font-family: 'Noto Sans JP', sans-serif; font-weight: 700"
+              class="fs-5 mt-5 mt-md-0 mt-lg-5 fw-bold text-secondary font-Noto fw-700"
             >
               榮獲 性別平等 餐廳認證
             </p>
@@ -196,12 +174,7 @@
       <div class="col col-lg-5">
         <div class="container m-auto px-auto">
           <div style="height: 430px">
-            <h4
-              class="my-5 text-warning"
-              style="font-family: 'Noto Sans JP', sans-serif; font-weight: 700"
-            >
-              立即斗內作者
-            </h4>
+            <h4 class="my-5 text-warning font-Noto fw-700">立即斗內作者</h4>
 
             <form>
               <div class="mb-3">
@@ -239,11 +212,7 @@
               <div class="d-flex justify-content-end">
                 <button
                   type="submit"
-                  class="btn btn-warning border shadow border-2"
-                  style="
-                    font-family: 'Noto Sans JP', sans-serif;
-                    font-weight: 700;
-                  "
+                  class="btn btn-warning border shadow border-2 font-Noto fw-700"
                 >
                   送出
                 </button>
@@ -330,5 +299,17 @@ iframe {
 .header-content {
   max-width: 50rem;
   margin-bottom: 2rem;
+}
+.font-Noto {
+  font-family: 'Noto Sans JP', sans-serif;
+}
+.fw-700 {
+  font-weight: 700;
+}
+.logo-origin-bg {
+  background-color: #f7f4f0;
+}
+.group-width {
+  max-width: 60rem;
 }
 </style>

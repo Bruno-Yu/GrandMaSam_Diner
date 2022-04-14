@@ -13,8 +13,7 @@
         <div class="modal-header bg-warning">
           <h3
             class="modal-title text-light"
-            id="exampleModalLabel"
-            style="font-family: 'Noto Sans JP', sans-serif; font-weight: 550"
+            id="exampleModalLabel font-Noto fw-550"
           >
             執行成功
           </h3>
@@ -28,11 +27,7 @@
         </div>
         <div v-if="login" class="modal-body">
           <div class="container">
-            <h5
-              style="font-family: 'Noto Sans JP', sans-serif; font-weight: 500"
-            >
-              歡迎回來，我們尊貴的會員
-            </h5>
+            <h5 class="font-Noto fw-500">歡迎回來，我們尊貴的會員</h5>
             <p>
               貼心提醒，這個月因為作者的手頭有點緊，還請於明日就匯會員款項，用以作為作者的跑路資金
             </p>
@@ -40,11 +35,7 @@
         </div>
         <div v-if="paid" class="modal-body">
           <div class="container">
-            <h5
-              style="font-family: 'Noto Sans JP', sans-serif; font-weight: 600"
-            >
-              感謝施主您的善舉
-            </h5>
+            <h5 class="font-Noto fw-600">感謝施主您的善舉</h5>
             <p class="fw-bold">
               有句話說台灣最美的風景就是人，但在作者眼中，最美的台灣風景就是你
             </p>
@@ -56,9 +47,8 @@
           <div class="container">
             <button
               type="button"
-              class="btn btn-warning shadow mx-auto shadow p-2 mb-1 border border-dark border-1"
+              class="btn btn-warning shadow mx-auto shadow p-2 mb-1 border border-dark border-1 font-Noto fw-400"
               @click="[paidSuccess(), closeModal()]"
-              style="font-family: 'Noto Sans JP', sans-serif; font-weight: 400"
             >
               我是盤子我驕傲
             </button>
@@ -68,18 +58,16 @@
           <div class="container d-flex justify-content-end">
             <button
               type="button"
-              class="btn btn-outline-dark shadow p-2 mb-1"
+              class="btn btn-outline-dark shadow p-2 mb-1 font-Noto fw-400"
               data-bs-dismiss="modal"
               @click="[closeModal(), loginSuccess()]"
-              style="font-family: 'Noto Sans JP', sans-serif; font-weight: 400"
             >
               我也沒錢
             </button>
             <button
               type="button"
-              class="btn btn-warning mx-2 shadow p-2 mb-1 border border-dark border-1"
+              class="btn btn-warning mx-2 shadow p-2 mb-1 border border-dark border-1 font-Noto fw-400"
               @click="[closeModal(), loginSuccess()]"
-              style="font-family: 'Noto Sans JP', sans-serif; font-weight: 400"
             >
               朕知道了
             </button>
@@ -89,9 +77,8 @@
       <div v-else class="modal-content">
         <div class="modal-header bg-danger">
           <h3
-            class="modal-title text-light"
+            class="modal-title text-light font-Noto fw-550"
             id="exampleModalLabel"
-            style="font-family: 'Noto Sans JP', sans-serif; font-weight: 550"
           >
             執行結果失敗
           </h3>
@@ -105,11 +92,7 @@
         </div>
         <div class="modal-body" v-if="paid">
           <div class="container">
-            <h5
-              style="font-family: 'Noto Sans JP', sans-serif; font-weight: 550"
-            >
-              很遺憾地通知您，付款失敗
-            </h5>
+            <h5 class="font-Noto fw-550">很遺憾地通知您，付款失敗</h5>
             <p class="fw-bold">貼心小提示:</p>
             <ul class="list-unstyled">
               <li>
@@ -137,18 +120,16 @@
           <div class="container d-flex justify-content-end">
             <button
               type="button"
-              class="btn btn-outline-dark shadow p-2 mb-1"
+              class="btn btn-outline-dark shadow p-2 mb-1 font-Noto fw-400"
               data-bs-dismiss="modal"
               @click="closeModal()"
-              style="font-family: 'Noto Sans JP', sans-serif; font-weight: 400"
             >
               給我滾
             </button>
             <button
               type="button"
-              class="btn btn-danger mx-2 shadow p-2 mb-1 border border-dark border-1"
+              class="btn btn-danger mx-2 shadow p-2 mb-1 border border-dark border-1 font-Noto fw-400"
               @click="closeModal"
-              style="font-family: 'Noto Sans JP', sans-serif; font-weight: 400"
             >
               我知道了
             </button>
@@ -158,18 +139,16 @@
           <div class="container d-flex justify-content-end">
             <button
               type="button"
-              class="btn btn-outline-dark shadow p-2 mb-1"
+              class="btn btn-outline-dark shadow p-2 mb-1 font-Noto fw-400"
               data-bs-dismiss="modal"
               @click="[loginFail(), closeModal()]"
-              style="font-family: 'Noto Sans JP', sans-serif; font-weight: 400"
             >
               再試試看
             </button>
             <button
               type="button"
-              class="btn btn-danger mx-2 shadow p-2 mb-1 border border-dark border-1"
+              class="btn btn-danger mx-2 shadow p-2 mb-1 border border-dark border-1 font-Noto fw-400"
               @click="[donateNow(), closeModal()]"
-              style="font-family: 'Noto Sans JP', sans-serif; font-weight: 400"
             >
               馬上斗內
             </button>
@@ -234,3 +213,24 @@ export default {
   },
 };
 </script>
+
+<style>
+.font-Noto {
+  font-family: 'Noto Sans JP', sans-serif;
+}
+.fw-400 {
+  font-weight: 400;
+}
+.fw-500 {
+  font-weight: 500;
+}
+.fw-550 {
+  font-weight: 550;
+}
+.fw-600 {
+  font-weight: 600;
+}
+.fw-700 {
+  font-weight: 700;
+}
+</style>

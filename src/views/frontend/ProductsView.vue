@@ -14,50 +14,22 @@
           <div class="row ps-2 row-cols-1">
             <div class="col m-auto">
               <h2
-                class="mt-5 mb-4 ms-2 fs-1 text-nowrap text-dark text-center text-sm-start"
-                style="
-                  font-family: 'Noto Sans JP', sans-serif;
-                  font-weight: 800;
-                "
+                class="mt-5 mb-4 ms-2 fs-1 text-nowrap text-dark text-center text-sm-start font-Noto fw-800"
               >
                 產品/服務列表
               </h2>
-              <p
-                class="fs-3 text-dark text-sm-nowrap"
-                style="
-                  font-family: 'Noto Sans JP', sans-serif;
-                  font-weight: 600;
-                "
-              >
+              <p class="fs-3 text-dark text-sm-nowrap font-Noto fw-600">
                 廚師介紹
               </p>
-              <p
-                class="fs-5 text-light text-sm-nowrap"
-                style="
-                  font-family: 'Noto Sans JP', sans-serif;
-                  font-weight: 400;
-                "
-              >
+              <p class="fs-5 text-light text-sm-nowrap font-Noto fw-400">
                 <span class="d-none d-md-inline">五腥出品，</span
                 >來自嘉義明雄的米其林廚師帶來的味道
               </p>
-              <p
-                class="fs-5 text-light text-sm-nowrap"
-                style="
-                  font-family: 'Noto Sans JP', sans-serif;
-                  font-weight: 400;
-                "
-              >
+              <p class="fs-5 text-light text-sm-nowrap font-Noto fw-400">
                 而每份<span class="d-none d-md-inline">他所帶來的</span
                 >食物，都有屬於食材自己的故事
               </p>
-              <p
-                class="fs-5 text-light text-sm-nowrap"
-                style="
-                  font-family: 'Noto Sans JP', sans-serif;
-                  font-weight: 400;
-                "
-              >
+              <p class="fs-5 text-light text-sm-nowrap font-Noto fw-400">
                 只要您用心品嘗，一定能嚐出嘉明<span
                   class="text-light fw-light d-none d-md-inline"
                   >( 嘉義民雄 )</span
@@ -124,8 +96,7 @@
       <div class="col-md-10">
         <div class="row row-cols-1 row-cols-lg-3">
           <div
-            class="col shadow bg-body mb-2 p-2"
-            style="border-size: border-box"
+            class="col shadow bg-body mb-2 p-2 overall"
             v-for="product in products"
             :key="product.id"
           >
@@ -141,14 +112,6 @@
                   ></div>
                 </router-link>
               </div>
-
-              <!-- style="
-                  background-size: cover;
-                  background-position: center center;
-                  background-blend-mode: multiply;
-                  background-color: #ede6dcb;
-                " -->
-              <!-- background-color: #9cb2c7; -->
               <a
                 href="#"
                 class="position-absolute text-light"
@@ -169,13 +132,6 @@
                 ></i>
                 <i v-else class="bi bi-heart"></i>
               </a>
-              <!-- <router-link
-                :to="{ name: 'Product', params: { id: `${product.id}` } }"
-                class="position-absolute link-light small text-decoration-none"
-                style="right: 16px; bottom: 10px"
-              >
-                看更多
-              </router-link> -->
             </div>
             <div class="card-body p-0">
               <h5 class="mb-0 mt-1 fw-bold">
@@ -283,7 +239,6 @@ export default {
       }
       this.$http.get(url).then((res) => {
         this.allProducts = JSON.parse(JSON.stringify(res.data.products));
-        // console.log(this.allProducts);
         if (query) {
           this.products = this.allProducts;
         }
@@ -296,7 +251,6 @@ export default {
         this.isLoading = false;
       });
     },
-    // eslint-disable-next-line default-param-last
     getProducts(page = 1) {
       const url = `${process.env.VUE_APP_API}/api/${process.env.VUE_APP_PATH}/products?page=${page}`;
       this.isLoading = true;
@@ -306,7 +260,6 @@ export default {
         this.has_next = res.data.pagination.has_next;
         this.has_pre = res.data.pagination.has_pre;
         this.total_pages = res.data.pagination.total_pages;
-        // this.getCategory(this.products);
         this.isLoading = false;
       });
     },
@@ -390,19 +343,11 @@ export default {
   background-blend-mode: multiply;
   background-color: #dcd8cfea;
 }
-/* background-size: cover; */
 .cart-image {
   background-size: cover;
   background-position: center center;
   background-blend-mode: multiply;
-  /* background-color: #f1efecea; */
-  /* overflow: hidden;
-  transform: scale(1, 1);
-  transition: all 1s ease-out; */
 }
-/* .cart-image :hover {
-  transform: scale(1.2, 1.2);
-} */
 
 .cart-img-top:hover {
   background-color: #8b702cea;
@@ -424,5 +369,26 @@ export default {
   background-size: cover;
   background-blend-mode: multiply;
   background-color: #ede6dcbf;
+}
+.font-Noto {
+  font-family: 'Noto Sans JP', sans-serif;
+}
+.fw-400 {
+  font-weight: 400;
+}
+.fw-500 {
+  font-weight: 500;
+}
+.fw-600 {
+  font-weight: 600;
+}
+.fw-700 {
+  font-weight: 700;
+}
+.fw-800 {
+  font-weight: 800;
+}
+.overall {
+  box-sizing: border-box;
 }
 </style>

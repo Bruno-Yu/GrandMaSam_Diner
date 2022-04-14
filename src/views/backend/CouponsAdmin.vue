@@ -114,7 +114,7 @@ export default {
           }));
         })
         .catch((error) => {
-          alert(error.response, '錯誤訊息');
+          this.$httpMessageState(error.response, '錯誤訊息');
         });
     },
     updateCoupon(couponShow) {
@@ -130,12 +130,12 @@ export default {
 
       this.$http[httpMeth](url, { data })
         .then((response) => {
-          alert(response, '新增優惠券');
+          this.$httpMessageState(response, '新增優惠券成功');
           this.getCoupons();
           this.$refs.couponDetail.closeModal();
         })
         .catch((error) => {
-          alert(error.response, '錯誤訊息');
+          this.$httpMessageState(error.response, '錯誤訊息');
         });
     },
     delCoupon() {
@@ -143,12 +143,12 @@ export default {
       this.$http
         .delete(url)
         .then((response) => {
-          alert(response, '刪除優惠券');
+          this.$httpMessageState(response, '刪除優惠券');
           this.$refs.delModal.cloaseModal();
           this.getCoupons();
         })
         .catch((error) => {
-          this.alert(error.response, '刪除優惠券');
+          this.$httpMessageState(error.response, '刪除優惠券');
         });
     },
   },

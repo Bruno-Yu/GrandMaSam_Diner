@@ -53,25 +53,16 @@
         </div>
       </div>
     </div>
-    <p
-      class="mt-5 mb-1 text-center"
-      style="font-family: 'Noto Sans JP', sans-serif; font-weight: 500"
-    >
+    <p class="mt-5 mb-1 text-center font-Noto fw-500">
       &copy; 2022~∞ - 八角學堂向以下人員致敬
     </p>
-    <p
-      class="mb-3 text-muted text-center"
-      style="font-family: 'Noto Sans JP', sans-serif; font-weight: 500"
-    >
+    <p class="mb-3 text-muted text-center font-Noto fw-500">
       辛苦的卡老師、Ray與其他同期的駁二裝置藝術們
     </p>
   </div>
 </template>
 
 <script>
-// import emitter from '@/libs/emitter';
-// import ModalMessage from '@/components/ModalMessage.vue';
-
 export default {
   data() {
     return {
@@ -99,11 +90,8 @@ export default {
         .then((res) => {
           const { token, expired } = res.data;
           document.cookie = `hexToken=${token};expires=${new Date(expired)};`;
-          // this.success = true;
           this.isLoading = false;
           this.$refs.modalMessage.openModal(true, 'login');
-          // this.success = false;
-          // this.$router.push('/admin');
         })
         .catch(() => {
           this.isLoading = false;
@@ -118,3 +106,12 @@ export default {
   },
 };
 </script>
+
+<style>
+.font-Noto {
+  font-family: 'Noto Sans JP', sans-serif;
+}
+.fw-500 {
+  font-weight: 500;
+}
+</style>

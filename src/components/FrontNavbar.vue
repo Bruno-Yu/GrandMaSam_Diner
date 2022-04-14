@@ -7,14 +7,12 @@
       <nav class="navbar navbar-expand-lg navbar-light bg-light fix-top">
         <div class="container d-flex">
           <router-link
-            class="fs-3 d-block navbar-brand my-0 lh-1"
-            style="font-family: 'Bangers', serif"
+            class="fs-3 d-block navbar-brand my-0 lh-1 font-Bangers"
             to="/"
           >
             GRANDMA SAM DINER
             <p
-              class="text-dark fw-lighter text-center fs-6 lh-1 mb-0"
-              style="font-family: 'Bangers', serif"
+              class="text-dark fw-lighter text-center fs-6 lh-1 mb-0 font-Bangers"
             >
               LET MAKE AMERICA GREAT AGAIN
             </p>
@@ -94,5 +92,8 @@
 <style>
 router-link .nav-item:hover {
   color: #ffc107;
+}
+.font-Bangers {
+  font-family: 'Bangers', serif;
 }
 </style>

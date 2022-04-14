@@ -199,26 +199,11 @@ export default {
     removeCartItem(id) {
       this.isLoadingItem = id;
       this.$refs.cartMessage.openModal(false, id, false);
-      // this.$http
-      //   .delete(
-      //     `${process.env.VUE_APP_API}/api/${process.env.VUE_APP_PATH}/cart/${id}`,
-      //   )
-      //   .then(() => {
-      //     // 取得購物車的資料
-      //     this.getCart();
-      //   });
       this.isLoadingItem = '';
     },
     removeCartAll() {
       this.isLoadingItem = 'deleteAll';
       this.$refs.cartMessage.openModal(false, '', true);
-      // this.$http
-      //   .delete(
-      //     `${process.env.VUE_APP_API}/api/${process.env.VUE_APP_PATH}/carts`,
-      //   )
-      //   .then(() => {
-      //     this.getCart();
-      //   });
       this.isLoadingItem = '';
     },
     updateCartItem(item) {

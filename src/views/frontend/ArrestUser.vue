@@ -5,32 +5,27 @@
     :can-cancel="true"
     :is-full-page="false"
   ></PageLoading>
-  <div class="container-fluid arrestUser vh-90 my-1">
+  <div class="container-fluid arrestUser vh-100 my-1">
     <div
-      class="row d-flex align-items-center justify-content-center justify-content-lg-start"
-      style="height: 100%"
+      class="row d-flex align-items-center justify-content-center justify-content-lg-start vh-100"
     >
       <div class="col col-10 col-lg-6 vh-30 my-3">
         <div class="container">
           <p
-            class="text-dark fs-1 ps-lg-3 d-none d-lg-inline-block text-nowrap"
-            style="font-family: 'Noto Sans JP', sans-serif; font-weight: 800"
+            class="text-dark fs-1 ps-lg-3 d-none d-lg-inline-block text-nowrap font-Noto fw-800"
           >
             <i>警告! 你已被匿名舉發!!!</i>
           </p>
           <div
-            class="bg-dark border border-light border-1 rounded-3"
-            style="--bs-bg-opacity: 0.4"
+            class="bg-dark border border-light border-1 rounded-3 dialog-arrest-bg"
           >
             <p
-              class="text-light fs-2 fw-bold text-center mt-4 mt-sm-2"
-              style="font-family: 'Noto Sans JP', sans-serif; font-weight: 500"
+              class="text-light fs-2 fw-bold text-center mt-4 mt-sm-2 font-Noto fw-500"
             >
               內~ 警察叔叔
             </p>
             <p
-              class="text-light fs-2 fw-bold text-center pt-2"
-              style="font-family: 'Noto Sans JP', sans-serif; font-weight: 400"
+              class="text-light fs-2 fw-bold text-center pt-2 font-Noto fw-400"
             >
               就是這個人!!!
             </p>
@@ -38,11 +33,7 @@
             <div class="d-flex justify-content-center mt-2 mb-2 mt-lg-4">
               <button
                 type="button"
-                class="btn btn-danger fs-3 link-light mx-2 shadow p-2 mb-1 border border-light border-1 w-30"
-                style="
-                  font-family: 'Noto Sans JP', sans-serif;
-                  font-weight: 600;
-                "
+                class="btn btn-danger fs-3 link-light mx-2 shadow p-2 mb-1 border border-light border-1 w-30 font-Noto fw-600"
                 @click="backToStore()"
               >
                 逃回商店
@@ -51,8 +42,7 @@
             </div>
           </div>
           <p
-            class="text-dark fs-1 ps-lg-3 mt-3 d-none d-lg-inline-block text-nowrap"
-            style="font-family: 'Noto Sans JP', sans-serif; font-weight: 800"
+            class="text-dark fs-1 ps-lg-3 mt-3 d-none d-lg-inline-block text-nowrap font-Noto fw-800"
           >
             <i>快跑! 跑起來! 快回商店!!!</i>
           </p>
@@ -87,5 +77,23 @@ export default {
   background-size: cover;
   /* background-blend-mode: multiply;
   background-color: #eff2f6; */
+}
+.font-Noto {
+  font-family: 'Noto Sans JP', sans-serif;
+}
+.fw-400 {
+  font-weight: 400;
+}
+.fw-500 {
+  font-weight: 500;
+}
+.fw-600 {
+  font-weight: 600;
+}
+.fw-800 {
+  font-weight: 800;
+}
+.dialog-arrest-bg {
+  --bs-bg-opacity: 0.4;
 }
 </style>

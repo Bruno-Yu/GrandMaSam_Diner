@@ -19,13 +19,7 @@
         >
           <SwiperSlide>
             <div
-              class="carousel-item d-block ratio ratio-4x3"
-              style="
-                background-size: cover;
-                background-position: center center;
-                background-blend-mode: multiply;
-                background-color: #ece7ddea;
-              "
+              class="carousel-item d-block ratio ratio-4x3 product-display"
               :style="{ backgroundImage: `url(${product.imageUrl})` }"
             ></div>
           </SwiperSlide>
@@ -34,13 +28,7 @@
             :key="key"
             class="shadow rounded"
             ><div
-              class="carousel-item d-block ratio ratio-4x3"
-              style="
-                background-position: center center;
-                background-size: cover;
-                background-blend-mode: multiply;
-                background-color: #ece7ddea;
-              "
+              class="carousel-item d-block ratio ratio-4x3 product-display"
               :style="{ backgroundImage: `url(${image})` }"
             ></div
           ></SwiperSlide>
@@ -173,14 +161,7 @@
             :key="item.id"
           >
             <div
-              class="swiper-slide-inner"
-              style="
-                height: 15rem;
-                background-position: center center;
-                background-size: cover;
-                background-color: #ece7ddea;
-                background-blend-mode: multiply;
-              "
+              class="swiper-slide-inner product-recommend-display"
               :style="{ backgroundImage: `url(${item.imageUrl})` }"
             >
               <a href="#" class="text-dark"> </a>
@@ -333,6 +314,20 @@ export default {
   transition-timing-function: linear;
   margin: 0 auto;
 }
+.product-display {
+  background-position: center center;
+  background-size: cover;
+  background-blend-mode: multiply;
+  background-color: #ece7ddea;
+}
+.product-recommend-display {
+  height: 15rem;
+  background-position: center center;
+  background-size: cover;
+  background-color: #ece7ddea;
+  background-blend-mode: multiply;
+}
+
 .swiper-button-next {
   color: #dde3ee;
 }

@@ -2,7 +2,7 @@
   <div>
     <div class="container p-3">
       <h2 class="my-5 ms-2 fw-bold text-center">關於作品</h2>
-      <p class="text-muted text-end">紀錄時間 2022/04/07 作者: Bruno Yu</p>
+      <p class="text-muted text-end">紀錄時間 2022/04/07</p>
       <br />
       <h4 class="fw-bold mb-3">作品創作初衷:</h4>
       <p>

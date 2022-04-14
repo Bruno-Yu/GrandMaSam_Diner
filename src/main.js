@@ -8,11 +8,9 @@ import { required, email, min } from '@vee-validate/rules';
 import { localize, setLocale } from '@vee-validate/i18n';
 import zhTW from '@vee-validate/i18n/dist/locale/zh_TW.json';
 import ModalMessage from '@/components/ModalMessage.vue';
-// import PageLoading from '@/components/PageLoading.vue';
 import Loading from 'vue-loading-overlay';
 import 'vue-loading-overlay/dist/vue-loading.css';
 import $httpMessageState from '@/libs/pushMessageState';
-// import emitter from '@/libs/emitter';
 import App from './App.vue';
 import router from './router';
 

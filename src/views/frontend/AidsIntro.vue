@@ -5,10 +5,9 @@
     :can-cancel="true"
     :is-full-page="false"
   ></PageLoading>
-  <div class="container-fluid bg-warning vh-90 my-1">
+  <div class="container-fluid bg-warning vh-90 my-1 mt-4">
     <div
       class="row row-cols-1 row-cols-lg-2 d-flex align-items-center justify-content-center"
-      style="height: 100%"
     >
       <div class="col col-lg-5">
         <div class="my-2 ratio ratio-1x1">
@@ -18,12 +17,7 @@
       <div
         class="col col-lg-5 me-lg-5 header-content shadow p-4 mb-5 mt-2 bg-warning rounded"
       >
-        <h3
-          class="my-3 text-light"
-          style="font-family: 'Noto Sans JP', sans-serif; font-weight: 600"
-        >
-          很遺憾地聽到這消息
-        </h3>
+        <h3 class="my-3 text-light font-Noto fw-600">很遺憾地聽到這消息</h3>
         <p class="fw-bold">
           但莫擔心莫害怕，我們政府衛生福利部疾病管理署早就立定了維護罹患愛滋朋友的相關權益，若有您有遭受以下行為皆能申訴，以下是節錄部分:
         </p>
@@ -100,5 +94,11 @@ export default {
   background-image: url(@/assets/images/aidsHelp.png);
   background-position: top center;
   background-size: cover;
+}
+.font-Noto {
+  font-family: 'Noto Sans JP', sans-serif;
+}
+.fw-600 {
+  font-weight: 600;
 }
 </style>

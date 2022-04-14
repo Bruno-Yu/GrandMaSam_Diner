@@ -2,14 +2,12 @@
   <div class="container-fluid py-5 gx-lg-0" style="background-color: black">
     <div class="container">
       <router-link
-        class="fs-3 d-block navbar-brand link-light my-2 lh-1 text-center text-warning"
-        style="font-family: 'Bangers', serif"
+        class="fs-3 d-block navbar-brand link-light my-2 lh-1 text-center text-warning font-Bangers"
         to="/"
       >
         GRANDMA SAM DINER
         <p
-          class="fw-lighter fs-6 lh-1 mb-0 text-center text-warning"
-          style="font-family: 'Bangers', serif"
+          class="fw-lighter fs-6 lh-1 mb-0 text-center text-warning font-Bangers"
         >
           LET MAKE AMERICA GREAT AGAIN
         </p>
@@ -21,10 +19,7 @@
           <div class="col col-lg-6 text-light footer-content px-5">
             <div class="d-flex justify-content-center align-items-center">
               <div class="footer-content">
-                <h4
-                  class="my-3 fw-bold text-center text-lg-start"
-                  style="font-family: 'Bangers', serif"
-                >
+                <h4 class="my-3 fw-bold text-center text-lg-start font-Bangers">
                   關於作品
                 </h4>
                 <p class="mt-2 small fw-light">
@@ -46,10 +41,7 @@
             <div
               class="row d-flex justify-content-lg-start justify-content-center"
             >
-              <h4
-                class="my-3 fw-bold text-center pe-lg-5 me-lg-5"
-                style="font-family: 'Bangers', serif"
-              >
+              <h4 class="my-3 fw-bold text-center pe-lg-5 me-lg-5 font-Bangers">
                 聯絡我們
               </h4>
               <div class="col">
@@ -141,5 +133,8 @@
 }
 .navbar-brand.navbar-brand.link-light:hover {
   color: #b38602;
+}
+.font-Bangers {
+  font-family: 'Bangers', serif;
 }
 </style>

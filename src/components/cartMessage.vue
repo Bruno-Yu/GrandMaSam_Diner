@@ -12,9 +12,8 @@
       <div v-if="add" class="modal-content">
         <div class="modal-header bg-warning">
           <h3
-            class="modal-title text-light"
+            class="modal-title text-light font-Noto fw-550"
             id="exampleModalLabel"
-            style="font-family: 'Noto Sans JP', sans-serif; font-weight: 550"
           >
             執行成功
           </h3>
@@ -40,9 +39,8 @@
           <div class="container d-flex justify-content-center">
             <button
               type="button"
-              class="btn btn-warning mx-2 shadow p-2 mb-1 border border-dark border-1"
+              class="btn btn-warning mx-2 shadow p-2 mb-1 border border-dark border-1 font-Noto fw-400"
               @click="closeModal()"
-              style="font-family: 'Noto Sans JP', sans-serif; font-weight: 400"
             >
               好優
             </button>
@@ -52,9 +50,8 @@
       <div v-else class="modal-content">
         <div class="modal-header bg-danger">
           <h3
-            class="modal-title text-light"
+            class="modal-title text-light font-Noto fw-550"
             id="exampleModalLabel"
-            style="font-family: 'Noto Sans JP', sans-serif; font-weight: 550"
           >
             刪除警示
           </h3>
@@ -68,11 +65,7 @@
         </div>
         <div class="modal-body">
           <div class="container">
-            <h5
-              style="font-family: 'Noto Sans JP', sans-serif; font-weight: 550"
-            >
-              即將被您刪除的商品會感到難過
-            </h5>
+            <h5 class="font-Noto fw-550">即將被您刪除的商品會感到難過</h5>
             <p>
               其實我們的商品也是有情緒的，您這麼做會讓商品感受到您的冷漠，而他們要的，其實不多，只是希望您能接受他們而已
             </p>
@@ -82,18 +75,16 @@
           <div class="container d-flex justify-content-end">
             <button
               type="button"
-              class="btn btn-outline-dark shadow p-2 mb-1"
+              class="btn btn-outline-dark shadow p-2 mb-1 font-Noto fw-400"
               data-bs-dismiss="modal"
               @click="closeModal()"
-              style="font-family: 'Noto Sans JP', sans-serif; font-weight: 400"
             >
               再想想
             </button>
             <button
               type="button"
-              class="btn btn-danger mx-2 shadow p-2 mb-1 border border-dark border-1"
+              class="btn btn-danger mx-2 shadow p-2 mb-1 border border-dark border-1 font-Noto fw-400"
               @click="[removeCart(all, id), $emit('get-cart'), closeModal()]"
-              style="font-family: 'Noto Sans JP', sans-serif; font-weight: 400"
             >
               這與我無瓜
             </button>
@@ -162,3 +153,16 @@ export default {
   },
 };
 </script>
+
+<style>
+.font-Noto {
+  font-family: 'Noto Sans JP', sans-serif;
+}
+.fw-400 {
+  font-weight: 400;
+}
+
+.fw-550 {
+  font-weight: 550;
+}
+</style>
