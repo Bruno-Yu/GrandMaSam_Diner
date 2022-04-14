@@ -6,6 +6,7 @@
           <router-link
             class="fs-3 d-block navbar-brand my-0 lh-1 font-Bangers"
             to="/"
+            @click="closeNavHam()"
           >
             GRANDMA SAM DINER
             <p
@@ -14,12 +15,12 @@
               LET MAKE AMERICA GREAT AGAIN
             </p>
           </router-link>
+          <!-- data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" -->
 
           <button
             class="navbar-toggler"
             type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent"
             aria-expanded="false"
             aria-label="Toggle navigation"
@@ -30,49 +31,40 @@
             class="collapse navbar-collapse justify-content-end"
             id="navbarSupportedContent"
           >
+            <!-- aria-current="page" -->
             <ul class="navbar-nav align-items-center mb-2 ms-auto mb-lg-0">
               <li class="nav-item">
-                <router-link
-                  class="nav-link active fw-bold"
-                  aria-current="page"
-                  to="/admin"
+                <router-link class="nav-link active fw-bold" to="/admin"
                   ><i class="bi bi-shop-window"></i> 產品管理</router-link
                 >
               </li>
 
+              <!-- aria-current="page" -->
               <li class="nav-item">
-                <router-link
-                  class="nav-link active fw-bold"
-                  aria-current="page"
-                  to="/ordersAdmin"
-                >
+                <router-link class="nav-link active fw-bold" to="/ordersAdmin">
                   <i class="bi bi-clipboard-check"></i>
                   訂單管理</router-link
                 >
               </li>
+              <!-- aria-current="page" -->
               <li class="nav-item">
-                <router-link
-                  class="nav-link active fw-bold"
-                  aria-current="page"
-                  to="/eventAdmin"
+                <router-link class="nav-link active fw-bold" to="/eventAdmin"
                   ><i class="bi bi-emoji-sunglasses"></i>
 
                   活動編輯</router-link
                 >
               </li>
 
+              <!-- aria-current="page" -->
               <li class="nav-item">
-                <router-link
-                  class="nav-link active fw-bold"
-                  aria-current="page"
-                  to="/aboutAdmin"
+                <router-link class="nav-link active fw-bold" to="/aboutAdmin"
                   ><i class="bi bi-journal-text"></i> 關於作品</router-link
                 >
               </li>
+              <!-- aria-current="page" -->
               <li class="nav-item">
                 <a
                   class="nav-link active fw-bold text-decoration-none"
-                  aria-current="page"
                   @click.prevent="logout"
                   href="#"
                 >
@@ -88,8 +80,21 @@
 </template>
 
 <script>
+import Collapse from 'bootstrap/js/dist/collapse';
+
 export default {
+  data() {
+    return {
+      bsCollapse: null,
+    };
+  },
   methods: {
+    closeNavHam() {
+      this.bsCollapse.hide();
+    },
+    toggleNavHam() {
+      this.bsCollapse.toggle();
+    },
     logout() {
       const api = `${process.env.VUE_APP_API}/logout`;
       this.$http
@@ -104,6 +109,12 @@ export default {
           this.$httpMessageState(error.response, '錯誤訊息');
         });
     },
+  },
+  mounted() {
+    const menu = document.querySelector('#navbarSupportedContent');
+    this.bsCollapse = new Collapse(menu, {
+      toggle: false,
+    });
   },
 };
 </script>
