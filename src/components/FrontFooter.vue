@@ -26,10 +26,9 @@
                   此網頁並非商業使用，僅作為個人學習、娛樂
                   以及六角作業繳交使用，若需要引用或作為商業用途，請先諮詢六角學院
                 </p>
+                <p class="text-muted small">註1: 同為繳交作業的六角同儕除外</p>
                 <p class="text-muted small">
-                  (
-                  但若同為繳交作業的同儕並非此限制所列，但若是其他補習班，則同為此限制範疇
-                  )
+                  註2: 若行為者是他牌補習班，則適用此限制範疇 :-P
                 </p>
                 <p class="small fw-light">
                   此作內容全是杜撰，也無任何隱射之意，若有雷同處純屬巧合，若有冒犯之處還請海函
@@ -91,7 +90,7 @@
                       >
                     </li>
                     <li class="text-muted small text-nowrap">
-                      註: 請謹慎播打，該電話直達高層
+                      註3: 請謹慎播打，該電話直達台灣領導
                     </li>
                     <li class="small fw-light my-1 text-nowrap">
                       <i class="bi bi-cursor text-warning"></i>
