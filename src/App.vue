@@ -5,8 +5,8 @@
 </template>
 
 <style lang="scss">
-@import 'bootstrap/scss/bootstrap';
-// @import './src/assets/stylesheets/all.scss';
+// @import 'bootstrap/scss/bootstrap';
+@import '@/assets/stylesheets/all.scss';
 </style>
 <style>
 .overall {

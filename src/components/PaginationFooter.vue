@@ -32,7 +32,7 @@
 
       <li class="page-item" :class="{ disabled: !hasNext }">
         <a
-          class="page-link"
+          class="page-link fw-bold"
           href="#"
           :aria-disabled="!hasNext"
           @click.prevent="emitData(currentPage + 1)"
