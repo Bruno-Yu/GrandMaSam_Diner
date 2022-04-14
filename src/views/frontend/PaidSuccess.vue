@@ -37,12 +37,3 @@ export default {
   },
 };
 </script>
-
-<style scoped>
-.paid-success {
-  background-image: url(@/assets/images/paid_success.jpg);
-  background-position: center center;
-  background-size: cover;
-  height: 470px;
-}
-</style>

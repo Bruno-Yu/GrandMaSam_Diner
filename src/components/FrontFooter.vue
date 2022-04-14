@@ -122,19 +122,3 @@
     </div>
   </div>
 </template>
-
-<style>
-.footer-content {
-  max-width: 20rem;
-  margin-bottom: 2rem;
-}
-.link-light.link-light:hover {
-  color: #ffc107;
-}
-.navbar-brand.navbar-brand.link-light:hover {
-  color: #b38602;
-}
-.font-Bangers {
-  font-family: 'Bangers', serif;
-}
-</style>

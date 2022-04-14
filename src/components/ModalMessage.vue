@@ -39,7 +39,7 @@
             <p class="fw-bold">
               有句話說台灣最美的風景就是人，但在作者眼中，最美的台灣風景就是你
             </p>
-            <p class="fw-bold">的錢{{ id }}</p>
+            <p class="fw-bold">的錢</p>
             <p class="fw-bold">處理訂單編號: {{ id }}</p>
           </div>
         </div>
@@ -213,24 +213,3 @@ export default {
   },
 };
 </script>
-
-<style>
-.font-Noto {
-  font-family: 'Noto Sans JP', sans-serif;
-}
-.fw-400 {
-  font-weight: 400;
-}
-.fw-500 {
-  font-weight: 500;
-}
-.fw-550 {
-  font-weight: 550;
-}
-.fw-600 {
-  font-weight: 600;
-}
-.fw-700 {
-  font-weight: 700;
-}
-</style>

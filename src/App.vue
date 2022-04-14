@@ -7,8 +7,3 @@
 <style lang="scss">
 @import '@/assets/stylesheets/all.scss';
 </style>
-<style>
-.overall {
-  box-sizing: border-box;
-}
-</style>

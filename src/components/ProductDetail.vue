@@ -49,9 +49,6 @@
 
 <script>
 export default {
-  data() {
-    return {};
-  },
   props: ['productDisplay', 'detailDisplay'],
 };
 </script>

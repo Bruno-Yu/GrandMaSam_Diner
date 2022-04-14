@@ -107,12 +107,3 @@ export default {
   },
 };
 </script>
-
-<style>
-router-link .nav-item:hover {
-  color: #ffc107;
-}
-.font-Bangers {
-  font-family: 'Bangers', serif;
-}
-</style>

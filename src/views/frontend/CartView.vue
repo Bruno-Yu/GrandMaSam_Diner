@@ -109,7 +109,7 @@
           <tr>
             <td class="d-none d-lg-table-cell"></td>
             <td colspan="2" class="text-end d-lg-none">總計</td>
-            <td colspan="3" class="text-end d-none d-lg-cell">總計</td>
+            <td colspan="3" class="text-end d-none d-lg-table-cell">總計</td>
             <td class="text-end">
               {{ cartData.total }}<span class="d-none d-lg-inline"> 元</span>
             </td>
@@ -230,12 +230,3 @@ export default {
   },
 };
 </script>
-
-<style>
-.cartView-product {
-  height: 100px;
-  width: 300px;
-  background-size: cover;
-  background-position: center;
-}
-</style>

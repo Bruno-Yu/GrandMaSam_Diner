@@ -114,12 +114,3 @@ export default {
   },
 };
 </script>
-
-<style>
-.cart-banner {
-  background-image: url(@/assets/images/cartView.jpg);
-  height: 600px;
-  background-position: center center;
-  background-size: cover;
-}
-</style>

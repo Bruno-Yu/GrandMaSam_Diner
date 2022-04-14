@@ -293,36 +293,3 @@ export default {
   },
 };
 </script>
-
-<style>
-.fav-banner {
-  background-image: url(@/assets/images/localStorage_banner.jpg);
-  height: 600px;
-  background-position: center center;
-  background-size: cover;
-}
-.font-Noto {
-  font-family: 'Noto Sans JP', sans-serif;
-}
-.fw-400 {
-  font-weight: 400;
-}
-.fw-500 {
-  font-weight: 500;
-}
-.fw-600 {
-  font-weight: 600;
-}
-.fw-700 {
-  font-weight: 700;
-}
-.dialog-local-bg {
-  --bs-bg-opacity: 0.2;
-}
-.localStorage-product {
-  height: 100px;
-  width: 300px;
-  background-size: cover;
-  background-position: center;
-}
-</style>

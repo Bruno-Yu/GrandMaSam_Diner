@@ -21,24 +21,3 @@ export default {
   props: ['cartNum'],
 };
 </script>
-<style lang="scss" scoped>
-.cart-icon {
-  outline: none;
-  border: none;
-  position: fixed;
-  z-index: 90;
-  width: 50px;
-  height: 50px;
-  font-weight: 800;
-  color: rgb(29, 24, 3);
-  line-height: 10px;
-  border-radius: 50%;
-  text-align: center;
-  right: 4%;
-  bottom: 15%;
-  @media (max-width: 480px) {
-    bottom: 18%;
-    right: 5%;
-  }
-}
-</style>

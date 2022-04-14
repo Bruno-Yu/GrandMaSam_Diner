@@ -88,17 +88,3 @@ export default {
   },
 };
 </script>
-
-<style>
-.aidsHelp {
-  background-image: url(@/assets/images/aidsHelp.png);
-  background-position: top center;
-  background-size: cover;
-}
-.font-Noto {
-  font-family: 'Noto Sans JP', sans-serif;
-}
-.fw-600 {
-  font-weight: 600;
-}
-</style>

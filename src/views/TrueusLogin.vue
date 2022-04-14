@@ -106,12 +106,3 @@ export default {
   },
 };
 </script>
-
-<style>
-.font-Noto {
-  font-family: 'Noto Sans JP', sans-serif;
-}
-.fw-500 {
-  font-weight: 500;
-}
-</style>

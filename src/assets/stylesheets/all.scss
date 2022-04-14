@@ -1,3 +1,377 @@
 @import '../../../node_modules/bootstrap/scss/_functions.scss';
 @import './Sass/variables';
 @import '../../../node_modules/bootstrap/scss/bootstrap.scss';
+@import '../../../node_modules/swiper/swiper.scss';
+@import '../../../node_modules/swiper/modules/pagination/pagination.scss';
+@import '../../../node_modules/swiper/modules/navigation/navigation.scss';
+
+// layout
+.overall {
+  box-sizing: border-box;
+}
+// hover effect
+a :hover {
+  color: #ffc107;
+}
+router-link .nav-item:hover {
+  color: #ffc107;
+}
+.link-light.link-light:hover {
+  color: #ffc107;
+}
+.navbar-brand.navbar-brand.link-light:hover {
+  color: #b38602;
+}
+
+// font
+.font-Bangers {
+  font-family: 'Bangers', serif;
+}
+.font-Noto {
+  font-family: 'Noto Sans JP', sans-serif;
+}
+.fw-400 {
+  font-weight: 400;
+}
+.fw-500 {
+  font-weight: 500;
+}
+.fw-550 {
+  font-weight: 550;
+}
+.fw-600 {
+  font-weight: 600;
+}
+.fw-700 {
+  font-weight: 700;
+}
+.fw-800 {
+  font-weight: 800;
+}
+.fw-900 {
+  font-weight: 900;
+}
+
+// pics & individual layout sorted by pages
+// AboutView.vue
+.logo-origin {
+  background-image: url(@/assets/images/aboutView_leader.png);
+  background-position: top center;
+  background-size: cover;
+  background-color: #f7f4f0;
+}
+.chronicle-event {
+  border: 0.1em solid rgb(30, 23, 5);
+  border-radius: 0.2em;
+}
+.ourFounder {
+  background-image: url(@/assets/images/aboutView_group.png);
+  height: 470px;
+  background-position: center center;
+  background-size: cover;
+  background-blend-mode: multiply;
+  background-color: #d1d7dbf3;
+}
+.playboy-cover {
+  background-image: url(@/assets/images/aboutView_playboy.jpg);
+  background-position: top center;
+  background-size: cover;
+  background-blend-mode: multiply;
+  background-color: #acb3c9ea;
+  border: 0.5em solid rgb(0, 0, 0);
+  border-radius: 0.2em;
+}
+.sex-equality {
+  background-image: url(@/assets/images/aboutView_woman.jpg);
+  background-position: center center;
+  background-size: cover;
+}
+// gmap embed
+iframe {
+  width: 100%;
+  height: 100%;
+}
+.gmap_canvas {
+  overflow: hidden;
+  background: none !important;
+  height: 100%;
+  width: 100%;
+}
+.mapouter {
+  position: relative;
+  text-align: right;
+  height: 100%;
+  width: 100%;
+  background-color: #b8babdd5;
+}
+.header-content {
+  max-width: 50rem;
+  margin-bottom: 2rem;
+}
+
+.logo-origin-bg {
+  background-color: #f7f4f0;
+}
+.group-width {
+  max-width: 60rem;
+}
+
+// AidsIntro.vue
+.aidsHelp {
+  background-image: url(@/assets/images/aidsHelp.png);
+  background-position: top center;
+  background-size: cover;
+}
+
+// ArrestUser.vue
+.arrestUser {
+  background-image: url(@/assets/images/arrestUser.jpg);
+  height: 600px;
+  background-position: center right;
+  background-size: cover;
+}
+
+.dialog-arrest-bg {
+  --bs-bg-opacity: 0.4;
+}
+
+// cartView.vue
+.cartView-product {
+  height: 100px;
+  width: 300px;
+  background-size: cover;
+  background-position: center;
+}
+
+// indexView.vue
+.header-banner {
+  background-image: url(@/assets/images/index_header_banner.jpg);
+  height: 669px;
+  background-position: center center;
+  background-size: cover;
+  background-blend-mode: multiply;
+  background-color: #a7aaadf9;
+}
+.story-section {
+  height: 500px;
+}
+.product-intro {
+  background-image: url(@/assets/images/index_product_intro_1.jpg);
+  height: 400px;
+  background-position: center center;
+  background-size: cover;
+  background-blend-mode: multiply;
+  background-color: #bdc8d7;
+  border: 0.5em solid rgb(0, 0, 0);
+  border-radius: 0.2em;
+}
+.product-intro-2 {
+  background-image: url(@/assets/images/product_intro_2.jpg);
+  height: 400px;
+  background-position: center center;
+  background-size: cover;
+  background-blend-mode: multiply;
+  background-color: #eef1f3;
+  border: 0.5em solid black;
+  border-radius: 0.2em;
+}
+.product-intro-3 {
+  background-image: url(@/assets/images/left_footer.jpg);
+  height: 450px;
+  background-position: center center;
+  background-size: cover;
+  background-blend-mode: multiply;
+  background-color: #545351;
+}
+.product-intro-md {
+  height: 450px;
+  background-image: url(@/assets/images/index_about_us.jpg);
+  background-size: cover;
+  background-position: center center;
+  background-blend-mode: multiply;
+  background-color: #aaabac;
+}
+.product-intro-4 {
+  background-image: url(@/assets/images/right_footer.jpg);
+  height: 450px;
+  background-position: center center;
+  background-size: cover;
+  background-blend-mode: multiply;
+  background-color: #545351;
+}
+.slogan-style {
+  width: 100%;
+  height: 40%;
+}
+.about-us {
+  height: 330px;
+}
+.about-us-width {
+  max-width: 50rem;
+}
+.product-intro-height {
+  height: 450px;
+}
+
+// LocalStorage.vue
+.fav-banner {
+  background-image: url(@/assets/images/localStorage_banner.jpg);
+  height: 600px;
+  background-position: center center;
+  background-size: cover;
+}
+.dialog-local-bg {
+  --bs-bg-opacity: 0.2;
+}
+.localStorage-product {
+  height: 100px;
+  width: 300px;
+  background-size: cover;
+  background-position: center;
+}
+
+// paidSuccess.vue
+.paid-success {
+  background-image: url(@/assets/images/paid_success.jpg);
+  background-position: center center;
+  background-size: cover;
+  height: 470px;
+}
+
+// productsView.vue
+.productsView-banner {
+  background-image: url(@/assets/images/productsView_banner.jpg);
+  height: 420px;
+  background-position: center center;
+  background-size: cover;
+  background-blend-mode: multiply;
+  background-color: #dcd8cfea;
+}
+.cart-image {
+  background-size: cover;
+  background-position: center center;
+  background-blend-mode: multiply;
+}
+
+.cart-img-top:hover {
+  background-color: #8b702cea;
+  opacity: 0.6;
+}
+
+.cart {
+  width: 10px;
+  height: 10px;
+  right: 10px;
+  bottom: 10px;
+  border-radius: 50% 50%;
+  border: 1px black solid;
+}
+.product-intro-3 {
+  background-image: url(@/assets/images/left_footer.jpg);
+  height: 450px;
+  background-position: center center;
+  background-size: cover;
+  background-blend-mode: multiply;
+  background-color: #ede6dcbf;
+}
+
+// productView.vue
+.carousel-item {
+  box-shadow: 1px 1px 10px #696969;
+  border-radius: 0.5rem;
+}
+
+.swiper-slide-inner {
+  box-shadow: 1px 1px 10px #696969;
+  border-radius: 1rem;
+}
+.swiper-free-mode > .swiper-wrapper {
+  transition-timing-function: linear;
+  margin: 0 auto;
+}
+.product-display {
+  background-position: center center;
+  background-size: cover;
+  background-blend-mode: multiply;
+  background-color: #ece7ddea;
+}
+.product-recommend-display {
+  height: 15rem;
+  background-position: center center;
+  background-size: cover;
+  background-color: #ece7ddea;
+  background-blend-mode: multiply;
+}
+
+.swiper-button-next {
+  color: #dde3ee;
+}
+.swiper-button-prev {
+  color: #dde3ee;
+}
+.swiper-pagination {
+  color: #dde3ee;
+}
+
+// TheEnd.vue
+.the-end {
+  background-image: url(@/assets/images/theEnd.jpg);
+  height: 600px;
+  background-position: center center;
+  background-size: cover;
+}
+.dialog-theEnd-bg {
+  --bs-bg-opacity: 0.4;
+}
+
+// UserOrders.vue
+.cart-banner {
+  background-image: url(@/assets/images/cartView.jpg);
+  height: 600px;
+  background-position: center center;
+  background-size: cover;
+}
+
+// notFound.vue
+.Not-found-banner {
+  background-image: url(@/assets/images/404_page.jpg);
+  height: 750px;
+  background-position: left center;
+  background-size: cover;
+}
+.dialog-bg {
+  border: 1px solid #b8babdd5;
+  --bs-bg-opacity: 0.3;
+}
+.btn-w-50 {
+  width: 50%;
+}
+
+// pics & individual layout sorted by components
+
+// CartIcon.vue
+.cart-icon {
+  outline: none;
+  border: none;
+  position: fixed;
+  z-index: 90;
+  width: 50px;
+  height: 50px;
+  font-weight: 800;
+  color: rgb(29, 24, 3);
+  line-height: 10px;
+  border-radius: 50%;
+  text-align: center;
+  right: 4%;
+  bottom: 15%;
+  @media (max-width: 480px) {
+    bottom: 18%;
+    right: 5%;
+  }
+}
+
+//fontFooter.vue
+.footer-content {
+  max-width: 20rem;
+  margin-bottom: 2rem;
+}

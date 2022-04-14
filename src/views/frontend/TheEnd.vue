@@ -69,24 +69,3 @@ export default {
   },
 };
 </script>
-
-<style>
-.the-end {
-  background-image: url(@/assets/images/theEnd.jpg);
-  height: 600px;
-  background-position: center center;
-  background-size: cover;
-}
-.font-Noto {
-  font-family: 'Noto Sans JP', sans-serif;
-}
-.fw-600 {
-  font-weight: 600;
-}
-.fw-700 {
-  font-weight: 700;
-}
-.dialog-theEnd-bg {
-  --bs-bg-opacity: 0.4;
-}
-</style>

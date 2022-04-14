@@ -75,8 +75,6 @@ export default {
   height: 600px;
   background-position: center right;
   background-size: cover;
-  /* background-blend-mode: multiply;
-  background-color: #eff2f6; */
 }
 .font-Noto {
   font-family: 'Noto Sans JP', sans-serif;

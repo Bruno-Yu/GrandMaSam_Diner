@@ -221,8 +221,5 @@ export default {
     this.getOrders();
     this.isLoading = false;
   },
-  // updated() {
-  //   this.getOrders();
-  // },
 };
 </script>

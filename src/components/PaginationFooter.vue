@@ -48,13 +48,9 @@ export default {
   data() {
     return {};
   },
-  // 設從axios response內的pagination，從其中拆出個屬性於根元件包含current_page
-
-  // props 傳入外部的資料，可以當作內部data屬性使用
   // 為方便在TEMPLATE內表達式內加減，用小駝峰型式寫
   props: ['currentPage', 'hasPre', 'hasNext', 'totalPages'],
   methods: {
-    // emitData，設參數，將使用者點擊的頁數帶進來，再傳遞出去
     emitData(page) {
       this.$emit('click-page', page);
     },

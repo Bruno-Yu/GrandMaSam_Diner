@@ -51,9 +51,7 @@
       <br />
       <br />
       <p class="fs-6 fw-bolder text-muted text-end">
-        <i class="fs-1 me-3 text-dark" style="font-family: 'Bangers', serif">
-          Bruno Yu
-        </i>
+        <i class="fs-1 me-3 text-dark font-Bangers"> Bruno Yu </i>
         2022/04/07 筆
       </p>
     </div>
