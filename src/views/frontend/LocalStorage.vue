@@ -57,12 +57,7 @@
               </td>
               <td class="d-none d-lg-table-cell">
                 <div
-                  style="
-                    height: 100px;
-                    width: 300px;
-                    background-size: cover;
-                    background-position: center;
-                  "
+                  class="localStorage-product"
                   :style="{ backgroundImage: `url(${item.imageUrl})` }"
                 ></div>
               </td>
@@ -97,7 +92,7 @@
               <td>
                 <button
                   type="button"
-                  class="btn btn-lg-danger btn-sm"
+                  class="btn"
                   @click="[addToCart(item.id), removeFromFavorites(item.id)]"
                   :disabled="isLoadingItem === item.id"
                 >
@@ -106,7 +101,9 @@
                     v-show="isLoadingItem === item.id"
                   ></span>
                   <i class="d-lg-none bi bi-cart2 text-danger fs-3"></i
-                  ><span class="d-none d-lg-inline"> 加到購物車</span>
+                  ><span class="d-none d-lg-inline-block btn btn-danger btn-sm">
+                    加到購物車</span
+                  >
                 </button>
               </td>
             </tr>
@@ -321,5 +318,11 @@ export default {
 }
 .dialog-local-bg {
   --bs-bg-opacity: 0.2;
+}
+.localStorage-product {
+  height: 100px;
+  width: 300px;
+  background-size: cover;
+  background-position: center;
 }
 </style>

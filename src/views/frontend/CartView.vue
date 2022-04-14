@@ -56,12 +56,7 @@
             </td>
             <td class="d-none d-lg-table-cell">
               <div
-                style="
-                  height: 100px;
-                  width: 300px;
-                  background-size: cover;
-                  background-position: center;
-                "
+                class="cartView-product"
                 :style="{ backgroundImage: `url(${item.product.imageUrl})` }"
               ></div>
             </td>
@@ -235,3 +230,12 @@ export default {
   },
 };
 </script>
+
+<style>
+.cartView-product {
+  height: 100px;
+  width: 300px;
+  background-size: cover;
+  background-position: center;
+}
+</style>

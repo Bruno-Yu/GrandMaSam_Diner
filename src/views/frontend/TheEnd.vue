@@ -20,8 +20,9 @@
           <p class="text-light fw-bold">
             但還好本集團創辦人早已提前洞悉這可能性，體恤在地民眾沒有精神寄託，特別開設了拜燈神教的東亞分部，讓在地民眾在這末日有個精神寄託，其總部分部就在台北
           </p>
-          <p class="text-light fw-bold">我們推廣合意信教制</p>
-          <p class="text-light fw-bold">讓您不論在身體上、心理上皆能獲得滿足</p>
+          <p class="text-light fw-bold">
+            我們推廣合意信教制，讓您不論在身體上、心理上皆能獲得滿足!
+          </p>
           <p class="text-light fs-4 font-Noto fw-600">
             女士們先生們 今晚你們想信教嗎?
           </p>
