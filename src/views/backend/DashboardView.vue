@@ -8,7 +8,9 @@
   <div class="container-fluid w-100" style="box-sizing: border-box">
     <BackNavbar />
     <ToastMessages></ToastMessages>
-    <RouterView v-if="verify" />
+    <div class="container">
+      <RouterView v-if="verify" />
+    </div>
     <FrontFooter />
   </div>
 </template>

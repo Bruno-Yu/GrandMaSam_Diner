@@ -41,6 +41,12 @@
 
               <!-- aria-current="page" -->
               <li class="nav-item">
+                <router-link class="nav-link active fw-bold" to="/couponsAdmin">
+                  <i class="bi bi-flag"></i>
+                  挑戰管理</router-link
+                >
+              </li>
+              <li class="nav-item">
                 <router-link class="nav-link active fw-bold" to="/ordersAdmin">
                   <i class="bi bi-clipboard-check"></i>
                   訂單管理</router-link
@@ -51,7 +57,7 @@
                 <router-link class="nav-link active fw-bold" to="/eventAdmin"
                   ><i class="bi bi-emoji-sunglasses"></i>
 
-                  活動編輯</router-link
+                  公告編輯</router-link
                 >
               </li>
 

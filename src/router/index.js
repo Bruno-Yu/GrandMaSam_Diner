@@ -16,6 +16,10 @@ const routes = [
         component: () => import('../views/frontend/ProductsView.vue'),
       },
       {
+        path: '/userChallenges',
+        component: () => import('../views/frontend/UserChallenges.vue'),
+      },
+      {
         path: '/localStorage',
         component: () => import('../views/frontend/LocalStorage.vue'),
       },
@@ -61,6 +65,14 @@ const routes = [
         path: '/productView/:id',
         name: 'Product',
         component: () => import('../views/frontend/ProductView.vue'),
+      },
+      {
+        path: '/userArticles',
+        component: () => import('../views/frontend/UserArticles.vue'),
+      },
+      {
+        path: '/userArticle/:articleId',
+        component: () => import('../views/frontend/UserArticle.vue'),
       },
     ],
   },

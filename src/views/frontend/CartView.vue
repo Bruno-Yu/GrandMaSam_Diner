@@ -115,23 +115,46 @@
             </td>
           </tr>
           <!-- <tr>
-              <td></td>
-              <td colspan="3" class="text-end text-success">折扣價</td>
-              <td class="text-end text-success">{{ }}</td>
-            </tr> -->
+            <td></td>
+            <td colspan="3" class="text-end text-success fw-bold">挑戰價</td>
+            <td class="text-end text-success">{{}}</td>
+          </tr> -->
         </tfoot>
       </table>
-      <div class="text-end my-3">
-        <button
-          class="btn btn-danger fw-bolder"
-          type="button"
-          @click="nextPage"
-          :disabled="
-            isLoadingItem === 'deleteAll' || cartData.carts.length === 0
-          "
-        >
-          下一步
-        </button>
+      <div class="row d-flex justify-content-end">
+        <div class="col-12 col-lg-4">
+          <div class="input-group mb-3 input-group-sm">
+            <label for="CartView_coupon"> </label>
+            <input
+              type="text"
+              id="CartView_coupon"
+              class="form-control"
+              v-model="coupon_code"
+              placeholder="請輸入挑戰碼"
+            />
+            <div class="input-group-append">
+              <button
+                class="btn btn-outline-secondary"
+                type="button"
+                @click="addCouponCode"
+              >
+                套用挑戰碼
+              </button>
+            </div>
+          </div>
+          <div class="text-end my-3">
+            <button
+              class="btn btn-danger fw-bolder"
+              type="button"
+              @click="nextPage"
+              :disabled="
+                isLoadingItem === 'deleteAll' || cartData.carts.length === 0
+              "
+            >
+              下一步
+            </button>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -152,6 +175,7 @@ export default {
       productId: '',
       isLoading: false,
       isLoadingItem: '',
+      coupon_code: '',
       form: {
         user: {
           name: '',
@@ -215,6 +239,24 @@ export default {
         .then(() => {
           this.getCart();
           this.isLoadingItem = '';
+        });
+    },
+    addCouponCode() {
+      const url = `${process.env.VUE_APP_API}/api/${process.env.VUE_APP_PATH}/coupon`;
+      const coupon = {
+        code: this.coupon_code,
+      };
+      this.isLoading = true;
+      this.$http
+        .post(url, { data: coupon })
+        .then((response) => {
+          this.$httpMessageState(response, '加入挑戰碼');
+          this.getCart();
+          this.isLoading = false;
+        })
+        .catch((error) => {
+          this.isLoading = false;
+          this.$httpMessageState(error.response, '尚無該挑戰');
         });
     },
     nextPage() {

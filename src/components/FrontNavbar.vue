@@ -57,6 +57,17 @@
                   商店</router-link
                 >
               </li>
+              <li class="nav-item">
+                <router-link
+                  class="nav-link active fw-bold"
+                  to="/userChallenges"
+                  @click="closeNavHam()"
+                  ><i class="bi bi-flag"></i>
+
+                  挑戰</router-link
+                >
+              </li>
+
               <!-- aria-current="page" -->
               <li class="nav-item">
                 <router-link
@@ -79,6 +90,17 @@
                 >
               </li>
               <!-- aria-current="page" -->
+              <li class="nav-item">
+                <router-link
+                  class="nav-link active fw-bold"
+                  to="/userArticles"
+                  @click="closeNavHam()"
+                  ><i class="bi bi-megaphone"></i>
+
+                  公告</router-link
+                >
+              </li>
+
               <li class="nav-item">
                 <router-link
                   class="nav-link active fw-bold"

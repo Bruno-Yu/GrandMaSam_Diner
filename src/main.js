@@ -1,7 +1,9 @@
 import { createApp } from 'vue';
 import 'bootstrap';
+import CKEditor from '@ckeditor/ckeditor5-vue';
 import axios from 'axios';
 import VueAxios from 'vue-axios';
+import VueClipboard from 'vue-clipboard2';
 // 晚上早點睡才不會看到如下面這行這種髒東西，但刪掉我的save on format會自動變成醬，所以...
 // eslint-disable-next-line
 import { Field, Form, ErrorMessage, defineRule, configure } from 'vee-validate';
@@ -27,6 +29,9 @@ setLocale('zh_TW');
 
 const app = createApp(App);
 app.config.globalProperties.$httpMessageState = $httpMessageState;
+VueClipboard.config.autoSetContainer = true;
+app.use(CKEditor);
+app.use('VueClipboard', VueClipboard);
 app.component('VForm', Form);
 app.component('ModalMessage', ModalMessage);
 app.component('PageLoading', Loading);
