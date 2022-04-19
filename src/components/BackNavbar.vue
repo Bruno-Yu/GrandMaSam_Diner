@@ -1,7 +1,7 @@
 <template>
   <div id="header" class="container-fluid shadow p-3 mb-2 bg-body rounded">
     <div class="container gx-0">
-      <nav class="navbar navbar-expand-lg navbar-light bg-light fix-top">
+      <nav class="navbar navbar-expand-lg navbar-light fix-top">
         <div class="container d-flex">
           <RouterLink
             class="fs-3 d-block navbar-brand my-0 lh-1 font-Bangers"
