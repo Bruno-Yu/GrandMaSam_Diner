@@ -39,38 +39,27 @@
     >
       <div class="col col-lg-7 vh-30">
         <div class="container bg-dark" style="--bs-bg-opacity: 0.3">
-          <p
-            class="text-light fs-2 text-center"
-            style="font-family: 'Noto Sans JP', sans-serif; font-weight: 500"
-          >
+          <p class="text-light fs-2 text-center font-Noto fw-500">
             其實你知道嗎?
             <span class="d-inline-block d-sm-inline">和平是需要付出代價的</span>
           </p>
-          <p
-            class="text-light fs-4 text-center"
-            style="font-family: 'Noto Sans JP', sans-serif; font-weight: 400"
-          >
+          <p class="text-light fs-4 text-center font-Noto fw-400">
             若你不願意付出，那你跟騙人家感情的渣男有甚麼兩樣呢?
           </p>
-          <p
-            class="text-light fs-4 text-center"
-            style="font-family: 'Noto Sans JP', sans-serif; font-weight: 400"
-          >
+          <p class="text-light fs-4 text-center font-Noto fw-400">
             小心你的青春跟背景這可愛的和平鴿一樣，一但逝去就回不來了 (哼
           </p>
           <div class="container d-flex justify-content-center mt-4">
             <button
               type="button"
-              class="btn btn-outline-light fs-3 shadow p-2 mb-1 border border-dark border-1 w-30"
-              style="font-family: 'Noto Sans JP', sans-serif; font-weight: 600"
+              class="btn btn-outline-light fs-3 shadow p-2 mb-1 border border-dark border-1 w-30 font-Noto fw-600"
               @click="goToResult()"
             >
               誰管你
             </button>
             <button
               type="button"
-              class="btn btn-danger fs-3 link-light mx-2 shadow p-2 mb-1 border border-dark border-1 w-30"
-              style="font-family: 'Noto Sans JP', sans-serif; font-weight: 600"
+              class="btn btn-danger fs-3 link-light mx-2 shadow p-2 mb-1 border border-dark border-1 w-30 font-Noto fw-600"
               @click="backToStore()"
             >
               我錯了

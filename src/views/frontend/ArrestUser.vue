@@ -38,7 +38,6 @@
               >
                 逃回商店
               </button>
-              <!-- style="width: 50%" -->
             </div>
           </div>
           <p

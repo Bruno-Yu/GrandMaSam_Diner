@@ -129,7 +129,7 @@
             <button
               type="button"
               class="btn btn-danger mx-2 shadow p-2 mb-1 border border-dark border-1 font-Noto fw-400"
-              @click="closeModal"
+              @click="closeModal()"
             >
               我知道了
             </button>

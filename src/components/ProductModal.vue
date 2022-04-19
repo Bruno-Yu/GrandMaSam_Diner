@@ -24,7 +24,11 @@
         <div class="modal-body">
           <div class="row">
             <div class="col-sm-6">
-              <img class="img-fluid" :src="product.imageUrl" alt="" />
+              <img
+                class="img-fluid"
+                :src="product.imageUrl"
+                :alt="product.title"
+              />
             </div>
             <div class="col-sm-6">
               <span class="badge bg-primary rounded-pill"> </span>
@@ -43,7 +47,11 @@
                     min="1"
                     v-model="qty"
                   />
-                  <button type="button" class="btn btn-dark" @click="addToCart">
+                  <button
+                    type="button"
+                    class="btn btn-dark"
+                    @click="addToCart()"
+                  >
                     加入購物車
                   </button>
                 </div>

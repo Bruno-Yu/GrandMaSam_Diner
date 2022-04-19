@@ -116,7 +116,6 @@ import Modal from 'bootstrap/js/dist/modal';
 import emitter from '@/libs/emitter';
 
 export default {
-  // props: ['cartData'],
   data() {
     return {
       modal: null,
@@ -153,7 +152,6 @@ export default {
   },
 
   mounted() {
-    // this.cart = this.cartData;
     this.modal = new Modal(document.querySelector('#CartModal'));
   },
 };

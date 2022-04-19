@@ -193,7 +193,6 @@
 <script>
 import { Swiper, SwiperSlide } from 'swiper/vue';
 import cartMessage from '@/components/cartMessage.vue';
-// eslint-disable-next-line object-curly-newline
 import {
   Navigation,
   Pagination,

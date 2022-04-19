@@ -40,22 +40,6 @@ class MyUploadAdapter {
       this.xhr.abort();
     }
   }
-
-  // 下方函式是協助初始化使其可以使用的函式
-  // function MyCustomUploadAdapterPlugin(editor) {
-  //   editor.plugins.get('FileRepository').createUploadAdapter = (loader) =>
-  //     // Configure the URL to the upload script in your back-end here!
-  //     new MyUploadAdapter(loader);
-  // }
-
-  // ...
-
-  // ClassicEditor.create(document.querySelector('#editor'), {
-  //   extraPlugins: [MyCustomUploadAdapterPlugin],
-
-  //   // ...
-  // }).catch((error) => {
-  //   console.log(error);
 }
 
 // 匯出檔案

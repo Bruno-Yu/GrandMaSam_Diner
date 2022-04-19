@@ -39,7 +39,6 @@
       <h2 class="fs-1 my-3 font-Noto fw-600 text-light text-center">
         稗史與公告
       </h2>
-      <!-- 需加入卡片內文字容高度限制 -->
     </div>
   </div>
   <div
@@ -93,7 +92,6 @@
                 class="card-img-top"
                 alt="MoneyIsTheProblem"
               />
-              <!-- <img :src="article.imageUrl" class="card-img-top" /> -->
               <div class="card-body text-start">
                 <h4 class="card-title fw-bold">{{ article.title }}</h4>
                 <div
@@ -108,7 +106,6 @@
       </template>
     </div>
   </div>
-  <!-- style="background-color: black" -->
   <div class="container-fluid bg-dark shadow rounded">
     <div class="row row-cols-1 row-cols-lg-2 g-1 my-1">
       <div class="col col-lg-6">

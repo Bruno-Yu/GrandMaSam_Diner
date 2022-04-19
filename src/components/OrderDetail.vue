@@ -127,7 +127,7 @@
           >
             取消
           </button>
-          <button type="button" class="btn btn-primary" @click="updateOrder">
+          <button type="button" class="btn btn-primary" @click="updateOrder()">
             修改付款狀態
           </button>
         </div>

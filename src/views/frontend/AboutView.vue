@@ -38,19 +38,19 @@
           </h4>
           <div class="container mx-auto group-width">
             <ul>
-              <li class="text-light fw-bold">
-                <span class="text-dark font-Noto"><i>1990年 -</i> </span>
+              <li class="text-dark font-Noto fw-400">
+                <span class="text-light"><i>1990年 -</i> </span>
                 創辦人在祖母與親朋好友的經濟支援下，藉由其銳利的商業判斷，在紐約曼哈頓的黃金地段，購置了大量不動產，並創辦了本集團大樓，為紀念創辦人祖母的獨到的眼光和金援以及為表現創辦人"在金錢之下人人平等"的核心理念，將該大樓命名為
                 山姆大嬸大樓（英語：The Grandma Sam
                 building），並以該大樓的名稱作為本集團的正式名稱 山姆大嬸 集團
                 （英語：The Grandma Sam Organization）
               </li>
-              <li class="text-light fw-bolder">
-                <span class="text-dark font-Noto"><i>2000~ 2010 年 -</i> </span>
+              <li class="text-dark font-Noto fw-400">
+                <span class="text-light"><i>2000~ 2010 年 -</i> </span>
                 本集團拓展遍佈世界各地，並在各地建立分支據點，在全球聯合國所屬140個會員國的市中心，沒有一個有本集團的辦事處
               </li>
-              <li class="text-light fw-bolder">
-                <span class="text-dark font-Noto"><i>在 2020 年 -</i> </span>
+              <li class="text-dark font-Noto fw-400">
+                <span class="text-light"><i>在 2020 年 -</i> </span>
                 本集團創辦人有感於其祖母與台灣民主地區領導人蔣大總統的好交情，決定利用其祖母在中華台北
                 ( 此亦為奧運會代表正式名稱
                 )的房地產投資收益，創立了台灣辦事處，並於隔年建立本餐飲公司
@@ -124,10 +124,10 @@
         <div class="row">
           <h4 class="my-lg-5 text-lg-center fw-bolder">榮譽獎章</h4>
           <div class="col shadow p-4 p-sm-5 mb-2 bg-warning rounded">
-            <p class="fs-5 fw-bold mt-lg-1 font-Noto fw-700">
+            <p class="fs-5 mt-lg-1 font-Noto fw-700">
               榮獲 2000年度最佳性福企業認證
             </p>
-            <p class="fw-bold">
+            <p class="font-Noto fw-400">
               在1990
               年我們集團的創辦人登上了當時最有影響力的雜誌封面，成為當時每個人夢想中想成為的男人，創辦人有感於此，在公司內部編撰了公司員工福利法，並在多年耕耘後，由集團內部的公正評委評選為
               2000年度最佳性福企業，並授予年度最佳性福企業認證獎章

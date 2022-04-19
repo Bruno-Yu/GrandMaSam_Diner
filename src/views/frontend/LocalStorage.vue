@@ -63,7 +63,6 @@
               </td>
               <td class="fw-bolder text-decoration-underline">
                 {{ item.title }}
-                <!-- <div class="text-success">已套用優惠券</div> -->
               </td>
               <td>
                 <span

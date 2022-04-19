@@ -6,7 +6,6 @@
     :is-full-page="false"
   ></PageLoading>
   <ModalMessage ref="modalMessage"></ModalMessage>
-  <!-- :succeeded="success" -->
   <div class="container-fluid">
     <div class="row justify-content-center gx-0">
       <h1 class="h3 my-5 font-weight-normal text-center fw-bolder">
