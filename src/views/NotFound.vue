@@ -22,11 +22,11 @@
             </div>
           </div>
           <div class="d-flex justify-content-center mt-1">
-            <router-link
+            <RouterLink
               to="/productsView"
               type="button"
               class="btn btn-danger btn-w-50 link-light fw-bolder fs-4 border border-light border-2 font-Noto"
-              >馬上前往</router-link
+              >馬上前往</RouterLink
             >
           </div>
           <p class="fw-bold my-2 text-light">
