@@ -38,7 +38,7 @@
         style="--bs-bg-opacity: 0.4"
       >
         <div class="container text-center mt-lg-1 p-3">
-          <h2 class="my-lg-3 text-ligh font-Noto fw-600t">立即斗內作者</h2>
+          <h2 class="my-lg-3 text-light font-Noto fw-600">立即斗內作者</h2>
           <h3 class="text-light font-Noto fw-600">就有機會能加入本神教</h3>
           <button
             type="button"

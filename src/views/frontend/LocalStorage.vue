@@ -108,13 +108,6 @@
               </td>
             </tr>
           </tbody>
-          <tfoot>
-            <!-- <tr>
-              <td></td>
-              <td colspan="3" class="text-end text-success">折扣價</td>
-              <td class="text-end text-success">{{ }}</td>
-            </tr> -->
-          </tfoot>
         </table>
         <div class="text-end my-3">
           <button

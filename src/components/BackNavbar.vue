@@ -3,7 +3,7 @@
     <div class="container gx-0">
       <nav class="navbar navbar-expand-lg navbar-light bg-light fix-top">
         <div class="container d-flex">
-          <router-link
+          <RouterLink
             class="fs-3 d-block navbar-brand my-0 lh-1 font-Bangers"
             to="/"
             @click="closeNavHam()"
@@ -14,10 +14,7 @@
             >
               LET MAKE AMERICA GREAT AGAIN
             </p>
-          </router-link>
-          <!-- data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent" -->
-
+          </RouterLink>
           <button
             class="navbar-toggler"
             type="button"
@@ -31,43 +28,34 @@
             class="collapse navbar-collapse justify-content-end"
             id="navbarSupportedContent"
           >
-            <!-- aria-current="page" -->
             <ul class="navbar-nav align-items-center mb-2 ms-auto mb-lg-0">
               <li class="nav-item">
-                <router-link class="nav-link active fw-bold" to="/admin"
-                  ><i class="bi bi-shop-window"></i> 產品管理</router-link
+                <RouterLink class="nav-link active fw-bold" to="/admin"
+                  ><i class="bi bi-shop-window"></i> 產品管理</RouterLink
                 >
               </li>
-
-              <!-- aria-current="page" -->
               <li class="nav-item">
-                <router-link class="nav-link active fw-bold" to="/couponsAdmin">
+                <RouterLink class="nav-link active fw-bold" to="/couponsAdmin">
                   <i class="bi bi-flag"></i>
-                  挑戰管理</router-link
+                  挑戰管理</RouterLink
                 >
               </li>
               <li class="nav-item">
-                <router-link class="nav-link active fw-bold" to="/ordersAdmin">
+                <RouterLink class="nav-link active fw-bold" to="/ordersAdmin">
                   <i class="bi bi-clipboard-check"></i>
-                  訂單管理</router-link
+                  訂單管理</RouterLink
                 >
               </li>
-              <!-- aria-current="page" -->
               <li class="nav-item">
-                <router-link class="nav-link active fw-bold" to="/eventAdmin"
-                  ><i class="bi bi-emoji-sunglasses"></i>
-
-                  公告編輯</router-link
+                <RouterLink class="nav-link active fw-bold" to="/eventAdmin"
+                  ><i class="bi bi-emoji-sunglasses"></i> 公告編輯</RouterLink
                 >
               </li>
-
-              <!-- aria-current="page" -->
               <li class="nav-item">
-                <router-link class="nav-link active fw-bold" to="/aboutAdmin"
-                  ><i class="bi bi-journal-text"></i> 關於作品</router-link
+                <RouterLink class="nav-link active fw-bold" to="/aboutAdmin"
+                  ><i class="bi bi-journal-text"></i> 關於作品</RouterLink
                 >
               </li>
-              <!-- aria-current="page" -->
               <li class="nav-item">
                 <a
                   class="nav-link active fw-bold text-decoration-none"

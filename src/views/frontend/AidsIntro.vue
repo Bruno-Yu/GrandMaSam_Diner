@@ -63,8 +63,8 @@
         </ul>
         <p class="fs-5 fw-bold">
           看到這麼用心的台灣主管機關所編撰的內容，是否有讓您回心轉意，要回到商店怒買一波以表達您的愛國心呢?
-          <router-link to="/productsView" class="link-danger fw-bold"
-            >回商店連結</router-link
+          <RouterLink to="/productsView" class="link-danger fw-bold"
+            >回商店連結</RouterLink
           >
         </p>
       </div>

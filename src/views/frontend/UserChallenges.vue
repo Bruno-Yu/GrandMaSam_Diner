@@ -55,10 +55,10 @@
         </p>
       </blockquote>
       <blockquote class="blockquote text-end">
-        <router-link
+        <RouterLink
           class="btn link-light text-decoration-underline fs-5 font-Noto fw-500"
           to="userArticles"
-          ><i>閱讀更多...</i></router-link
+          ><i>閱讀更多...</i></RouterLink
         >
       </blockquote>
     </figure>

@@ -38,11 +38,11 @@
         <nav aria-label="breadcrumb">
           <ol class="breadcrumb bg-white px-0 mb-0 py-3">
             <li class="breadcrumb-item">
-              <router-link class="text-muted" to="/">首頁</router-link>
+              <RouterLink class="text-muted" to="/">首頁</RouterLink>
             </li>
             <li class="breadcrumb-item">
-              <router-link class="text-muted" to="/productsView"
-                >商店</router-link
+              <RouterLink class="text-muted" to="/productsView"
+                >商店</RouterLink
               >
             </li>
             <li class="breadcrumb-item active" aria-current="page">產品細節</li>
@@ -168,12 +168,12 @@
             </div>
             <div class="card-body p-0">
               <h4 class="mb-0 mt-3">
-                <router-link
+                <RouterLink
                   :to="{ name: 'Product', params: { id: `${product.id}` } }"
                   class="link-dark fw-bold text-decoration-none"
                 >
                   {{ item.title }}
-                </router-link>
+                </RouterLink>
               </h4>
               <p class="card-text mb-0">
                 NT$ {{ item.price }}

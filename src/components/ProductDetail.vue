@@ -32,7 +32,6 @@
       </div>
     </div>
     <div v-if="productDisplay.id">
-      <!-- 修正item當key 的問題 -->
       <img
         v-for="(item, key) in productDisplay.imagesUrl"
         :src="item"

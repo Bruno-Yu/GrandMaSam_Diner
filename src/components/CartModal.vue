@@ -46,12 +46,12 @@
                     </button>
                   </td>
                   <td>
-                    <router-link
+                    <RouterLink
                       :to="{ path: `/productView/${item.product.id}` }"
                       class="text-decoration-none link-dark fw-bold"
                     >
                       {{ item.product.title }}
-                    </router-link>
+                    </RouterLink>
                     <div class="text-dark" v-if="item.coupon">
                       <small>已套用優惠券</small>
                     </div>

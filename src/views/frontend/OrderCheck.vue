@@ -96,6 +96,7 @@
     </button>
   </div>
 </template>
+
 <script>
 export default {
   data() {
@@ -107,9 +108,6 @@ export default {
       isLoading: false,
       PaidDate: '尚未付款',
     };
-  },
-  components: {
-    // ModalMessage,
   },
   methods: {
     PaidDateRenewed() {

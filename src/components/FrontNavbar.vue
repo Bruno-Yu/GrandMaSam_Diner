@@ -6,7 +6,7 @@
     <div class="container gx-0">
       <nav class="navbar navbar-expand-lg navbar-light bg-light fix-top">
         <div class="container d-flex">
-          <router-link
+          <RouterLink
             class="fs-3 d-block navbar-brand my-0 lh-1 font-Bangers"
             to="/"
             @click="closeNavHam()"
@@ -17,7 +17,7 @@
             >
               LET MAKE AMERICA GREAT AGAIN
             </p>
-          </router-link>
+          </RouterLink>
 
           <!-- data-bs-target="#navbarSupportedContent" -->
           <!-- data-bs-toggle="collapse" -->
@@ -38,76 +38,76 @@
             <ul class="navbar-nav align-items-center mb-2 ms-auto mb-lg-0">
               <!-- aria-current="page" -->
               <li class="nav-item">
-                <router-link
+                <RouterLink
                   class="nav-link active fw-bold"
                   to="/about"
                   @click="closeNavHam()"
-                  ><i class="bi bi-journals"></i> 故事</router-link
+                  ><i class="bi bi-journals"></i> 故事</RouterLink
                 >
               </li>
 
               <li class="nav-item">
                 <!-- aria-current="page" -->
-                <router-link
+                <RouterLink
                   class="nav-link active fw-bold"
                   to="/productsView"
                   @click="closeNavHam()"
                 >
                   <i class="bi bi-shop"></i>
-                  商店</router-link
+                  商店</RouterLink
                 >
               </li>
               <li class="nav-item">
-                <router-link
+                <RouterLink
                   class="nav-link active fw-bold"
                   to="/userChallenges"
                   @click="closeNavHam()"
                   ><i class="bi bi-flag"></i>
 
-                  挑戰</router-link
+                  挑戰</RouterLink
                 >
               </li>
 
               <!-- aria-current="page" -->
               <li class="nav-item">
-                <router-link
+                <RouterLink
                   class="nav-link active fw-bold"
                   to="/localStorage"
                   @click="closeNavHam()"
                   ><i class="bi bi-suit-heart"></i>
 
-                  收藏</router-link
+                  收藏</RouterLink
                 >
               </li>
 
               <!-- aria-current="page" -->
               <li class="nav-item">
-                <router-link
+                <RouterLink
                   class="nav-link active fw-bold"
                   to="/cartView"
                   @click="closeNavHam()"
-                  ><i class="bi bi-bag"></i> 訂單</router-link
+                  ><i class="bi bi-bag"></i> 訂單</RouterLink
                 >
               </li>
               <!-- aria-current="page" -->
               <li class="nav-item">
-                <router-link
+                <RouterLink
                   class="nav-link active fw-bold"
                   to="/userArticles"
                   @click="closeNavHam()"
                   ><i class="bi bi-megaphone"></i>
 
-                  公告</router-link
+                  公告</RouterLink
                 >
               </li>
 
               <li class="nav-item">
-                <router-link
+                <RouterLink
                   class="nav-link active fw-bold"
                   to="/trueusLogin"
                   @click="closeNavHam()"
                 >
-                  <i class="bi bi-person"></i> 登入</router-link
+                  <i class="bi bi-person"></i> 登入</RouterLink
                 >
               </li>
             </ul>

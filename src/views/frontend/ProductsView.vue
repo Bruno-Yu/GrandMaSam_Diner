@@ -102,7 +102,7 @@
           >
             <div class="card border-0 mb-2 position-relative">
               <div class="cart-img-top">
-                <router-link
+                <RouterLink
                   :to="{ path: `/productView/${product.id}` }"
                   class="text-decoration-none"
                 >
@@ -110,7 +110,7 @@
                     class="cart-image rounded-0 ratio ratio-16x9"
                     :style="{ backgroundImage: `url(${product.imageUrl})` }"
                   ></div>
-                </router-link>
+                </RouterLink>
               </div>
               <a
                 href="#"

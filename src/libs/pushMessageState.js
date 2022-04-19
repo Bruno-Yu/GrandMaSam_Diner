@@ -1,6 +1,6 @@
 import emitter from '@/libs/emitter';
 
-export default function (response, title = '更新') {
+export default function $httpMessageState(response, title = '更新') {
   if (response.data.success) {
     emitter.emit('push-message', {
       style: 'success',

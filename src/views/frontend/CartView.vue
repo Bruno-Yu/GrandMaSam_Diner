@@ -62,7 +62,6 @@
             </td>
             <td class="fw-bolder text-decoration-underline">
               {{ item.product.title }}
-              <!-- <div class="text-success">已套用優惠券</div> -->
             </td>
             <td>
               <div class="input-group input-group-sm">
@@ -114,11 +113,6 @@
               {{ cartData.total }}<span class="d-none d-lg-inline"> 元</span>
             </td>
           </tr>
-          <!-- <tr>
-            <td></td>
-            <td colspan="3" class="text-end text-success fw-bold">挑戰價</td>
-            <td class="text-end text-success">{{}}</td>
-          </tr> -->
         </tfoot>
       </table>
       <div class="row d-flex justify-content-end">

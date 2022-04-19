@@ -16,12 +16,12 @@
           type="button"
           class="btn btn-warning border-1 border fw-bold border-light my-2"
         >
-          <router-link
+          <RouterLink
             to="/productsView"
             class="text-decoration-none fs-5 link-light"
           >
             回到商城
-          </router-link>
+          </RouterLink>
         </button>
       </div>
     </div>

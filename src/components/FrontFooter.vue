@@ -1,7 +1,7 @@
 <template>
   <div class="container-fluid py-5 gx-lg-0" style="background-color: black">
     <div class="container">
-      <router-link
+      <RouterLink
         class="fs-3 d-block navbar-brand link-light my-2 lh-1 text-center text-warning font-Bangers"
         to="/"
       >
@@ -11,7 +11,7 @@
         >
           LET MAKE AMERICA GREAT AGAIN
         </p>
-      </router-link>
+      </RouterLink>
       <div class="container mt-3">
         <div
           class="row row-cols-1 row-cols-lg-2 justify-content-lg-between mt-2"

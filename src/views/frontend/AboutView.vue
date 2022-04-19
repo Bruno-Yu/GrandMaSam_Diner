@@ -123,7 +123,6 @@
       >
         <div class="row">
           <h4 class="my-lg-5 text-lg-center fw-bolder">榮譽獎章</h4>
-          <!-- <div class="col shadow p-5 mb-2 bg-warning rounded"> -->
           <div class="col shadow p-4 p-sm-5 mb-2 bg-warning rounded">
             <p class="fs-5 fw-bold mt-lg-1 font-Noto fw-700">
               榮獲 2000年度最佳性福企業認證

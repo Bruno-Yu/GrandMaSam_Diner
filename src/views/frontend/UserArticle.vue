@@ -3,8 +3,8 @@
     <nav aria-label="breadcrumb">
       <ol class="breadcrumb">
         <li class="breadcrumb-item">
-          <router-link class="text-muted fw-bold" to="/user/articles"
-            >公告列表</router-link
+          <RouterLink class="text-muted fw-bold" to="/user/articles"
+            >公告列表</RouterLink
           >
         </li>
         <li class="breadcrumb-item active" aria-current="page">

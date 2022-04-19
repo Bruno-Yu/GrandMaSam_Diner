@@ -48,7 +48,7 @@
     <div class="row row-cols-1 row-cols-lg-3 g-4">
       <template v-for="article in articles" :key="article.id">
         <div class="col" v-if="article.isPublic">
-          <router-link
+          <RouterLink
             :to="`/userArticle/${article.id}`"
             v-if="article.isPublic"
             class="btn"
@@ -103,7 +103,7 @@
                 ></div>
               </div>
             </div>
-          </router-link>
+          </RouterLink>
         </div>
       </template>
     </div>
