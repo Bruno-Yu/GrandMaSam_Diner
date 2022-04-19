@@ -121,7 +121,7 @@
                 立即訂閱
               </h2>
               <p class="fs-6 text-light text-sm-nowrap font-Noto fw-400">
-                在了解了本集團歷史與公開資訊公開資訊後，是否讓您對本集團也感到有興趣了呢?
+                在了解了本集團歷史與公開資訊後，是否讓您對本集團也感到有興趣了呢?
               </p>
               <p class="fs-6 text-light text-sm-nowrap font-Noto fw-400">
                 馬上註冊您的信箱，當作者錢不夠用時，會第一時間聯繫您!

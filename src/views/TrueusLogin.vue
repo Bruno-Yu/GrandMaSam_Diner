@@ -70,9 +70,6 @@ export default {
       isLoading: false,
     };
   },
-  components: {
-    // ModalMessage,
-  },
   methods: {
     login() {
       // EMAIL 輸入欄DOM元素
