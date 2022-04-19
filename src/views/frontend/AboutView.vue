@@ -23,7 +23,7 @@
         </div>
         <div class="col col-lg-3">
           <div class="my-2 ratio ratio-1x1 logo-origin-bg">
-            <div class="logo-origin"></div>
+            <div class="logo-origin" />
           </div>
         </div>
       </div>
@@ -109,7 +109,7 @@
           </ul>
         </div>
         <div class="col col-lg-5 my-3">
-          <div class="ourFounder"></div>
+          <div class="ourFounder" />
         </div>
       </div>
     </div>
@@ -137,7 +137,7 @@
       </div>
       <div class="col col-lg-5">
         <div class="mt-lg-5 mb-2 ratio ratio-1x1">
-          <div class="playboy-cover vh-60 vh-lg-30"></div>
+          <div class="playboy-cover vh-60 vh-lg-30" />
         </div>
       </div>
     </div>
@@ -164,7 +164,7 @@
       </div>
       <div class="col col-lg-5">
         <div class="my-3 ratio ratio-4x3">
-          <div class="sex-equality"></div>
+          <div class="sex-equality" />
         </div>
       </div>
     </div>

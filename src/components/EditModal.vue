@@ -43,7 +43,7 @@
   </div>
 
   <div
-    v-show="!deletOn"
+    v-show="!deleteOn"
     id="productModal"
     ref="productModal"
     class="modal fade"
@@ -78,9 +78,14 @@
                     class="form-control"
                     placeholder="請輸入圖片連結"
                     v-model="productDisplay.imageUrl"
+                    id="imageUrl"
                   />
                 </div>
-                <img class="img-fluid" :src="productDisplay.imageUrl" alt="" />
+                <img
+                  class="img-fluid"
+                  :src="productDisplay.imageUrl"
+                  :alt="productDisplay.title"
+                />
                 <div
                   class="mb-1"
                   v-for="(image, key) in productDisplay.imagesUrl"
@@ -93,9 +98,10 @@
                       type="text"
                       class="form-control"
                       placeholder="請輸入圖片連結"
+                      id="imagesUrl"
                     />
                   </div>
-                  <img class="img-fluid" :src="image" alt="" />
+                  <img class="img-fluid" :src="image" :alt="key" />
                 </div>
                 <div
                   v-if="
@@ -148,7 +154,7 @@
                   />
                 </div>
                 <div class="mb-3 col-md-6">
-                  <label for="price" class="form-label">單位</label>
+                  <label for="unit" class="form-label">單位</label>
                   <input
                     id="unit"
                     type="text"

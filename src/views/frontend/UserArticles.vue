@@ -5,7 +5,7 @@
     <div class="container-fluid py-2" style="background-color: black">
       <div class="row row-cols-1 row-cols-lg-2">
         <div class="col ge-0">
-          <div class="container News-banner"></div>
+          <div class="container News-banner" />
         </div>
         <div class="col gs-0">
           <div
@@ -123,12 +123,7 @@
               <p class="fs-6 text-light text-sm-nowrap font-Noto fw-400">
                 馬上註冊您的信箱，當作者錢不夠用時，會第一時間聯繫您!
               </p>
-              <VForm
-                ref="form"
-                class=""
-                v-slot="{ errors }"
-                @submit="subscribe"
-              >
+              <VForm ref="form" v-slot="{ errors }" @submit="subscribe">
                 <div class="input-group mb-auto mx-auto">
                   <VField
                     id="email"
@@ -165,7 +160,7 @@
       </div>
       <div
         class="d-none d-sm-grid col col-lg-6 userArticles-footer-banner mt-1 rounded-3 border-5 shadow p-2"
-      ></div>
+      />
     </div>
   </div>
 </template>

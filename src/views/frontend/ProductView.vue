@@ -5,7 +5,7 @@
     :can-cancel="true"
     :is-full-page="false"
   ></PageLoading>
-  <cartMessage ref="cartMessage"></cartMessage>
+  <cartMessage ref="cartMessage" />
   <div class="container-fluid">
     <div class="row mt-5 d-flex align-items-center justify-content-center">
       <div class="col-md-6 rounded">

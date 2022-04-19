@@ -73,7 +73,7 @@
 
     <div class="row row-cols-1 row-cols-lg-2 g-1">
       <div class="col col-md-6 mt-2">
-        <div class="product-intro"></div>
+        <div class="product-intro" />
       </div>
       <div class="col col-lg-5 m-auto text-auto">
         <div class="container-fluid shadow p-5 mb-1 bg-warning rounded">
@@ -105,7 +105,7 @@
       class="row flex-row-reverse g-1 shadow p-1 p-lg-5 mb-1 bg-body rounded"
     >
       <div class="col-md-6 my-1">
-        <div class="product-intro-2"></div>
+        <div class="product-intro-2" />
       </div>
       <div class="col-md-5 m-auto text-auto">
         <div class="container-fluid shadow p-5 mb-1 bg-body rounded">
@@ -133,7 +133,7 @@
     <div class="row row-cols-1 row-cols-lg-3 mt-2 gx-1">
       <div
         class="col col-lg-3 d-none d-lg-block product-intro-3 product-intro-height"
-      ></div>
+      />
       <div class="col col-lg-6 product-intro-md product-intro-height">
         <div class="container text-auto text-center text-light">
           <div class="row align-items-center mt-5">
@@ -154,7 +154,7 @@
       </div>
       <div
         class="col col-lg-3 d-none d-lg-block product-intro-4 product-intro-height"
-      ></div>
+      />
     </div>
   </div>
 </template>

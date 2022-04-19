@@ -11,7 +11,7 @@
     >
       <div class="col col-lg-5">
         <div class="my-2 ratio ratio-1x1">
-          <div class="aidsHelp"></div>
+          <div class="aidsHelp" />
         </div>
       </div>
       <div

@@ -3,21 +3,17 @@
     <div class="row row-cols-1 row-cols-lg-3">
       <div class="col d-none d-lg-grid">
         <div class="row shadow mb-1 p-2 bg-body">
-          <div
-            class="container-fluid Coupons-header-left ratio ratio-1x1"
-          ></div>
+          <div class="container-fluid Coupons-header-left ratio ratio-1x1" />
         </div>
       </div>
       <div class="col">
         <div class="row shadow mb-1 p-2 bg-body">
-          <div class="container-fluid Coupons-header-md ratio ratio-1x1"></div>
+          <div class="container-fluid Coupons-header-md ratio ratio-1x1" />
         </div>
       </div>
       <div class="col d-none d-lg-grid">
         <div class="row shadow mb-1 p-2 bg-body">
-          <div
-            class="container-fluid Coupons-header-right ratio ratio-1x1"
-          ></div>
+          <div class="container-fluid Coupons-header-right ratio ratio-1x1" />
         </div>
       </div>
     </div>
@@ -108,8 +104,6 @@
               </div>
             </div>
           </div>
-          <!-- @click.prevent="cobycode"
-                      data-clipboard-text="NEWMEMBER2020" -->
           <div class="col">
             <div class="card m-4 border-1 border-body shadow">
               <div class="card-body">
@@ -218,12 +212,7 @@
             <div class="container">
               <div class="row mt-5 d-flex justify-content-center">
                 <div class="col-12 col-lg-8">
-                  <VForm
-                    ref="form"
-                    class=""
-                    v-slot="{ errors }"
-                    @submit="subscribe"
-                  >
+                  <VForm ref="form" v-slot="{ errors }" @submit="subscribe">
                     <div class="input-group mb-auto">
                       <VField
                         id="email"
