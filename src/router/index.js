@@ -74,6 +74,10 @@ const routes = [
         path: '/userArticle/:articleId',
         component: () => import('../views/frontend/UserArticle.vue'),
       },
+      {
+        path: '/trialCart',
+        component: () => import('../views/frontend/TrialCart.vue'),
+      },
     ],
   },
 

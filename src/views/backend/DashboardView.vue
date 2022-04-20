@@ -5,13 +5,17 @@
     :can-cancel="true"
     :is-full-page="false"
   ></PageLoading>
-  <div class="container-fluid w-100" style="box-sizing: border-box">
-    <BackNavbar />
-    <ToastMessages></ToastMessages>
-    <div class="container">
+  <div class="container-fluid">
+    <ToastMessages />
+    <div class="row mb-5">
+      <BackNavbar />
+    </div>
+    <div class="row">
       <RouterView v-if="verify" />
     </div>
-    <FrontFooter />
+    <div class="row">
+      <FrontFooter />
+    </div>
   </div>
 </template>
 

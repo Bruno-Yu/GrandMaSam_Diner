@@ -1,9 +1,9 @@
 <template>
-  <div class="container-fluid" style="box-sizing: border-box">
+  <div class="container-fluid">
     <div class="row mb-5">
       <FrontNavbar />
     </div>
-    <div class="row">
+    <div class="row mt-5">
       <RouterView />
     </div>
     <div class="row">

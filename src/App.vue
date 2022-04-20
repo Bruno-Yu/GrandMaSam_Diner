@@ -1,5 +1,5 @@
 <template>
-  <div class="overall container-fluid gx-0.5 w-100">
+  <div class="overall container-fluid" style="box-sizing: border-box">
     <RouterView />
   </div>
 </template>

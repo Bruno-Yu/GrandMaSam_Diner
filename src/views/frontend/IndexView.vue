@@ -46,7 +46,11 @@
             本餐廳的核心精神是:
           </p>
           <p class="fs-4 text-center text-lg-nowrap font-Noto fw-700">
-            <i> 自己的國家自己救!自己的碗盤自己洗! </i>
+            <i>
+              自己的國家自己救!<span class="d-inline-block d-lg-inline"
+                >自己的碗盤自己洗!</span
+              >
+            </i>
           </p>
           <div class="container text-lg-center about-us-width">
             <p class="fs-6 text-muted font-Noto fw-500">

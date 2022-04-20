@@ -17,7 +17,7 @@
               <blockquote class="blockquote">
                 <p class="fs-1 text-light font-Noto fw-bold">
                   <i>
-                    我們堅信合意信教的正確性，而一想到那些無辜受驚的民眾，我還是會感到難過</i
+                    我們堅信合意信教的正確性，而一想到那些無辜受驚的民眾，我還是會感到難過!</i
                   >
                 </p>
               </blockquote>
