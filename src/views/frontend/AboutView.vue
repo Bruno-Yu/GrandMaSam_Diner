@@ -37,20 +37,23 @@
           集團
         </h4>
         <div class="container mx-auto group-width">
-          <ul>
+          <ul class="list-unstyled">
             <li class="text-dark font-Noto fw-400">
-              <span class="text-light"><i>1990年 -</i> </span>
+              <i class="bi bi-emoji-smile-fill text-light"></i>
+              <span class="text-light"><i> 1990年 -</i> </span>
               創辦人在祖母與親朋好友的經濟支援下，藉由其銳利的商業判斷，在紐約曼哈頓的黃金地段，購置了大量不動產，並創辦了本集團大樓，為紀念創辦人祖母的獨到的眼光和金援以及為表現創辦人"在金錢之下人人平等"的核心理念，將該大樓命名為
               山姆大嬸大樓（英語：The Grandma Sam
               building），並以該大樓的名稱作為本集團的正式名稱 山姆大嬸 集團
               （英語：The Grandma Sam Organization）
             </li>
             <li class="text-dark font-Noto fw-400">
-              <span class="text-light"><i>2000~ 2010 年 -</i> </span>
+              <i class="bi bi-emoji-smile-upside-down-fill text-light"></i>
+              <span class="text-light"><i> 2000~ 2010 年 -</i> </span>
               本集團拓展遍佈世界各地，並在各地建立分支據點，在全球聯合國所屬140個會員國的市中心，沒有一個有本集團的辦事處
             </li>
             <li class="text-dark font-Noto fw-400">
-              <span class="text-light"><i>在 2020 年 -</i> </span>
+              <i class="bi bi-emoji-smile-fill text-light"></i>
+              <span class="text-light"><i> 在 2020 年 -</i> </span>
               本集團創辦人有感於其祖母與台灣民主地區領導人蔣大總統的好交情，決定利用其祖母在中華台北
               ( 此亦為奧運會代表正式名稱
               )的房地產投資收益，創立了台灣辦事處，並於隔年建立本餐飲公司

@@ -165,18 +165,25 @@
               class="card border-0 mb-4 position-relative position-relative"
               v-for="item in products"
               :key="item.id"
+              @click="getProduct(item.id)"
             >
               <div
                 class="swiper-slide-inner product-recommend-display"
                 :style="{ backgroundImage: `url(${item.imageUrl})` }"
               >
-                <a href="#" class="text-dark"> </a>
+                <RouterLink
+                  class="d-block w-100 h-100"
+                  :to="{ path: `/productView/${item.id}` }"
+                  @click="getProduct(item.id)"
+                >
+                </RouterLink>
               </div>
               <div class="card-body p-0">
                 <h4 class="mb-0 mt-3">
                   <RouterLink
-                    :to="{ name: 'Product', params: { id: `${product.id}` } }"
+                    :to="{ path: `/productView/${item.id}` }"
                     class="link-dark fw-bold text-decoration-none"
+                    @click="getProduct(item.id)"
                   >
                     {{ item.title }}
                   </RouterLink>
@@ -272,6 +279,9 @@ export default {
         this.products = res.data.products;
         this.isLoading = false;
       });
+    },
+    goToTarget(id) {
+      this.$router.push(`/productView/${id}`);
     },
     addToCart(id, qty) {
       const url = `${process.env.VUE_APP_API}/api/${process.env.VUE_APP_PATH}/cart`;
