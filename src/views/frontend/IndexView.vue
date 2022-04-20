@@ -131,8 +131,6 @@
             class="row d-flex justify-content-center align-items-center mt-5 h-100"
           >
             <div class="col-10 text-light text-center">
-              <br />
-              <br />
               <h3 class="my-5 font-Noto fw-600">
                 獻出你的錢包，讓台灣再次偉大
               </h3>
