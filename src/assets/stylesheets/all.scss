@@ -13,6 +13,10 @@
 a :hover {
   color: #ffc107;
 }
+.cart-img-top :hover {
+  background-color: #ffffff;
+  opacity: 0.5;
+}
 router-link .nav-item:hover {
   color: #ffc107;
 }
@@ -259,11 +263,6 @@ iframe {
   background-size: cover;
   background-position: center center;
   background-blend-mode: multiply;
-}
-
-.cart-img-top:hover {
-  background-color: #8b702cea;
-  opacity: 0.6;
 }
 
 .cart {

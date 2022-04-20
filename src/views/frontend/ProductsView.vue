@@ -95,12 +95,10 @@
       </div>
       <div class="col-md-10">
         <div class="row row-cols-1 row-cols-lg-3">
-          <div
-            class="col shadow bg-body mb-2 p-2 overall"
-            v-for="product in products"
-            :key="product.id"
-          >
-            <div class="card border-0 mb-2 position-relative">
+          <div class="col p-2" v-for="product in products" :key="product.id">
+            <div
+              class="card border-0 mb-2 p-2 g-1 shadow overall position-relative"
+            >
               <div class="cart-img-top">
                 <RouterLink
                   :to="{ path: `/productView/${product.id}` }"
@@ -111,6 +109,34 @@
                     :style="{ backgroundImage: `url(${product.imageUrl})` }"
                   ></div>
                 </RouterLink>
+              </div>
+              <div class="card-body p-1">
+                <h5 class="mb-0 mt-1 fw-bold">
+                  {{ product.title }}
+                </h5>
+                <div class="d-flex justify-content-between">
+                  <div>
+                    <p class="card-text mt-1 mb-0 fw-bold">
+                      TWD {{ product.price }}
+                    </p>
+                    <p class="text-muted fw-light small my-auto">
+                      <del> 原價TWD{{ product.origin_price }}</del>
+                    </p>
+                  </div>
+                  <button
+                    type="button"
+                    class="btn btn-warning shadow fw-bolder border border-1 btn-sm p-2 my-auto me-1"
+                    @click="[addToCart(product.id), getCart()]"
+                    :disabled="isLoadingItem === product.id"
+                  >
+                    <span
+                      class="spinner-grow spinner-grow-sm"
+                      v-show="isLoadingItem === product.id"
+                    ></span>
+                    加入購物車
+                  </button>
+                </div>
+                <p class="text-muted mt-3"></p>
               </div>
               <a
                 href="#"
@@ -133,35 +159,8 @@
                 <i v-else class="bi bi-heart"></i>
               </a>
             </div>
-            <div class="card-body p-0">
-              <h5 class="mb-0 mt-1 fw-bold">
-                {{ product.title }}
-              </h5>
-              <div class="d-flex justify-content-between">
-                <div>
-                  <p class="card-text mt-1 mb-0 fw-bold">
-                    TWD {{ product.price }}
-                  </p>
-                  <p class="text-muted fw-light small my-auto">
-                    <del> 原價TWD{{ product.origin_price }}</del>
-                  </p>
-                </div>
-                <button
-                  type="button"
-                  class="btn btn-warning shadow fw-bolder border border-1 btn-sm p-2 my-auto me-1"
-                  @click="[addToCart(product.id), getCart()]"
-                  :disabled="isLoadingItem === product.id"
-                >
-                  <span
-                    class="spinner-grow spinner-grow-sm"
-                    v-show="isLoadingItem === product.id"
-                  ></span>
-                  加入購物車
-                </button>
-              </div>
-              <p class="text-muted mt-3"></p>
-            </div>
           </div>
+          <!-- 固定按鈕 -->
           <button
             type="button"
             class="btn"
