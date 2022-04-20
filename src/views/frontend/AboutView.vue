@@ -173,7 +173,7 @@
     <div class="row row-cols-1 flex-row-reverse justify-content-center mt-3">
       <div class="col col-lg-5">
         <div class="container m-auto px-auto">
-          <div style="height: 430px">
+          <div class="contact-us-height">
             <h4 class="my-5 text-warning font-Noto fw-700">立即斗內作者</h4>
 
             <form>

@@ -31,7 +31,7 @@
               <i> 我們相信成功是1分的實力加上99分的心意</i>
             </p>
           </blockquote>
-          <figcaption class="blockquote-footer fs-5">
+          <figcaption class="blockquote-footer fs-6">
             出自- 1995 <cite title="Source Title">五歲就會抬頭的創辦人</cite>
           </figcaption>
         </figure>
@@ -60,8 +60,7 @@
     </figure>
   </div>
   <div
-    class="container-fluid bg-body border border-body border-2 shadow text-center p-3 mb-2"
-    style="height: 200px"
+    class="container-fluid bg-body border border-body border-2 shadow text-center p-3 mb-2 Coupons-title"
   >
     <h2 class="fs-2 font-Noto fw-600 mt-2 mb-3">用錢買得到的安心</h2>
     <p class="fs-5 lg-sm font-Noto fw-400 text-warning">
@@ -192,19 +191,17 @@
   </div>
   <div class="container-fluid Thanks-boss shadow mb-1 p-2 bg-body">
     <div
-      class="row d-flex text-center align-items-center w-100 h-100"
-      style="position: relative"
+      class="row d-flex text-center align-items-center w-100 h-100 position-relative"
     >
-      <div class="col-12 my-lg-3" style="position: relative">
+      <div class="col-12 my-lg-3">
         <h2 class="fs-1 font-Noto fw-600 text-warning">謝謝老闆</h2>
         <h5 class="font-Noto fw-600 text-warning">好人一生平安</h5>
         <div
-          class="w-100 mt-lg-5 mt-3 pt-5"
-          style="position: absolute; z-index: 99"
+          class="w-100 mt-lg-5 mt-3 pt-5 position-absolute"
+          style="z-index: 99"
         >
           <div
-            class="container w-100 p-2 rounded-2"
-            style="background-color: black; height: 180px"
+            class="container w-100 p-2 rounded-2 Coupons-title bg-black Thanks-boss-height"
           >
             <h2 class="fs-2 mt-1 font-Noto fw-bold text-light text-center">
               訂閱我們最新的要款通知

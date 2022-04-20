@@ -35,7 +35,6 @@
 
       <div
         class="col col-lg-3 bg-dark border border-light border-1 rounded-3 h-auto dialog-theEnd-bg"
-        style="--bs-bg-opacity: 0.4"
       >
         <div class="container text-center mt-lg-1 p-3">
           <h2 class="my-lg-3 text-light font-Noto fw-600">立即斗內作者</h2>

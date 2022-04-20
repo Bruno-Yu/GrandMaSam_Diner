@@ -2,7 +2,7 @@
   <div
     class="container-fluid bg-warning shadow rounded border border-body border-3"
   >
-    <div class="container-fluid py-2" style="background-color: black">
+    <div class="container-fluid py-2 bg-black">
       <div class="row row-cols-1 row-cols-lg-2">
         <div class="col ge-0">
           <div class="container News-banner" />

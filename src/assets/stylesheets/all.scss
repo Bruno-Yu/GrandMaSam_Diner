@@ -22,6 +22,10 @@ router-link .nav-item:hover {
 .navbar-brand.navbar-brand.link-light:hover {
   color: #b38602;
 }
+// color
+.bg-black {
+  background-color: black;
+}
 
 // font
 .font-Bangers {
@@ -86,6 +90,10 @@ router-link .nav-item:hover {
   background-position: center center;
   background-size: cover;
 }
+.contact-us-height {
+  height: 400px;
+}
+
 // gmap embed
 iframe {
   width: 100%;
@@ -348,9 +356,7 @@ iframe {
 }
 
 // UserArticles.vue
-.bg-black {
-  background-color: black;
-}
+
 .News-header {
   background-image: url('@/assets/images/Articles_banner.jpg');
   height: 500px;
@@ -418,6 +424,13 @@ iframe {
   @media (min-width: 768px) {
     background-position: center;
   }
+}
+.Coupons-title {
+  height: 200px;
+}
+
+.Thanks-boss-height {
+  height: 180px;
 }
 .Thanks-boss {
   background-image: url(@/assets/images/Thanks_boss.jpg);
