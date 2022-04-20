@@ -12,8 +12,8 @@
         </li>
       </ol>
     </nav>
-    <div class="row justify-content-center">
-      <article class="col-8">
+    <div class="row justify-content-center mb-4">
+      <article class="col-12 col-lg-8">
         <h2 class="display-3 fw-bold text-center">{{ article.title }}</h2>
         <p class="text-end mt-5 mb-3">
           <i>
@@ -63,7 +63,7 @@
             v-html="article.description"
           ></p>
         </blockquote>
-        <div class="fs-5 lh-lg mb-5" v-html="article.content"></div>
+        <div class="fs-5 lh-lg mb-5" v-html="article.content" />
         <br />
         <br />
         <br />

@@ -25,7 +25,11 @@
         <figure class="text-center">
           <blockquote class="blockquote">
             <p class="fs-3 font-Noto fw-bold">
-              <i> 成功其實是1分的實力加上99分的心意</i>
+              <i>
+                成功其實是1分的實力<span class="d-inline-block d-sm-inline"
+                  >加上99分的心意</span
+                ></i
+              >
             </p>
           </blockquote>
           <figcaption class="blockquote-footer mt-2">
@@ -38,16 +42,21 @@
   <div class="container gx-0 Coupons-money mb-2 rounded">
     <div class="row d-flex justify-content-center align-items-center h-100">
       <div class="col h-100">
-        <figure class="text-light text-center mt-5 p-4">
+        <figure class="text-light text-start text-sm-center mt-5 p-4">
           <blockquote class="blockquote">
             <p class="fs-3 font-Noto fw-bold">
-              <i>錢包的厚度決定了您人生的高度，</i>
+              <i
+                >錢包的厚度
+                <span class="d-inline-block d-sm-inline"
+                  >決定了您人生的高度!</span
+                >
+              </i>
             </p>
             <p class="fs-3 font-Noto fw-bold">
               <i>不要讓吝嗇限制了您的視野!</i>
             </p>
           </blockquote>
-          <blockquote class="blockquote">
+          <blockquote class="blockquote text-end text-sm-center">
             <RouterLink
               class="btn link-light text-decoration-underline fs-5 font-Noto fw-500"
               to="userArticles"
@@ -59,7 +68,7 @@
     </div>
   </div>
   <div
-    class="container gx-0 bg-body border border-body border-2 shadow text-center p-3 mb-2 Coupons-title"
+    class="container gx-0 bg-body border border-body border-2 shadow text-center p-2 mb-2 Coupons-title"
   >
     <h2 class="fs-2 font-Noto fw-600 mt-2 mb-3">該證明您自己的時候了</h2>
     <p class="fs-5 lg-sm font-Noto fw-500 text-warning">

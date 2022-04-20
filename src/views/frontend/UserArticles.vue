@@ -106,7 +106,7 @@
       </template>
     </div>
   </div>
-  <div class="container gx-0 bg-dark">
+  <div class="container gx-0 mt-4 bg-dark">
     <div class="row row-cols-1 row-cols-lg-2 my-1">
       <div class="col col-lg-6">
         <div class="container bg-dark p-sm-5 rounded">

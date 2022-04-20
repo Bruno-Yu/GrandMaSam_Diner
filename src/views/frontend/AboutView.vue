@@ -1,120 +1,117 @@
 <template>
-  <div class="container-fluid gx-0 bg-body">
+  <div class="container bg-body">
     <h2 class="my-5 fw-bold text-center gx-0 font-Noto fw-700">關於我們</h2>
+
     <div
-      class="container my-1 py-3 border border-secondary border-1 border-start-0 border-end-0 border-bottom-0 gx-0"
+      class="row row-cols-1 d-flex justify-content-center my-1 py-3 border border-body border-1 border-start-0 border-end-0 border-bottom-0"
     >
-      <div class="row row-cols-1 d-flex justify-content-center gx-0">
-        <div
-          class="col col-lg-5 me-lg-5 header-content shadow p-4 mb-5 mt-2 bg-body rounded"
-        >
-          <h4 class="my-3 fw-bolder">源起</h4>
-          <p class="text-muted">
-            根據現存史料《 !!! 》第一部《His
-            Story》篇的解釋，此人形符號是起源於西元前1234年，文獻中記載，該符號可能是出自上古奧林匹斯性評會。
-            而在後來在世界經典《 腎經
-            》中也紀載著該符號首度在人世中現世的奇蹟，在著名 摸東摩西 ( 註 )
-            填海造陸並解放烏克蘭人民脫離俄羅斯的殘暴統治後，領導著眾人踏上耶路撒冷的自由之路，其所經過的路途中神秘力量所產生的神秘符號
-            ( 如圖 ) ，當代著名考古學家劉鉛筆於近期受訪時做出大膽假設
-            "據有文字記載的史料所知，沒人直接見過上帝，若真有上帝，這就是他首次現身的證明，這就是曾經見證奇蹟的時刻!"
-            但早在這之前，我們創辦將已將該符號作為本集團的商標與信仰，後來有人推測其自身根本就是上帝在人世間行走的化身，但本人則在近期受訪時表示:
-            "謝謝指教!" 短短的幾個字卻充分展現了其愛與包容的性格。
-          </p>
-        </div>
-        <div class="col col-lg-3">
-          <div class="my-2 ratio ratio-1x1 logo-origin-bg">
-            <div class="logo-origin" />
-          </div>
-        </div>
-      </div>
       <div
-        class="row row-cols-1 d-flex justify-content-center gx-0 shadow p-3 mb-2 bg-warning rounded chronicle-event"
+        class="col col-lg-5 me-lg-5 header-content shadow p-4 mb-5 mt-2 bg-body rounded"
       >
-        <div class="col col-lg-9">
-          <h4
-            class="my-5 my-lg-4 text-light fw-bolder text-lg-center font-Noto fw-700"
-          >
-            集團
-          </h4>
-          <div class="container mx-auto group-width">
-            <ul>
-              <li class="text-dark font-Noto fw-400">
-                <span class="text-light"><i>1990年 -</i> </span>
-                創辦人在祖母與親朋好友的經濟支援下，藉由其銳利的商業判斷，在紐約曼哈頓的黃金地段，購置了大量不動產，並創辦了本集團大樓，為紀念創辦人祖母的獨到的眼光和金援以及為表現創辦人"在金錢之下人人平等"的核心理念，將該大樓命名為
-                山姆大嬸大樓（英語：The Grandma Sam
-                building），並以該大樓的名稱作為本集團的正式名稱 山姆大嬸 集團
-                （英語：The Grandma Sam Organization）
-              </li>
-              <li class="text-dark font-Noto fw-400">
-                <span class="text-light"><i>2000~ 2010 年 -</i> </span>
-                本集團拓展遍佈世界各地，並在各地建立分支據點，在全球聯合國所屬140個會員國的市中心，沒有一個有本集團的辦事處
-              </li>
-              <li class="text-dark font-Noto fw-400">
-                <span class="text-light"><i>在 2020 年 -</i> </span>
-                本集團創辦人有感於其祖母與台灣民主地區領導人蔣大總統的好交情，決定利用其祖母在中華台北
-                ( 此亦為奧運會代表正式名稱
-                )的房地產投資收益，創立了台灣辦事處，並於隔年建立本餐飲公司
-              </li>
-            </ul>
-          </div>
-        </div>
+        <h4 class="my-3 fw-bolder">源起</h4>
+        <p class="text-muted">
+          根據現存史料《 !!! 》第一部《His
+          Story》篇的解釋，此人形符號是起源於西元前1234年，文獻中記載，該符號可能是出自上古奧林匹斯性評會。
+          而在後來在世界經典《 腎經
+          》中也紀載著該符號首度在人世中現世的奇蹟，在著名 摸東摩西 ( 註 )
+          填海造陸並解放烏克蘭人民脫離俄羅斯的殘暴統治後，領導著眾人踏上耶路撒冷的自由之路，其所經過的路途中神秘力量所產生的神秘符號
+          ( 如圖 ) ，當代著名考古學家劉鉛筆於近期受訪時做出大膽假設
+          "據有文字記載的史料所知，沒人直接見過上帝，若真有上帝，這就是他首次現身的證明，這就是曾經見證奇蹟的時刻!"
+          但早在這之前，我們創辦將已將該符號作為本集團的商標與信仰，後來有人推測其自身根本就是上帝在人世間行走的化身，但本人則在近期受訪時表示:
+          "謝謝指教!" 短短的幾個字卻充分展現了其愛與包容的性格。
+        </p>
       </div>
-      <div
-        class="row row-cols-1 flex-row-reverse justify-content-center my-3 gx-0 shadow p-3 mb-2 bg-body rounded"
-      >
-        <h4 class="mt-2 mb-1 my-lg-5 text-lg-center fw-bolder">集團核心理念</h4>
-        <div class="col col-lg-5 mx-2">
-          <ul class="my-3 list-group">
-            <li class="text-muted list-group-item py-3">
-              <p class="fs-5 fw-bold text-secondary">
-                <span class="text-dark fw-bold"
-                  ><i class="bi bi-check2-circle"></i
-                ></span>
-                用心打造
-              </p>
-              <p>
-                由於是用心不是用手，但所幸當地的大多數民眾，憑藉著良好的邏輯與文學素養和當地媒體與政客的長期薰陶下，早就對這類過度包裝而沒內容的說法沒有任何期待了
-              </p>
-            </li>
-            <li class="text-muted list-group-item py-3">
-              <p class="fs-5 fw-bold text-secondary">
-                <span class="text-dark fw-bold"
-                  ><i class="bi bi-check2-circle"></i
-                ></span>
-                講究食安
-              </p>
-              <p>
-                本餐飲所用的食材皆是純天然製成，無農藥殘留過量、食材來源不實及定價遠低成本價等問題
-                ，本集團旗下餐廳87項產品抽驗結果，全數符合國家檢驗的最低標準。
-              </p>
-            </li>
-            <li class="text-muted list-group-item py-3">
-              <p class="fs-5 fw-bold text-secondary">
-                <span class="text-dark fw-bold"
-                  ><i class="bi bi-check2-circle"></i>
-                </span>
-                集團理念
-              </p>
-              <ul>
-                <li>
-                  本著 夢想是熱情的起點 ;
-                  夢遺則是...的頂點，用雙手，我們一同製造夢想
-                </li>
-                <li>
-                  沿路上我們培養了許多珍貴的客群，也呼應了我們集團總裁的人生信條以及所要傳達的理念:
-                  " 我們真的把您當人看 ! ”
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </div>
-        <div class="col col-lg-5 my-3">
-          <div class="ourFounder" />
+      <div class="col col-lg-3">
+        <div class="my-2 ratio ratio-1x1 logo-origin-bg">
+          <div class="logo-origin" />
         </div>
       </div>
     </div>
-  </div>
-  <div class="container-fluid">
+    <div
+      class="row row-cols-1 d-flex justify-content-center shadow p-3 mb-2 bg-warning rounded border border-2 border-body"
+    >
+      <div class="col col-lg-9">
+        <h4
+          class="my-5 my-lg-4 text-light fw-bolder text-lg-center font-Noto fw-700"
+        >
+          集團
+        </h4>
+        <div class="container mx-auto group-width">
+          <ul>
+            <li class="text-dark font-Noto fw-400">
+              <span class="text-light"><i>1990年 -</i> </span>
+              創辦人在祖母與親朋好友的經濟支援下，藉由其銳利的商業判斷，在紐約曼哈頓的黃金地段，購置了大量不動產，並創辦了本集團大樓，為紀念創辦人祖母的獨到的眼光和金援以及為表現創辦人"在金錢之下人人平等"的核心理念，將該大樓命名為
+              山姆大嬸大樓（英語：The Grandma Sam
+              building），並以該大樓的名稱作為本集團的正式名稱 山姆大嬸 集團
+              （英語：The Grandma Sam Organization）
+            </li>
+            <li class="text-dark font-Noto fw-400">
+              <span class="text-light"><i>2000~ 2010 年 -</i> </span>
+              本集團拓展遍佈世界各地，並在各地建立分支據點，在全球聯合國所屬140個會員國的市中心，沒有一個有本集團的辦事處
+            </li>
+            <li class="text-dark font-Noto fw-400">
+              <span class="text-light"><i>在 2020 年 -</i> </span>
+              本集團創辦人有感於其祖母與台灣民主地區領導人蔣大總統的好交情，決定利用其祖母在中華台北
+              ( 此亦為奧運會代表正式名稱
+              )的房地產投資收益，創立了台灣辦事處，並於隔年建立本餐飲公司
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div
+      class="row row-cols-1 flex-row-reverse justify-content-center my-3 shadow p-2 mb-2 bg-body rounded"
+    >
+      <h4 class="mt-2 mb-1 my-lg-5 text-lg-center fw-bolder">集團核心理念</h4>
+      <div class="col col-lg-5 mx-2">
+        <ul class="my-3 list-group">
+          <li class="text-muted list-group-item py-3">
+            <p class="fs-5 fw-bold text-secondary">
+              <span class="text-dark fw-bold"
+                ><i class="bi bi-check2-circle"></i
+              ></span>
+              用心打造
+            </p>
+            <p>
+              由於是用心不是用手，但所幸當地的大多數民眾，憑藉著良好的邏輯與文學素養和當地媒體與政客的長期薰陶下，早就對這類過度包裝而沒內容的說法沒有任何期待了
+            </p>
+          </li>
+          <li class="text-muted list-group-item py-3">
+            <p class="fs-5 fw-bold text-secondary">
+              <span class="text-dark fw-bold"
+                ><i class="bi bi-check2-circle"></i
+              ></span>
+              講究食安
+            </p>
+            <p>
+              本餐飲所用的食材皆是純天然製成，無農藥殘留過量、食材來源不實及定價遠低成本價等問題
+              ，本集團旗下餐廳87項產品抽驗結果，全數符合國家檢驗的最低標準。
+            </p>
+          </li>
+          <li class="text-muted list-group-item py-3">
+            <p class="fs-5 fw-bold text-secondary">
+              <span class="text-dark fw-bold"
+                ><i class="bi bi-check2-circle"></i>
+              </span>
+              集團理念
+            </p>
+            <ul>
+              <li>
+                本著 夢想是熱情的起點 ;
+                夢遺則是...的頂點，用雙手，我們一同製造夢想
+              </li>
+              <li>
+                沿路上我們培養了許多珍貴的客群，也呼應了我們集團總裁的人生信條以及所要傳達的理念:
+                " 我們真的把您當人看 ! ”
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div class="col col-lg-5 my-3">
+        <div class="ourFounder" />
+      </div>
+    </div>
     <div
       class="row row-cols-1 row-cols-lg-2 justify-content-center my-3 bg-warning shadow p-3 mb-1 rounded"
     >
@@ -141,7 +138,6 @@
         </div>
       </div>
     </div>
-
     <div
       class="row row-cols-1 row-cols-lg-2 flex-row-reverse justify-content-center my-2 shadow p-3 mb-2 bg-body rounded"
     >
@@ -168,9 +164,9 @@
         </div>
       </div>
     </div>
-  </div>
-  <div class="container-fluid gx-0 shadow bg-dark">
-    <div class="row row-cols-1 flex-row-reverse justify-content-center mt-3">
+    <div
+      class="row row-cols-1 flex-row-reverse justify-content-center bg-dark mt-3"
+    >
       <div class="col col-lg-5">
         <div class="container m-auto px-auto">
           <div class="contact-us-height">
