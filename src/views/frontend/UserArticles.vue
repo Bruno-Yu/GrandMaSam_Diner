@@ -1,39 +1,37 @@
 <template>
   <div
-    class="container-fluid bg-warning shadow rounded border border-body border-3"
+    class="container gx-0 bg-black shadow rounded border border-body border-3"
   >
-    <div class="container-fluid py-2 bg-black">
-      <div class="row row-cols-1 row-cols-lg-2">
-        <div class="col ge-0">
-          <div class="container News-banner" />
-        </div>
-        <div class="col gs-0">
+    <div class="row row-cols-1 row-cols-lg-2">
+      <div class="col ge-0">
+        <div class="container News-banner" />
+      </div>
+      <div class="col gs-0">
+        <div
+          class="container d-flex align-items-center h-100 p-3 shadow bg-black"
+        >
           <div
-            class="container d-flex align-items-center h-100 p-3 shadow bg-black"
+            class="container shadow mb-2 p-4 rounded h-50 d-flex align-items-center bg-black"
           >
-            <div
-              class="container shadow mb-2 p-4 rounded h-50 d-flex align-items-center bg-black"
-            >
-              <figure class="text-center text-lg-start">
-                <blockquote class="blockquote">
-                  <p class="fs-1 text-light fw-bold">
-                    <i>
-                      我們堅信合意信教的正確性，而一想到那些無辜受驚的民眾，我還是會感到難過</i
-                    >
-                  </p>
-                </blockquote>
-                <figcaption class="blockquote-footer fs-5">
-                  2010/5/28 <cite title="Source Title">拜燈教主</cite>
-                </figcaption>
-              </figure>
-            </div>
+            <figure class="text-center text-lg-start">
+              <blockquote class="blockquote">
+                <p class="fs-1 text-light font-Noto fw-bold">
+                  <i>
+                    我們堅信合意信教的正確性，而一想到那些無辜受驚的民眾，我還是會感到難過</i
+                  >
+                </p>
+              </blockquote>
+              <figcaption class="blockquote-footer font-Noto fs-5 text-lg-end">
+                2010/5/28 <cite title="Source Title">拜燈教主</cite>
+              </figcaption>
+            </figure>
           </div>
         </div>
       </div>
     </div>
   </div>
   <div
-    class="container-fluid mt-2 mb-3 mb-lg-4 shadow News-title rounded border border-body border-5"
+    class="container gx-0 mt-2 mb-3 mb-lg-4 shadow News-title rounded border border-body border-5"
   >
     <div class="row">
       <h2 class="fs-1 my-3 font-Noto fw-600 text-light text-center">
@@ -42,7 +40,7 @@
     </div>
   </div>
   <div
-    class="container-fluid bg-body shadow border border-body border-1 rounded"
+    class="container gx-0 bg-body shadow border border-body border-1 rounded"
   >
     <div class="row row-cols-1 row-cols-lg-3 g-4">
       <template v-for="article in articles" :key="article.id">
@@ -93,9 +91,11 @@
                 alt="MoneyIsTheProblem"
               />
               <div class="card-body text-start">
-                <h4 class="card-title fw-bold">{{ article.title }}</h4>
+                <h4 class="card-title font-Noto fw-500">
+                  {{ article.title }}
+                </h4>
                 <div
-                  class="text-start fw-bold text-secondary"
+                  class="text-start font-Noto text-muted"
                   style="max-height: 3rem; overflow: hidden"
                   v-html="article.description"
                 ></div>
@@ -106,11 +106,11 @@
       </template>
     </div>
   </div>
-  <div class="container-fluid bg-dark shadow rounded">
-    <div class="row row-cols-1 row-cols-lg-2 g-1 my-1">
+  <div class="container gx-0 bg-dark">
+    <div class="row row-cols-1 row-cols-lg-2 my-1">
       <div class="col col-lg-6">
-        <div class="container bg-dark shadow-lg px-2 py-4 p-sm-5 rounded">
-          <div class="row ps-2 row-cols-1">
+        <div class="container bg-dark p-sm-5 rounded">
+          <div class="row row-cols-1">
             <div class="col m-auto">
               <h2
                 class="mt-5 mb-4 text-nowrap text-warning text-center text-sm-start font-Noto fw-600"
@@ -158,9 +158,9 @@
           </div>
         </div>
       </div>
-      <div
-        class="d-none d-sm-grid col col-lg-6 userArticles-footer-banner mt-1 rounded-3 border-5 shadow p-2"
-      />
+      <div class="d-none d-sm-grid col col-lg-6">
+        <div class="userArticles-footer-banner"></div>
+      </div>
     </div>
   </div>
 </template>

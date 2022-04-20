@@ -1,5 +1,5 @@
 <template>
-  <div class="container-fluid bg-warning">
+  <div class="container gx-0 bg-warning">
     <div class="row row-cols-1 row-cols-lg-3">
       <div class="col d-none d-lg-grid">
         <div class="row shadow mb-1 p-2 bg-body">
@@ -18,60 +18,59 @@
       </div>
     </div>
   </div>
-  <div
-    class="container-fluid mb-2 quote shadow"
-    style="background-color: black"
-  >
+  <div class="container gx-0 mb-2 quote bg-black">
     <div class="row d-flex justify-content-center mb-2">
       <div class="col text-center text-light my-3">
-        <h2 class="fs-1 fw-bold font-Noto">格言</h2>
+        <h2 class="fs-2 text-warning fw-bold font-Noto">感悟</h2>
         <figure class="text-center">
           <blockquote class="blockquote">
             <p class="fs-3 font-Noto fw-bold">
-              <i> 我們相信成功是1分的實力加上99分的心意</i>
+              <i> 成功其實是1分的實力加上99分的心意</i>
             </p>
           </blockquote>
-          <figcaption class="blockquote-footer fs-6">
+          <figcaption class="blockquote-footer mt-2">
             出自- 1995 <cite title="Source Title">五歲就會抬頭的創辦人</cite>
           </figcaption>
         </figure>
       </div>
     </div>
   </div>
-  <div
-    class="container-fluid Coupons-money mb-2 rounded d-flex align-items-center"
-  >
-    <figure class="text-light">
-      <blockquote class="blockquote">
-        <p class="fs-3 font-Noto fw-bold text-start">
-          <i>錢包的厚度決定了您人生的高度，</i>
-        </p>
-        <p class="fs-3 font-Noto fw-bold text-start">
-          <i>不要讓吝嗇限制了您的視野!</i>
-        </p>
-      </blockquote>
-      <blockquote class="blockquote text-end">
-        <RouterLink
-          class="btn link-light text-decoration-underline fs-5 font-Noto fw-500"
-          to="userArticles"
-          ><i>閱讀更多...</i></RouterLink
-        >
-      </blockquote>
-    </figure>
+  <div class="container gx-0 Coupons-money mb-2 rounded">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col h-100">
+        <figure class="text-light text-center mt-5 p-4">
+          <blockquote class="blockquote">
+            <p class="fs-3 font-Noto fw-bold">
+              <i>錢包的厚度決定了您人生的高度，</i>
+            </p>
+            <p class="fs-3 font-Noto fw-bold">
+              <i>不要讓吝嗇限制了您的視野!</i>
+            </p>
+          </blockquote>
+          <blockquote class="blockquote">
+            <RouterLink
+              class="btn link-light text-decoration-underline fs-5 font-Noto fw-500"
+              to="userArticles"
+              ><i>閱讀更多...</i></RouterLink
+            >
+          </blockquote>
+        </figure>
+      </div>
+    </div>
   </div>
   <div
-    class="container-fluid bg-body border border-body border-2 shadow text-center p-3 mb-2 Coupons-title"
+    class="container gx-0 bg-body border border-body border-2 shadow text-center p-3 mb-2 Coupons-title"
   >
-    <h2 class="fs-2 font-Noto fw-600 mt-2 mb-3">用錢買得到的安心</h2>
-    <p class="fs-5 lg-sm font-Noto fw-400 text-warning">
-      不只5倍! 我們讓您能有更多的選擇! 愛就要勇敢把錢掏出來!
+    <h2 class="fs-2 font-Noto fw-600 mt-2 mb-3">該證明您自己的時候了</h2>
+    <p class="fs-5 lg-sm font-Noto fw-500 text-warning">
+      <i>不只5倍! 我們讓您能有更多的選擇! 愛就要勇敢把錢掏出來!</i>
     </p>
     <p class="fs-6 lh-sm text-muted">
       ( 註: 此券能對於您的結帳金額有所加成，是被視為成功人士的象徵，但請量力而為
       )
     </p>
   </div>
-  <div class="container-fluid shadow bg-body border border-body mb-1 rounded">
+  <div class="container gx-0 shadow bg-body border border-body mb-1 rounded">
     <div id="coupon-section">
       <div class="container-fluid">
         <div class="row row-cols-1 row-cols-lg-4 justify-content-start">
@@ -189,7 +188,7 @@
       </div>
     </div>
   </div>
-  <div class="container-fluid Thanks-boss shadow mb-1 p-2 bg-body">
+  <div class="container gx-0 Thanks-boss">
     <div
       class="row d-flex text-center align-items-center w-100 h-100 position-relative"
     >
