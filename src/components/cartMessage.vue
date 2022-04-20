@@ -26,7 +26,7 @@
           ></button>
         </div>
         <div class="modal-body">
-          <div class="container">
+          <div class="container pt-2 gx-2">
             <h5 class="fw-bold">
               <span class="text-success"
                 ><i class="bi bi-check-circle"></i
@@ -36,10 +36,10 @@
           </div>
         </div>
         <div class="modal-footer">
-          <div class="container d-flex justify-content-center">
+          <div class="container gx-2 d-flex justify-content-center">
             <button
               type="button"
-              class="btn btn-warning mx-2 shadow p-2 mb-1 border border-dark border-1 font-Noto fw-400"
+              class="btn btn-warning mx-2 mb-1 shadow p-2 border border-dark border-1 font-Noto fw-400"
               @click="closeModal()"
             >
               好優
@@ -64,14 +64,14 @@
           ></button>
         </div>
         <div class="modal-body">
-          <div class="container">
+          <div class="container gx-2 pt-2">
             <h5 class="font-Noto fw-550">即將被您刪除的商品會感到難過</h5>
-            <p>
+            <p class="font-Noto fw-400">
               其實我們的商品也是有情緒的，您這麼做會讓商品感受到您的冷漠，而他們要的，其實不多，只是希望您能接受他們而已
             </p>
           </div>
         </div>
-        <div class="modal-footer">
+        <div class="modal-footer gx-2">
           <div class="container d-flex justify-content-end">
             <button
               type="button"
@@ -83,7 +83,7 @@
             </button>
             <button
               type="button"
-              class="btn btn-danger mx-2 shadow p-2 mb-1 border border-dark border-1 font-Noto fw-400"
+              class="btn btn-danger ms-2 shadow p-2 mb-1 border border-dark border-1 font-Noto fw-400"
               @click="[removeCart(all, id), $emit('get-cart'), closeModal()]"
             >
               這與我無瓜
