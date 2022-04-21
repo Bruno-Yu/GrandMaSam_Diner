@@ -5,27 +5,38 @@
     :can-cancel="true"
     :is-full-page="false"
   ></PageLoading>
-  <div v-if="favorites.length" class="container-fluid gx-0 gy-1 mt-3">
-    <h1 class="text-center mt-5 fs-1 mb-3 fw-bolder">收藏</h1>
-    <div class="container">
-      <div class="mt-4">
-        <div class="text-end">
-          <button
-            class="btn btn-outline-danger"
-            type="button"
-            @click="removeFavAll"
-            :disabled="isLoadingItem === 'deleteAll' || favorites.length === 0"
-          >
-            <span
-              class="spinner-grow spinner-grow-sm"
-              v-show="isLoadingItem === 'deleteAll'"
-            ></span
-            >清空收藏
-          </button>
-        </div>
-        <table class="table align-middle">
+  <div v-if="favorites.length" class="container mt-3">
+    <div class="row bg-warning border-bottom border-3 border-dark">
+      <div class="local-baby" />
+    </div>
+    <div class="row mt-5 mb-3">
+      <h1 class="text-center font-Noto fs-1 fw-bold">收藏</h1>
+    </div>
+    <div class="row d-flex justify-content-end">
+      <div class="col-auto me-md-5">
+        <button
+          class="btn btn-outline-danger fw-bold font-Noto mb-1"
+          type="button"
+          @click="removeFavAll"
+          :disabled="isLoadingItem === 'deleteAll' || favorites.length === 0"
+        >
+          <span
+            class="spinner-grow spinner-grow-sm"
+            v-show="isLoadingItem === 'deleteAll'"
+          ></span
+          >清空收藏
+        </button>
+      </div>
+    </div>
+    <div
+      class="container shadow my-4 bg-body border border-1 border-body p-5 rounded"
+    >
+      <div class="row">
+        <table class="table">
           <thead>
-            <tr class="text-start">
+            <tr
+              class="text-start text-start font-Noto fw-bold fs-5 text-primary"
+            >
               <th>刪<span class="d-none d-lg-inline">除鍵</span></th>
               <th class="d-none d-lg-table-cell">預覽圖</th>
               <th>品名</th>
@@ -61,7 +72,7 @@
                   :style="{ backgroundImage: `url(${item.imageUrl})` }"
                 ></div>
               </td>
-              <td class="fw-bolder text-decoration-underline">
+              <td class="font-Noto fs-5 fw-400">
                 {{ item.title }}
               </td>
               <td>
@@ -70,19 +81,24 @@
                   v-show="isLoadingItem === item.id"
                 ></span>
                 <span class="text-secondary fz-sm"
-                  >{{ item.price }} <span class="d-none d-lg-inline">元</span>
-                  <span class="d-none d-lg-inline"> / {{ item.unit }}</span>
+                  >{{ item.price }}
+                  <span class="d-none d-lg-inline font-Noto fs-5 fw-400"
+                    >元</span
+                  >
+                  <span class="d-none d-lg-inline font-Noto fs-5 fw-400">
+                    / {{ item.unit }}</span
+                  >
                 </span>
               </td>
               <td class="d-none d-lg-table-cell">
                 <button
                   type="button"
-                  class="btn btn-outline-secondary btn-sm"
+                  class="btn btn-outline-secondary btn-sm shadow-sm mt-2 font-Noto fw-400"
                   :disabled="isLoadingItem === item.id"
                   @click="goToProductView(item.id)"
                 >
                   <span
-                    class="spinner-grow spinner-grow-sm"
+                    class="spinner-grow spinner-grow-sm font-Noto fs-5 fw-400"
                     v-show="isLoadingItem === item.id"
                   ></span>
                   查看更多
@@ -99,8 +115,10 @@
                     class="spinner-grow spinner-grow-sm"
                     v-show="isLoadingItem === item.id"
                   ></span>
-                  <i class="d-lg-none bi bi-cart2 text-danger fs-3"></i
-                  ><span class="d-none d-lg-inline-block btn btn-danger btn-sm">
+                  <i class="d-lg-none bi bi-cart2 text-danger"></i
+                  ><span
+                    class="d-none d-lg-inline-block btn btn-danger font-Noto fs-6 fw-400 btn-sm shadow"
+                  >
                     加到購物車</span
                   >
                 </button>
@@ -110,7 +128,7 @@
         </table>
         <div class="text-end my-3">
           <button
-            class="btn btn-danger fw-bolder"
+            class="btn btn-danger font-Noto fw-bold border border-1 border-body shadow"
             type="button"
             @click="addAllToCart"
             :disabled="isLoadingItem === 'addAll' || favorites.length === 0"
@@ -125,7 +143,7 @@
       </div>
     </div>
   </div>
-  <div v-else class="container-fluid fav-banner vh-100 my-1">
+  <div v-else class="container gx-0 fav-banner vh-100 my-1">
     <div class="row d-flex align-items-center justify-content-center vh-100">
       <div class="col vh-30 my-3">
         <div class="container bg-light dialog-local-bg">
@@ -285,3 +303,12 @@ export default {
   },
 };
 </script>
+
+<style>
+.local-baby {
+  background-image: url(@/assets/images/Local_Baby.jpg);
+  height: 190px;
+  background-position: top center;
+  background-size: cover;
+}
+</style>

@@ -143,8 +143,7 @@
       <div class="my-3 d-flex justify-content-center">
         <button
           type="button"
-          class="btn btn-danger fw-bold font-Noto fs-4"
-          style="width: 30%"
+          class="btn btn-danger fw-bold font-Noto fs-4 w-auto"
           @click="updatePaid"
         >
           確認並付款

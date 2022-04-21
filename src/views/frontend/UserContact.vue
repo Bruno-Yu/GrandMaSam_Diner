@@ -44,7 +44,7 @@
       </h2>
     </div>
     <div
-      class="row justify-content-center shadow my-5 bg-light border border-1 border-body p-5 rounded-3"
+      class="row justify-content-center shadow my-5 bg-light border border-1 border-body rounded-3"
     >
       <VForm
         ref="form"
