@@ -7,10 +7,7 @@
   ></PageLoading>
   <div class="container paid-success shadow mb-2 p-1">
     <div class="my-5 row d-flex justify-content-center">
-      <div
-        class="col-6 col-lg-2 bg-body rounded"
-        style="--bs-bg-opacity: 0.7; height: 200px"
-      >
+      <div class="col-6 col-lg-2 bg-body rounded paid-checkbox">
         <p class="fs-2 font-Noto fw-bold text-dark text-center">
           <i class="bi bi-check2-circle text-success fw-bolder"></i>
           付款成功

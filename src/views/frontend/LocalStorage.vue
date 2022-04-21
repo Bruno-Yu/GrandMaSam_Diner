@@ -303,12 +303,3 @@ export default {
   },
 };
 </script>
-
-<style>
-.local-baby {
-  background-image: url(@/assets/images/Local_Baby.jpg);
-  height: 190px;
-  background-position: top center;
-  background-size: cover;
-}
-</style>

@@ -49,11 +49,11 @@
         class="row row-cols-1 row-cols-lg-2 mt-5 mb-3 justify-content-center"
       >
         <div class="col-lg-6 p-4 bg-body border border-1 border-body">
-          <h3 class="fw-bold font-Noto">施主資訊</h3>
+          <h3 class="fw-bold font-Noto mb-3">施主資訊</h3>
           <table class="table">
             <tbody v-if="orderShow.user">
               <tr>
-                <th class="font-Noto fw-400" style="width: 100px">姓名</th>
+                <th class="font-Noto fw-400">姓名</th>
                 <td class="font-Noto fw-400">{{ orderShow.user.name }}</td>
               </tr>
               <tr>
@@ -73,11 +73,11 @@
         </div>
 
         <div class="col-lg-6 p-4 bg-body border border-1 border-body">
-          <h3 class="fw-bold font-Noto">訂單細節</h3>
+          <h3 class="fw-bold font-Noto mb-3">訂單細節</h3>
           <table class="table">
             <tbody>
               <tr>
-                <th class="font-Noto fw-400" style="width: 100px">訂單編號</th>
+                <th class="font-Noto fw-400">訂單編號</th>
                 <td>{{ orderShow.id }}</td>
               </tr>
               <tr>

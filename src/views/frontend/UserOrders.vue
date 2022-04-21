@@ -85,14 +85,3 @@ export default {
   },
 };
 </script>
-
-<style>
-.user-orders-banner {
-  background-image: url(@/assets/images/Users_orders_banner.jpg);
-  height: 190px;
-  background-position: top center;
-  background-size: cover;
-  background-color: #ebd8b2ea;
-  background-blend-mode: multiply;
-}
-</style>
