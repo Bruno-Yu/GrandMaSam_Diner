@@ -34,8 +34,8 @@
   height: 450px;
   background-position: center center;
   background-size: cover;
-  background-blend-mode: multiply;
-  background-color: #545351;
+  background-blend-mode: darken;
+  background-color: #171717f6;
 }
 .product-intro-md {
   height: 450px;
@@ -43,7 +43,7 @@
   background-size: cover;
   background-position: center center;
   background-blend-mode: multiply;
-  background-color: #aaabac;
+  background-color: #7f8081;
 }
 .product-intro-4 {
   background-image: url(@/assets/images/right_footer.jpg);
@@ -51,7 +51,7 @@
   background-position: center center;
   background-size: cover;
   background-blend-mode: multiply;
-  background-color: #545351;
+  background-color: #7e7e7c;
 }
 .slogan-style {
   height: 670px;
