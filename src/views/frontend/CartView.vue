@@ -188,7 +188,7 @@
             </div>
             <div class="text-end my-3">
               <button
-                class="btn btn-danger fw-bolder font-Noto fw-bold border border-1 border-body shadow"
+                class="btn btn-danger font-Noto fw-bold border border-1 border-body shadow"
                 type="button"
                 style="width: 30%"
                 @click="nextPage"

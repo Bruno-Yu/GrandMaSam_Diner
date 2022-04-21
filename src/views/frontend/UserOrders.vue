@@ -7,14 +7,14 @@
   ></PageLoading>
   <div v-if="cartData.carts.length" class="container mt-3">
     <div class="row bg-warning">
-      <div class="user-orders-banner"></div>
+      <div class="user-orders-banner" />
     </div>
     <div class="row">
       <h1 class="text-center mt-5 font-Noto fs-1 mb-3 fw-bold">訂單</h1>
       <RouterView />
     </div>
   </div>
-  <div v-else class="container-fluid cart-banner my-1">
+  <div v-else class="container gx-0 cart-banner my-1">
     <div
       class="row d-flex align-items-center justify-content-center"
       style="height: 100%"

@@ -5,11 +5,55 @@
     :can-cancel="true"
     :is-full-page="false"
   ></PageLoading>
-  <div class="container">
-    <div class="my-5 row justify-content-center">
-      <VForm ref="form" class="col-md-6" v-slot="{ errors }" @submit="onSubmit">
+  <div class="container px-lg-5">
+    <div class="container my-3 d-none d-md-grid">
+      <div class="row row-cols-3">
+        <div class="col">
+          <button
+            class="btn w-100 btn-warning rounded-2 shadow border border-dark border-3"
+            type="button"
+            @click="prePage"
+          >
+            <p class="fs-4 font-Noto fw-600 text-dark my-2">購物車</p>
+          </button>
+        </div>
+        <div class="col">
+          <button
+            class="btn w-100 btn-warning rounded-2 shadow border border-dark border-3"
+            type="button"
+          >
+            <p class="fs-4 font-Noto fw-600 my-2">填寫資訊</p>
+          </button>
+        </div>
+        <div class="col">
+          <button
+            class="btn w-100 btn-outline-secondary rounded-2 border border-body border-3 shadow"
+            type="button"
+            disabled
+          >
+            <p class="fs-4 font-Noto fw-600 my-2">訂單內容</p>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="row mt-5 mb-3">
+      <h2
+        class="font-Noto fw-700 text-center text-md-start ps-md-5 text-warning"
+      >
+        步驟 2. 填寫資訊
+      </h2>
+    </div>
+    <div
+      class="row justify-content-center shadow my-5 bg-light border border-1 border-body p-5 rounded-3"
+    >
+      <VForm
+        ref="form"
+        class="col-md-6 shadow border-body border-1 rounded-3 p-5"
+        v-slot="{ errors }"
+        @submit="onSubmit"
+      >
         <div class="mb-3">
-          <label for="email" class="form-label fw-bold">
+          <label for="email" class="form-label font-Noto fw-400">
             Email <span class="text-danger fw-bolder">*</span></label
           >
           <VField
@@ -26,14 +70,14 @@
         </div>
 
         <div class="mb-3">
-          <label for="name" class="form-label fw-bold"
+          <label for="name" class="form-label font-Noto fw-400"
             >收件人姓名 <span class="text-danger fw-bolder">*</span></label
           >
           <VField
             id="name"
             name="姓名"
             type="text"
-            class="form-control"
+            class="form-control font-Noto fw-400"
             :class="{ 'is-invalid': errors['姓名'] }"
             placeholder="請輸入姓名"
             :rules="noEmpty"
@@ -43,14 +87,14 @@
         </div>
 
         <div class="mb-3">
-          <label for="tel" class="form-label fw-bold"
+          <label for="tel" class="form-label font-Noto fw-400"
             >收件人電話 <span class="text-danger fw-bolder">*</span></label
           >
           <VField
             id="tel"
             name="電話"
             type="tel"
-            class="form-control"
+            class="form-control font-Noto fw-400"
             :class="{ 'is-invalid': errors['電話'] }"
             placeholder="請輸入電話"
             :rules="isPhone"
@@ -60,14 +104,14 @@
         </div>
 
         <div class="mb-3">
-          <label for="address" class="form-label fw-bold"
+          <label for="address" class="form-label font-Noto fw-400"
             >收件人地址 <span class="text-danger fw-bolder">*</span></label
           >
           <VField
             id="address"
             name="地址"
             type="text"
-            class="form-control"
+            class="form-control font-Noto fw-400"
             :class="{ 'is-invalid': errors['地址'] }"
             placeholder="請輸入地址"
             :rules="noEmpty"
@@ -77,7 +121,7 @@
         </div>
 
         <div class="mb-3">
-          <label for="message" class="form-label fw-bold">留言</label>
+          <label for="message" class="form-label font-Noto fw-400">留言</label>
           <textarea
             id="message"
             class="form-control"
@@ -92,7 +136,7 @@
         </p>
         <div class="d-flex justify-content-between">
           <button
-            class="d-block btn btn-outline-danger fw-bolder"
+            class="d-block btn btn-outline-danger font-Noto fw-bold"
             type="button"
             @click="prePage"
           >
@@ -101,7 +145,7 @@
 
           <button
             type="submit"
-            class="d-block btn btn-danger"
+            class="d-block btn btn-danger font-Noto fw-bold border border-1 border-body shadow"
             :disabled="
               Object.keys(errors).length > 0 || cartData.carts.length === 0
             "
