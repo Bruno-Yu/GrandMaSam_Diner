@@ -146,7 +146,7 @@
   <div v-else class="container gx-0 fav-banner vh-100 my-1">
     <div class="row d-flex align-items-center justify-content-center vh-100">
       <div class="col vh-30 my-3">
-        <div class="container bg-light dialog-local-bg">
+        <div class="container bg-light font-Noto dialog-local-bg">
           <p
             class="text-dark fs-2 fw-bold text-center mt-4 mt-sm-2 font-Noto fw-500"
           >

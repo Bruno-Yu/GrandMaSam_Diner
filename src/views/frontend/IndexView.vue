@@ -132,12 +132,17 @@
           >
             <div class="col-10 text-light text-center">
               <h3 class="my-5 font-Noto fw-600">
-                獻出你的錢包，讓台灣再次偉大
+                獻出你的錢包，<span class="d-inline-block d-lg-inline"
+                  >讓台灣再次偉大</span
+                >
               </h3>
               <p class="fs-1 text-warning">
                 <i class="bi bi-award"></i>
               </p>
-              <p class="fw-bold fs-2">嗝來黴 與 米其林輪胎</p>
+              <p class="fw-bold fs-2">
+                嗝來黴 與
+                <span class="d-inline-block d-lg-inline">米其林輪胎</span>
+              </p>
               <p class="fw-bold fs-5">全台唯一認證餐廳</p>
             </div>
           </div>

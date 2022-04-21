@@ -15,12 +15,9 @@
     </div>
   </div>
   <div v-else class="container gx-0 cart-banner my-1">
-    <div
-      class="row d-flex align-items-center justify-content-center"
-      style="height: 100%"
-    >
+    <div class="row d-flex align-items-center justify-content-center vh-100">
       <div class="col col-lg-7 vh-30">
-        <div class="container bg-dark" style="--bs-bg-opacity: 0.3">
+        <div class="container bg-dark font-Noto" style="--bs-bg-opacity: 0.3">
           <p class="text-light fs-2 text-center font-Noto fw-500">
             其實你知道嗎?
             <span class="d-inline-block d-sm-inline">和平是需要付出代價的</span>
