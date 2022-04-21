@@ -1,0 +1,68 @@
+.header-banner {
+  background-image: url(@/assets/images/index_header_banner.jpg);
+  height: 669px;
+  background-position: center center;
+  background-size: cover;
+  background-blend-mode: multiply;
+  background-color: #a7aaadf9;
+}
+.story-section {
+  height: 500px;
+}
+.product-intro {
+  background-image: url(@/assets/images/index_product_intro_1.jpg);
+  height: 400px;
+  background-position: center center;
+  background-size: cover;
+  background-blend-mode: multiply;
+  background-color: #bdc8d7;
+  border: 0.5em solid rgb(0, 0, 0);
+  border-radius: 0.2em;
+}
+.product-intro-2 {
+  background-image: url(@/assets/images/product_intro_2.jpg);
+  height: 400px;
+  background-position: center center;
+  background-size: cover;
+  background-blend-mode: multiply;
+  background-color: #eef1f3;
+  border: 0.5em solid black;
+  border-radius: 0.2em;
+}
+.product-intro-3 {
+  background-image: url(@/assets/images/left_footer.jpg);
+  height: 450px;
+  background-position: center center;
+  background-size: cover;
+  background-blend-mode: multiply;
+  background-color: #545351;
+}
+.product-intro-md {
+  height: 450px;
+  background-image: url(@/assets/images/index_about_us.jpg);
+  background-size: cover;
+  background-position: center center;
+  background-blend-mode: multiply;
+  background-color: #aaabac;
+}
+.product-intro-4 {
+  background-image: url(@/assets/images/right_footer.jpg);
+  height: 450px;
+  background-position: center center;
+  background-size: cover;
+  background-blend-mode: multiply;
+  background-color: #545351;
+}
+.slogan-style {
+  height: 670px;
+}
+
+.about-us {
+  height: 330px;
+}
+.about-us-width {
+  max-width: 50rem;
+}
+.product-intro-height {
+  height: 450px;
+}

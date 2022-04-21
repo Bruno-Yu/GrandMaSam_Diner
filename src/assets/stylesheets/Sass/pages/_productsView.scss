@@ -1,0 +1,30 @@
+.productsView-banner {
+  background-image: url(@/assets/images/productsView_banner.jpg);
+  height: 420px;
+  background-position: center center;
+  background-size: cover;
+  background-blend-mode: multiply;
+  background-color: #dcd8cfea;
+}
+.cart-image {
+  background-size: cover;
+  background-position: center center;
+  background-blend-mode: multiply;
+}
+
+.cart {
+  width: 10px;
+  height: 10px;
+  right: 10px;
+  bottom: 10px;
+  border-radius: 50% 50%;
+  border: 1px black solid;
+}
+.product-intro-3 {
+  background-image: url(@/assets/images/left_footer.jpg);
+  height: 450px;
+  background-position: center center;
+  background-size: cover;
+  background-blend-mode: multiply;
+  background-color: #ede6dcbf;
+}

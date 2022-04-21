@@ -1,0 +1,54 @@
+// layout
+.overall {
+  box-sizing: border-box;
+}
+// hover effect
+a :hover {
+  color: #ffc107;
+}
+.cart-img-top :hover {
+  background-color: #ffffff;
+  opacity: 0.5;
+}
+router-link .nav-item:hover {
+  color: #ffc107;
+}
+.link-light.link-light:hover {
+  color: #ffc107;
+}
+.navbar-brand.navbar-brand.link-light:hover {
+  color: #b38602;
+}
+// color
+.bg-black {
+  background-color: black;
+}
+
+// font
+.font-Bangers {
+  font-family: 'Bangers', serif;
+}
+.font-Noto {
+  font-family: 'Noto Sans JP', sans-serif;
+}
+.fw-400 {
+  font-weight: 400;
+}
+.fw-500 {
+  font-weight: 500;
+}
+.fw-550 {
+  font-weight: 550;
+}
+.fw-600 {
+  font-weight: 600;
+}
+.fw-700 {
+  font-weight: 700;
+}
+.fw-800 {
+  font-weight: 800;
+}
+.fw-900 {
+  font-weight: 900;
+}

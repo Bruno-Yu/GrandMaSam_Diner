@@ -1,0 +1,9 @@
+.the-end {
+  background-image: url(@/assets/images/theEnd.jpg);
+  height: 600px;
+  background-position: center center;
+  background-size: cover;
+}
+.dialog-theEnd-bg {
+  --bs-bg-opacity: 0.4;
+}

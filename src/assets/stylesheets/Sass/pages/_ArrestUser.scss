@@ -1,0 +1,10 @@
+.arrestUser {
+  background-image: url(@/assets/images/arrestUser.jpg);
+  height: 600px;
+  background-position: center right;
+  background-size: cover;
+}
+
+.dialog-arrest-bg {
+  --bs-bg-opacity: 0.4;
+}

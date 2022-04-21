@@ -1,0 +1,13 @@
+.Not-found-banner {
+  background-image: url(@/assets/images/404_page.jpg);
+  height: 750px;
+  background-position: left center;
+  background-size: cover;
+}
+.dialog-bg {
+  border: 1px solid #b8babdd5;
+  --bs-bg-opacity: 0.3;
+}
+.btn-w-50 {
+  width: 50%;
+}

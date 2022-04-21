@@ -1,0 +1,14 @@
+.user-orders-banner {
+  background-image: url(@/assets/images/Users_orders_banner.jpg);
+  height: 190px;
+  background-position: top center;
+  background-size: cover;
+  background-color: #ebd8b2ea;
+  background-blend-mode: multiply;
+}
+.cart-banner {
+  background-image: url(@/assets/images/cartView.jpg);
+  height: 600px;
+  background-position: center center;
+  background-size: cover;
+}

@@ -1,0 +1,36 @@
+.carousel-item {
+  box-shadow: 1px 1px 10px #696969;
+  border-radius: 0.5rem;
+}
+
+.swiper-slide-inner {
+  box-shadow: 1px 1px 10px #696969;
+  border-radius: 1rem;
+}
+.swiper-free-mode > .swiper-wrapper {
+  transition-timing-function: linear;
+  margin: 0 auto;
+}
+.product-display {
+  background-position: center center;
+  background-size: cover;
+  background-blend-mode: multiply;
+  background-color: #f8f5eeea;
+}
+.product-recommend-display {
+  height: 15rem;
+  background-position: center center;
+  background-size: cover;
+  background-color: #ece7ddea;
+  background-blend-mode: multiply;
+}
+
+.swiper-button-next {
+  color: #dde3ee;
+}
+.swiper-button-prev {
+  color: #dde3ee;
+}
+.swiper-pagination {
+  color: #dde3ee;
+}

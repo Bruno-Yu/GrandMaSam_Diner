@@ -1,0 +1,36 @@
+.News-header {
+  background-image: url('@/assets/images/Articles_banner.jpg');
+  height: 500px;
+  background-position: center center;
+  background-size: cover;
+}
+.News-banner {
+  background-image: url('@/assets/images/News_banner.jpg');
+  height: 500px;
+  background-position: center center;
+  background-size: cover;
+}
+.News-title {
+  background-image: url(@/assets/images/WillBeBack.jpg);
+  height: 100px;
+  background-size: cover;
+  background-blend-mode: multiply;
+  background-color: #888782fd;
+  background-position: 0%;
+  background-attachment: fixed;
+  @media (min-width: 768px) {
+    background-position: center;
+  }
+}
+.News-content {
+  background-color: rgba(180, 174, 152, 0.915);
+}
+.userArticles-footer-banner {
+  background-image: url(@/assets/images/News_of_leader.jpg);
+  height: 420px;
+  background-position: center center;
+  background-size: cover;
+  background-blend-mode: multiply;
+  background-color: #aeaba8;
+  border: 1px solid black;
+}

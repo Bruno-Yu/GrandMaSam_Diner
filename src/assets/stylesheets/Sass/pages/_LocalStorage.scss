@@ -1,0 +1,21 @@
+.local-baby {
+  background-image: url(@/assets/images/Local_Baby.jpg);
+  height: 190px;
+  background-position: top center;
+  background-size: cover;
+}
+.fav-banner {
+  background-image: url(@/assets/images/localStorage_banner.jpg);
+  height: 600px;
+  background-position: center center;
+  background-size: cover;
+}
+.dialog-local-bg {
+  --bs-bg-opacity: 0.2;
+}
+.localStorage-product {
+  height: 100px;
+  width: 300px;
+  background-size: cover;
+  background-position: center;
+}

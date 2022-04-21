@@ -1,0 +1,25 @@
+@import '../../../../node_modules/bootstrap/scss/_functions.scss';
+@import './utlis/variables';
+@import '../../../../node_modules/bootstrap/scss/bootstrap.scss';
+@import '../../../../node_modules/swiper/swiper.scss';
+@import '../../../../node_modules/swiper/modules/pagination/pagination.scss';
+@import '../../../../node_modules/swiper/modules/navigation/navigation.scss';
+
+@import './utlis/helpers';
+@import './pages/AboutView';
+@import './pages/AidsIntro';
+@import './pages/ArrestUser';
+@import './pages/cartView';
+@import './pages/indexView';
+@import './pages/LocalStorage';
+@import './pages/notFound';
+@import './pages/paidSuccess';
+@import './pages/productsView';
+@import './pages/productView';
+@import './pages/TheEnd';
+@import './pages/UserArticles';
+@import './pages/UserChallenges';
+@import './pages/UserOrders';
+
+@import './components/CartIcon';
+@import './components/fontFooter';
