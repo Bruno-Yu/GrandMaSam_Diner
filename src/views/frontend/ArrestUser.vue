@@ -67,30 +67,3 @@ export default {
   },
 };
 </script>
-
-<style>
-.arrestUser {
-  background-image: url(@/assets/images/arrestUser.jpg);
-  height: 600px;
-  background-position: center right;
-  background-size: cover;
-}
-.font-Noto {
-  font-family: 'Noto Sans JP', sans-serif;
-}
-.fw-400 {
-  font-weight: 400;
-}
-.fw-500 {
-  font-weight: 500;
-}
-.fw-600 {
-  font-weight: 600;
-}
-.fw-800 {
-  font-weight: 800;
-}
-.dialog-arrest-bg {
-  --bs-bg-opacity: 0.4;
-}
-</style>
