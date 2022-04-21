@@ -79,7 +79,6 @@ export default {
       const username = InputEmail.value;
       const password = InputPassword.value;
       const user = { username, password };
-      console.log(user);
       // 使用axios與傳送api確認授權
       this.$http
         .post(`${process.env.VUE_APP_API}/admin/signin`, user)
