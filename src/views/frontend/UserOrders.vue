@@ -5,32 +5,14 @@
     :can-cancel="true"
     :is-full-page="false"
   ></PageLoading>
-  <div v-if="cartData.carts.length" class="container-fluid mt-3">
-    <h1 class="text-center mt-5 fs-1 mb-3 fw-bolder">訂單</h1>
-    <nav class="d-flex justify-content-center">
-      <RouterLink
-        class="link-dark fw-bold text-decoration-none me-2 active"
-        to="/cartView"
-      >
-        步驟1. 購物車內容
-      </RouterLink>
-      <span class="text-secondary fw-bolder"> >> </span>
-
-      <RouterLink
-        class="link-dark text-decoration-none fw-bold mx-2"
-        to="/userContact"
-      >
-        步驟2. 聯絡資訊填寫
-      </RouterLink>
-      <span class="text-secondary fw-bolder"> >> </span>
-      <RouterLink
-        class="link-dark text-decoration-none fw-bold ms-2"
-        to="/orderCheck"
-      >
-        步驟3. 訂單明細確認
-      </RouterLink>
-    </nav>
-    <RouterView />
+  <div v-if="cartData.carts.length" class="container mt-3">
+    <div class="row bg-warning">
+      <div class="user-orders-banner"></div>
+    </div>
+    <div class="row">
+      <h1 class="text-center mt-5 font-Noto fs-1 mb-3 fw-bold">訂單</h1>
+      <RouterView />
+    </div>
   </div>
   <div v-else class="container-fluid cart-banner my-1">
     <div
@@ -103,3 +85,14 @@ export default {
   },
 };
 </script>
+
+<style>
+.user-orders-banner {
+  background-image: url(@/assets/images/Users_orders_banner.jpg);
+  height: 190px;
+  background-position: top center;
+  background-size: cover;
+  background-color: #ebd8b2ea;
+  background-blend-mode: multiply;
+}
+</style>

@@ -70,9 +70,9 @@
   <div
     class="container gx-0 bg-body border border-body border-2 shadow text-center p-2 mb-2 Coupons-title"
   >
-    <h2 class="fs-2 font-Noto fw-600 mt-2 mb-3">該證明您自己的時候了</h2>
+    <h2 class="fs-2 font-Noto fw-600 mt-2 mb-3">挑戰試煉</h2>
     <p class="fs-5 lg-sm font-Noto fw-500 text-warning">
-      <i>不只5倍! 我們讓您能有更多的選擇! 愛就要勇敢把錢掏出來!</i>
+      <i> 人生就是不停地挑戰自己的極限! 我們能提供的不只有5倍! </i>
     </p>
     <p class="fs-6 lh-sm text-muted">
       ( 註: 此券能對於您的結帳金額有所加成，是被視為成功人士的象徵，但請量力而為
