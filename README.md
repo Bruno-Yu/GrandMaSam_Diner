@@ -48,4 +48,4 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 ### 圖片來源 Sources of pics
 
 - unsplash、pixabay...etc.
-- self made
+- self-made image.
