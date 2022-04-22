@@ -28,10 +28,6 @@ Bruno
 - webpack
 - CSS/SCSS、HTML
 
-```
-npm run lint
-```
-
 ### 使用插件 NPM Plugins
 
 - vee-validate、vee-validate/i18n、vee-validate/rules
@@ -45,7 +41,7 @@ npm run lint
 
 See [Configuration Reference](https://cli.vuejs.org/config/).
 
-### 圖片來源
+### 圖片來源 Sources of pics
 
 - unsplash、pixabay...etc.
 - self made
