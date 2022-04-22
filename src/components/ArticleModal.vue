@@ -165,9 +165,7 @@ import Modal from 'bootstrap/js/dist/modal';
 
 function MyCustomUploadAdapterPlugin(editor) {
   // eslint-disable-next-line no-param-reassign
-  editor.plugins.get('FileRepository').createUploadAdapter = (loader) =>
-    // eslint-disable-next-line implicit-arrow-linebreak
-    new MyUploadAdapter(loader);
+  editor.plugins.get('FileRepository').createUploadAdapter = (loader) => new MyUploadAdapter(loader);
 }
 
 export default {

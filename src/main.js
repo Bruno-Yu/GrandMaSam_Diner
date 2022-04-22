@@ -4,9 +4,9 @@ import CKEditor from '@ckeditor/ckeditor5-vue';
 import axios from 'axios';
 import VueAxios from 'vue-axios';
 import VueClipboard from 'vue-clipboard2';
-// 晚上早點睡才不會看到如下面這行這種髒東西，但刪掉我的save on format會自動變成醬，所以...
-// eslint-disable-next-line
-import { Field, Form, ErrorMessage, defineRule, configure } from 'vee-validate';
+import {
+  Field, Form, ErrorMessage, defineRule, configure,
+} from 'vee-validate';
 import { required, email, min } from '@vee-validate/rules';
 import { localize, setLocale } from '@vee-validate/i18n';
 import zhTW from '@vee-validate/i18n/dist/locale/zh_TW.json';

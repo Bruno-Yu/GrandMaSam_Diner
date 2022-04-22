@@ -97,7 +97,6 @@
 
 <script>
 import Modal from 'bootstrap/js/dist/modal';
-// import emitter from '@/libs/emitter';
 
 export default {
   data() {

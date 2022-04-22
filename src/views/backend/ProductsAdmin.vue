@@ -120,7 +120,6 @@ export default {
   data() {
     return {
       productsList: null,
-      // 建立接收get資料庫陣列的各屬性狀態
       current_page: 1,
       has_next: true,
       has_pre: false,
