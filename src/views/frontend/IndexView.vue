@@ -55,7 +55,7 @@
           <div class="container text-lg-center about-us-width">
             <p class="fs-6 text-muted font-Noto fw-500">
               餐點部分:
-              除了各系列防腐劑漢堡外，並與各大連鎖超商合作，推出義大利麵，燉飯，炸雞及各式炸物小點系列，絕對難以滿足味蕾挑剔的您
+              除了各系列防腐劑漢堡外，我們與各大連鎖超商合作，推出義大利麵，燉飯，炸雞及各式炸物小點系列，絕對難以滿足味蕾挑剔的您
             </p>
           </div>
         </div>
