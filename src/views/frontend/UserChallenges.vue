@@ -289,6 +289,5 @@ export default {
       setTimeout(this.subscribeCallback, 1000);
     },
   },
-  mounted() {},
 };
 </script>
