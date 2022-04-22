@@ -126,7 +126,7 @@
                   <button
                     type="button"
                     class="btn btn-warning shadow fw-bolder border border-1 btn-sm p-2 my-auto me-1"
-                    @click="[addToCart(product.id), getCart()]"
+                    @click="addToCart(product.id), getCart()"
                     :disabled="isLoadingItem === product.id"
                   >
                     <span

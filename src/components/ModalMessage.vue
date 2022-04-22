@@ -48,7 +48,7 @@
             <button
               type="button"
               class="btn btn-warning shadow mx-auto shadow p-2 mb-1 border border-dark border-1 font-Noto fw-400"
-              @click="[paidSuccess(), closeModal()]"
+              @click="paidSuccess(), closeModal()"
             >
               我是盤子我驕傲
             </button>
@@ -60,14 +60,14 @@
               type="button"
               class="btn btn-outline-dark shadow p-2 mb-1 font-Noto fw-400"
               data-bs-dismiss="modal"
-              @click="[closeModal(), loginSuccess()]"
+              @click="closeModal(), loginSuccess()"
             >
               我也沒錢
             </button>
             <button
               type="button"
               class="btn btn-warning ms-2 shadow p-2 mb-1 border border-dark border-1 font-Noto fw-400"
-              @click="[closeModal(), loginSuccess()]"
+              @click="closeModal(), loginSuccess()"
             >
               朕知道了
             </button>
@@ -147,14 +147,14 @@
               type="button"
               class="btn btn-outline-dark shadow p-2 mb-1 font-Noto fw-400"
               data-bs-dismiss="modal"
-              @click="[loginFail(), closeModal()]"
+              @click="loginFail(), closeModal()"
             >
               再試試看
             </button>
             <button
               type="button"
               class="btn btn-danger ms-2 shadow p-2 mb-1 border border-dark border-1 font-Noto fw-400"
-              @click="[donateNow(), closeModal()]"
+              @click="donateNow(), closeModal()"
             >
               馬上斗內
             </button>

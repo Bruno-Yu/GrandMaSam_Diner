@@ -35,7 +35,7 @@
                     <button
                       type="button"
                       class="btn btn-outline-danger btn-sm"
-                      @click="[removeCart(item.id), this.modal.hide()]"
+                      @click="removeCart(item.id), this.modal.hide()"
                       :disabled="isLoadingItem === item.id"
                     >
                       <span
@@ -101,7 +101,7 @@
           <button
             type="button"
             class="btn btn-warning btn-block btn-shadow fw-bold"
-            @click="[closeModal(), goOrders()]"
+            @click="closeModal(), goOrders()"
           >
             結帳去
           </button>

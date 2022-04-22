@@ -84,7 +84,7 @@
             <button
               type="button"
               class="btn btn-danger ms-2 shadow p-2 mb-1 border border-dark border-1 font-Noto fw-400"
-              @click="[removeCart(all, id), $emit('get-cart'), closeModal()]"
+              @click="removeCart(all, id), $emit('get-cart'), closeModal()"
             >
               這與我無瓜
             </button>
