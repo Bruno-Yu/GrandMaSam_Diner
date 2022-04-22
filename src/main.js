@@ -14,6 +14,8 @@ import ModalMessage from '@/components/ModalMessage.vue';
 import Loading from 'vue-loading-overlay';
 import 'vue-loading-overlay/dist/vue-loading.css';
 import $httpMessageState from '@/libs/pushMessageState';
+import $frontHttpMessageState from '@/libs/frontPushMessageState';
+
 import App from './App.vue';
 import router from './router';
 
@@ -29,6 +31,7 @@ setLocale('zh_TW');
 
 const app = createApp(App);
 app.config.globalProperties.$httpMessageState = $httpMessageState;
+app.config.globalProperties.$frontHttpMessageState = $frontHttpMessageState;
 VueClipboard.config.autoSetContainer = true;
 app.use(CKEditor);
 app.use('VueClipboard', VueClipboard);

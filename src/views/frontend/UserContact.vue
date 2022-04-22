@@ -201,6 +201,11 @@ export default {
         .get(`${process.env.VUE_APP_API}/api/${process.env.VUE_APP_PATH}/cart`)
         .then((res) => {
           this.cartData = res.data.data;
+        })
+
+        .catch((error) => {
+          this.isLoading = false;
+          this.$frontHttpMessageState(error.response, '購物車截取失敗');
         });
     },
     // 驗證 表單觸發方法
@@ -208,11 +213,18 @@ export default {
       this.isLoading = true;
       const url = `${process.env.VUE_APP_API}/api/${process.env.VUE_APP_PATH}/order`;
       const order = this.form;
-      this.$http.post(url, { data: order }).then(() => {
-        this.$refs.form.resetForm();
-        this.$router.push('/orderCheck');
-        this.isLoading = false;
-      });
+      this.$http
+        .post(url, { data: order })
+        .then(() => {
+          this.$refs.form.resetForm();
+          this.$router.push('/orderCheck');
+          this.isLoading = false;
+        })
+
+        .catch((error) => {
+          this.isLoading = false;
+          this.$frontHttpMessageState(error.response, '表單傳送失敗');
+        });
     },
     noEmpty(value) {
       return value ? true : '此欄不得為空';

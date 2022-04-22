@@ -259,6 +259,9 @@ export default {
         .then(() => {
           this.getCart();
           this.isLoadingItem = '';
+        })
+        .catch((error) => {
+          this.$frontHttpMessageState(error.response, '購物車更新失敗');
         });
     },
     removeCartItem(id) {
@@ -282,9 +285,14 @@ export default {
           `${process.env.VUE_APP_API}/api/${process.env.VUE_APP_PATH}/cart/${item.id}`,
           { data },
         )
-        .then(() => {
+        .then((response) => {
+          this.$frontHttpMessageState(response, '更改成功');
           this.getCart();
           this.isLoadingItem = '';
+        })
+        .catch((error) => {
+          this.isLoading = false;
+          this.$frontHttpMessageState(error.response, '更改失敗');
         });
     },
     addCouponCode() {
@@ -296,13 +304,13 @@ export default {
       this.$http
         .post(url, { data: coupon })
         .then((response) => {
-          this.$httpMessageState(response, '加入挑戰碼');
+          this.$frontHttpMessageState(response, '加入挑戰碼');
           this.getCart();
           this.isLoading = false;
         })
         .catch((error) => {
           this.isLoading = false;
-          this.$httpMessageState(error.response, '尚無該挑戰');
+          this.$frontHttpMessageState(error.response, '尚無該挑戰');
         });
     },
     nextPage() {

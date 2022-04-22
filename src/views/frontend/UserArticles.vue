@@ -195,7 +195,7 @@ export default {
         })
         .catch((error) => {
           this.isLoading = false;
-          this.$httpMessageState(error.response, '錯誤訊息');
+          this.$frontHttpMessageState(error.response, '公告截取失敗');
         });
     },
   },

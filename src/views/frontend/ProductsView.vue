@@ -236,31 +236,43 @@ export default {
       if (query) {
         url = `${process.env.VUE_APP_API}/api/${process.env.VUE_APP_PATH}/products?category=${query}`;
       }
-      this.$http.get(url).then((res) => {
-        this.allProducts = JSON.parse(JSON.stringify(res.data.products));
-        if (query) {
-          this.products = this.allProducts;
-        }
-        this.allProducts.forEach((item) => {
-          originCategories.push(item.category);
+      this.$http
+        .get(url)
+        .then((res) => {
+          this.allProducts = JSON.parse(JSON.stringify(res.data.products));
+          if (query) {
+            this.products = this.allProducts;
+          }
+          this.allProducts.forEach((item) => {
+            originCategories.push(item.category);
+          });
+          this.categories = originCategories.filter(
+            (cat, index) => originCategories.indexOf(cat) === index,
+          );
+          this.isLoading = false;
+        })
+        .catch((error) => {
+          this.isLoading = false;
+          this.$frontHttpMessageState(error.response, '類別截取失敗');
         });
-        this.categories = originCategories.filter(
-          (cat, index) => originCategories.indexOf(cat) === index,
-        );
-        this.isLoading = false;
-      });
     },
     getProducts(page = 1) {
       const url = `${process.env.VUE_APP_API}/api/${process.env.VUE_APP_PATH}/products?page=${page}`;
       this.isLoading = true;
-      this.$http.get(url).then((res) => {
-        this.products = res.data.products;
-        this.current_page = res.data.pagination.current_page;
-        this.has_next = res.data.pagination.has_next;
-        this.has_pre = res.data.pagination.has_pre;
-        this.total_pages = res.data.pagination.total_pages;
-        this.isLoading = false;
-      });
+      this.$http
+        .get(url)
+        .then((res) => {
+          this.products = res.data.products;
+          this.current_page = res.data.pagination.current_page;
+          this.has_next = res.data.pagination.has_next;
+          this.has_pre = res.data.pagination.has_pre;
+          this.total_pages = res.data.pagination.total_pages;
+          this.isLoading = false;
+        })
+        .catch((error) => {
+          this.isLoading = false;
+          this.$frontHttpMessageState(error.response, '產品截取失敗');
+        });
     },
     getProduct(id) {
       this.isLoading = true;
@@ -273,6 +285,9 @@ export default {
         .then((res) => {
           this.cartData = res.data.data;
           this.cartNum = res.data.data.carts.length || 0;
+        })
+        .catch((error) => {
+          this.$frontHttpMessageState(error.response, '購物車截取失敗');
         });
     },
     saveToFavorites(id) {
@@ -302,6 +317,10 @@ export default {
         .then(() => {
           this.isLoadingItem = '';
           this.$refs.cartMessage.openModal(true);
+        })
+        .catch((error) => {
+          this.isLoadingItem = '';
+          this.$frontHttpMessageState(error.response, '購物車增加失敗');
         });
     },
   },

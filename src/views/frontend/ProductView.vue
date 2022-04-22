@@ -264,21 +264,34 @@ export default {
     getProduct() {
       const api = `${process.env.VUE_APP_API}/api/${process.env.VUE_APP_PATH}/product/${this.id}`;
       this.isLoading = true;
-      this.$http.get(api).then((response) => {
-        if (response.data.success) {
-          this.product = response.data.product;
-          this.getProducts(this.product.category);
-        }
-        this.isLoading = false;
-      });
+      this.$http
+        .get(api)
+        .then((response) => {
+          if (response.data.success) {
+            this.product = response.data.product;
+            this.getProducts(this.product.category);
+          }
+          this.isLoading = false;
+        })
+        .catch((error) => {
+          this.isLoading = false;
+          this.$frontHttpMessageState(error.response, '產品截取失敗');
+        });
     },
     getProducts(query) {
       const url = `${process.env.VUE_APP_API}/api/${process.env.VUE_APP_PATH}/products?category=${query}`;
       this.isLoading = true;
-      this.$http.get(url).then((res) => {
-        this.products = res.data.products;
-        this.isLoading = false;
-      });
+      this.$http
+        .get(url)
+        .then((res) => {
+          this.products = res.data.products;
+          this.isLoading = false;
+        })
+
+        .catch((error) => {
+          this.isLoading = false;
+          this.$frontHttpMessageState(error.response, '產品截取失敗');
+        });
     },
     goToTarget(id) {
       this.$router.push(`/productView/${id}`);

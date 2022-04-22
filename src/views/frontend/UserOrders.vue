@@ -74,6 +74,11 @@ export default {
         .then((res) => {
           this.cartData = res.data.data;
           this.isLoading = false;
+        })
+
+        .catch((error) => {
+          this.isLoading = false;
+          this.$frontHttpMessageState(error.response, '購物車截取失敗');
         });
     },
   },

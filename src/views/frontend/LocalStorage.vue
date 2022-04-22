@@ -226,6 +226,9 @@ export default {
           this.products = res.data.products;
           this.getFavor(this.products);
           this.isLoading = false;
+        })
+        .catch((error) => {
+          this.$frontHttpMessageState(error.response, '產品截取失敗');
         });
     },
 
@@ -234,6 +237,9 @@ export default {
         .get(`${process.env.VUE_APP_API}/api/${process.env.VUE_APP_PATH}/cart`)
         .then((res) => {
           this.cartData = res.data.data;
+        })
+        .catch((error) => {
+          this.$frontHttpMessageState(error.response, '購物車截取失敗');
         });
     },
     // 注意: 加入購物車需帶入兩個參數 1.id 2.數量
@@ -262,6 +268,9 @@ export default {
         .then(() => {
           this.getCart();
           this.isLoadingItem = '';
+        })
+        .catch((error) => {
+          this.$frontHttpMessageState(error.response, '購物車增加失敗');
         });
     },
     addAllToCart() {
