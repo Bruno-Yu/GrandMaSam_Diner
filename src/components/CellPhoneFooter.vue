@@ -123,26 +123,26 @@ export default {
       }
     }
   }
-  @include pad {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-  .cart-amount {
-    position: absolute;
-    height: 24px;
-    width: 24px;
-    border-radius: 50%;
-    line-height: 24px;
-    text-align: center;
-    background-color: $secondary;
-    color: white;
-    top: 6px;
-    left: 65%;
-    transform: translate(-50%, -50%);
-    @include mobile {
-      left: 80%;
-    }
-  }
+  // @include pad {
+  //   display: flex;
+  //   flex-direction: column;
+  //   justify-content: center;
+  // }
+  // .cart-amount {
+  //   position: absolute;
+  //   height: 24px;
+  //   width: 24px;
+  //   border-radius: 50%;
+  //   line-height: 24px;
+  //   text-align: center;
+  //   background-color: $secondary;
+  //   color: white;
+  //   top: 6px;
+  //   left: 65%;
+  //   transform: translate(-50%, -50%);
+  //   @include mobile {
+  //     left: 80%;
+  //   }
+  // }
 }
 </style>
