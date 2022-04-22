@@ -10,9 +10,6 @@
     <div class="row">
       <FrontFooter />
     </div>
-    <div class="row">
-      <CellPhoneFooter />
-    </div>
   </div>
 </template>
 
@@ -20,14 +17,12 @@
 import emitter from '@/libs/emitter';
 import FrontNavbar from '@/components/FrontNavbar.vue';
 import FrontFooter from '@/components/FrontFooter.vue';
-import CellPhoneFooter from '@/components/CellPhoneFooter.vue';
 import StateInformModal from '@/components/StateInformModal.vue';
 
 export default {
   components: {
     FrontNavbar,
     FrontFooter,
-    CellPhoneFooter,
     StateInformModal,
   },
   data() {
