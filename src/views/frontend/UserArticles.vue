@@ -57,7 +57,7 @@
             class="btn"
           >
             <div
-              class="card shadow shadow-lg mb-1 p-1"
+              class="card shadow  mb-1 p-1"
             >
               <!-- 主圖替換 -->
               <img

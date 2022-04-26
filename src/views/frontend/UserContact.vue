@@ -145,7 +145,7 @@
 
           <button
             type="submit"
-            class="d-block btn btn-danger font-Noto fw-bold border border-1 border-body shadow"
+            class="d-block btn btn-danger font-Noto fw-bold  shadow"
             :disabled="
               Object.keys(errors).length > 0 || cartData.carts.length === 0
             "

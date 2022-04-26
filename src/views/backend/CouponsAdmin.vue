@@ -1,4 +1,11 @@
 <template>
+<PageLoading
+  loader="bars"
+  :active="isLoading"
+  :can-cancel="true"
+  :is-full-page="false"
+></PageLoading>
+
   <div class="mb-5">
     <h2 class="my-5 ms-2 fw-bold text-center">優惠券管理頁面</h2>
     <div class="text-end mt-4">
@@ -104,6 +111,7 @@ export default {
       this.$refs.delModal.openModal();
     },
     getCoupons() {
+      this.isLoading = true;
       const url = `${process.env.VUE_APP_API}/api/${process.env.VUE_APP_PATH}/admin/coupons`;
       this.$http
         .get(url, this.tempProduct)
@@ -112,12 +120,15 @@ export default {
             ...item,
             due_date: this.dateTimeFormat(item.due_date),
           }));
+          this.isLoading = false;
         })
         .catch((error) => {
+          this.isLoading = false;
           this.$httpMessageState(error.response, '錯誤訊息');
         });
     },
     updateCoupon(couponShow) {
+      this.isLoading = true;
       let url = `${process.env.VUE_APP_API}/api/${process.env.VUE_APP_PATH}/admin/coupon`;
       let httpMeth = 'post';
       let data = couponShow;
@@ -133,12 +144,15 @@ export default {
           this.$httpMessageState(response, '新增優惠券成功');
           this.getCoupons();
           this.$refs.couponDetail.closeModal();
+          this.isLoading = false;
         })
         .catch((error) => {
           this.$httpMessageState(error.response, '錯誤訊息');
+          this.isLoading = false;
         });
     },
     delCoupon() {
+      this.isLoading = true;
       const url = `${process.env.VUE_APP_API}/api/${process.env.VUE_APP_PATH}/admin/coupon/${this.couponShow.id}`;
       this.$http
         .delete(url)
@@ -146,9 +160,11 @@ export default {
           this.$httpMessageState(response, '刪除優惠券');
           this.$refs.delModal.cloaseModal();
           this.getCoupons();
+          this.isLoading = false;
         })
         .catch((error) => {
           this.$httpMessageState(error.response, '刪除優惠券');
+          this.isLoading = false;
         });
     },
   },

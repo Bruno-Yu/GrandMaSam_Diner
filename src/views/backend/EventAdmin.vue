@@ -1,6 +1,12 @@
 <template>
   <div class="mb-5">
-    <Loading :active="isLoading" :z-index="1060"></Loading>
+<PageLoading
+  loader="bars"
+  :active="isLoading"
+  :can-cancel="true"
+  :is-full-page="false"
+></PageLoading>
+
     <div class="text-end mt-4">
       <button class="btn btn-primary" type="button" @click="openModal(true)">
         建立新的頁面

@@ -32,29 +32,32 @@
         >
           <ul class="navbar-nav align-items-center mb-2 ms-auto mb-lg-0">
             <li class="nav-item">
-              <RouterLink class="nav-link active fw-bold" to="/admin"
+              <RouterLink class="nav-link active fw-bold" to="/admin" @click="closeNavHam"
+
                 ><i class="bi bi-shop-window"></i> 產品管理</RouterLink
               >
             </li>
             <li class="nav-item">
-              <RouterLink class="nav-link active fw-bold" to="/couponsAdmin">
+              <RouterLink class="nav-link active fw-bold" to="/couponsAdmin" @click="closeNavHam"
+>
                 <i class="bi bi-flag"></i>
                 挑戰管理</RouterLink
               >
             </li>
             <li class="nav-item">
-              <RouterLink class="nav-link active fw-bold" to="/ordersAdmin">
+              <RouterLink class="nav-link active fw-bold" to="/ordersAdmin" @click="closeNavHam"
+>
                 <i class="bi bi-clipboard-check"></i>
                 訂單管理</RouterLink
               >
             </li>
             <li class="nav-item">
-              <RouterLink class="nav-link active fw-bold" to="/eventAdmin"
+              <RouterLink class="nav-link active fw-bold" to="/eventAdmin" @click="closeNavHam"
                 ><i class="bi bi-emoji-sunglasses"></i> 公告編輯</RouterLink
               >
             </li>
             <li class="nav-item">
-              <RouterLink class="nav-link active fw-bold" to="/aboutAdmin"
+              <RouterLink class="nav-link active fw-bold" to="/aboutAdmin" @click="closeNavHam"
                 ><i class="bi bi-journal-text"></i> 關於作品</RouterLink
               >
             </li>
