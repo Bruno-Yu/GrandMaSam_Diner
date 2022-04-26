@@ -6,7 +6,7 @@
     >
       <i class="bi bi-cart2 position-relative">
         <span
-          class="position-absolute top-10 start-100 translate-middle p-1 bg-danger border border-light border-1 rounded-circle text-light fw-bold shadow"
+          class="position-absolute top-10 start-100 translate-middle p-1 bg-danger border border-light border-1 rounded-circle text-light fw-bold"
           style="font-size: 0.5rem"
         >
           {{ cartNum }}

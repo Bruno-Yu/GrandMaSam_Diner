@@ -10,7 +10,7 @@
       <div class="row row-cols-3">
         <div class="col">
           <button
-            class="btn w-100 btn-warning rounded-2 shadow border border-dark border-3"
+            class="btn w-100 btn-warning rounded-2 border border-dark border-3"
             type="button"
             @click="prePage"
           >
@@ -19,7 +19,7 @@
         </div>
         <div class="col">
           <button
-            class="btn w-100 btn-warning rounded-2 shadow border border-dark border-3"
+            class="btn w-100 btn-warning rounded-2 border border-dark border-3"
             type="button"
           >
             <p class="fs-4 font-Noto fw-600 my-2">填寫資訊</p>
@@ -27,7 +27,7 @@
         </div>
         <div class="col">
           <button
-            class="btn w-100 btn-outline-secondary rounded-2 border border-body border-3 shadow"
+            class="btn w-100 btn-outline-secondary rounded-2 border border-body border-3 "
             type="button"
             disabled
           >
@@ -48,7 +48,7 @@
     >
       <VForm
         ref="form"
-        class="col-md-6 shadow border-body border-1 rounded-3 p-5"
+        class="col-md-6  rounded-3 p-5"
         v-slot="{ errors }"
         @submit="onSubmit"
       >

@@ -165,7 +165,7 @@
         </div>
       </div>
       <div class="d-none d-sm-grid col col-lg-6">
-        <div class="userArticles-footer-banner"></div>
+        <div class="userArticles-footer-banner" />
       </div>
     </div>
   </div>

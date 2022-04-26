@@ -1,4 +1,11 @@
 <template>
+<PageLoading
+  loader="bars"
+  :active="isLoading"
+  :can-cancel="true"
+  :is-full-page="false"
+></PageLoading>
+
   <div class="container">
     <nav aria-label="breadcrumb">
       <ol class="breadcrumb">

@@ -12,7 +12,7 @@
         榮譽會員登入處
       </h1>
       <div class="col-8 col-lg-5 mb-5">
-        <form id="form" class="form-signin">
+        <form id="form" class="form-signin" @click="login" @keyup.enter="login">
           <div class="form-floating mb-3">
             <input
               type="email"
@@ -36,9 +36,7 @@
           <button
             class="btn btn-lg btn-warning fw-bold shadow w-100 mt-3"
             data-name="loginBtn"
-            type="button"
-            @click="login"
-          >
+            type="submit">
             登入
           </button>
         </form>

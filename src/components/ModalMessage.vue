@@ -47,7 +47,7 @@
           <div class="container gx-2">
             <button
               type="button"
-              class="btn btn-warning shadow mx-auto shadow p-2 mb-1 border border-dark border-1 font-Noto fw-400"
+              class="btn btn-warning  mx-auto  p-2 mb-1 border border-dark border-1 font-Noto fw-400"
               @click="paidSuccess(), closeModal()"
             >
               我是盤子我驕傲
@@ -58,7 +58,7 @@
           <div class="container d-flex justify-content-end gx-2">
             <button
               type="button"
-              class="btn btn-outline-dark shadow p-2 mb-1 font-Noto fw-400"
+              class="btn btn-outline-dark  p-2 mb-1 font-Noto fw-400"
               data-bs-dismiss="modal"
               @click="closeModal(), loginSuccess()"
             >
@@ -66,7 +66,7 @@
             </button>
             <button
               type="button"
-              class="btn btn-warning ms-2 shadow p-2 mb-1 border border-dark border-1 font-Noto fw-400"
+              class="btn btn-warning ms-2 p-2 mb-1 border border-dark border-1 font-Noto fw-400"
               @click="closeModal(), loginSuccess()"
             >
               朕知道了
@@ -126,7 +126,7 @@
           <div class="container d-flex justify-content-end gx-2">
             <button
               type="button"
-              class="btn btn-outline-dark shadow p-2 mb-1 font-Noto fw-400"
+              class="btn btn-outline-dark  p-2 mb-1 font-Noto fw-400"
               data-bs-dismiss="modal"
               @click="closeModal"
             >
@@ -134,7 +134,7 @@
             </button>
             <button
               type="button"
-              class="btn btn-danger ms-2 shadow p-2 mb-1 border border-dark border-1 font-Noto fw-400"
+              class="btn btn-danger ms-2  p-2 mb-1 border border-dark border-1 font-Noto fw-400"
               @click="closeModal"
             >
               我知道了
@@ -145,7 +145,7 @@
           <div class="container d-flex justify-content-end gx-2">
             <button
               type="button"
-              class="btn btn-outline-dark shadow p-2 mb-1 font-Noto fw-400"
+              class="btn btn-outline-dark  p-2 mb-1 font-Noto fw-400"
               data-bs-dismiss="modal"
               @click="loginFail(), closeModal()"
             >
@@ -153,7 +153,7 @@
             </button>
             <button
               type="button"
-              class="btn btn-danger ms-2 shadow p-2 mb-1 border border-dark border-1 font-Noto fw-400"
+              class="btn btn-danger ms-2 p-2 mb-1 border border-dark border-1 font-Noto fw-400"
               @click="donateNow(), closeModal()"
             >
               馬上斗內

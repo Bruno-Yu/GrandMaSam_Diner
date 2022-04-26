@@ -33,7 +33,7 @@
             <div class="d-flex justify-content-center mt-2 mb-2 mt-lg-4">
               <button
                 type="button"
-                class="btn btn-danger fs-3 link-light mx-2 shadow p-2 mb-1 border border-light border-1 w-30 font-Noto fw-600"
+                class="btn btn-danger fs-3 link-light mx-2 p-2 mb-1 border border-light border-1 w-30 font-Noto fw-600"
                 @click="backToStore"
               >
                 逃回商店

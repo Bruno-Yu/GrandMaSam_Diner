@@ -5,13 +5,13 @@
     :can-cancel="true"
     :is-full-page="false"
   ></PageLoading>
-  <cartMessage ref="cartMessage" @get-cart="getCart"></cartMessage>
+  <CartMessage ref="cartMessage" @get-cart="getCart()"/>
   <div class="container px-lg-5">
     <div class="container my-3 d-none d-md-grid">
       <div class="row row-cols-3">
         <div class="col">
           <button
-            class="btn w-100 btn-warning rounded-2 shadow border border-dark border-3"
+            class="btn w-100 btn-warning rounded-2 border border-dark border-3"
             type="button"
           >
             <p class="fs-4 font-Noto fw-600 text-dark my-2">購物車</p>
@@ -19,7 +19,7 @@
         </div>
         <div class="col">
           <button
-            class="btn w-100 btn-outline-secondary rounded-2 border border-body border-3 shadow"
+            class="btn w-100 btn-outline-secondary rounded-2 border border-body border-3 "
             type="button"
             disabled
           >
@@ -28,7 +28,7 @@
         </div>
         <div class="col">
           <button
-            class="btn w-100 btn-outline-secondary rounded-2 border border-body border-3 shadow"
+            class="btn w-100 btn-outline-secondary rounded-2 border border-body border-3 "
             type="button"
             disabled
           >
@@ -207,7 +207,7 @@
 </template>
 
 <script>
-import cartMessage from '@/components/cartMessage.vue';
+import CartMessage from '@/components/cartMessage.vue';
 import emitter from '@/libs/emitter';
 
 export default {
@@ -234,7 +234,7 @@ export default {
     };
   },
   components: {
-    cartMessage,
+    CartMessage,
   },
   methods: {
     getCart() {
@@ -243,6 +243,7 @@ export default {
         .then((res) => {
           this.cartData = res.data.data;
           emitter.emit('cart-num', this.cartData.carts.length);
+          this.$emit('get-cart');
         });
     },
     addToCart(id, qty = 1) {
@@ -267,12 +268,14 @@ export default {
     removeCartItem(id) {
       this.isLoadingItem = id;
       this.$refs.cartMessage.openModal(false, id, false);
+      this.getCart();
       this.isLoadingItem = '';
     },
     removeCartAll() {
       this.isLoadingItem = 'deleteAll';
-      this.$refs.cartMessage.openModal(false, '', true);
       this.isLoadingItem = '';
+      this.$refs.cartMessage.openModal(false, '', true);
+      this.getCart();
     },
     updateCartItem(item) {
       const data = {

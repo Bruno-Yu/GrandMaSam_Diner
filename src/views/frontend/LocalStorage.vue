@@ -93,7 +93,7 @@
               <td class="d-none d-lg-table-cell">
                 <button
                   type="button"
-                  class="btn btn-outline-secondary btn-sm shadow-sm mt-2 font-Noto fw-400"
+                  class="btn btn-outline-secondary btn-sm  mt-2 font-Noto fw-400"
                   :disabled="isLoadingItem === item.id"
                   @click="goToProductView(item.id)"
                 >
@@ -117,7 +117,7 @@
                   ></span>
                   <i class="d-lg-none bi bi-cart2 text-danger"></i
                   ><span
-                    class="d-none d-lg-inline-block btn btn-danger font-Noto fs-6 fw-400 btn-sm shadow"
+                    class="d-none d-lg-inline-block btn btn-danger font-Noto fs-6 fw-400 btn-sm "
                   >
                     加到購物車</span
                   >
@@ -128,7 +128,7 @@
         </table>
         <div class="text-end my-3">
           <button
-            class="btn btn-danger font-Noto fw-bold border border-1 border-body shadow"
+            class="btn btn-danger font-Noto fw-bold border border-1 border-body "
             type="button"
             @click="addAllToCart"
             :disabled="isLoadingItem === 'addAll' || favorites.length === 0"
@@ -146,7 +146,7 @@
   <div v-else class="container gx-0 fav-banner vh-100 my-1">
     <div class="row d-flex align-items-center justify-content-center vh-100">
       <div class="col vh-30 my-3">
-        <div class="container bg-light font-Noto dialog-local-bg">
+        <div class="container bg-light font-Noto dialog-local-bg py-2">
           <p
             class="text-dark fs-2 fw-bold text-center mt-4 mt-sm-2 font-Noto fw-500"
           >
@@ -168,14 +168,14 @@
           <div class="d-flex justify-content-center mt-2 mb-2 mt-lg-4">
             <button
               type="button"
-              class="btn btn-outline-dark fs-3 shadow p-2 mb-1 border border-dark border-2 w-30 font-Noto fw-600"
+              class="btn btn-outline-dark fs-3  p-2 mb-1 border border-dark border-2 w-30 font-Noto fw-600"
               @click="goToAIDS"
             >
               我愛滋
             </button>
             <button
               type="button"
-              class="btn btn-danger fs-3 link-light mx-2 shadow p-2 mb-1 border border-dark border-1 w-30 font-Noto fw-600"
+              class="btn btn-danger fs-3 link-light mx-2 p-2 mb-1 border border-dark border-1 w-30 font-Noto fw-600"
               @click="backToStore"
             >
               我愛國

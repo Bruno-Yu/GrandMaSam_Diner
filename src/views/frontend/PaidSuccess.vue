@@ -5,7 +5,7 @@
     :can-cancel="true"
     :is-full-page="false"
   ></PageLoading>
-  <div class="container paid-success shadow mb-2 p-1">
+  <div class="container paid-success  mb-2 p-1">
     <div class="my-5 row d-flex justify-content-center">
       <div class="col-6 col-lg-2 bg-body rounded paid-checkbox">
         <p class="fs-2 font-Noto fw-bold text-dark text-center">
@@ -15,7 +15,7 @@
         <div class="d-flex justify-content-center mt-5">
           <button
             type="button"
-            class="btn btn-warning shadow border-3 border fw-bold border-dark border-lg- my-2"
+            class="btn btn-warning  border-3 border fw-bold border-dark border-lg- my-2"
           >
             <RouterLink
               to="/productsView"

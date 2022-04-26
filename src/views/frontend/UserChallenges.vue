@@ -103,7 +103,7 @@
                     type="button"
                     class="btn btn-coupon btn-warning w-80 fw-bold"
                     data-clipboard-text="#55555555"
-                    @click.prevent="copyCode"
+                    @click="copyCode"
                   >
                     複製5倍券序號
                   </button>
@@ -131,7 +131,7 @@
                     type="button"
                     class="btn btn-coupon btn-warning w-80 fw-bold"
                     data-clipboard-text="#44444444"
-                    @click.prevent="copyCode"
+                    @click="copyCode"
                   >
                     複製4倍券序號
                   </button>
@@ -159,7 +159,7 @@
                     type="button"
                     class="btn btn-coupon btn-warning w-80 fw-bold"
                     data-clipboard-text="#88888888"
-                    @click.prevent="copyCode"
+                    @click="copyCode"
                   >
                     複製8倍券序號
                   </button>
@@ -185,7 +185,7 @@
                     type="button"
                     class="btn btn-coupon btn-warning w-80 fw-bold"
                     data-clipboard-text="#77777777"
-                    @click.prevent="copyCode"
+                    @click="copyCode"
                   >
                     複製7倍券序號
                   </button>

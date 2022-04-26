@@ -15,7 +15,7 @@
         </div>
       </div>
       <div
-        class="col col-lg-5 me-lg-5 header-content shadow p-4 mb-5 mt-2 bg-warning rounded"
+        class="col col-lg-5 me-lg-5 header-content  p-4 mb-5 mt-2 bg-warning rounded"
       >
         <h3 class="my-3 text-light font-Noto fw-600">很遺憾地聽到這消息</h3>
         <p class="fw-bold">

@@ -11,7 +11,7 @@
       <div class="row row-cols-3">
         <div class="col">
           <button
-            class="btn w-100 btn-warning rounded-2 shadow border border-dark border-3"
+            class="btn w-100 btn-warning rounded-2  border border-dark border-3"
             type="button"
             disabled
           >
@@ -20,7 +20,7 @@
         </div>
         <div class="col">
           <button
-            class="btn w-100 btn-warning rounded-2 shadow border border-dark border-3"
+            class="btn w-100 btn-warning rounded-2  border border-dark border-3"
             type="button"
             disabled
           >
@@ -29,7 +29,7 @@
         </div>
         <div class="col">
           <button
-            class="btn w-100 btn-warning rounded-2 shadow border border-dark border-3"
+            class="btn w-100 btn-warning rounded-2  border border-dark border-3"
             type="button"
           >
             <p class="fs-4 font-Noto fw-600 my-2">訂單內容</p>
@@ -43,7 +43,7 @@
       步驟 3. 訂單內容
     </h2>
     <div
-      class="container shadow my-5 bg-body border border-1 border-body align-middle rounded-3 px-lg-5"
+      class="container shadow-sm my-5 bg-body border border-1 border-body align-middle rounded-3 px-lg-5"
     >
       <div
         class="row row-cols-1 row-cols-lg-2 mt-5 mb-3 justify-content-center"

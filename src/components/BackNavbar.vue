@@ -95,10 +95,8 @@ export default {
       this.$http
         .post(api)
         .then((response) => {
-          if (response.data.success) {
-            this.$httpMessageState(response, '登出');
-            this.$router.push('/trueusLogin');
-          }
+          this.$httpMessageState(response, '登出');
+          this.$router.push('/trueusLogin');
         })
         .catch((error) => {
           this.$httpMessageState(error.response, '錯誤訊息');

@@ -125,7 +125,7 @@
                   </div>
                   <button
                     type="button"
-                    class="btn btn-warning shadow fw-bolder border border-1 btn-sm p-2 my-auto "
+                    class="btn btn-warning fw-bolder border border-1 btn-sm p-2 my-auto "
                     @click="addToCart(product.id), getCart()"
                     :disabled="isLoadingItem === product.id"
                   >
@@ -163,7 +163,7 @@
           <button
             type="button"
             class="btn"
-            @click.prevent="openCartModal(cartData)"
+            @click="openCartModal(cartData)"
           >
             <CartIcon :cartNum="cartNum" />
           </button>
@@ -186,7 +186,7 @@
 <script>
 import emitter from '@/libs/emitter';
 import PaginationFooter from '@/components/PaginationFooter.vue';
-import cartMessage from '@/components/cartMessage.vue';
+import CartMessage from '@/components/cartMessage.vue';
 import CartIcon from '@/components/CartIcon.vue';
 import CartModal from '@/components/CartModal.vue';
 
@@ -215,7 +215,7 @@ export default {
   },
   components: {
     PaginationFooter,
-    cartMessage,
+    CartMessage,
     CartIcon,
     CartModal,
   },

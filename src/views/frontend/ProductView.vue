@@ -129,7 +129,7 @@
           </div>
         </div>
         <div class="row mb-3 mt-2">
-          <div class="container border-body border-2 shadow rounded px-3 pt-3">
+          <div class="container  shadow rounded px-3 pt-3">
             <h3 class="font-Noto fw-600 mb-4">購買須知</h3>
             <p class="text-muted">
               寄送時間： 預計訂單成立後 7
@@ -267,10 +267,8 @@ export default {
       this.$http
         .get(api)
         .then((response) => {
-          if (response.data.success) {
-            this.product = response.data.product;
-            this.getProducts(this.product.category);
-          }
+          this.product = response.data.product;
+          this.getProducts(this.product.category);
           this.isLoading = false;
         })
         .catch((error) => {

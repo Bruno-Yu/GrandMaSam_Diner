@@ -39,7 +39,7 @@
           <div class="container gx-2 d-flex justify-content-center">
             <button
               type="button"
-              class="btn btn-warning mx-2 mb-1 shadow p-2 border border-dark border-1 font-Noto fw-400"
+              class="btn btn-warning mx-2 mb-1  p-2 border border-dark border-1 font-Noto fw-400"
               @click="closeModal"
             >
               好優
@@ -75,7 +75,7 @@
           <div class="container d-flex justify-content-end">
             <button
               type="button"
-              class="btn btn-outline-dark shadow p-2 mb-1 font-Noto fw-400"
+              class="btn btn-outline-dark p-2 mb-1 font-Noto fw-400"
               data-bs-dismiss="modal"
               @click="closeModal"
             >
@@ -83,7 +83,7 @@
             </button>
             <button
               type="button"
-              class="btn btn-danger ms-2 shadow p-2 mb-1 border border-dark border-1 font-Noto fw-400"
+              class="btn btn-danger ms-2 p-2 mb-1 border border-dark border-1 font-Noto fw-400"
               @click="removeCart(all, id), $emit('get-cart'), closeModal()"
             >
               這與我無瓜
@@ -107,7 +107,6 @@ export default {
       all: false,
     };
   },
-  emits: ['get-cart'],
   methods: {
     openModal(add, id, all) {
       if (add) {

@@ -11,7 +11,7 @@
     </div>
     <div class="row">
       <h1 class="text-center mt-5 font-Noto fs-1 mb-3 fw-bold">訂單</h1>
-      <RouterView />
+      <RouterView @get-cart="getCart" />
     </div>
   </div>
   <div v-else class="container gx-0 cart-banner my-1">
