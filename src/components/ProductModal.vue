@@ -50,7 +50,7 @@
                   <button
                     type="button"
                     class="btn btn-dark"
-                    @click="addToCart()"
+                    @click="addToCart"
                   >
                     加入購物車
                   </button>

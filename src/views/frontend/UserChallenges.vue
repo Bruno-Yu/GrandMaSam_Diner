@@ -2,17 +2,17 @@
   <div class="container gx-0 bg-warning">
     <div class="row row-cols-1 row-cols-lg-3">
       <div class="col d-none d-lg-grid">
-        <div class="row shadow mb-1 p-2 bg-body">
+        <div class="row  mb-1 p-2 bg-body">
           <div class="container-fluid Coupons-header-left ratio ratio-1x1" />
         </div>
       </div>
       <div class="col">
-        <div class="row shadow mb-1 p-2 bg-body">
+        <div class="row  mb-1 p-2 bg-body">
           <div class="container-fluid Coupons-header-md ratio ratio-1x1" />
         </div>
       </div>
       <div class="col d-none d-lg-grid">
-        <div class="row shadow mb-1 p-2 bg-body">
+        <div class="row  mb-1 p-2 bg-body">
           <div class="container-fluid Coupons-header-right ratio ratio-1x1" />
         </div>
       </div>
@@ -79,12 +79,12 @@
       )
     </p>
   </div>
-  <div class="container gx-0 shadow bg-body border border-body mb-1 rounded">
+  <div class="container gx-0 shadow mb-1 rounded">
     <div id="coupon-section">
       <div class="container-fluid">
         <div class="row row-cols-1 row-cols-lg-4 justify-content-start">
           <div class="col">
-            <div class="card m-4 shadow border border-1 border-body">
+            <div class="card m-4 shadow">
               <div class="card-body">
                 <h4
                   class="card-title text-center text-warning font-Noto fw-bold"
@@ -112,7 +112,7 @@
             </div>
           </div>
           <div class="col">
-            <div class="card m-4 border-1 border-body shadow">
+            <div class="card m-4 shadow">
               <div class="card-body">
                 <h4
                   class="card-title text-center text-warning font-Noto fw-bold"
@@ -140,7 +140,7 @@
             </div>
           </div>
           <div class="col">
-            <div class="card m-4 border-1 border-body shadow">
+            <div class="card m-4 shadow">
               <div class="card-body">
                 <h4
                   class="card-title text-center text-warning font-Noto fw-bold"
@@ -168,7 +168,7 @@
             </div>
           </div>
           <div class="col">
-            <div class="card m-4 border-1 border-body shadow">
+            <div class="card m-4 shadow">
               <div class="card-body">
                 <h4 class="card-title text-center text-warning fw-bold">
                   7倍券

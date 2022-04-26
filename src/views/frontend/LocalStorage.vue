@@ -169,14 +169,14 @@
             <button
               type="button"
               class="btn btn-outline-dark fs-3 shadow p-2 mb-1 border border-dark border-2 w-30 font-Noto fw-600"
-              @click="goToAIDS()"
+              @click="goToAIDS"
             >
               我愛滋
             </button>
             <button
               type="button"
               class="btn btn-danger fs-3 link-light mx-2 shadow p-2 mb-1 border border-dark border-1 w-30 font-Noto fw-600"
-              @click="backToStore()"
+              @click="backToStore"
             >
               我愛國
             </button>

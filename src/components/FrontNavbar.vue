@@ -5,7 +5,7 @@
         <RouterLink
           class="fs-3 d-block navbar-brand my-0 lh-1 font-Bangers"
           to="/"
-          @click="closeNavHam()"
+          @click="closeNavHam"
         >
           GRANDMA SAM DINER
           <p
@@ -23,7 +23,7 @@
           aria-controls="navbarNavDropdown"
           aria-expanded="false"
           aria-label="Toggle navigation"
-          @click="toggleNavHam()"
+          @click="toggleNavHam"
         >
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -37,7 +37,7 @@
               <RouterLink
                 class="nav-link active fw-bold"
                 to="/about"
-                @click="closeNavHam()"
+                @click="closeNavHam"
                 ><i class="bi bi-journals"></i> 故事</RouterLink
               >
             </li>
@@ -47,7 +47,7 @@
               <RouterLink
                 class="nav-link active fw-bold"
                 to="/productsView"
-                @click="closeNavHam()"
+                @click="closeNavHam"
               >
                 <i class="bi bi-shop"></i>
                 商店</RouterLink
@@ -57,7 +57,7 @@
               <RouterLink
                 class="nav-link active fw-bold"
                 to="/userChallenges"
-                @click="closeNavHam()"
+                @click="closeNavHam"
                 ><i class="bi bi-flag"></i>
 
                 挑戰</RouterLink
@@ -69,7 +69,7 @@
               <RouterLink
                 class="nav-link active fw-bold"
                 to="/localStorage"
-                @click="closeNavHam()"
+                @click="closeNavHam"
                 ><i class="bi bi-suit-heart"></i>
 
                 收藏</RouterLink
@@ -81,7 +81,7 @@
               <RouterLink
                 class="nav-link active fw-bold"
                 to="/cartView"
-                @click="closeNavHam()"
+                @click="closeNavHam"
                 ><i class="bi bi-bag"></i> 訂單</RouterLink
               >
             </li>
@@ -90,7 +90,7 @@
               <RouterLink
                 class="nav-link active fw-bold"
                 to="/userArticles"
-                @click="closeNavHam()"
+                @click="closeNavHam"
                 ><i class="bi bi-megaphone"></i>
 
                 公告</RouterLink
@@ -101,7 +101,7 @@
               <RouterLink
                 class="nav-link active fw-bold"
                 to="/trueusLogin"
-                @click="closeNavHam()"
+                @click="closeNavHam"
               >
                 <i class="bi bi-person"></i> 登入</RouterLink
               >

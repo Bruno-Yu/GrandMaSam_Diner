@@ -7,7 +7,7 @@
   ></PageLoading>
   <div class="container bg-warning">
     <div
-      class="header-banner row shadow p-3 mb-2 mt-4 bg-body d-flex align-items-center justify-content-center justify-content-lg-end slogan-style"
+      class="header-banner row  p-3 mb-2 mt-4 bg-body d-flex align-items-center justify-content-center justify-content-lg-end slogan-style"
     >
       <div class="col-10 col-md-6 col-lg-4">
         <div class="d-flex justify-content-start">
@@ -26,7 +26,7 @@
         <div class="d-flex justify-content-center mt-4">
           <button
             type="button"
-            class="btn btn-warning link-dark fw-bold fs-4 border border-light border-1 shadow font-Noto w-100 fw-700 me-lg-5"
+            class="btn btn-warning link-dark fw-bold fs-4 border border-light border-1  font-Noto w-100 fw-700 me-lg-5"
             @click="backToStore()"
           >
             <i>馬上行動</i>
@@ -67,7 +67,7 @@
         <div class="product-intro" />
       </div>
       <div class="col col-lg-5 m-auto text-auto">
-        <div class="container shadow p-5 mb-1 bg-warning rounded">
+        <div class="container p-5 mb-1 bg-warning rounded">
           <h4
             class="mt-4 text-center text-light text-lg-start font-Noto fw-500"
           >
@@ -99,7 +99,7 @@
         <div class="product-intro-2" />
       </div>
       <div class="col-lg-5 m-auto text-auto">
-        <div class="container shadow p-5 mb-1 bg-body rounded">
+        <div class="container p-5 mb-1 bg-body rounded">
           <h4 class="text-center text-lg-start font-Noto fw-700">別樹一格</h4>
           <p class="font-Noto fw-500">
             <i class="bi bi-check2-square"></i>

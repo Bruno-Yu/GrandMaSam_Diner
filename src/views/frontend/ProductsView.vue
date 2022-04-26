@@ -5,12 +5,12 @@
     :can-cancel="true"
     :is-full-page="false"
   ></PageLoading>
-  <CartModal ref="CartModal"></CartModal>
-  <cartMessage ref="cartMessage"></cartMessage>
+  <CartModal ref="CartModal" />
+  <CartMessage ref="cartMessage" />
   <div class="container-fluid bg-warning">
     <div class="row row-cols-1 row-cols-lg-2 g-1 my-1">
       <div class="col col-lg-6">
-        <div class="container shadow px-2 py-4 p-sm-5 bg-warning rounded">
+        <div class="container  px-2 py-4 p-sm-5 bg-warning rounded">
           <div class="row ps-2 row-cols-1">
             <div class="col m-auto">
               <h2
@@ -116,7 +116,7 @@
                 </h5>
                 <div class="d-flex justify-content-between">
                   <div>
-                    <p class="card-text mt-1 mb-0 fw-bold">
+                    <p class="card-text my-1 fw-bold">
                       TWD {{ product.price }}
                     </p>
                     <p class="text-muted fw-light small my-auto">
@@ -125,7 +125,7 @@
                   </div>
                   <button
                     type="button"
-                    class="btn btn-warning shadow fw-bolder border border-1 btn-sm p-2 my-auto me-1"
+                    class="btn btn-warning shadow fw-bolder border border-1 btn-sm p-2 my-auto "
                     @click="addToCart(product.id), getCart()"
                     :disabled="isLoadingItem === product.id"
                   >
@@ -136,7 +136,6 @@
                     加入購物車
                   </button>
                 </div>
-                <p class="text-muted mt-3"></p>
               </div>
               <a
                 href="#"
@@ -156,7 +155,7 @@
                   v-if="favorites.includes(product.id)"
                   class="bi bi-heart-fill"
                 ></i>
-                <i v-else class="bi bi-heart"></i>
+                <i v-else class="bi bi-heart" />
               </a>
             </div>
           </div>
@@ -166,7 +165,7 @@
             class="btn"
             @click.prevent="openCartModal(cartData)"
           >
-            <CartIcon :cartNum="cartNum"></CartIcon>
+            <CartIcon :cartNum="cartNum" />
           </button>
         </div>
       </div>

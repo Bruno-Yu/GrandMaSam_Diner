@@ -40,7 +40,7 @@
             <button
               type="button"
               class="btn btn-warning mx-2 mb-1 shadow p-2 border border-dark border-1 font-Noto fw-400"
-              @click="closeModal()"
+              @click="closeModal"
             >
               好優
             </button>
@@ -77,7 +77,7 @@
               type="button"
               class="btn btn-outline-dark shadow p-2 mb-1 font-Noto fw-400"
               data-bs-dismiss="modal"
-              @click="closeModal()"
+              @click="closeModal"
             >
               再想想
             </button>

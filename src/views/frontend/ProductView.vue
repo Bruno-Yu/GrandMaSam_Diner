@@ -28,7 +28,7 @@
               <SwiperSlide
                 v-for="(image, key) in product.imagesUrl"
                 :key="key"
-                class="shadow rounded"
+                class=" rounded"
                 ><div
                   class="carousel-item d-block ratio ratio-4x3 product-display"
                   :style="{ backgroundImage: `url(${image})` }"

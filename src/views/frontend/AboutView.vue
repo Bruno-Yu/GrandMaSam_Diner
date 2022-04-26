@@ -6,7 +6,7 @@
       class="row row-cols-1 d-flex justify-content-center my-1 py-3 border border-body border-1 border-start-0 border-end-0 border-bottom-0"
     >
       <div
-        class="col col-lg-5 me-lg-5 header-content shadow p-4 mb-5 mt-2 bg-body rounded"
+        class="col col-lg-5 me-lg-5 header-content p-4 mb-5 mt-2 bg-body rounded"
       >
         <h4 class="my-3 fw-bolder">源起</h4>
         <p class="text-muted">
@@ -122,8 +122,8 @@
         class="col-12 col-lg-5 me-lg-4 d-flex justify-content-center align-items-center"
       >
         <div class="row">
-          <h4 class="my-lg-5 text-lg-center fw-bolder">榮譽獎章</h4>
-          <div class="col shadow p-4 p-sm-5 mb-2 bg-warning rounded">
+          <h2 class="my-lg-5 display-5 fw-500 font-Noto  text-lg-center text-light">榮譽獎章</h2>
+          <div class="col  p-4 p-sm-5 mb-2 bg-warning rounded">
             <p class="fs-5 mt-lg-1 font-Noto fw-700">
               榮獲 2000年度最佳性福企業認證
             </p>
@@ -146,7 +146,7 @@
     >
       <div class="col-12 col-lg-4 mt-3 mt-sm-0 mt-lg-5 ms-2">
         <div class="row d-flex mt-sm-0 mt-lg-5 align-items-center">
-          <div class="col my-lg-4 shadow p-2 p-sm-3 mb-2 bg-body rounded">
+          <div class="col my-lg-4 p-2 p-sm-3 mb-2 bg-body rounded">
             <p
               class="fs-5 mt-5 mt-md-0 mt-lg-5 fw-bold text-secondary font-Noto fw-700"
             >

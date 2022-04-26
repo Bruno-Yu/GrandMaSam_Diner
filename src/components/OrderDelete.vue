@@ -34,7 +34,7 @@
           >
             取消
           </button>
-          <button type="button" class="btn btn-danger" @click="updateModal()">
+          <button type="button" class="btn btn-danger" @click="updateModal">
             確認刪除
           </button>
         </div>

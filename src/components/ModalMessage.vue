@@ -128,14 +128,14 @@
               type="button"
               class="btn btn-outline-dark shadow p-2 mb-1 font-Noto fw-400"
               data-bs-dismiss="modal"
-              @click="closeModal()"
+              @click="closeModal"
             >
               給我滾
             </button>
             <button
               type="button"
               class="btn btn-danger ms-2 shadow p-2 mb-1 border border-dark border-1 font-Noto fw-400"
-              @click="closeModal()"
+              @click="closeModal"
             >
               我知道了
             </button>

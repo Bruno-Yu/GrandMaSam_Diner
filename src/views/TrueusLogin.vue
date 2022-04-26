@@ -5,7 +5,7 @@
     :can-cancel="true"
     :is-full-page="false"
   ></PageLoading>
-  <ModalMessage ref="modalMessage"></ModalMessage>
+  <ModalMessage ref="modalMessage" />
   <div class="container-fluid">
     <div class="row justify-content-center gx-0">
       <h1 class="h3 my-5 font-weight-normal text-center fw-bolder">
@@ -37,7 +37,7 @@
             class="btn btn-lg btn-warning fw-bold shadow w-100 mt-3"
             data-name="loginBtn"
             type="button"
-            v-on:click="login"
+            @click="login"
           >
             登入
           </button>

@@ -17,7 +17,7 @@
   <div v-else class="container gx-0 cart-banner my-1">
     <div class="row d-flex align-items-center justify-content-center vh-100">
       <div class="col col-lg-7">
-        <div class="container bg-dark font-Noto cart-box">
+        <div class="container bg-dark font-Noto cart-box py-3">
           <p class="text-light fs-2 text-center font-Noto fw-500">
             其實你知道嗎?
             <span class="d-inline-block d-sm-inline">和平是需要付出代價的</span>
@@ -32,14 +32,14 @@
             <button
               type="button"
               class="btn btn-outline-light fs-3 shadow p-2 mb-1 border border-dark border-1 w-30 font-Noto fw-600"
-              @click="goToResult()"
+              @click="goToResult"
             >
               誰管你
             </button>
             <button
               type="button"
               class="btn btn-danger fs-3 link-light mx-2 shadow p-2 mb-1 border border-dark border-1 w-30 font-Noto fw-600"
-              @click="backToStore()"
+              @click="backToStore"
             >
               我錯了
             </button>

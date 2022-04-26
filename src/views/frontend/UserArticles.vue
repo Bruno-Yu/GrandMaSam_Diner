@@ -6,7 +6,7 @@
     :is-full-page="false"
   ></PageLoading>
   <div
-    class="container gx-0 bg-black shadow rounded border border-body border-3"
+    class="container gx-0 bg-black  rounded border border-body border-3"
   >
     <div class="row row-cols-1 row-cols-lg-2">
       <div class="col ge-0">
@@ -14,10 +14,10 @@
       </div>
       <div class="col gs-0">
         <div
-          class="container d-flex align-items-center h-100 p-3 shadow bg-black"
+          class="container d-flex align-items-center h-100 p-3  bg-black"
         >
           <div
-            class="container shadow mb-2 p-4 rounded h-50 d-flex align-items-center bg-black"
+            class="container mb-2 p-4 rounded h-50 d-flex align-items-center bg-black"
           >
             <figure class="text-center text-lg-start">
               <blockquote class="blockquote">
@@ -37,7 +37,7 @@
     </div>
   </div>
   <div
-    class="container gx-0 mt-2 mb-3 mb-lg-4 shadow News-title rounded border border-body border-5"
+    class="container gx-0 mt-2 mb-3 mb-lg-4 News-title rounded border border-body border-5"
   >
     <div class="row">
       <h2 class="fs-1 my-3 font-Noto fw-600 text-light text-center">
@@ -46,7 +46,7 @@
     </div>
   </div>
   <div
-    class="container gx-0 bg-body shadow border border-body border-1 rounded"
+    class="container gx-0 bg-body shadow rounded"
   >
     <div class="row row-cols-1 row-cols-lg-3 g-4">
       <template v-for="article in articles" :key="article.id">
@@ -57,7 +57,7 @@
             class="btn"
           >
             <div
-              class="card border border-body border-2 shadow shadow-lg mb-1 p-1"
+              class="card shadow shadow-lg mb-1 p-1"
             >
               <!-- 主圖替換 -->
               <img

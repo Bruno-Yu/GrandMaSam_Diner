@@ -42,7 +42,7 @@
           <button
             type="button"
             class="btn btn-danger border border-2 w-100 fs-5 my-1 font-Noto fw-700"
-            @click="donateNow()"
+            @click="donateNow"
           >
             立即斗內
           </button>

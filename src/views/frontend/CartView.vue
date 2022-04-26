@@ -5,7 +5,7 @@
     :can-cancel="true"
     :is-full-page="false"
   ></PageLoading>
-  <cartMessage ref="cartMessage" @get-cart="getCart()"></cartMessage>
+  <cartMessage ref="cartMessage" @get-cart="getCart"></cartMessage>
   <div class="container px-lg-5">
     <div class="container my-3 d-none d-md-grid">
       <div class="row row-cols-3">
