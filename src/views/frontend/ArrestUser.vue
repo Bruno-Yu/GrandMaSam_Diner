@@ -5,7 +5,7 @@
     :can-cancel="true"
     :is-full-page="false"
   ></PageLoading>
-  <div class="container-fluid arrestUser vh-100 my-1">
+  <div class="container gx-0 arrestUser vh-100 my-1">
     <div
       class="row d-flex align-items-center justify-content-center justify-content-lg-start vh-100"
     >

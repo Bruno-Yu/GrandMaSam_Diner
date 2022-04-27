@@ -7,7 +7,7 @@
   ></PageLoading>
   <CartModal ref="CartModal" />
   <CartMessage ref="cartMessage" />
-  <div class="container-fluid bg-warning">
+  <div class="container  bg-warning">
     <div class="row row-cols-1 row-cols-lg-2 g-1 my-1">
       <div class="col col-lg-6">
         <div class="container  px-2 py-4 p-sm-5 bg-warning rounded">
@@ -42,7 +42,7 @@
       <div class="d-none d-sm-grid col col-lg-6 productsView-banner mt-1" />
     </div>
   </div>
-  <div class="container-fluid mb-5 mt-md-5 mt-3 mb-7">
+  <div class="container mb-5 mt-md-5 mt-3 mb-7">
     <div class="row">
       <div class="col-md-2">
         <div

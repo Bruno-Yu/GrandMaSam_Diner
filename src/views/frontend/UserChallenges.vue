@@ -3,17 +3,17 @@
     <div class="row row-cols-1 row-cols-lg-3">
       <div class="col d-none d-lg-grid">
         <div class="row  mb-1 p-2 bg-body">
-          <div class="container-fluid Coupons-header-left ratio ratio-1x1" />
+          <div class="container Coupons-header-left ratio ratio-1x1" />
         </div>
       </div>
       <div class="col">
         <div class="row  mb-1 p-2 bg-body">
-          <div class="container-fluid Coupons-header-md ratio ratio-1x1" />
+          <div class="container Coupons-header-md ratio ratio-1x1" />
         </div>
       </div>
       <div class="col d-none d-lg-grid">
         <div class="row  mb-1 p-2 bg-body">
-          <div class="container-fluid Coupons-header-right ratio ratio-1x1" />
+          <div class="container Coupons-header-right ratio ratio-1x1" />
         </div>
       </div>
     </div>

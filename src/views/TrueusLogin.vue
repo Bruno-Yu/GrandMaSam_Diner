@@ -6,8 +6,8 @@
     :is-full-page="false"
   ></PageLoading>
   <ModalMessage ref="modalMessage" />
-  <div class="container-fluid">
-    <div class="row justify-content-center gx-0">
+  <div class="container">
+    <div class="row justify-content-center ">
       <h1 class="h3 my-5 font-weight-normal text-center fw-bolder">
         榮譽會員登入處
       </h1>
