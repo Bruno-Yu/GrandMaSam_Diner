@@ -69,7 +69,8 @@
       <div class="col col-lg-5 m-auto text-auto">
         <div class="container p-5 mb-1 bg-warning rounded">
           <h3
-            class="mt-4 text-center  text-lg-start font-Noto fw-700 text-bg-yellow"
+            class="mt-4 text-center  text-lg-start font-Noto fw-550 text-bg-productsView-yellow
+"
           >
             味道獨特
           </h3>
