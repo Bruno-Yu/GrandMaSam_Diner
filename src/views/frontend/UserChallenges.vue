@@ -69,7 +69,7 @@
   </div>
   <div class="container gx-0 shadow mb-1 rounded">
   <div
-    class="container gx-0 bg-body border-bottom border-1 border-body text-center p-2 mb-2 Coupons-title"
+    class="container gx-0 bg-body border-bottom border-1 border-body text-center p-2 mb-2 "
   >
     <h2 class="fs-2 font-Noto fw-600 mt-2 mb-3">挑戰試煉</h2>
     <p class="fs-5 lg-sm font-Noto fw-500 text-warning">
@@ -80,8 +80,8 @@
       )
     </p>
   </div>
-    <div id="coupon-section">
-      <div class="container gx-0">
+    <div id="coupon-section" >
+      <div class="container mt-2 mt-lg-0 gx-0">
         <div class="row row-cols-1 row-cols-lg-4 justify-content-start">
           <div class="col">
             <div class="card m-4 shadow">
