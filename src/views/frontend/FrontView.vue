@@ -1,5 +1,5 @@
 <template>
-  <div class="container-fluid">
+  <div>
     <div class="row mb-5">
       <FrontNavbar />
     </div>

@@ -7,7 +7,7 @@
   ></PageLoading>
   <cartMessage ref="cartMessage" />
   <div class="container">
-    <div class="row d-flex justify-content-center">
+    <div class="row d-flex gx-0 justify-content-center">
       <div class="col-12 col-lg-8">
         <div class="row mt-5 d-flex align-items-center justify-content-between">
           <div class="col-md-7 rounded">
@@ -17,7 +17,7 @@
               :space-between="50"
               navigation
               :pagination="{ clickable: true }"
-              class="shadow mb-3 p-2 rounded"
+              class=" mb-3 ps-0  rounded"
             >
               <SwiperSlide>
                 <div
@@ -129,7 +129,7 @@
           </div>
         </div>
         <div class="row mb-3 mt-2">
-          <div class="container shadow rounded px-3 pt-3">
+          <div class="container shadow-sm rounded px-3 pt-3">
             <h3 class="font-Noto fw-600 mb-4">購買須知</h3>
             <p class="text-muted">
               寄送時間： 預計訂單成立後 7

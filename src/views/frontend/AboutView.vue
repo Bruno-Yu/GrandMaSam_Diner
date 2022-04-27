@@ -32,7 +32,8 @@
     >
       <div class="col col-lg-9">
         <h4
-          class="my-5 my-lg-4 text-light fw-bolder text-lg-center font-Noto fw-700"
+          class="my-5 my-lg-4 text-light fw-bolder text-lg-center font-Noto fw-700 text-bg-productsView-yellow
+"
         >
           集團
         </h4>
@@ -40,7 +41,9 @@
           <ul class="list-unstyled">
             <li class="text-dark font-Noto fw-400">
               <i class="bi bi-emoji-smile-fill text-light"></i>
-              <span class="text-light"><i> 1990年 -</i> </span>
+              <span class="text-light font-Noto fw-700 text-bg-productsView-yellow
+
+"><i> 1990年 -</i> </span>
               創辦人在祖母與親朋好友的經濟支援下，藉由其銳利的商業判斷，在紐約曼哈頓的黃金地段，購置了大量不動產，並創辦了本集團大樓，為紀念創辦人祖母的獨到的眼光和金援以及為表現創辦人"在金錢之下人人平等"的核心理念，將該大樓命名為
               山姆大嬸大樓（英語：The Grandma Sam
               building），並以該大樓的名稱作為本集團的正式名稱 山姆大嬸 集團
@@ -48,12 +51,15 @@
             </li>
             <li class="text-dark font-Noto fw-400">
               <i class="bi bi-emoji-smile-upside-down-fill text-light"></i>
-              <span class="text-light"><i> 2000~ 2010 年 -</i> </span>
+              <span class="text-light font-Noto fw-700 text-bg-productsView-yellow
+
+"><i> 2000~ 2010 年 -</i> </span>
               本集團拓展遍佈世界各地，並在各地建立分支據點，在全球聯合國所屬140個會員國的市中心，沒有一個有本集團的辦事處
             </li>
             <li class="text-dark font-Noto fw-400">
               <i class="bi bi-emoji-smile-fill text-light"></i>
-              <span class="text-light"><i> 在 2020 年 -</i> </span>
+              <span class="text-light font-Noto fw-700 text-bg-productsView-yellow
+"><i> 在 2020 年 -</i> </span>
               本集團創辦人有感於其祖母與台灣民主地區領導人蔣大總統的好交情，決定利用其祖母在中華台北
               ( 此亦為奧運會代表正式名稱
               )的房地產投資收益，創立了台灣辦事處，並於隔年建立本餐飲公司
@@ -122,7 +128,7 @@
         class="col-12 col-lg-5 me-lg-4 d-flex justify-content-center align-items-center"
       >
         <div class="row">
-          <h2 class="my-lg-5 display-5 fw-500 font-Noto  text-lg-center text-light">榮譽獎章</h2>
+          <h2 class="my-lg-5 display-5 fw-500 font-Noto  text-lg-center text-light text-bg-productsView-yellow">榮譽獎章</h2>
           <div class="col  p-4 p-sm-5 mb-2 bg-warning rounded">
             <p class="fs-5 mt-lg-1 font-Noto fw-700">
               榮獲 2000年度最佳性福企業認證

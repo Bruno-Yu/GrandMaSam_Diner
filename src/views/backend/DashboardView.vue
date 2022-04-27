@@ -5,7 +5,7 @@
     :can-cancel="true"
     :is-full-page="false"
   ></PageLoading>
-  <div class="container-fluid">
+  <div>
     <ToastMessages />
     <div class="row mb-5">
       <BackNavbar />

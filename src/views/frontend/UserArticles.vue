@@ -46,7 +46,7 @@
     </div>
   </div>
   <div
-    class="container gx-0 bg-body shadow rounded"
+    class="container gx-0 bg-body shadow-sm rounded"
   >
     <div class="row row-cols-1 row-cols-lg-3 g-4">
       <template v-for="article in articles" :key="article.id">

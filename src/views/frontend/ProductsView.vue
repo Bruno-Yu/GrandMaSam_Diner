@@ -18,20 +18,22 @@
               >
                 產品/服務列表
               </h2>
-              <p class="fs-3 text-dark text-sm-nowrap font-Noto fw-600">
+              <p class="fs-3 text-dark text-sm-nowrap font-Noto fw-600 text-bg-yellow">
                 廚師介紹
               </p>
-              <p class="fs-5 text-light text-sm-nowrap font-Noto fw-400">
+              <p class="fs-5 text-sm-nowrap font-Noto fw-800 text-bg-productsView-yellow">
                 <span class="d-none d-md-inline">五腥出品，</span
                 >來自嘉義明雄的米其林廚師帶來的味道
               </p>
-              <p class="fs-5 text-light text-sm-nowrap font-Noto fw-400">
+              <p class="fs-5 text-sm-nowrap font-Noto fw-800 text-bg-productsView-yellow">
                 而每份<span class="d-none d-md-inline">他所帶來的</span
                 >食物，都有屬於食材自己的故事
               </p>
-              <p class="fs-5 text-light text-sm-nowrap font-Noto fw-400">
+              <p class="fs-5 text-sm-nowrap font-Noto fw-800 text-bg-productsView-yellow
+">
                 只要您用心品嘗，一定能嚐出嘉明<span
-                  class="text-light fw-light d-none d-md-inline"
+                  class=" d-none d-md-inline font-Noto fw-800 text-bg-productsView-yellow
+"
                   >( 嘉義民雄 )</span
                 >的味道
               </p>

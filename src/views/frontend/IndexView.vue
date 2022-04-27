@@ -68,11 +68,11 @@
       </div>
       <div class="col col-lg-5 m-auto text-auto">
         <div class="container p-5 mb-1 bg-warning rounded">
-          <h4
-            class="mt-4 text-center text-light text-lg-start font-Noto fw-500"
+          <h3
+            class="mt-4 text-center  text-lg-start font-Noto fw-700 text-bg-yellow"
           >
             味道獨特
-          </h4>
+          </h3>
           <p class="text-dark font-Noto fw-500">
             本集團訴求的是夢想，並不只是單純的餐飲品牌，所以我們販售給我們貴賓的餐點都有一份夢想的味道
             ( ? )
