@@ -178,7 +178,7 @@
               />
               <div class="input-group-append">
                 <button
-                  class="btn btn-outline-secondary font-Noto fw-bold"
+                  class="btn btn-outline-secondary font-Noto fw-bold rounded-0"
                   type="button"
                   @click="addCouponCode"
                 >
