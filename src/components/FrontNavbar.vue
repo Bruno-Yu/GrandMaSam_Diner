@@ -25,7 +25,7 @@
           aria-label="Toggle navigation"
           @click="toggleNavHam"
         >
-          <span class="navbar-toggler-icon"></span>
+          <span class="navbar-toggler-icon" />
         </button>
         <div
           class="collapse navbar-collapse justify-content-end"
@@ -35,30 +35,30 @@
             <!-- aria-current="page" -->
             <li class="nav-item">
               <RouterLink
-                class="nav-link active fw-bold"
+                class="nav-link fw-bold"
                 to="/about"
                 @click="closeNavHam"
-                ><i class="bi bi-journals"></i> 故事</RouterLink
+                ><i class="bi bi-journals" /> 故事</RouterLink
               >
             </li>
 
             <li class="nav-item">
               <!-- aria-current="page" -->
               <RouterLink
-                class="nav-link active fw-bold"
+                class="nav-link  fw-bold"
                 to="/productsView"
                 @click="closeNavHam"
               >
-                <i class="bi bi-shop"></i>
+                <i class="bi bi-shop" />
                 商店</RouterLink
               >
             </li>
             <li class="nav-item">
               <RouterLink
-                class="nav-link active fw-bold"
+                class="nav-link  fw-bold"
                 to="/userChallenges"
                 @click="closeNavHam"
-                ><i class="bi bi-flag"></i>
+                ><i class="bi bi-flag" />
 
                 挑戰</RouterLink
               >
@@ -67,10 +67,10 @@
             <!-- aria-current="page" -->
             <li class="nav-item">
               <RouterLink
-                class="nav-link active fw-bold"
+                class="nav-link fw-bold"
                 to="/localStorage"
                 @click="closeNavHam"
-                ><i class="bi bi-suit-heart"></i>
+                ><i class="bi bi-suit-heart" />
 
                 收藏</RouterLink
               >
@@ -79,19 +79,19 @@
             <!-- aria-current="page" -->
             <li class="nav-item">
               <RouterLink
-                class="nav-link active fw-bold"
+                class="nav-link fw-bold"
                 to="/cartView"
                 @click="closeNavHam"
-                ><i class="bi bi-bag"></i> 訂單</RouterLink
+                ><i class="bi bi-bag" /> 訂單</RouterLink
               >
             </li>
             <!-- aria-current="page" -->
             <li class="nav-item">
               <RouterLink
-                class="nav-link active fw-bold"
+                class="nav-link  fw-bold"
                 to="/userArticles"
                 @click="closeNavHam"
-                ><i class="bi bi-megaphone"></i>
+                ><i class="bi bi-megaphone" />
 
                 公告</RouterLink
               >
@@ -99,11 +99,11 @@
 
             <li class="nav-item">
               <RouterLink
-                class="nav-link active fw-bold"
+                class="nav-link fw-bold"
                 to="/trueusLogin"
                 @click="closeNavHam"
               >
-                <i class="bi bi-person"></i> 登入</RouterLink
+                <i class="bi bi-person" /> 登入</RouterLink
               >
             </li>
           </ul>

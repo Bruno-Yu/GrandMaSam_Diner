@@ -24,7 +24,7 @@
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <span class="navbar-toggler-icon"></span>
+          <span class="navbar-toggler-icon" />
         </button>
         <div
           class="collapse navbar-collapse justify-content-end"
@@ -32,42 +32,42 @@
         >
           <ul class="navbar-nav align-items-center mb-2 ms-auto mb-lg-0">
             <li class="nav-item">
-              <RouterLink class="nav-link active fw-bold" to="/admin" @click="closeNavHam"
+              <RouterLink class="nav-link fw-bold" to="/admin" @click="closeNavHam"
 
-                ><i class="bi bi-shop-window"></i> 產品管理</RouterLink
+                ><i class="bi bi-shop-window" /> 產品管理</RouterLink
               >
             </li>
             <li class="nav-item">
-              <RouterLink class="nav-link active fw-bold" to="/couponsAdmin" @click="closeNavHam"
+              <RouterLink class="nav-link  fw-bold" to="/couponsAdmin" @click="closeNavHam"
 >
-                <i class="bi bi-flag"></i>
+                <i class="bi bi-flag" />
                 挑戰管理</RouterLink
               >
             </li>
             <li class="nav-item">
-              <RouterLink class="nav-link active fw-bold" to="/ordersAdmin" @click="closeNavHam"
+              <RouterLink class="nav-link  fw-bold" to="/ordersAdmin" @click="closeNavHam"
 >
-                <i class="bi bi-clipboard-check"></i>
+                <i class="bi bi-clipboard-check" />
                 訂單管理</RouterLink
               >
             </li>
             <li class="nav-item">
-              <RouterLink class="nav-link active fw-bold" to="/eventAdmin" @click="closeNavHam"
-                ><i class="bi bi-emoji-sunglasses"></i> 公告編輯</RouterLink
+              <RouterLink class="nav-link  fw-bold" to="/eventAdmin" @click="closeNavHam"
+                ><i class="bi bi-emoji-sunglasses" /> 公告編輯</RouterLink
               >
             </li>
             <li class="nav-item">
-              <RouterLink class="nav-link active fw-bold" to="/aboutAdmin" @click="closeNavHam"
-                ><i class="bi bi-journal-text"></i> 關於作品</RouterLink
+              <RouterLink class="nav-link  fw-bold" to="/aboutAdmin" @click="closeNavHam"
+                ><i class="bi bi-journal-text" /> 關於作品</RouterLink
               >
             </li>
             <li class="nav-item">
               <a
-                class="nav-link active fw-bold text-decoration-none"
+                class="nav-link  fw-bold text-decoration-none"
                 @click.prevent="logout"
                 href="#"
               >
-                <i class="bi bi-box-arrow-right"></i> 人生登出</a
+                <i class="bi bi-box-arrow-right" /> 人生登出</a
               >
             </li>
           </ul>

@@ -10,7 +10,19 @@ a :hover {
   background-color: #ffffff;
   opacity: 0.5;
 }
-router-link .nav-item:hover {
+.navbar-nav .nav-item .nav-link {
+  color: black;
+}
+.navbar-nav .nav-item .nav-link.active {
+  color: rgb(150, 148, 148);
+}
+
+.navbar .navbar-nav .nav-link:hover  {
+  color:#ffc107!important;
+  font-weight: normal;
+}
+
+li > a a :active {
   color: #ffc107;
 }
 .link-light.link-light:hover {
