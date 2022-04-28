@@ -5,17 +5,17 @@
     :can-cancel="true"
     :is-full-page="false"
   ></PageLoading>
-  <div class="container">
+  <div class="container p-5">
     <h2 class="my-5 ms-2 fw-bold text-center">產品管理列表</h2>
     <div class="text-end mt-4">
       <button
         type="button"
-        class="btn btn-primary"
+        class="btn btn-primary font-Noto fw-400"
         @click="modalOn('new')"
         :disabled="isLoadingItem === 'New'"
       >
         <span
-          class="spinner-grow spinner-grow-sm"
+          class="spinner-grow spinner-grow-sm "
           v-show="isLoadingItem === 'New'"
         ></span>
         建立新的產品

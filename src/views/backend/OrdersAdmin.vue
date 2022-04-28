@@ -6,7 +6,8 @@
     :is-full-page="false"
   ></PageLoading>
   <h2 class="my-5 ms-2 fw-bold text-center">訂單管理頁面</h2>
-  <table class="table mt-4">
+  <div class="p-5">
+  <table class="table mt-4 ">
     <thead>
       <tr>
         <th scope="col">訂單號</th>
@@ -86,6 +87,7 @@
       </tr>
     </tbody>
   </table>
+  </div>
   <OrderDetail
     :order="orderShow"
     ref="orderDetail"

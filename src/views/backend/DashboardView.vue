@@ -11,7 +11,7 @@
       <BackNavbar />
     </div>
     <div class="row">
-      <RouterView v-if="verify" />
+      <RouterView v-if="verify"  />
     </div>
     <div class="row">
       <FrontFooter />

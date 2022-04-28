@@ -6,7 +6,7 @@
   :is-full-page="false"
 ></PageLoading>
 
-  <div class="mb-5">
+  <div class="mb-5 p-5">
     <h2 class="my-5 ms-2 fw-bold text-center">優惠券管理頁面</h2>
     <div class="text-end mt-4">
       <button class="btn btn-dark" type="button" @click="openCouponModal(true)">

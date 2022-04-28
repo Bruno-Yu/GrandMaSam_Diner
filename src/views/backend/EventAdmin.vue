@@ -7,7 +7,7 @@
   :is-full-page="false"
 ></PageLoading>
 
-    <div class="text-end mt-4">
+    <div class="text-end mt-4 p-5">
       <button class="btn btn-primary" type="button" @click="openModal(true)">
         建立新的頁面
       </button>

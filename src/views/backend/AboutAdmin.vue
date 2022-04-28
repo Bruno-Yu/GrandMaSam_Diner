@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="container p-3">
+    <div class="container p-5">
       <h2 class="my-5 ms-2 fw-bold text-center">關於作品</h2>
       <p class="text-muted text-end">紀錄時間 2022/04/07</p>
       <br />
