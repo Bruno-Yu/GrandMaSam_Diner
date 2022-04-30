@@ -21,6 +21,77 @@ Bruno
 - 後台功能: 新增、修改、刪除產品、優惠卷( 挑戰 )管理、訂單管理、公告文章編撰..等。
   Back-end function: New-add/Edit/Delete functions for products、Coupons/Orders/News admin pages.
 
+### 頁面展示說明 ( Demo. & Descript.)
+
+**首頁**
+
+* 和諧化技術
+  Entrance index page built
+* 關鍵字放大再放大功能
+  Emphasize the main points
+
+![1651290242267.png](image/README/1651290242267.png)
+
+**商品類別功能 Sorted by Categories Func.**
+
+* 挑選使用者嗜好功能
+  Categories Func.
+
+![1651290313078.png](image/README/1651290313078.png)
+
+**產品頁面說明 Product detail info. page**
+
+* 誘導使用者加入購物車的鮮明陰影設置
+  Detail the chosen product info for users.
+
+![1651290474769.png](image/README/1651290474769.png)
+
+**產品推薦建議 Recommended products area**
+
+* 類似產品推坑建議
+  Similar products recommendation
+
+![1651290840733.png](image/README/1651290840733.png)
+
+**購物車視窗功能 Shopping Cart content reminder Func.**
+
+* 告知使用者購買商品資訊/價格，友善提醒他們要有足夠的錢才能購買
+  inform users for the contents of cart along with the total amount.
+* 有人抄襲才有用的奇怪聲明
+  Proper notice of the copy right statement
+
+![1651291060567.png](image/README/1651291060567.png)
+
+**企業社會責任頁面 Coroporate Social Responsibility page**
+
+* 提供使用者CSR 功能
+  Save the poor save the world
+
+![1651291265378.png](image/README/1651291265378.png)
+
+**響應式網頁設計 RWD Responsive Web Design** 
+
+* 大俠愛吃漢堡寶選單功能
+  Toggleable menu for mobile screen
+* 適當表達感謝功能
+  Decent manner display
+
+![1651291435225.png](image/README/1651291435225.png)
+
+**後臺公告最新資訊功能 Billboard for Admin to demonstrate to users**
+
+* 讓管理員公告奇怪產品的展示頁面
+  The billboard space for admin to demo some news for users
+
+![1651291806099.png](image/README/1651291806099.png)
+
+**404 頁面功能 404 page / Not Found Notice**
+
+* 適當提醒使用者並無此頁的功能
+  404 page deigned for users if they were used wrong router link.
+
+![1651292041412.png](image/README/1651292041412.png)
+
 ### 使用技術 The used Techniques
 
 - VueCli
