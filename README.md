@@ -27,11 +27,11 @@ Cheers
 
 ---
 
-### 頁面展示說明 ( Demo. & Descript.)
+### 頁面展示說明 ( Demo. & Descript. )
 
-( *註: 為保護當事人，以下圖片有進行和諧化處理* ) 
+( *註: 為保護當事人，以下圖片有進行和諧化處理*  )
 
-**首頁 Index Page**
+**首頁 ( Index Page )**
 
 * 和諧化技術
   ( Entrance index page built )
@@ -64,7 +64,7 @@ Cheers
 **購物車視窗功能 ( Shopping Cart content reminder Func. )**
 
 * 告知使用者購買商品資訊/價格，友善提醒他們要有足夠的錢才能購買
-  ( inform users for the detail content of the shopping cart along with the total amount. )
+  ( inform users for the detail content of the shopping cart along with the total amount )
 * 有人抄襲才有用的奇怪聲明
   ( Proper notice of the copy right statement )
 
@@ -96,13 +96,13 @@ Cheers
 **404 頁面功能 404 page / Not Found Notice**
 
 * 適當提醒使用者並無此頁的功能
-  ( 404 page deigned for users if they were used wrong router links. )
+  ( 404 page deigned for users if they were using wrong router links )
 
 ![1651292041412.png](image/README/1651292041412.png)
 
 ---
 
-### 使用技術 The used Techniques
+### 使用技術 ( The Techniques Applied )
 
 - VueCli
 - VueRouter
@@ -116,7 +116,7 @@ Cheers
 
 ---
 
-### 使用插件 NPM Plugins
+### 使用插件 ( NPM Plugins )
 
 - vee-validate、vee-validate/i18n、vee-validate/rules
 - swiper
