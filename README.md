@@ -36,7 +36,7 @@ Cheers
 * 和諧化技術
   ( Entrance index page built )
 * 關鍵字放大再放大功能
-  ( Emphasize the main points )
+  ( Emphasize the main points by enlarging certain words )
 
 ![1651290242267.png](image/README/1651290242267.png)
 
