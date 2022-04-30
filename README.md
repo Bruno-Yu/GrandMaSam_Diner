@@ -4,7 +4,9 @@
 
 此作創作的初衷為解決敝人的作業繳交問題以及希望藉由此作帶給讀者些許歡樂，畢竟人生苦短，壓力與工作占據了生活大部分時間則是現代人的常態，但周遭的事物卻往往像一套套模板，每天看到的文章與新聞感覺都很類似，像是彼此間事先商量好了一般，久了總有些乏味，而過度包裝的行銷台詞在言詞中總感覺少了些真誠，這邊嘗試以較為跳躍的文字重新塑造了一個全為虛構的餐飲網站，存在於虛擬平行時空中的一隅，而此作本意只為您的莞爾一笑與敝人的舒壓爾爾，但有鑑於每個人看事物的觀點與感受會有所不同，若有任何造成您閱讀後的不適，還請海涵，筆者並無意隱射任何人與事，若有得罪之處還請您見諒!
 
-This project is aiming for practicing of the front-end techniques for the built of B2C E-commerce platform, In the meantime, I had tried to create a fictional diner with some stories by utilizing words to form its content via different point of view intend to entertain the readers like you. I humbly hope it could bring you a slight of happiness after viewing it. For the record, there's no malicious intents implied. Please accept my deeply appology if any offenses you felt, and hope you do enjoy my work!
+This project is aiming for practicing of the front-end techniques for building B2C E-commerce platform, In the meantime, I had tried to create a fictional diner located at Taipei with some stories behind by utilizing words to form its description via different point of view, the main goal of this content is to entertain the readers like you. I humbly hope it could bring you a slight of joy after viewing it. For the record, there's no malicious intents included. If there's any discomfort you felt, please accept my deeply apology in advance!
+
+Hope you do enjoy my work!
 
 Cheers
 
@@ -106,9 +108,9 @@ Cheers
 - VueRouter
 - Vue 元件概念 ( Concept of Vue Components applied )
 - 串接 API ( Create the links with API )
-- bootstrap 5
+- Bootstrap 5
 - RWD
-- webpack
+- Webpack
 - CSS/SCSS、HTML
 - ESLint Style - Airbnb ( Note: Not Hotels.com, Booking.com, TripAdivsor, Trivago...etc. )
 
