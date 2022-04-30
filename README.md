@@ -71,7 +71,7 @@ Bruno
 
 **響應式網頁設計 RWD Responsive Web Design** 
 
-* 大俠愛吃漢堡寶選單功能
+* 大俠愛吃漢寶寶選單功能
   Toggleable menu for mobile screen
 * 適當表達感謝功能
   Decent manner display
