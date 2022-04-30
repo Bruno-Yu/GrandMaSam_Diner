@@ -21,9 +21,9 @@ Cheers
 ### 基礎功能介紹 ( Basic Function inro. )
 
 - 前台功能: 漢堡選單、購物車、商品展示、訂單功能、結帳流程、管理員登入頁..等。
-  ( Front-end function: Toggle nav-bar customized、Shopping cart、products' layputs and demonstarions、checkout process、Admin login...etc. )
+  ( Front-end function: Toggle nav-bar customized、Shopping cart、products' layouts and demonstarions、checkout processes、Admin login...etc. )
 - 後台功能: 新增、修改、刪除產品、優惠卷( 挑戰 )管理、訂單管理、公告文章編撰..等。
-  ( Back-end function: New-add/Edit/Delete functions for products、Coupons/Orders/News admin pages. )
+  ( Back-end function: New-add / Edit / Delete functions for products、Coupons / Orders / News admin pages. )
 
 ---
 
